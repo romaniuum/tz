@@ -1,0 +1,694 @@
+      <!DOCTYPE html>
+      <html lang="fr" class="vk vk_js_no vk_1x vk_flex_no r m h  vk_appAuth_no n vk_old  vk_schemes_no   "><head>
+          <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    <base id="base">
+    
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="/images/icons/favicons/fav_logo.ico?10"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/pwa/favicon_32.png?12">
+    <link rel="apple-touch-icon" href="/images/icons/pwa/apple/default.png?15">
+    <meta name="apple-mobile-web-app-title" content="VK">
+    <meta name="application-name" content="VK">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
+    <title>VK | VK</title>
+          <meta http-equiv="origin-trial" content="AiJEtxZTdbmRu3zkrD0Bg/GvReuip5r0aklN7tIrw1Yit01/+j7PNlJFAyMMo/vqqNVvDmRsGCPGfVtNn5ookQ8AAABueyJvcmlnaW4iOiJodHRwczovL3ZrLmNvbTo0NDMiLCJmZWF0dXJlIjoiRG9jdW1lbnRQaWN0dXJlSW5QaWN0dXJlQVBJIiwiZXhwaXJ5IjoxNjk0MTMxMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=">
+    <script nomodule>window.nomodules = true;</script>
+    <script type="text/javascript">;/*challenge*/
+(function () {
+  'use strict';
+
+  // eslint-disable-next-line no-restricted-syntax
+  function challenge({ isEnabled }) {
+      if (!isEnabled) {
+          return;
+      }
+      let isRedirectRequested = false;
+      function redirect(target) {
+          if (!isRedirectRequested) {
+              isRedirectRequested = true;
+              window.location.href = target;
+          }
+      }
+      function getRedirectTarget(parameter) {
+          return `${parameter}=${encodeURIComponent(window.location.href)}`;
+      }
+      const observer = new PerformanceObserver((list)=>{
+          for (const entry of list.getEntries()){
+              if (entry.serverTiming) {
+                  for (const serverEntry of entry.serverTiming){
+                      if (serverEntry.name !== 'challenge') {
+                          return;
+                      }
+                      const { origin } = new URL(entry.name);
+                      redirect(origin + serverEntry.description + '?' + getRedirectTarget('back'));
+                  }
+              }
+          }
+      });
+      observer.observe({
+          entryTypes: [
+              'navigation',
+              'resource'
+          ]
+      });
+  }
+
+  return challenge;
+
+})()({"isEnabled":true});</script>
+    
+    <style>@font-face{font-family: 'VK Sans Display Faux';font-weight: 600;font-display: swap;src: url(/css/fonts/VKSansDisplayDemiBoldFaux.v100.woff2) format('woff2');unicode-range: U+0,U+A,U+D,U+20-5A,U+61-7A,U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491;}@font-face{font-family: 'VK Sans Display';font-weight: 300;font-display: swap;src: url(/css/fonts/VKSansDisplayLightLatin.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayLightLatin.v320.woff) format('woff');unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;}@font-face{font-family: 'VK Sans Display';font-weight: 300;font-display: swap;src: url(/css/fonts/VKSansDisplayLightCyrillic.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayLightCyrillic.v320.woff) format('woff');unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;}@font-face{font-family: 'VK Sans Display';font-weight: 300;font-display: swap;src: url(/css/fonts/VKSansDisplayLightRest.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayLightRest.v320.woff) format('woff');unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;}@font-face{font-family: 'VK Sans Display';font-weight: 400;font-display: swap;src: url(/css/fonts/VKSansDisplayRegularLatin.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayRegularLatin.v320.woff) format('woff');unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;}@font-face{font-family: 'VK Sans Display';font-weight: 400;font-display: swap;src: url(/css/fonts/VKSansDisplayRegularCyrillic.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayRegularCyrillic.v320.woff) format('woff');unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;}@font-face{font-family: 'VK Sans Display';font-weight: 400;font-display: swap;src: url(/css/fonts/VKSansDisplayRegularRest.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayRegularRest.v320.woff) format('woff');unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;}@font-face{font-family: 'VK Sans Display';font-weight: 500;font-display: swap;src: url(/css/fonts/VKSansDisplayMediumLatin.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayMediumLatin.v320.woff) format('woff');unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;}@font-face{font-family: 'VK Sans Display';font-weight: 500;font-display: swap;src: url(/css/fonts/VKSansDisplayMediumCyrillic.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayMediumCyrillic.v320.woff) format('woff');unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;}@font-face{font-family: 'VK Sans Display';font-weight: 500;font-display: swap;src: url(/css/fonts/VKSansDisplayMediumRest.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayMediumRest.v320.woff) format('woff');unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;}@font-face{font-family: 'VK Sans Display';font-weight: 600;font-display: swap;src: url(/css/fonts/VKSansDisplayDemiBoldLatin.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayDemiBoldLatin.v320.woff) format('woff');unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;}@font-face{font-family: 'VK Sans Display';font-weight: 600;font-display: swap;src: url(/css/fonts/VKSansDisplayDemiBoldCyrillic.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayDemiBoldCyrillic.v320.woff) format('woff');unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;}@font-face{font-family: 'VK Sans Display';font-weight: 600;font-display: swap;src: url(/css/fonts/VKSansDisplayDemiBoldRest.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayDemiBoldRest.v320.woff) format('woff');unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;}@font-face{font-family: 'VK Sans Display';font-weight: 700;font-display: swap;src: url(/css/fonts/VKSansDisplayBoldLatin.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayBoldLatin.v320.woff) format('woff');unicode-range: U+0,U+A,U+D,U+20-5F,U+61-7E,U+A0,U+A2-A5,U+A7,U+A9,U+AB,U+AD,U+AE,U+B0,U+B1,U+B6,U+B7,U+BB,U+D7,U+F7,U+131,U+237,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026,U+2039,U+203A,U+20AC,U+20B4,U+20B8,U+20BD,U+20BF,U+2122,U+2191,U+2193,U+2212;}@font-face{font-family: 'VK Sans Display';font-weight: 700;font-display: swap;src: url(/css/fonts/VKSansDisplayBoldCyrillic.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayBoldCyrillic.v320.woff) format('woff');unicode-range: U+401,U+404,U+406,U+407,U+40E,U+410-44F,U+451,U+454,U+456,U+457,U+45E,U+490,U+491,U+20B4,U+2116;}@font-face{font-family: 'VK Sans Display';font-weight: 700;font-display: swap;src: url(/css/fonts/VKSansDisplayBoldRest.v320.woff2) format('woff2'), url(/css/fonts/VKSansDisplayBoldRest.v320.woff) format('woff');unicode-range: U+307,U+308,U+2190,U+2192,U+2194-2199,U+2248,U+2260,U+2264,U+2265;}:root{--vk-sans-display:'VK Sans Display', var(--vkui--font_family_fallbacks);}:root,[scheme=bright_light]{--vkui--font_family_fallbacks:-apple-system, system-ui, "Helvetica Neue", Roboto, sans-serif;--vkui--color_background_content:#ffffff;--vkui--color_text_primary:#000000;--vkui--color_text_secondary:#818c99;}[scheme=space_gray]{--vkui--color_background_content:#19191a;--vkui--color_text_primary:#e1e3e6;--vkui--color_text_secondary:#76787a;}:root{--semibold-font-weight:600;--regular-font-weight:400;--base-fonts:-apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Segoe WP', 'Helvetica Neue', 'Lucida Grande', Verdana, Tahoma, Arial, sans-serif;}:root{--content_sticky_elements_height:0px;--content_header_height:56px;--content_tabbar_height:48px;--content_area_height:calc(100vh - 96px);}@media (max-width:881px){.vk_tabbar_bottom{--content_area_height:calc(100vh - var(--content_header_height) - var(--content_tabbar_height) - var(--content_sticky_elements_height));}}body.bad_browser_page_fast_reload{margin:0;padding:0;}.BadBrowser{background-color:var(--vkui--color_background_content);box-sizing:border-box;font-family:var(--base-fonts);display:table;padding:24px 12px;text-align:center;margin:0 auto;max-width:620px;min-height:var(--content_area_height);}.BadBrowser__content{display:table-cell;vertical-align:middle;}.BadBrowser__title{color:var(--vkui--color_text_primary);font-weight:var(--semibold-font-weight);font-size:20px;line-height:24px;font-family:var(--vk-sans-display);}.BadBrowser__text{color:var(--vkui--color_text_secondary);font-weight:var(--regular-font-weight);font-size:16px;line-height:20px;margin:8px 0 0 0;}.BadBrowser__browsers{padding-top:48px;}.BadBrowser__browsersTable{display:table;width:100%;}.BadBrowser__browsersTableCell{display:table-cell;}.BadBrowserHeader{box-sizing:border-box;position:relative;padding:12px;height:var(--content_header_height);width:100%;z-index:1;}.BadBrowserHeader__inner{margin:0 auto;max-width:620px;width:100%;}.BadBrowserHeader__logo{display:inline-block;vertical-align:middle;}.Browser{background-color:transparent;border:0;color:var(--vkui--color_text_primary);cursor:pointer;display:block;font-size:15px;line-height:20px;padding:0;text-align:center;text-decoration:none;width:100%;}.Browser__title{margin:12px 0 0;}:root{--vk-sans-display:'VK Sans Display', 'VK Sans Display Faux', var(--base-fonts);}</style>
+    <script>
+      (function() {
+        window.vk = {"id":0,"age":0,"pabs":507,"__debug":false,"__atest":false,"__dev":false,"__domain":"vk.com","wsTransport":"https:\/\/stats.vk-portal.net","statsMeta":{"platform":"mvk","st":false,"time":1737311881,"hash":"ob5WnziZtIvlNa0sQwf7VdL8SWZu4zzwdp5c0ukz9nT","reloadVersion":36},"tnsPixelType":"unauth","tnsPixelSocdem":"13","main_platform":"mvk","platform":"mvk","apiConfigDomains":{"domain":"m.vk.com","apiDomain":"api.vk.com","loginDomain":"login.vk.com","connectDomain":"id.vk.com"},"logoutUrl":"https:\/\/login.vk.com\/?act=logout_mobile&hash=2cae3a4a3aa8312097&_origin=https%3A%2F%2Fm.vk.com&reason=tn&lrt=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU","selectorsToCheck":[],"isCallsDevEnv":false,"preloadTabbarStaticConfig":{"feed":["profile_redesign.js","group_redesign.js","video.js","video_showcase.js","short_video.js","mail.js"],"video":["feed.js","stories_feed_block.js","mail.js","short_video.js"],"mail":["feed.js","stories_feed_block.js","video.js","video_showcase.js","short_video.js"],"clips":["feed.js","stories_feed_block.js","mail.js","video.js","video_showcase.js"]},"rv":"120834","ts":1737311881,"sw":null,"static":{"js_stage":1,"css_stage":1,"flushed_assets":[],"domain":"https:\/\/st6-22.vk.com","nav_map":{"^\\\/join":["join.js","join.css"],"promocode(\\\/([0-9a-zA-Z-]+))?":["promocode.js","promocode.css"],"^\\\/audio":["audio.js"],"^\\\/video":["video.css","video.js","mail.css"],"^\\\/clip":["ShortVideoPage.css","short_videos_page.css","short_video.js","mail.css"],"^\\\/(photo|album|tag|attachments|market|uslugi)":["photo.css","mail.css","photoview.js","photo.js"],"^\\\/(wall|mail|write|im|chatjoin)":["mail.css","wall.css"],"settings\\?act=money_transfer_history":["money_transfer_history.js","money_transfer_history.css"],"^\\\/settings":["settings.js","settings.css"],"settings\\?act=business_notify":["business_notify_settings.js","business_notify_settings.css"],"reports\\?act=":["reports.css"],"^\\\/(blog|about|press|jobs|products|adv)":["blog.css","blog.js","mail.css"],"^\\\/(product|cart|cart_order|orders|market\\.php)(\\??[0-9a-zA-Z=_-]+)?":["market.js","market.css"],"^\\\/(reviews)":["market.js","market.css","photo.css"],"^\\\/(vkcrowdsource)":["crowdsource.js","crowdsource.css"],"^\\\/groups_catalog\\\/([0-9a-zA-Z_\\-]+)$":["groups_catalog.js"],"z=(story|narrative)(-?\\d+_\\d+)":["stories.css","stories.js"],"z=photo(-?\\d+_\\d+)":["photo.js"]},"assets":{"AttachmentSkeletons.css":["AttachmentSkeletons.dd544d2bf5ade5980242.css"],"BadBrowser.css":["BadBrowser.f08dd9fb248c03fed1d1.css"],"BookmarksApps.css":["BookmarksApps.934cacc0cd94e81687e9.css"],"CarouselSkeleton.css":["CarouselSkeleton.7d354bc672a9b7d904ce.css"],"FeedBlockWrap.css":["FeedBlockWrap.1b05ee8fec564f9d3295.css"],"GameInstallScreen.css":["GameInstallScreen.7b21f620d3bdfd9a15b4.css"],"HiddenPostBlank.css":["HiddenPostBlank.b4ae79c8b9e9a574a668.css"],"PWAInstallGuide.css":["PWAInstallGuide.8a32784f178c0d55f78f.css"],"PostContentSkeleton.css":["PostContentSkeleton.fa8405ab42d2a22b4e64.css"],"RecommendationSkeleton.css":["RecommendationSkeleton.5d81f97c332e4d0b0a46.css"],"ShortVideoPage.css":["ShortVideoPage.caec49e98dac95485277.css"],"ShortVideosPage.css":["ShortVideosPage.bae555b147c41372ab2a.css"],"addresses_list.css":["addresses_list.1544e17f0902207009ff.css"],"apps.css":["apps.9d179b999f822cf1fe15.css"],"apps_stub.css":["apps_stub.5b424314dcd3eb1e0cdc.css"],"apps_stub_redesigned.css":["apps_stub_redesigned.19912ce26f1a41a7200b.css"],"article.css":["article.5b6962f7d035950a9cd0.css"],"article_common.css":["article_common.7da929966b8609419a6c.css"],"audio.css":["audio.2040d17036c84f6a96c3.css"],"audio_player_bottom.css":["audio_player_bottom.377af502482d42ef0dbb.css"],"audio_player_mini.css":["audio_player_mini.8b49f486b7129b7d4f4c.css"],"author_page.css":["author_page.0a2d0ee6d9364e38721e.css"],"away.css":["away.fa1fd3ea233dc4d471b5.css"],"blog.css":["blog.da535028af0156fea866.css"],"bookmarks.css":["bookmarks.79d4c8f37d909b295bb7.css"],"business_notify_settings.css":["business_notify_settings.3f1b8a3964ef0e151545.css"],"common.css":["common.e2d124f7b18b3c431062.css"],"crowdsource.css":["crowdsource.23b67a8a970b2966fbc0.css"],"feed.css":["feed.07d2c0e7ccf72c167aad.css"],"fonts.css":["fonts.fb9f1910d4618183f000.css"],"fonts_stories_new_avatar_story.css":["fonts_stories_new_avatar_story.efd296c6aeb1647a0e5b.css"],"friends.css":["friends.21ca26aaf1abba75d0fe.css"],"group.css":["group.c7cf4bf7541db279e5fc.css"],"group_redesign.css":["group_redesign.99f49f498e5e6ae9f7db.css"],"group_redesign_name_history.css":["group_redesign_name_history.ea2d0651902d7df67c38.css"],"groups_list.css":["groups_list.ff7a49b795b261bffb61.css"],"inline_icons_migration.css":["inline_icons_migration.c1079600e28be904a459.css"],"join.css":["join.3374144bb321a2c8320b.css"],"legacy.css":["legacy.30821279ea4f52f3768d.css"],"like_publish.css":["like_publish.b4f13c4f6d8f6946395d.css"],"login.css":["login.b904bc80f683c49fba98.css"],"login_block_reason.css":["login_block_reason.e9d52aeb702106b37f35.css"],"mail.css":["mail.e57335fc06f3cffae205.css"],"market.css":["market.e55e2207368bd1c0abd5.css"],"mini_apps_catalog.css":["mini_apps_catalog.5125e3218d1cae6a1c01.css"],"money_transfer_history.css":["money_transfer_history.d8d05915bbeabc7025a7.css"],"narratives.css":["narratives.33a4f2dc6e415f05b51c.css"],"notifications.css":["notifications.f18544bbc8cb79fb2478.css"],"oauth_android.css":["oauth_android.0fc30fcb5e5758c7ad44.css"],"oauth_base.css":["oauth_base.7e2be2e12f035225a29f.css"],"oauth_ios.css":["oauth_ios.ef481b4ce68811d43080.css"],"oauth_winmobile.css":["oauth_winmobile.d44cfd74f84002995a5f.css"],"onboarding_screen_download_app.css":["onboarding_screen_download_app.4e9cc0501bb80599ab46.css"],"onboarding_screen_recom_themes.css":["onboarding_screen_recom_themes.ea04d9f89d833b1b1ab7.css"],"owner_cover_upload.css":["owner_cover_upload.a492de7c19fadb56c06e.css"],"owner_photo_upload.css":["owner_photo_upload.2c36688a3027a4b3efa0.css"],"page_bottom_banners.css":["page_bottom_banners.86789e932e625876d1e2.css"],"payments.css":["payments.61622c88b990b6e6e3d6.css"],"personal_discount.css":["personal_discount.53240101bf10f084a7f8.css"],"photo.css":["photo.d713ce5141c7734c21d8.css"],"podcasts.css":["podcasts.e8716fb314e500b9411e.css"],"posting_redesign.css":["posting_redesign.743b5273b3d1746499df.css"],"profile.css":["profile.220b31c3f05a74f8ab35.css"],"profile_edit.css":["profile_edit.b3fef7fe9dc3c90e9d01.css"],"profile_redesign.css":["profile_redesign.e746b5f82ff33ce870fd.css"],"promocode.css":["promocode.6c3be67003bda7c37b9c.css"],"reactions.css":["reactions.3fcf5cbe67464158bc06.css"],"reports.css":["reports.b901c36c8960c27b3c38.css"],"search.css":["search.45fe45ccba4af1a46d19.css"],"settings.css":["settings.fb8236422b2412ab63b6.css"],"short_videos_page.css":["short_videos_page.bae555b147c41372ab2a.css"],"special.css":["special.f6fffc1006f930dcb364.css"],"stories.css":["stories.49f08be6f9fa0a334fd8.css"],"textlives.css":["textlives.773e7b0140f1b00cf1db.css"],"thumbnail_creator.css":["thumbnail_creator.133a48001d9da1f25a99.css"],"ugc_sticker.css":["ugc_sticker.2e8f40678a2f4062f8ae.css"],"unauthorized.css":["unauthorized.9956e22c4702bc9562c5.css"],"unauthorized_search.css":["unauthorized_search.89d8f76df71c0fdc8b09.css"],"universal_widget.css":["universal_widget.33a79eadb4f6aa53b78f.css"],"uxpolls.css":["uxpolls.38e6d6e44ab742224143.css"],"variables.css":["variables.fade24b73998ff2f5606.css"],"video.css":["video.fe220ee98c38f3736871.css"],"vk_connect.css":["vk_connect.bcad410120be139577d1.css"],"vk_sans_display.css":["vk_sans_display.9f9256a15167150e20bd.css"],"vk_sans_display_faux.css":["vk_sans_display_faux.7709f6cb23b51d5ed980.css"],"vk_sans_display_faux_inline.css":["vk_sans_display_faux_inline.dfe5379d7a1ccdff6d8a.css"],"vkui.css":["vkui.c224fdf0e6b6857fb489.css"],"wall.css":["wall.5c1d389fdea2c7f0aa54.css"],"webview.css":["webview.f24ca020be35a20d8050.css"],"internal\/debugLog.css":["internal\/debugLog.7908c4d9f646b2a1a59f.css"],"internal\/debugLog.js":["internal\/debugLog.2e4eaa7c268a5c22.js"],"internal\/debugMenu.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","internal\/debugMenu.9665943fd411e07e.css","internal\/debugMenu.b94846906b055f9c.js"],"internal\/deploymentsTestTool.js":["vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","internal\/deploymentsTestTool.7185848787f6ea49.js"],"app_action_snippet.js":["app_action_snippet.b3a5586b43872988.css","app_action_snippet.5250398902f1227e.js"],"app_slides_sheet.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","app_slides_sheet.7e13ebfe658621d2.js"],"apps.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vendors~onlyReact.6e168b851c3b360c.js","vendors~qr.0cece557c2d7d5f9.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","sticker-lib.ee5a14519bf1a7bd.css","sticker-lib.4302de1db6a9fe37.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","b-ab1d6963a39283da.8d6ea173130277de.js","b-88ade255ffc02212.199fc7a714fd09dc.js","b-8a76037bf22e3d6e.f6797a7ce7227d66.js","b-77edd1642d867ebb.0399b8d235019184.js","b-e5d9d88db0ddefd5.2bb244504b0f5eb0.js","b-b531b2cd2325c2b1.6abbd9d03e69d129.js","b-63ae9d7e99ba5826.26e2dc84d69d0f6e.js","b-a2a1a647134bb137.94c5aebb40701b60.js","b-987b29586010de34.bd3601860aeb179f.js","b-e2dd2d132282ed6f.1107b59ff9928795.js","b-b4cdc7b172360f2d.0d88fef8b31222a5.js","b-d3fd95b9dfe9eba6.f9852ced54553275.js","b-016dae3d4da9b073.82e0afe61490e388.js","b-e523a799d321a6e8.31a701d99a0d9716.js","b-aab2b5a41c88c033.1526402420884a5a.js","b-3193dfec3ede41e8.2952c8c2486a748a.js","b-b4b8efc2c17ae681.dcb77e59bb724503.js","b-09e91eb4bf799b32.0ca97f2adf1e1fdf.js","b-133d6475553ef5e1.5f059756057378fb.js","b-6757dd2b558de227.d22b97e2fdab5f48.js","apps.40d6433756b02cee.css","apps.643d655594388ed5.js"],"apps_attach_catalog.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~runtime.cf0dbb82c6e8af09.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","apps_attach_catalog.ca6d0533816bf276.css","apps_attach_catalog.4ea0d107b3040db5.js"],"apps_connect.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~vkjs.26e39eaf27f22160.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","b-ab1d6963a39283da.8d6ea173130277de.js","b-63ae9d7e99ba5826.26e2dc84d69d0f6e.js","apps_connect.21ae71ef227d0f79.css","apps_connect.d355867785504cfa.js"],"apps_personal_discount.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","apps_personal_discount.53aac61b8313b8f2.css","apps_personal_discount.144f87fc0bbd31f9.js"],"apps_stub.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~onlyReact.6e168b851c3b360c.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","b-77edd1642d867ebb.0399b8d235019184.js","b-987b29586010de34.bd3601860aeb179f.js","b-016dae3d4da9b073.82e0afe61490e388.js","b-3193dfec3ede41e8.2952c8c2486a748a.js","apps_stub.8599a37db18b48d6.css","apps_stub.d9cebc6b566858b9.js"],"apps_stub_redesigned.js":["vendors~icons.084dc7716c4b81ca.js","vendors~vkui.aa43e291dc7a38d6.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","apps_stub_redesigned.c3ad63a7ae050c9b.css","apps_stub_redesigned.4713c576d3251f4d.js"],"article.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-878a6f6025a99fb4.9dcc20e1f39e23b9.js","b-8aa1b2960ac3ece2.d0bee793b37cedf8.js","b-382abfd247bf8ca2.2293c05873115981.js","article.2d417c47b8efbcdb.js"],"article_standalone.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~onlyReact.6e168b851c3b360c.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","b-77edd1642d867ebb.0399b8d235019184.js","b-987b29586010de34.bd3601860aeb179f.js","b-878a6f6025a99fb4.9dcc20e1f39e23b9.js","b-8aa1b2960ac3ece2.d0bee793b37cedf8.js","b-382abfd247bf8ca2.2293c05873115981.js","b-6d840ce89936d795.f8e65494f19a944b.js","article_standalone.8599a37db18b48d6.css","article_standalone.04fb2b0dc9786643.js"],"audio.js":["vendors.fa03a04dc39a20b5.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-e5d9d88db0ddefd5.2bb244504b0f5eb0.js","b-878a6f6025a99fb4.9dcc20e1f39e23b9.js","b-36d0be18b54dca57.52483cab457ca752.js","b-c598f686d1311f2c.e835f3d337e7b7af.js","b-6757dd2b558de227.d22b97e2fdab5f48.js","audio.1ad0e5124eff20ac.css","audio.de30d4cb03e7a1fe.js"],"audio_catalog.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","audio_catalog.9baacc99875ab908.js"],"audio_player_bottom.js":["audio_player_bottom.ef4ba7d2495c80ec.js"],"audio_player_mini.js":["audio_player_mini.8ad5856a3135debe.js"],"author_likes_onboarding.js":["author_likes_onboarding.eb6ba6bb053c1611.js"],"banned.js":["banned.36b5ddcbf6dfd026.js"],"best_friends.js":["b-be618d0cbbd51ae6.449def01e1d80d01.js","best_friends.8538b5412abbf5bd.js"],"block_friends_recommendation_march_2023.js":["vendors~icons.084dc7716c4b81ca.js","vendors~api.c4ac41d65450d58f.js","vendors~reactUtils.dd53503a221e4dfc.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-afda04acd51726d1.59dc32a3a41191ba.js","b-61bac8a33eb729ae.fbc21144c27af953.js","b-1534128c3b504fd6.549cb73b99f938c2.js","block_friends_recommendation_march_2023.2df634115cc10e5f.css","block_friends_recommendation_march_2023.a180597ee170a980.js"],"block_good_authors_may_2023.js":["vendors~icons.084dc7716c4b81ca.js","vendors~api.c4ac41d65450d58f.js","vendors~reactUtils.dd53503a221e4dfc.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-afda04acd51726d1.59dc32a3a41191ba.js","b-61bac8a33eb729ae.fbc21144c27af953.js","b-1534128c3b504fd6.549cb73b99f938c2.js","block_good_authors_may_2023.2df634115cc10e5f.css","block_good_authors_may_2023.b482708d1980be0f.js"],"blog.js":["blog.f295b31d9b4ff632.js"],"bridge_modals.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","bridge_modals.28b07973e92a762d.css","bridge_modals.a97accef0de52260.js"],"business_notify_settings.js":["business_notify_settings.c2ee444023eea49a.js"],"calls.js":["vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-b4cdc7b172360f2d.0d88fef8b31222a5.js","calls.1e59f9d3991d3c2f.js"],"chat_photo_upload.js":["chat_photo_upload.1efe5a832a3cc89a.js"],"check_validation_phone.js":["vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","check_validation_phone.f009f420cff4bc70.css","check_validation_phone.b598e69f06b9c1ea.js"],"coauthor_invite.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","7812.e8aafb9de0d875f8.js","coauthor_invite.671c261d86eb1253.js"],"common.js":["runtime.ebbd3751cd025873.js","vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~onlyReact.6e168b851c3b360c.js","vendors~sentry.34cf090fc00f043b.js","vendors~qr.0cece557c2d7d5f9.js","vendors~eventemitter.e34565a004092b5b.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","sticker-lib.ee5a14519bf1a7bd.css","sticker-lib.4302de1db6a9fe37.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","b-77edd1642d867ebb.0399b8d235019184.js","b-987b29586010de34.bd3601860aeb179f.js","b-016dae3d4da9b073.82e0afe61490e388.js","b-aab2b5a41c88c033.1526402420884a5a.js","b-eddde02b452bb196.19b6d9ede91ad123.js","b-3193dfec3ede41e8.2952c8c2486a748a.js","b-ccefc682f38f859d.6487a5e5ba81c7ff.js","b-493df50a7f19a0a2.fc7a87f545d9bcc3.js","b-133d6475553ef5e1.5f059756057378fb.js","b-6d840ce89936d795.f8e65494f19a944b.js","6314.605aa4287a880d52.js","7286.842d3b89b946e94d.js","common.72d738d39c0933d1.css","common.cdba04f524f29d11.js"],"communities_catalog.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","communities_catalog.163a1f73ff81d85e.js"],"communities_showcase.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","communities_showcase.e3d5f028e4f9df0a.js"],"connect.js":["vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","connect.32fb107ea54e2df1.js"],"cookie_banner.js":["cookie_banner.b4626f40b50d8ca6.js"],"crowdsource.js":["vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","crowdsource.2ba12158194d2610.css","crowdsource.567cfd8a6e621f37.js"],"easter_eggs.js":["easter_eggs.6317f97cf83a56c3.js"],"ecomm_admin_tips.js":["vendors~effector.2eb322c0f037ed29.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","ecomm_admin_tips.e19a72f5a4a169d8.css","ecomm_admin_tips.8cb6c4bcba0d6edf.js"],"ecomm_market_catalog.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","b-88ade255ffc02212.199fc7a714fd09dc.js","b-8a76037bf22e3d6e.f6797a7ce7227d66.js","b-e5d9d88db0ddefd5.2bb244504b0f5eb0.js","b-b531b2cd2325c2b1.6abbd9d03e69d129.js","b-a2a1a647134bb137.94c5aebb40701b60.js","b-e2dd2d132282ed6f.1107b59ff9928795.js","b-b4cdc7b172360f2d.0d88fef8b31222a5.js","b-e523a799d321a6e8.31a701d99a0d9716.js","ecomm_market_catalog.c2690f72a206aea0.css","ecomm_market_catalog.02699fdb87e9576f.js"],"ecomm_market_item.js":["vendors~icons.084dc7716c4b81ca.js","vendors~api.c4ac41d65450d58f.js","vendors~vkui.aa43e291dc7a38d6.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","sticker-lib.ee5a14519bf1a7bd.css","sticker-lib.4302de1db6a9fe37.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","b-8a76037bf22e3d6e.f6797a7ce7227d66.js","b-07411907c8edde54.d3c442fb8d7da0b3.js","b-32d8f1f88c9eb90c.cec4b77842844c99.js","3432.c0069de5063a98fd.js","ecomm_market_item.5633952e7b40ae95.css","ecomm_market_item.7093655d8e1f436d.js"],"ecomm_market_item_buttons.js":["vendors~icons.084dc7716c4b81ca.js","vendors~api.c4ac41d65450d58f.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","b-07411907c8edde54.d3c442fb8d7da0b3.js","ecomm_market_item_buttons.5a078c56ac0190de.css","ecomm_market_item_buttons.9cf46a9f73e68ece.js"],"ecomm_market_item_comments.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","sticker-lib.ee5a14519bf1a7bd.css","sticker-lib.4302de1db6a9fe37.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-8a76037bf22e3d6e.f6797a7ce7227d66.js","b-32d8f1f88c9eb90c.cec4b77842844c99.js","ecomm_market_item_comments.155bdc1c9f015fb5.css","ecomm_market_item_comments.f8215a50e9a03a07.js"],"ecosystem_profile.js":["ecosystem_profile.fe1589efa8d4eb44.js"],"feed.js":["feed.f06ec0584410f0c1.js"],"feed_achievement_game_block.js":["feed_achievement_game_block.9b0992b2397b6d85.js"],"feed_animated_block.js":["feed_animated_block.637c86338c1de913.css","feed_animated_block.443270db12ea6340.js"],"feed_block_apps_recommendation.js":["vendors~icons.084dc7716c4b81ca.js","vendors~reactUtils.dd53503a221e4dfc.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-afda04acd51726d1.59dc32a3a41191ba.js","feed_block_apps_recommendation.6c02126dd2f100c1.js"],"feed_block_recommended_groups.js":["vendors~icons.084dc7716c4b81ca.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-afda04acd51726d1.59dc32a3a41191ba.js","feed_block_recommended_groups.ac6fd843af322a75.js"],"feed_hide_ad_post_block.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","feed_hide_ad_post_block.f0633ff87e49f278.css","feed_hide_ad_post_block.900b11a2d374e8de.js"],"feed_hide_post_block.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","2641.7fa322b1f0611d64.js","feed_hide_post_block.f0633ff87e49f278.css","feed_hide_post_block.07d89fe0d0b9bb87.js"],"friends.js":["vendors~icons.084dc7716c4b81ca.js","vendors~api.c4ac41d65450d58f.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","friends.680afee3ad07eb63.css","friends.c90b6d398d8f49bd.js"],"friends_catalog.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","friends_catalog.711d5e4f8310b4eb.js"],"game_install_screen.js":["vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~onlyReact.6e168b851c3b360c.js","nav.c0a81cee54d44951.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","b-77edd1642d867ebb.0399b8d235019184.js","game_install_screen.4bb3217cc7f6b930.js"],"games_pwa.js":["vendors~icons.084dc7716c4b81ca.js","games_pwa.edbab2ad229638af.js"],"grip.js":["grip.072ea4eccb02ca98.js"],"group_inactive_feed.js":["vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","group_inactive_feed.45682097c60b775c.css","group_inactive_feed.9324b62dee1000c2.js"],"group_members_catalog.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","group_members_catalog.5adcd09358f6e6a4.js"],"group_redesign.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~framer-motion.6a259922da4108fc.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-8b09038068c69f43.5da31292c08ebcde.js","b-78fda72979182a64.7ea7109e7f8745d9.js","3583.1e27b3b8b8ff17c6.js","group_redesign.17db2590cb13151a.css","group_redesign.c06dce9586828af1.js"],"group_redesign_name_history.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-8b09038068c69f43.5da31292c08ebcde.js","group_redesign_name_history.8f0f63be9bfc552d.css","group_redesign_name_history.0af0e56afc3dd5b9.js"],"groups_catalog.js":["groups_catalog.aeb34e5f1ab2a74c.js"],"join.js":["vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","join.b99eea6754121526.css","join.0a0ea29870e7902d.js"],"join_avatar.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","join_avatar.6d63f1d5525d3115.css","join_avatar.bae1d45785b88de2.js"],"join_email_check.js":["join_email_check.4c8d9f06ae6eb80b.js"],"login.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","login.a93b7968b8dbbef7.css","login.ff956c02027faaf8.js"],"mail.js":["b-c598f686d1311f2c.e835f3d337e7b7af.js","mail.ec6b1357f97ce38c.js"],"mail_tooltips.js":["mail_tooltips.b5f996ab999d6e2d.js"],"market.js":["market.d1843a71c1a65c10.js"],"market_analytics.js":["market_analytics.bca38337a2e55d09.js"],"mini_apps.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~vkjs.26e39eaf27f22160.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","b-ab1d6963a39283da.8d6ea173130277de.js","b-63ae9d7e99ba5826.26e2dc84d69d0f6e.js","b-d3fd95b9dfe9eba6.f9852ced54553275.js","b-b4b8efc2c17ae681.dcb77e59bb724503.js","mini_apps.445a9a025f7c6fec.css","mini_apps.ab8fb99779e30e6d.js"],"mini_apps_catalog.js":["mini_apps_catalog.b5c9257625f4bc83.js"],"mini_apps_catalog_search.js":["mini_apps_catalog_search.38adf1d5439d1696.js"],"mini_apps_left_menu_tooltip.js":["mini_apps_left_menu_tooltip.567732874d6ae11f.js"],"mini_apps_recommended_carousel.js":["mini_apps_recommended_carousel.bd51ef816b77bdaf.js"],"mini_apps_recommended_carousel_async.js":["mini_apps_recommended_carousel_async.1e82056b36663c00.js"],"miniapps_orders_history.js":["miniapps_orders_history.0b1cfac39895b11a.js"],"money_transfer_history.js":["money_transfer_history.f6800587284d3027.js"],"narratives.js":["vendors.fa03a04dc39a20b5.js","vendors~api.c4ac41d65450d58f.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~draggable.cd0fad5369325634.js","vendors~cropperjs.57a80a6033385b08.js","b-6ecc4d3cc750f540.690eda139bd39674.js","b-5af33361aa676523.5fd40581229adffc.js","5641.c5fe43b1bb290d24.js","7571.8e2a2d5b06fa2f68.js","narratives.88c15ab22f94ccd6.js"],"node_ssr.js":["vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","node_ssr.0cd76b09cd04d492.js"],"onboarding_screen_download_app.js":["onboarding_screen_download_app.1a23d72e19ca8079.js"],"onboarding_screen_recom_themes.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","onboarding_screen_recom_themes.1982fe1ddfa6cd4c.css","onboarding_screen_recom_themes.c767347694926f0a.js"],"openapi.js":["openapi.fa924492a05b0770.js"],"owner_cover_upload.js":["vendors~icons.084dc7716c4b81ca.js","vendors~vkjs.26e39eaf27f22160.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-61bac8a33eb729ae.fbc21144c27af953.js","b-73ac7f5fa696553f.f903d970b4d34b6a.js","owner_cover_upload.0e97a9243732453a.css","owner_cover_upload.ad7e521d923615fa.js"],"owner_photo_upload.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~vkjs.26e39eaf27f22160.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","b-ab1d6963a39283da.8d6ea173130277de.js","owner_photo_upload.4adc10fe4854a3c5.css","owner_photo_upload.ddfe3e2b8ce90f5e.js"],"page_bottom_banners.js":["b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","page_bottom_banners.590d2dd19084aa9d.js"],"payments.js":["payments.2573178aa92285d8.js"],"performance_observers.js":["performance_observers.8716b26a407fc5ea.js"],"photo.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","photo.4be69be29a944722.css","photo.72bcd603a76b4802.js"],"photo_stream.js":["vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~runtime.cf0dbb82c6e8af09.js","photo_stream.2842c12ab5aa5f5b.js"],"photoview.js":["photoview.61b8c619cbf8b7e0.js"],"polyfills.js":["runtime.ebbd3751cd025873.js","vendors.fa03a04dc39a20b5.js","vendors~sentry.34cf090fc00f043b.js","b-493df50a7f19a0a2.fc7a87f545d9bcc3.js","polyfills.f3e28e5a145cb13f.js"],"post_attachments_block.isolated.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vendors~onlyReact.6e168b851c3b360c.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","post_attachments_block.isolated.fcb3adb43d23a310.css","post_attachments_block.isolated.3f29a28c302af66d.js"],"post_attachments_block.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","b-88ade255ffc02212.199fc7a714fd09dc.js","b-8a76037bf22e3d6e.f6797a7ce7227d66.js","b-e5d9d88db0ddefd5.2bb244504b0f5eb0.js","b-b531b2cd2325c2b1.6abbd9d03e69d129.js","b-a2a1a647134bb137.94c5aebb40701b60.js","b-e2dd2d132282ed6f.1107b59ff9928795.js","b-40e86ed471ed2e29.d969e09f97102501.js","post_attachments_block.c3ad8ebb4851d8e7.css","post_attachments_block.0a78d4a844fdd484.js"],"post_content_container.isolated.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vendors~onlyReact.6e168b851c3b360c.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","2253.a87452662c5eade5.js","post_content_container.isolated.6f03bfbea873d707.css","post_content_container.isolated.7f78960948ef6a9a.js"],"post_content_container.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~draggable.cd0fad5369325634.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","b-88ade255ffc02212.199fc7a714fd09dc.js","b-8a76037bf22e3d6e.f6797a7ce7227d66.js","b-e5d9d88db0ddefd5.2bb244504b0f5eb0.js","b-b531b2cd2325c2b1.6abbd9d03e69d129.js","b-a2a1a647134bb137.94c5aebb40701b60.js","b-e2dd2d132282ed6f.1107b59ff9928795.js","b-40e86ed471ed2e29.d969e09f97102501.js","2253.a87452662c5eade5.js","post_content_container.6eb2776c52445bb3.css","post_content_container.8be32ac023fbc02b.js"],"post_context_menu.js":["vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","post_context_menu.18134479e9e6db3f.js"],"post_header.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","post_header.f0b276ab669c2648.css","post_header.05984f0e96cd71cd.js"],"post_stats_pixel.js":["post_stats_pixel.804943d388fc3e00.js"],"post_translation.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","post_translation.e930771a7f924b29.js"],"posting_draft.js":["posting_draft.b4361cf85c697cca.js"],"posting_hashtags.js":["posting_hashtags.b4046e58968a4b1b.js"],"posting_redesign.js":["vendors~api.c4ac41d65450d58f.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","5728.719c2539148a2e10.js","posting_redesign.61703e587d264532.js"],"primary_attachment_album.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","primary_attachment_album.acb2ff86ebd0b513.js"],"primary_attachment_article.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","primary_attachment_article.ce824a14f065caf4.js"],"primary_attachment_audio.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","primary_attachment_audio.d4bf646c995b5f3f.css","primary_attachment_audio.9573b755937ea67c.js"],"primary_attachment_link.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","primary_attachment_link.bc5759470b74f588.js"],"primary_attachment_poll.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","b-a2a1a647134bb137.94c5aebb40701b60.js","primary_attachment_poll.e7e0541e83441e55.css","primary_attachment_poll.8984482e66370521.js"],"profile.js":["profile.279ce3e380833d29.js"],"profile_edit.js":["vendors~icons.084dc7716c4b81ca.js","vendors~api.c4ac41d65450d58f.js","vendors~effector.2eb322c0f037ed29.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","b-61bac8a33eb729ae.fbc21144c27af953.js","b-73ac7f5fa696553f.f903d970b4d34b6a.js","b-a927b5d31330f742.1836293f4eb12018.js","profile_edit.3857af5b07901f9a.css","profile_edit.688cc9e1d8010d16.js"],"profile_redesign.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~reactUtils.dd53503a221e4dfc.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~draggable.cd0fad5369325634.js","vendors~framer-motion.6a259922da4108fc.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","sticker-lib.ee5a14519bf1a7bd.css","sticker-lib.4302de1db6a9fe37.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-65dd8c4dc7c19689.773e11b800cf2ad8.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-24197fc5cc1f87c2.da982a8d826b0aac.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","b-9faed0de19197521.9d6eb33ae7662815.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-8cbd3ea4bfeb8ed5.2d742542d7d656f7.css","b-8cbd3ea4bfeb8ed5.bc27558e4619aea1.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","b-ab1d6963a39283da.8d6ea173130277de.js","b-88ade255ffc02212.199fc7a714fd09dc.js","b-8a76037bf22e3d6e.f6797a7ce7227d66.js","b-e5d9d88db0ddefd5.2bb244504b0f5eb0.js","b-b531b2cd2325c2b1.6abbd9d03e69d129.js","b-63ae9d7e99ba5826.26e2dc84d69d0f6e.js","b-a2a1a647134bb137.94c5aebb40701b60.js","b-e2dd2d132282ed6f.1107b59ff9928795.js","b-afda04acd51726d1.59dc32a3a41191ba.js","b-61bac8a33eb729ae.fbc21144c27af953.js","b-878a6f6025a99fb4.9dcc20e1f39e23b9.js","b-b4cdc7b172360f2d.0d88fef8b31222a5.js","b-d3fd95b9dfe9eba6.f9852ced54553275.js","b-e523a799d321a6e8.31a701d99a0d9716.js","b-1534128c3b504fd6.549cb73b99f938c2.js","b-73ac7f5fa696553f.f903d970b4d34b6a.js","b-8b09038068c69f43.5da31292c08ebcde.js","b-36d0be18b54dca57.52483cab457ca752.js","b-a927b5d31330f742.1836293f4eb12018.js","b-13f87f0769d4d7e8.954d63cf05ff0719.js","b-3e320c5dd1142953.f59f348c50b6a80a.js","b-78fda72979182a64.7ea7109e7f8745d9.js","4660.310b1580e6662295.js","9102.2a20bbd9c9aff202.js","profile_redesign.891ba54a60b4a444.css","profile_redesign.cb9ff722df88aac5.js"],"promocode.js":["promocode.c17030bcc1080da8.js"],"promocode_partners.js":["promocode_partners.6f8703462f73de3e.js"],"pwa.js":["pwa.a8f04cc42a2a4087.js"],"qrcode.js":["qrcode.b5f80f6b58988773.js"],"reactions.js":["reactions.3478a51acd1ca0b6.js"],"redirect_screen.js":["redirect_screen.a5a6a5e4212b8e74.js"],"sak_unauthorized.js":["sak_unauthorized.c35d8988d830e469.js"],"sentry.js":["vendors~sentry.34cf090fc00f043b.js","vendors~eventemitter.e34565a004092b5b.js","b-eddde02b452bb196.19b6d9ede91ad123.js","sentry.d8c2d07aa7bb5f02.js"],"settings.js":["settings.ab49fd0b526c61cc.js"],"short_video.js":["short_video.be6261f880444d24.js"],"stickers.js":["stickers.13de3b77990bd44a.js"],"stories.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~api.c4ac41d65450d58f.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-88ade255ffc02212.199fc7a714fd09dc.js","b-6ecc4d3cc750f540.690eda139bd39674.js","b-71eb857b4366e44d.d2ec5c51dabe86da.js","stories.1415966274682e0e.css","stories.2aba088608caa2b0.js"],"stories_archive.js":["vendors.fa03a04dc39a20b5.js","vendors~api.c4ac41d65450d58f.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","b-6ecc4d3cc750f540.690eda139bd39674.js","b-5af33361aa676523.5fd40581229adffc.js","stories_archive.9334237718a867e2.js"],"stories_feed_block.isolated.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~onlyReact.6e168b851c3b360c.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","6314.605aa4287a880d52.js","6247.907f567ee6044f58.js","stories_feed_block.isolated.e23dfde2bcc15a87.css","stories_feed_block.isolated.b072c61f4e8bd15c.js"],"stories_feed_block.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~api.c4ac41d65450d58f.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-6ecc4d3cc750f540.690eda139bd39674.js","b-71eb857b4366e44d.d2ec5c51dabe86da.js","6247.907f567ee6044f58.js","stories_feed_block.b9c28915789e1661.js"],"superapp.js":["superapp.8136833aca8245ed.js"],"textlives.js":["textlives.3d54c3ee74e620a3.js"],"thumbs_edit.js":["9598.6de622c4ff47ac52.js","thumbs_edit.b5b8266bc13be06b.js"],"tracer.js":["vendors~sentry.34cf090fc00f043b.js","tracer.ef0f3b0ebd4299e7.js"],"ugc_sticker.js":["ugc_sticker.a510e923c3bd5372.js"],"unauthorized.js":["b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-71afd2c9b10e3c25.5b9686f229a55cf3.js","unauthorized.2d1fbc4e32a2e70e.js"],"unauthorized_search.js":["unauthorized_search.12f7719043dbb35b.js"],"unban_recommendation.js":["vendors~icons.084dc7716c4b81ca.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","unban_recommendation.a44bf71756298b78.css","unban_recommendation.719ec3d503e4b2d9.js"],"uxpolls.js":["b-3e320c5dd1142953.f59f348c50b6a80a.js","uxpolls.f3930804a99ac755.js"],"video.js":["vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~vkjs.26e39eaf27f22160.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-878a6f6025a99fb4.9dcc20e1f39e23b9.js","b-8aa1b2960ac3ece2.d0bee793b37cedf8.js","6686.bfa554e2ace5c342.js","video.55c94bc2436487d3.js"],"video_showcase.js":["b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","video_showcase.8a9a357c9ee20ffd.js"],"vk_sans_observer.js":["vk_sans_observer.6765996b5e2282a1.js"],"vkapps.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~effector.2eb322c0f037ed29.js","vendors~vkui.aa43e291dc7a38d6.js","vendors~runtime.cf0dbb82c6e8af09.js","vendors~onlyReact.6e168b851c3b360c.js","vendors~qr.0cece557c2d7d5f9.js","nav.c0a81cee54d44951.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","icons~fa00e7f3b2f5fe99.146ae44048dfc05f.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","b-ab1d6963a39283da.8d6ea173130277de.js","b-77edd1642d867ebb.0399b8d235019184.js","b-63ae9d7e99ba5826.26e2dc84d69d0f6e.js","b-987b29586010de34.bd3601860aeb179f.js","b-016dae3d4da9b073.82e0afe61490e388.js","b-aab2b5a41c88c033.1526402420884a5a.js","b-09e91eb4bf799b32.0ca97f2adf1e1fdf.js","vkapps.6cf42918aab5363c.css","vkapps.95df071e50db7af4.js"],"wall.js":["vendors~icons.084dc7716c4b81ca.js","vendors.fa03a04dc39a20b5.js","vendors~vk.6bb26b183eea4a09.js","vendors~api.c4ac41d65450d58f.js","vendors~vkjs.26e39eaf27f22160.js","vendors~videoplayer.86f44f5558ce40ce.js","vendors~videoplayer-interactive.8f7c87e5332cc9e0.js","vkcom-kit.d5946c0ecb1d09f3.css","vkcom-kit.055d24e5f61b8b06.js","b-59181cc6a7524acb.c0ccb71d630cfcf7.js","b-928aa6fa81a71652.573db7ae57a26b01.js","b-e582d705bf69f87b.8f9afad04926dd5f.js","b-dc971cd1c3cac9c6.6515f81cc88b3af5.js","b-5e0c1eae29f0d3ec.ef9713443721be6f.js","b-ded80de8208ae1d7.39a4261e2d6d003f.js","b-ab1d6963a39283da.8d6ea173130277de.js","b-88ade255ffc02212.199fc7a714fd09dc.js","b-b531b2cd2325c2b1.6abbd9d03e69d129.js","b-63ae9d7e99ba5826.26e2dc84d69d0f6e.js","b-d3fd95b9dfe9eba6.f9852ced54553275.js","b-13f87f0769d4d7e8.954d63cf05ff0719.js","wall.d2f1309e4b79126d.css","wall.5382ab48f9331276.js"],"wall_posting.js":["b-be618d0cbbd51ae6.449def01e1d80d01.js","wall_posting.bbfc93565c3ca913.js"],"wall_view_stats.js":["wall_view_stats.06f4f42467180d71.js"],"window_proxy.js":["vendors.fa03a04dc39a20b5.js","vendors~vkjs.26e39eaf27f22160.js","vendors~eventemitter.e34565a004092b5b.js","b-eddde02b452bb196.19b6d9ede91ad123.js","b-ccefc682f38f859d.6487a5e5ba81c7ff.js","window_proxy.3eaf0b6604e63d5a.js"],"xss_playground.js":["xss_playground.e09da972ca8cd084.js"]},"async_assets":{"profile_redesign.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"spa-mvk-call-join.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~icons.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~vk.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~api.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~vkjs.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~effector.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~reactUtils.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~vkui.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~videoplayer.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~videoplayer-interactive.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~runtime.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~draggable.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vendors~framer-motion.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"vkcom-kit.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"sticker-lib.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"4660.js":["MobileCallsEntry.36fdbaf3e7d30076.js"],"9102.js":["MobileCallsEntry.36fdbaf3e7d30076.js"]},"init_entries":["polyfills.js","window_proxy.js","vk_sans_observer.js"]},"lang":16,"countryISO":"FR","at":0,"pe":{"posting_mvk_react_form":1,"service_booking_mvk":1,"search_video_owner_videos_mvk_enabled_standalone":1,"mvk_spa_search_video_standalone":1,"search_video_owner_videos_mvk_enabled":1,"mvk_spa_search_video":1,"childdi_name_conflict_fix2":1,"mvk_spa_market_item_page":1,"video_standalone":1,"send_user_info_stats":1,"force_send_user_info":1,"send_user_info_on_localhost":1,"push_notifier":1,"app_pwa_platform_analytics":1,"mini_apps_web_add_to_favorites":1,"mini_apps_check_allowed_scopes_no_validation":1,"mini_apps.web_app_get_friends_with_api":1,"mini_apps_share_enrich_mvk":1,"mini_apps_send_stat_arguments_bridge_events":1,"mini_apps_get_friends_mvk":1,"mini_apps_performance_close_app_empty_event":1,"mini_apps_track_event_extra_call":1,"mini_apps_show_actions_fix":1,"mini_apps_send_stat_arguments_bridge_events_sdk":1,"mini_apps_hide_close_app":1,"mini_apps_replace_cur_app_with_get_current_app":1,"mini_apps_delete_window_VKAppsActionMenuModal":1,"remove_showAppsBox_from_app_instance":1,"allowWindowApiConfigDomains":1,"mini_apps_delete_window_orderBoxHandler":1,"mini_apps_sdk_launch":1,"mini_apps_disable_vk_web_app_open_article_editor":1,"mini_apps_sdk_together_several_modals":1,"mini_apps_sdk_launch_allow_postponed_start":1,"mini_apps_new_webview_url_for_launch":1,"mini_apps_share_to_user":1,"mini_apps_log_overridden_handlers":1,"mini_apps_sdk_collect_stats":1,"update_web_token_on_vk_web_app_show_wall_post_box":1,"collect_stats_in_js_sdk_mvk_games":1,"collect_js_sdk_init_in_mvk":1,"defer_run_mini_app_on_mvk":1,"iframe_error_trigger_from_sdk":1,"mini_apps_methods_config":1,"mini_apps_sdk_fix_pay_form":1,"mini_apps_bridge_stats_bridge_log_field":1,"mini_apps_prevent_double_mount_event":1,"mini_apps_sdk_allow_bridge_method_dry_run":1,"cookie_secure_default_true":1,"feed_post_ads_menu_stats":1,"webinf_change_queue_analytics":1,"widgets_xdm_same_origin":1,"mvk_preload_entries":1,"stickers_money_transfer_suggestions":1,"mvk_mail_include_archived_messages_count":1,"web2_story_box_enabled":1,"navigation_timespent":1,"web_stats_transport_story_view":1,"registration_item_stat":1,"mute_mvk_err_peaks":1,"web_stats_send_on_events_limit":1,"batchify_web_stats":1,"open_app_bridge_event_to_api":1,"audio_unauth_preview":1,"audio_unauth_preview_box":1,"audio_mediascope":1,"audio_my_tracker_mvk":1,"audio_legal_notice_in_item":1,"mvk_navgo_xss_fix":1,"unauthorized_media_layer_box":1,"faq_clean_up_extra_spaces":1,"loginvk_api_use_anonymous_token":1,"feed_replace_emoji_with_images":1,"games_pass_ref_to_wall_post":1,"remove_a_m_apps_save_stats_act":1,"mail_business_notify":1,"waf_ajax_request_enabled":1,"add_to_menu_event_to_api":1,"cookie_lite_js_save_stat":1,"mvk_waf_ajax_request_enabled":1,"notifications_events_to_api":1,"web_api_fork":1,"smb_get_checkout_url":1,"market_single_cart_ozon_redirect_url_encoding":1,"market_item_seller_response_time":1,"profile_enable_album_tabs":1,"owner_content_tabs_active_tab_click_transition":1,"landing_vkpay_form_prod_env":1,"marusia_web_music_stats":1,"profile_owner_content_tabs_settings":1,"nft_tab_show_empty":1,"personal_in_vkidacc":1,"profile_redesign_new_cover_exp":1,"web_stats_send_beacon":1,"esia_verification_status":1,"vkui_account_common_verification_mark":1,"messenger_mediascope_stats_collect":1,"ui_controls_normalize_html_entities":1,"web_stats_reduce_debounce":1,"web_stats_device_id":1,"mvk_vkapi_capture_async_stacktrace":1,"apps_games_log_xdm_errors_custom":1,"measure_module_navigation_stats":1,"sentry_js_known_issues_mvk_integration":1,"sentry_js_api_errors_mvk_integration":1,"sentry_js_static_errors_mvk_integration":1,"sentry_js_network_detections_mvk_integration":1,"sentry_js_page_snapshot_mvk_integration":1,"sentry_js_mvk_verbose":1,"sentry_js_mvk_snapshot_ls_near_limit":1,"web_inline_grouping_fix":1,"mini_apps_action_menu_mvk":1,"mini_apps_action_menu_back_button_fix_mvk_app_exit":1,"mini_apps_vote_payments_check":1,"mini_apps_disable_ios_bounce_effect":1,"mini_apps_close_app_mvk_history_fix":1,"direct_games_safari_view_controller":1,"direct_games_install_screen_safari_view_controller":1,"mvk_market_item_page_block_banner":1,"mvk_quick_search_canceled_requests_stats":1,"longread_tts_no_stream_error":1,"apps_skip_lazy_static_reload_mvk":1,"mvk_posting_track_event_count":1,"mvk_posting_force_carousel_mode":1,"posting_share_photo_video_options_limited_mvk":1,"posting_share_wall_media_options_limited_mvk":1,"tech_stories_metrics_web_mvk":1,"mvk_calls_calls_enabled":1,"profile_redesign_onboarding":1,"vkc_app_detection_enabled":1,"marusia_mvk_messenger":1,"marusia_send_start_session":1,"marusia_skill_list_new":1,"mvk_profile_cover_redesign":1,"react_lazy_initiator_abort_render":1,"search_enable_catalog_search_audio":1,"mobile_account_counters_queue":1,"mvk_games_history_back_on_exit":1,"video_showcase_mvk_prev_next_buttons":1,"video_showcase_mvk_autoplay_next":1,"video_showcase_mvk_end_screen":1,"mvk_disable_buttons_on_restricted_videos":1,"video_showcase_mvk_continue_watch_design_fixes":1,"mvk_skins_legacy_base_TextInput":1,"vkvideo_redirect_to_mobile_standalone":1,"vkvideo_mobile_tab":1,"video_merge_block_pagination":1,"search_global_catalog_video_suggester":1,"search_video_service_catalog_video_suggester":1,"stories_publisher_sdk_new_cache_in_render":1,"mvk_stories_creator_remove_root_stop_propagation":1,"mini_apps_filter_method_params":1,"mini_apps_duplicate_recommend_modal":1,"new_hashtags_parser":1,"feed_redesign_ad_data_secondary":1,"mini_apps_im_integration_catalog_section_web":1,"mini_apps_open_report_form_mvk":1,"fix_cyrillic_in_external_urls":1,"feed_redesign_fix_mention":1,"feed_redesign_fix_hashtag_mention":1,"search_enable_catalog_search_statuses":1,"vk_video_standalone_new_copy_link_logic":1,"search_disable_new_text_parser":1,"search_enable_catalog_search_clips":1,"search_enable_catalog_search_clips_service":1,"search_enable_catalog_clips_suggester":1,"search_enable_catalog_clips_service_suggester":1,"search_enable_new_design_catalog_header":1,"search_enable_catalog_group_members":1,"search_enable_catalog_group_members_actions":1,"search_enable_catalog_search_market_service":1,"media_grid_single_image_blur_enabled":1,"media_grid_with_gray_fields_enabled":1,"single_photo_backdrop_blur_enabled":1,"feed_redesign_web_mvk_grid_height_limit_enabled":1,"feed_remove_dispatch_global_resize":1,"media_grid_fullscreen_enabled":1,"feed_secondary_attachment_audio_redesign":1,"video_player_track_onestat_errors":1,"video_player_fix_embed_webview":1,"video_player_mvk_waiting_live":1,"video_player_mvk_mediascope_pixels":1,"video_player_new_embed_mediascope_pixels":1,"video_send_view_history_record":1,"video_history_record_time_send":1,"videoplayer_off_interactive_graph":1,"video_player_support_new_live_links":1,"video_player_ref_domain_embed":1,"video_new_year_icon":1,"video_new_video_page":1,"video_player_remixstlid_to_onestat":1,"video_mvk_hide_remove_from_my_in_playlist":1,"video_standalone_mvk_unplug_audio":1,"mini_apps_ads_banner_click_once":1,"mini_apps_ads_native_ads_timeout":1,"mini_apps_ads_interstitial_timer_persistent":1,"mini_apps_ads_interstitial_resolve_after_hide":1,"web_vitals_inp":1,"web_collect_lcp_element_resource_metrics":1,"vk_bridge_modals_horizontal_layout":1,"music_clear_media_type":1,"mini_apps_catalog_cursor_pagination":1,"audio_special_project_mvk":1,"media_focus_mvk":1,"storage_bridge_events_to_api":1,"account_verified_link":1,"logout_save_user_dialog_mvk":1,"mvk_show_follow_button_as_add":1,"stickers.ugc":1,"stickers.popup.mvk":1,"content_reports_new_profile_form":1,"client_dev_null_video_uploader_errors":1,"vkid_api_formatted_execute_response":1,"video_fix_subscription_double_sections":1,"mvk_sentry_js_ignore_local_erorrs":1,"mvk_feed_main_trackcode_client":1,"vk_resource_timing_stats":1,"switch_to_akashi":1,"mix_friends_followers":1,"mvk_react_router_current_stack_length_fix":1,"video_mvk_first_session_promo_ios":1,"video_mvk_first_session_promo_android":1,"video_open_in_app_promo_button_bugfix":1,"mvk_video_show_delete_video_button":1,"mini_apps_performance_iframe_errors":1,"feed_post_menu_stats":1,"mini_apps_profile_bridge_fix":1,"mini_apps_send_session_uuid":1,"mini_apps_collect_performance_from_sdk":1,"mini_apps_fix_double_init_bridge":1,"mini_apps_collect_sessions_from_sdk":1,"mini_apps_send_my_tracker_activity":1,"mini_apps_vkapps_allow_notifications_api":1,"games_send_track_visitor_activity":1,"games_js_sdk_use_api_mvk":1,"mini_apps_send_session_uuid_bridge_events":1,"mini_apps_parse_webview_url_for_launch_ref":1,"mini_apps_toggle_favorite_api":1,"mini_apps_performance_v2":1,"mvk_fix_popstate_nav_update":1,"mvk_spa_page_error_ratio":1,"mvk_profiler_stub_enabled":1,"mvk_catalog_section_without_vk_apps":1,"mvk_navigation_progress_bar":1,"primary_attachment_audio_component_and_services_clean_up":1,"profile_age_mark":1,"feed_viewport_dom_post":1,"feed_secondary_attachment_audio_redesign_mvk":1,"feed_open_audio_stats_for_react":1,"video_permanent_promo_button_android":1,"video_permanent_promo_button_ios":1,"video_bookmarks_renaming_to_watch_later":1,"video_create_playlist_empty_input_bugfix":1,"video_disable_mvk_standalone_messages_share":1,"mvk_keep_client_tab_id":1,"stories_mvk_sticker_template":1,"stories_creator_onbording":1,"fix_open_story_author_index":1,"users_wasm_support":1,"mvk_fix_static_manager_race_condition":1,"feed_content_events_open_mvk":1,"feed_content_events_expand_mvk":1,"feed_content_events_report_mvk":1,"feed_content_events_hide_subscribe_event_mvk":1,"profile_snowballs_mvk":1,"web_mytracker_collect_post_stats":1,"stories_mvk_best_friends":1,"stories_publisher_storybox_new_mvk":1,"feed_content_events_caption_link_click_mvk":1,"mvk_unused_skins_delete":1,"vkm_mvk_open_chat_link":1,"vkm_check_is_mobile_in_default_act":1,"unique_adblock_users":1,"clips_support_direct_link_mvk":1,"feed_show_more_text_global_handlers_fix_mvk":1,"mvk_lite_mode_disabled":1,"posting_hide_copyright_button_mvk":1,"mvk_audio_captcha_enabled":1,"collect_ttlb":1,"feed_first_page_size_initial_scroll_check":1,"group_recommended_tips_mvk_enabled":1,"mvk_video_app_promo_slow_yt_modal_should_track_exp_analytics":1,"mvk_remove_api_expired_token_function":1,"mvk_fix_react_navigation_time":1,"mvk_mention_events_with_inited_check":1,"special_groups_redirects":1,"groups_donut_banner_redesign":1,"mvk_router_deactivate_abort_signal":1,"clips_web_blur_restriction":1,"clips_restrictions_mvk":1,"mvk_collect_web_app_starts":1,"web_api_fix_exception":1,"web_api_handle_network_errors":1,"mvk_page_loading_error_banner":1,"web_api_token_fetch_retry":1,"interactive_video_redesign_badge_mvk":1,"web_messenger_open_app_ref":1,"market_single_cart_ozon_mvk":1,"clips_mvk_use_spa_edit_modal":1,"statlogs_clear_all_domains_cookie_MVKC-7414":1,"challenge_ajax_requests":1,"search_communities_hide_safe_search_filter_mvk":1,"hide_global_search_videoshowcase_mvk":1},"ex":[],"acl":[],"cfg":{"nft_profile_content_count":15,"short_video_pwa_notify_clips_threshold":3,"short_video_pwa_notify_retry_after":14,"short_video_publish_video_to_clips_duration_min":1,"short_video_publish_video_to_clips_duration_max":60,"clips_encode_progress_delay":3000,"clips_encode_progress_attempts":300,"special_subdomains_groups":[[-224318634,"test-sub-host","test_test_7777"],[-226270912,"specialdomaingroup","club226270912"],[-29809500,"sportmailru","sportmailru"]],"mvk_a11y_coverage_downlink_bandwidth":5,"sentry_dsn":["75b6a20df0014dbc8cf4d074eeeea6c5",27],"mvk_a11y_coverage_hash_prefixes":["tab-PUldVA","upload_image_","fXD"],"videoplayer_history_record_watch_time":25,"statlogs_cookie_size_limit":3500,"web_perf_use_new_logic":true,"akashi_endpoint":"https:\/\/akashi.vk-portal.net\/api\/v1\/web","langs_force_version":1,"vk_resource_compression_map":{"domain":{"userapi.com":"5","vk.com":"1"},"type":{"audio":"5","beacon":"11","css":"2","early-hints":"4","fetch":"7","iframe":"8","image":"12","img":"6","link":"1","navigation":"10","other":"13","script":"3","xmlhttprequest":"9"}}},"audioAdsConfig":{"_":"_"}};
+        window.isMVK = true;
+        window.audioSubscribe = false;
+        window.isArticleWebView = false;
+
+        var vkElem = document.querySelector('.vk');
+        var vkClass = vkElem.getAttribute('class');
+
+        function isSchemesSupported() {
+          return window.CSS &&
+            CSS.supports &&
+            CSS.supports('color', 'var(--custom-property)');
+        }
+
+        function cssPropertySupported(pNames) {
+          var element = document.createElement('a');
+          var index = pNames.length;
+          try {
+            while (index--) {
+              var name = pNames[index];
+
+              element.style.display = name;
+              if (element.style.display === name) {
+                return true;
+              }
+            }
+          } catch (pError) {}
+
+          return false;
+        }
+        var supports = {
+          js: true,
+          flex: cssPropertySupported('flex -webkit-flex -ms-flexbox -moz-box -webkit-box'.split(' ')),
+          schemes: isSchemesSupported()
+        };
+
+        supports.schemes && (vkClass = vkClass.replace('vk_schemes_no', 'vk_schemes_yes'));
+        supports.js && (vkClass = vkClass.replace('vk_js_no', 'vk_js_yes'));
+        supports.flex && (vkClass = vkClass.replace('vk_flex_no', 'vk_flex_yes'));
+        vkElem.setAttribute('class', vkClass);
+      })();
+    </script>
+
+    
+    <script type="text/javascript">
+<!--
+;/*top_script*/
+(function () {
+  'use strict';
+
+  const isCSSVariablesSupported = ()=>Boolean(window.CSS && CSS.supports && CSS.supports('color', 'var(--custom-property)'));
+  const isMatchMediaSupported = ()=>Boolean(window.matchMedia);
+  const isFlexboxSupported = ()=>document.documentElement.classList.contains('vk_flex_yes');
+  const isSupportsSupported = ()=>Boolean(window.CSS && CSS.supports);
+  const isGridsSupported = ()=>Boolean(typeof document.createElement('div').style.grid === 'string');
+  const isSVGSupported = ()=>Boolean(document.createElementNS) && Boolean(document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
+  const isMutationObserverSupported = ()=>'MutationObserver' in window;
+  function isLogicalAssignmentSupported() {
+      try {
+          new Function('var v;v||=1')();
+      } catch (err) {
+          return false;
+      }
+      return true;
+  }
+  const isJsModulesSupported = ()=>!window.nomodules;
+  const isES2020supported = ()=>Boolean(String.prototype.matchAll);
+  let _isES2021supported = null;
+  function isES2021supported() {
+      if (!_isES2021supported) {
+          // ES2021 РІРєР»СЋС‡Р°РµС‚ РІ СЃРµР±СЏ logical assignment. РЎР°С„Р°СЂРё РїРѕРґРґРµСЂР¶Р°Р» ES2021 РІ 13 РІРµСЂСЃРёРё, РЅРѕ Logical Assignment РІ РЅРµРµ РЅРµ РїРѕРїР°Р»
+          _isES2021supported = Boolean(String.prototype.replaceAll) && isLogicalAssignmentSupported();
+      }
+      return _isES2021supported;
+  }
+  const isES2022supported = ()=>Boolean(Object.hasOwn);
+
+  function top_script(params) {
+      deviceInfoDetector(params);
+      window.deferStaticEntries = params.defer_static;
+      if (params.al_ver) {
+          window.al = {
+              ver: params.al_ver
+          };
+      }
+      window._preventEvents = [
+          'click',
+          'touchstart',
+          'touchend',
+          'mouseover',
+          'mousemove'
+      ];
+      window._preventPointerEventsElement = document.createElement('style');
+      window._preventPointerEventsElement.innerHTML = window._preventEvents.map((event)=>`[on${event}]`).join(', ') + ', a, button, input' + ' { pointer-events: none; }';
+      document.head.insertAdjacentElement('afterbegin', window._preventPointerEventsElement);
+      window._onloadDeferCallbacks = [];
+      // РµСЃР»Рё СЂРµСЃР°Р№Р· РїСЂРѕРёР·РѕР№РґРµС‚ РґРѕ Р·Р°РіСЂСѓР·РєРё РїСЂРѕРєСЃРё, Р±СѓРґРµС‚ РјРЅРѕР¶РµСЃС‚РІРѕ РѕС€РёР±РѕРє
+      window.onBodyResize = ()=>{};
+      // РІ РїРѕСЃР»РµРґРЅРµРµ РІСЂРµРјСЏ СЃС‚Р°Р» СЃРёР»СЊРЅРѕ С„РѕРЅРёС‚СЊ РѕРЅСЃРєСЂРѕР»Р» РјРµСЃСЃРµРЅРґР¶РµСЂР°. РРЅР»Р°Р№РЅ РѕР±СЂР°Р±РѕС‚С‡РёРє, РєРѕС‚РѕСЂС‹Р№ РЅРµ РїСЂРµРІРµРЅС‚РёС‚СЃСЏ
+      // Рё РЅРµ СѓСЃРїРµРІР°РµС‚ Р·Р°РїСЂРѕРєСЃРёСЂРѕРІР°С‚СЊСЃСЏ РЅР° РјРµРґР»РµРЅРЅРѕРј РёРЅС‚РµСЂРЅРµС‚Рµ. РЎР°РјС‹Р№ РґРµС€РµРІС‹Р№ СЃРїРѕСЃРѕР± РµРіРѕ СѓСЃРїРѕРєРѕРёС‚СЊ - Р·Р°РіР»СѓС€РєР° РЅРёР¶Рµ
+      // РЈР±СЂР°С‚СЊ РєРѕРіРґР° РјРµСЃСЃРµРЅРґР¶РµСЂ РЅР° РјРІРє РЅР°С‡РЅРµС‚ РїРѕРґРґРµСЂР¶РёРІР°С‚СЊСЃСЏ
+      window.Messenger = {
+          _onMainScroll: ()=>{},
+          _onConvoScroll: ()=>{}
+      };
+      // bootstrap
+      window.cur = {
+          destroy: []
+      };
+      window.lang = {};
+      window.extend = function() {
+          const args = Array.prototype.slice.call(arguments);
+          const obj = args.shift();
+          if (!args.length) {
+              return {
+                  obj
+              };
+          }
+          for(let i = 0, l = args.length; i < l; i++){
+              for(const key in args[i]){
+                  if (key === 'layerX' || key === 'layerY') {
+                      continue;
+                  }
+                  obj[key] = args[i][key];
+              }
+          }
+          return obj;
+      };
+      window.onDomReady = (callback)=>{
+          if (window.document.readyState === 'loading') {
+              window.document.addEventListener('DOMContentLoaded', ()=>callback(), {
+                  once: true
+              });
+              return;
+          }
+          callback();
+      };
+      window.onDOMReady = window.onDomReady;
+      window.onloadDeferStatic = (fn, force = false)=>{
+          if (force === true) {
+              fn();
+          } else if (window.deferStaticEntries.length > 0) {
+              window._onloadDeferCallbacks.push(()=>{
+                  fn();
+              });
+          } else {
+              window.onDomReady(()=>{
+                  fn();
+              });
+          }
+      };
+      /**
+     * РћР±РѕСЂР°С‡РёРІР°РµС‚ РёРЅР»Р°Р№РЅ РєРѕРґ, С‡С‚РѕР±С‹ РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё РїРѕРЅСЏС‚СЊ РјРµСЃС‚Рѕ, РІ РєРѕС‚РѕСЂРѕРј СЌС‚РѕС‚ РєРѕРґ Р±С‹Р» РґРѕР±Р°РІР»РµРЅ.
+     * Р’РѕР·РјРѕР¶РЅРѕ, СЃС‚РѕРёС‚ СЃРґРµР»Р°С‚СЊ Р±РѕР»РµРµ С‡РёСЃС‚РѕРµ РѕР±РѕСЂР°С‡РёРІР°РЅРёРµ. Р­С‚РѕС‚ РєРѕРґ РґРѕР±Р°РІР»РµРЅ РґР»СЏ РёСЃРїСЂР°РІР»РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ С„РѕРЅР°.
+     */ window.taggedInline = (name, cb)=>{
+          window.__inline_tag = name;
+          try {
+              cb();
+          } catch (e) {
+              throw e;
+          } finally{
+              delete window.__inline_tag;
+          }
+      };
+      // РЎР°РјС‹Рµ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РїРѕР»РёС„РёР»С‹. РћСЃС‚Р°Р»СЊРЅС‹Рµ вЂ” РІ polyfills.js
+      if (window.NodeList && !NodeList.prototype.forEach) {
+          NodeList.prototype.forEach = Array.prototype.forEach;
+      }
+      window.onStaticLoadFailed = function notifyScriptBroken(el) {
+          if (!el || !('sendBeacon' in navigator)) {
+              return;
+          }
+          navigator.sendBeacon('/?act=broken_static_log', new URLSearchParams({
+              type: el.tagName === 'SCRIPT' ? 'script' : 'style',
+              src: el.src || el.href,
+              visibility: document.visibilityState,
+              href: location.href
+          }));
+      };
+      window.onAssetLoaded = function onAssetLoaded(el) {
+          if (window.stManager) {
+              window.stManager.assetLoaded(el);
+          } else {
+              var _window;
+              var ___loaded_assets;
+              (___loaded_assets = (_window = window).__loaded_assets) != null ? ___loaded_assets : _window.__loaded_assets = [];
+              window.__loaded_assets.push(el);
+          }
+      };
+      function detectHighestEcmaVersion() {
+          const ecmaDetectors = [
+              isES2022supported,
+              isES2021supported,
+              isES2020supported
+          ];
+          const ecmaVersions = [
+              'es2022',
+              'es2021',
+              'es2020'
+          ];
+          for(let i = 0; i < ecmaDetectors.length; i++){
+              if (ecmaDetectors[i]()) {
+                  return ecmaVersions[i];
+              }
+          }
+          return '< es2022';
+      }
+      window.highestEcmaSupported = detectHighestEcmaVersion();
+  }
+  function deviceInfoDetector({ iospwa_cookie, device_cookie, cookie_secure, cookie_samesite, cookie_path, cookie_domain, need_reload }) {
+      const expires = new Date(new Date().getTime() + 7776e6).toUTCString();
+      if (navigator.standalone === true && document.cookie.indexOf(`${iospwa_cookie}=1`) === -1) {
+          document.cookie = `${iospwa_cookie}=1; expires=${expires};${cookie_secure}${cookie_samesite} path=${cookie_path}; domain=${cookie_domain}`;
+      }
+      const doc = document;
+      const win = window;
+      const typeUndef = 'undefined';
+      const supportSign = '!';
+      const noSupportSign = '-';
+      const screen /* c */  = win.screen;
+      const width /* g */  = screen.width || 0;
+      const height /* c */  = screen.height || 0;
+      const dpr /* n */  = win.devicePixelRatio || 1;
+      const innerWidth = win.innerWidth || 0;
+      const cookieReg = new RegExp(`(^|;\\s+)${device_cookie}=([^;]+)`);
+      const cookieMatched /* p */  = (doc.cookie.match(cookieReg) || [])[2] || '';
+      const parts /* h */  = cookieMatched.split('/');
+      const DETECTION_COOKIE_LENGTH = 11;
+      const isCookieValid = cookieMatched && width == parts[0] && height == parts[1] && dpr == parts[2] && parts[3].length === DETECTION_COOKIE_LENGTH;
+      const savedVKUISupportCheck = isCookieValid ? parts[3][8] : false;
+      const makeCookieRewrite = savedVKUISupportCheck === noSupportSign && checkVKUISupport() !== savedVKUISupportCheck;
+      const updateInnerWidthOnly = isCookieValid && !makeCookieRewrite && innerWidth != parts[4];
+      if (!isCookieValid || makeCookieRewrite || updateInnerWidthOnly) {
+          const detected /* g */  = [
+              width,
+              height,
+              dpr,
+              doDetect(),
+              innerWidth
+          ].join('/');
+          doc.cookie = `${device_cookie}=; expires=${new Date(0).toUTCString()};${cookie_secure}${cookie_samesite} path=${cookie_path}`;
+          doc.cookie = `${device_cookie}=${detected}; expires=${expires};${cookie_secure}${cookie_samesite} path=${cookie_path}; domain=${cookie_domain}`;
+          if (!updateInnerWidthOnly && doc.cookie !== '' && need_reload) {
+              location.reload();
+          }
+      }
+      function checkVKUISupport() {
+          const supports = isFlexboxSupported() && isMatchMediaSupported() && isSVGSupported() && isMutationObserverSupported();
+          return supports ? supportSign : noSupportSign;
+      }
+      function checkModernCssSupport() {
+          // TODO: Check possibility to replace with VKUI support or jsModules support
+          const supports = isFlexboxSupported() && isMatchMediaSupported() && isCSSVariablesSupported() && isSupportsSupported() && isGridsSupported() && isSVGSupported();
+          return supports ? supportSign : noSupportSign;
+      }
+      function doDetect() {
+          const supportsXhr /* c */  = function() {
+              let supports;
+              try {
+                  // eslint-disable-next-line no-restricted-globals
+                  supports = new XMLHttpRequest();
+              } catch (a) {
+                  try {
+                      supports = new ActiveXObject('Msxml2.XMLHTTP');
+                  } catch (err1) {
+                      try {
+                          supports = new ActiveXObject('Microsoft.XMLHTTP');
+                      } catch (err2) {}
+                  }
+              }
+              return supports ? supportSign : noSupportSign;
+          }();
+          const supportsFile /* g */  = function() {
+              let elem = doc.createElement('div');
+              elem.innerHTML = '<input type="file" />';
+              elem = elem.getElementsByTagName('input')[0];
+              return 'file' !== elem.type || elem.disabled ? noSupportSign : supportSign;
+          }();
+          const supportsTouch /* h */  = 'ontouchstart' in win ? supportSign : noSupportSign;
+          let supportsGeo /* m */  = noSupportSign;
+          try {
+              if (typeof navigator.geolocation !== typeUndef) {
+                  supportsGeo = supportSign;
+              } else if (typeof win.google !== typeUndef && typeof google.gears !== typeUndef) {
+                  supportsGeo = supportSign;
+              } else if (typeof device !== typeUndef && typeof device.getServiceObject !== typeUndef) {
+                  supportsGeo = supportSign;
+              } else if (typeof Mojo !== typeUndef && typeof Mojo.Service.Request !== 'Mojo.Service.Request') {
+                  supportsGeo = supportSign;
+              }
+          } catch (e) {}
+          const supportsAudioMpeg /* l */  = function(mimeType) {
+              try {
+                  const audio = win.Audio ? new Audio() : doc.createElement('audio');
+                  if (audio.canPlayType && audio.canPlayType(mimeType) && 'no' !== audio.canPlayType(mimeType)) {
+                      return supportSign;
+                  }
+              } catch (e) {}
+              return noSupportSign;
+          }('audio/mpeg');
+          const supportsTransform /* n */  = function(transform /* b */ ) {
+              try {
+                  const elem /* a */  = doc.createElement('div');
+                  const prefixes /* g */  = [
+                      '',
+                      'webkit',
+                      'Moz',
+                      'ms',
+                      'O'
+                  ];
+                  for(let i /* c */  = 0, len /* h */  = prefixes.length; i < len; i++){
+                      const prefix = prefixes[i];
+                      const prop = prefix ? prefix + transform : transform.toLowerCase();
+                      if (typeof elem.style[prop] !== typeUndef) {
+                          return supportSign;
+                      }
+                  }
+                  return noSupportSign;
+              } catch (e) {
+                  return noSupportSign;
+              }
+          }('Transform');
+          const supportsFileAPI = function() {
+              if ((win.XMLHttpRequest || win.XDomainRequest) && (win.FormData || win.FileReader && (win.XMLHttpRequest && XMLHttpRequest.sendAsBinary || win.ArrayBuffer && win.Uint8Array && (win.MozBlobBuilder || win.WebKitBlobBuilder || win.BlobBuilder)))) {
+                  return supportSign;
+              }
+              return noSupportSign;
+          }();
+          const supportsJSModules = isJsModulesSupported() ? supportSign : noSupportSign;
+          const supportsVKUI = checkVKUISupport();
+          const supportsModernCss = checkModernCssSupport();
+          const supportsES2021 = isES2021supported() ? supportSign : noSupportSign;
+          return [
+              supportsXhr,
+              supportsFile,
+              supportsTouch,
+              supportsGeo,
+              supportsAudioMpeg,
+              supportsTransform,
+              supportsFileAPI,
+              supportsJSModules,
+              supportsVKUI,
+              supportsES2021,
+              supportsModernCss
+          ].join('');
+      }
+  }
+
+  return top_script;
+
+})()({"device_cookie":"remixmdevice","iospwa_cookie":"remixmiospwa","cookie_path":"\/","cookie_domain":".vk.com","cookie_samesite":"","cookie_secure":" Secure;","need_reload":true,"defer_static":[],"al_ver":""});;/*flush_controller*/
+(function () {
+  'use strict';
+
+  (function() {
+      const frag = document.createDocumentFragment();
+      const elem = document.createElement('div');
+      const range = document.createRange();
+      frag.appendChild(elem);
+      range.selectNodeContents(elem);
+      window.cdf = function cdf(html) {
+          if (!html) return document.createDocumentFragment();
+          return range.createContextualFragment(html);
+      };
+  })();
+  function addBodyAttributes(attrsObj) {
+      for(const key in attrsObj){
+          if (attrsObj.hasOwnProperty(key)) {
+              if (document.body.hasAttribute(key) && key === 'class') {
+                  document.body.setAttribute(key, document.body.getAttribute(key) + ' ' + attrsObj[key]);
+              } else {
+                  document.body.setAttribute(key, attrsObj[key]);
+              }
+          }
+      }
+  }
+  function removeSkeletonLayout() {
+      const layoutEl = document.querySelector('.layout--flush');
+      if (layoutEl) {
+          layoutEl.remove();
+      }
+  }
+  function appendSkeletonToLayout() {
+      const el = document.getElementById('flush_skeleton_container');
+      const mcont = document.getElementById('mcont');
+      mcont.appendChild(el);
+      el.style.display = 'block';
+      const progressBarLine = document.getElementById('head-progress-bar');
+      if (progressBarLine) {
+          progressBarLine.style.transform = 'translate(30%)';
+      }
+  }
+  function processFlushHeadPartInsert(value) {
+      const html = new DOMParser().parseFromString(value, 'text/html').body.innerText;
+      const headFrag = window.cdf(html);
+      document.head.appendChild(headFrag);
+  }
+  function processComments() {
+      Array.from(document.body.childNodes).forEach((node)=>{
+          if (node.nodeType === 8 && node.nodeValue) {
+              const parts = node.nodeValue.split(':');
+              const value = parts.slice(1).join(':');
+              switch(parts[0]){
+                  case 'flush_head_part_insert':
+                      processFlushHeadPartInsert(value);
+                      node.remove();
+                      break;
+              }
+          }
+      });
+  }
+  function onFlushFinish() {
+      delete window.FlushController;
+  }
+  // eslint-disable-next-line no-restricted-syntax
+  function initFlushController() {
+      window.FlushController = {
+          addBodyAttributes,
+          removeSkeletonLayout,
+          processComments,
+          appendSkeletonToLayout
+      };
+      document.addEventListener('DOMContentLoaded', ()=>{
+          onFlushFinish();
+      });
+  }
+
+  return initFlushController;
+
+})()([]);
+//-->
+</script>
+    
+<link rel="preload" href="https://st6-22.vk.com/css/fonts/VKSansDisplayDemiBoldFaux.v100.woff2" as="font" type="font/woff2" crossorigin/>
+    <!--defer:["variables.css","BadBrowser.css","vk_sans_display_faux.css","vk_sans_display.css"]-->
+<!--async:["grip.js"]-->
+<script src="https://st6-22.vk.com/dist/mobile/runtime.ebbd3751cd025873.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/vendors.fa03a04dc39a20b5.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/vendors~sentry.34cf090fc00f043b.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/b-493df50a7f19a0a2.fc7a87f545d9bcc3.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/polyfills.f3e28e5a145cb13f.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/vendors~vkjs.26e39eaf27f22160.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/vendors~eventemitter.e34565a004092b5b.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/b-eddde02b452bb196.19b6d9ede91ad123.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/b-ccefc682f38f859d.6487a5e5ba81c7ff.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/window_proxy.3eaf0b6604e63d5a.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+<script src="https://st6-22.vk.com/dist/mobile/vk_sans_observer.6765996b5e2282a1.js" onerror="window.onStaticLoadFailed && window.onStaticLoadFailed(this)"></script>
+
+    <link rel="canonical" href="https://vk.com/" />
+    <link rel="alternate" href="android-app://com.vkontakte.android/vkontakte/m.vk.com/" />
+</head><body  class="vk__page _ivk _hover vk_ios_no vk_stickers_hints_support_no opera_mini_no vk_safari_no bad_browser_page_fast_reload vk_tabbar_bottom  vk_tabbar_hidden   vk_al_no vk_mode_regular">
+  <div class="HeadProgressbar" id="head-progress-bar-container" style="visibility: hidden"><div class="HeadProgressbar__progress" style="transform: translate(0%)" id="head-progress-bar"><div></div></div></div>
+  <script id="color-scheme-script" type="text/javascript">
+<!--
+;/*body*/
+(function () {
+  'use strict';
+
+  function body({ colorSchemeMode, isForcedColorSchemeMode, isDarkSchemeGuideHidden, colorSchemesMap }) {
+      const isSchemesSupported = ()=>{
+          return window.CSS && CSS.supports && CSS.supports('color', 'var(--custom-property)');
+      };
+      function initBasicColorScheme(mode, schemesMap) {
+          const ColorSchemeMode = {
+              Light: 'light',
+              Dark: 'dark',
+              Auto: 'auto'
+          };
+          const ColorSchemeName = {
+              Dark: 'space_gray',
+              Light: 'bright_light'
+          };
+          const SchemeColors = {
+              Dark: '#222222',
+              Light: '#ffffff'
+          };
+          const colorScheme = {
+              isSchemesAutoSwitchingSupported () {
+                  return window.matchMedia && window.matchMedia('(prefers-color-scheme)').matches;
+              },
+              applyScheme (element, schemeKey) {
+                  const scheme = (schemesMap == null ? void 0 : schemesMap[schemeKey]) || schemeKey;
+                  element.setAttribute('scheme', scheme);
+              },
+              setScheme (isDark) {
+                  var _document_querySelector, _document_querySelector1;
+                  if (!isSchemesSupported()) {
+                      return;
+                  }
+                  this.applyScheme(document.body, isDark ? ColorSchemeName.Dark : ColorSchemeName.Light);
+                  (_document_querySelector = document.querySelector('meta[name=theme-color]')) == null ? void 0 : _document_querySelector.setAttribute('content', isDark ? SchemeColors.Dark : SchemeColors.Light);
+                  (_document_querySelector1 = document.querySelector('meta[name=color-scheme]')) == null ? void 0 : _document_querySelector1.setAttribute('content', isDark ? 'dark' : 'light');
+              },
+              setMode () {
+                  let isDark = false;
+                  switch(mode){
+                      case ColorSchemeMode.Light:
+                          {
+                              isDark = false;
+                              break;
+                          }
+                      case ColorSchemeMode.Dark:
+                          {
+                              isDark = true;
+                              break;
+                          }
+                      case ColorSchemeMode.Auto:
+                          {
+                              if (this.isSchemesAutoSwitchingSupported()) {
+                                  const mql = window.matchMedia('(prefers-color-scheme: dark)');
+                                  isDark = mql.matches;
+                              } else {
+                                  mode = ColorSchemeMode.Light;
+                              }
+                              break;
+                          }
+                  }
+                  this.setScheme(isDark);
+              }
+          };
+          colorScheme.setMode();
+      }
+      let resultColorSchemeMode = colorSchemeMode;
+      let isModeSavingAllowed = true;
+      try {
+          const sessionsColorSchemeMode = sessionStorage.getItem('colorScheme');
+          if (sessionsColorSchemeMode) {
+              resultColorSchemeMode = sessionsColorSchemeMode;
+              isModeSavingAllowed = false;
+              if (window.colorScheme) {
+                  window.colorScheme.isModeSavingAllowed = false;
+              }
+          }
+          if (isForcedColorSchemeMode) {
+              resultColorSchemeMode = colorSchemeMode;
+              isModeSavingAllowed = false;
+              if (window.colorScheme) {
+                  window.colorScheme.isModeSavingAllowed = false;
+              }
+              sessionStorage.setItem('colorScheme', colorSchemeMode);
+          }
+      } catch (e) {}
+      if (window.colorScheme) {
+          window.colorScheme.init({
+              mode: resultColorSchemeMode,
+              schemesMap: colorSchemesMap
+          });
+      } else {
+          window.colorSchemeInit = {
+              mode: resultColorSchemeMode,
+              schemesMap: colorSchemesMap
+          };
+          window.colorSchemeInitIsModeSavingAllowed = isModeSavingAllowed;
+          initBasicColorScheme(resultColorSchemeMode, colorSchemesMap);
+      }
+      const thisScript = document.getElementById('color-scheme-script');
+      thisScript.parentNode.removeChild(thisScript);
+  }
+
+  return body;
+
+})()({"colorSchemeMode":"auto","isForcedColorSchemeMode":false,"colorSchemesMap":null});
+//-->
+</script>
+  
+  <div style="position: absolute; left: -9999; top: 0; height: 0; width: 0; overflow: hidden;">
+<svg class="NftAvatar__asset" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" fill="currentColor" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="nftMountBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#2EE6A8"/>
+      <stop offset="0.34375" stop-color="#3399FF" />
+      <stop offset="0.692708" stop-color="#9933FF" />
+      <stop offset="1" stop-color="#FF3399"/>
+    </linearGradient>
+    <clipPath id="nftClipMask" clipPathUnits="objectBoundingBox">
+      <path d="M0.314,0.034 A0.118,0.118,0,0,1,0.428,0.004 l0.382,0.102 a0.118,0.118,0,0,1,0.083,0.083 l0.102,0.382 a0.118,0.118,0,0,1,-0.03,0.114 L0.686,0.966 a0.118,0.118,0,0,1,-0.114,0.03 l-0.382,-0.102 a0.118,0.118,0,0,1,-0.083,-0.083 L0.004,0.428 a0.118,0.118,0,0,1,0.03,-0.114 L0.314,0.034"/>
+    </clipPath>
+    <clipPath id="decorationNftClip56">
+      <path d="M17.6397 2.85774C19.4081 1.08936 21.9855 0.398735 24.4012 1.046L44.5937 6.45657C47.0093 7.10384 48.8962 8.99068 49.5434 11.4063L54.954 31.5988C55.6013 34.0145 54.9106 36.5919 53.1423 38.3603L38.3603 53.1423C36.5919 54.9106 34.0145 55.6013 31.5988 54.954L11.4063 49.5434C8.99068 48.8962 7.10384 47.0093 6.45657 44.5937L1.04601 24.4012C0.398735 21.9855 1.08936 19.4081 2.85774 17.6397L17.6397 2.85774"/>
+    </clipPath>
+    <clipPath id="decorationNftClip64">
+      <path d="M20.5679 2.85774C22.3363 1.08936 24.9137 0.398735 27.3294 1.046L51.5219 7.52837C53.9375 8.17564 55.8244 10.0625 56.4716 12.4781L62.954 36.6706C63.6013 39.0863 62.9106 41.6637 61.1423 43.4321L43.4321 61.1423C41.6637 62.9106 39.0863 63.6013 36.6706 62.954L12.4781 56.4716C10.0625 55.8244 8.17564 53.9375 7.52837 51.5219L1.04601 27.3294C0.398735 24.9137 1.08936 22.3363 2.85774 20.5679L20.5679 2.85774"/>
+    </clipPath>
+    <mask id="decorationNftMask60">
+      <rect fill="white" x="0" y="0" width="100%" height="100%" />
+      <path fill="black" d="M 21.1038 4.8577 C 22.8722 3.0894 25.4496 2.3987 27.8653 3.046 L 50.0578 8.9925 C 52.4734 9.6397 54.3603 11.5266 55.0075 13.9422 L 60.954 36.1347 C 61.6013 38.5504 60.9106 41.1278 59.1423 42.8962 L 42.8962 59.1423 C 41.1278 60.9106 38.5504 61.6013 36.1347 60.954 L 13.9422 55.0075 C 11.5266 54.3603 9.6397 52.4734 8.9925 50.0578 L 3.046 27.8653 C 2.3987 25.4496 3.0894 22.8722 4.8577 21.1038 L 21.1038 4.8577"/>
+    </mask>
+    <clipPath id="decorationCircleClip64">
+      <path d="
+        M 32 0
+        a 32 32 0 0 1 0 64
+        a 32 32 0 0 1 0 -64
+        v 2
+        a 30 30 0 0 0 0 60
+        a 30 30 0 0 0 0 -60
+      "/>
+    </clipPath>
+  </defs>
+  <path vector-effect="non-scaling-stroke" paint-order="fill" id="nftMount" d="M31.434 3.447A11.77 11.77 0 0 1 42.802.401l38.23 10.244a11.77 11.77 0 0 1 8.323 8.322l10.244 38.23a11.77 11.77 0 0 1-3.046 11.369L68.566 96.553a11.77 11.77 0 0 1-11.368 3.046l-38.23-10.244a11.77 11.77 0 0 1-8.323-8.322L.401 42.803a11.77 11.77 0 0 1 3.046-11.369L31.434 3.447Z"/>
+</svg>
+</div>
+  <div class="BadBrowserHeader"><div class="BadBrowserHeader__inner"><a href="/"><img class="BadBrowserHeader__logo" srcSet="/images/mobile/icons/vk_logo_color_32_2x.png 2x" src="/images/mobile/icons/vk_logo_color_32.png" alt="VK" /></a></div></div><div class="BadBrowser"><div class="BadBrowser__content"><h1 class="BadBrowser__title">Votre navigateur est obsol&#232;te</h1><p class="BadBrowser__text">Cela peut entra&#238;ner un fonctionnement lent de VK ou des erreurs.<br/>Mettez &#224; jour votre navigateur ou installez l&#39;un des navigateurs suivants :</p><div class="BadBrowser__browsers"><div class="BadBrowser__browsersTable"><div class="BadBrowser__browsersTableCell"><button class="Browser" onClick="ajax.post(&#39;/bad_browser.php&#39;, { act: &#39;stats&#39;, clicked_browser: &#39;opera&#39; })" type="button" aria-label="Opera"><img class="Browser__image" src="https://sun6-22.userapi.com/ZdV8d-XHc_5GsnwSSBvJSCZ7Dv5TUEdZuQILrw/dTxtHF9uF1M.png" srcSet="https://sun6-23.userapi.com/kH8RLj3loZ1exlWJIr4kTGG1Fo5JWNPWRp_-zg/5E7DNC0LZms.png 2x" alt="Opera" /><p class="Browser__title">Opera</p></button></div><div class="BadBrowser__browsersTableCell"><button class="Browser" onClick="ajax.post(&#39;/bad_browser.php&#39;, { act: &#39;stats&#39;, clicked_browser: &#39;firefox&#39; })" type="button" aria-label="Firefox"><img class="Browser__image" src="https://sun6-21.userapi.com/6DD0xSghpEY4ZOnSoOQGo5hvOqZld01WrEb-dA/I-cI-hyWOi0.png" srcSet="https://sun6-23.userapi.com/m_nGlwXl8BfbuPxJLWz8P8KUIzS_5xDn7_fYYA/NgOj9_4a5RU.png 2x" alt="Firefox" /><p class="Browser__title">Firefox</p></button></div></div></div></div></div><script>window.layoutReady = true; window.dispatchEvent(new CustomEvent('layoutReady'))</script>
+  
+  <noscript><img style='display: none' src='/?act=no_js&hash=cd3017ae76aff7d912' /></noscript>
+  <script type="text/javascript">
+<!--
+onloadDeferStatic(function(){parent&&parent!=window&&(document.body.innerHTML='');try {window.store.stickers = {"url_template":"https:\/\/vk.com\/sticker\/1-%id%-%size%"}}catch(e){};(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");}, false);
+//-->
+</script>
+  <div id="vk_utils"></div>
+  <div id="z"></div>
+  <div id="MediaView_container"></div>
+  <div id="vk_bottom"></div>
+  <div id="theme_color_shim"></div>
+  
+  
+</body>

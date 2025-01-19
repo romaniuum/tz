@@ -1,0 +1,294 @@
+<!DOCTYPE html><!-- Last Published: Fri Jan 10 2025 23:04:20 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="3fc60d38f8844162f614def2adb2dcd2.webflow.io" data-wf-page="65611d87f32c4fcae553e22d" data-wf-site="5f7a5e204f25f20dc72567dc"><head><meta charset="utf-8"/><title>SmugMug: Protect, Share, Store, and Sell Your Photos</title><meta content="Whether you want a photo website that sells prints, secure client galleries or just need unlimited storage, let us be your all-in-one solution." name="description"/><meta content="SmugMug: Protect, Share, Store, and Sell Your Photos" property="og:title"/><meta content="Whether you want a photo website that sells prints, secure client galleries or just need unlimited storage, let us be your all-in-one solution." property="og:description"/><meta content="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/601c25368beed132ade150bf_home.jpg" property="og:image"/><meta content="SmugMug: Protect, Share, Store, and Sell Your Photos" property="twitter:title"/><meta content="Whether you want a photo website that sells prints, secure client galleries or just need unlimited storage, let us be your all-in-one solution." property="twitter:description"/><meta content="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/601c25368beed132ade150bf_home.jpg" property="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/css/3fc60d38f8844162f614def2adb2dcd2.4c66bbff3.min.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Inconsolata:400,700","Roboto Mono:100,300,regular,500,700","Inter:100,200,300,regular,500,600,700","Bebas Neue:regular","Josefin Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic","Smooch:regular","League Gothic:regular","Gelasio:regular,500,600,700"]  }});</script><script src="https://use.typekit.net/iei2cch.js" type="text/javascript"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5ff38c36601e9695b078e1d2_favicon-small.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5ff38c3c75603ce143456de5_favicon-large.png" rel="apple-touch-icon"/><link href="https://www.smugmug.com/" rel="canonical"/><script src="https://www.googleoptimize.com/optimize.js?id=OPT-TN5ZZ74"></script>
+
+<style>
+html .w-webflow-badge { 
+  display: none !important;
+}
+
+.navbar-light .user-actions-link {
+  color: #fff !important;
+}
+.navbar-dark .user-actions-link {
+  color: #808080 !important;
+}
+  
+.nav-user-block {
+  display: none;
+}
+
+.is-current-user .nav-user-block,
+.is-anonymous .nav-user-block {
+  display: flex;
+}
+  
+.is-current-user .nav-user-block .nav-link,
+.is-current-user .nav-user-block .button,
+.is-loading-user .nav-user-block .nav-link,
+.is-loading-user .nav-user-block .button {
+  display: none;
+}
+
+  .is-current-user .hide-if-user {
+  display: none !important;
+}
+
+.is-anonymous .hide-if-anon {
+  display: none !important;
+}
+
+.is-loading-user .hide-if-user,
+.is-loading-user .hide-if-anon,
+.is-loading-user .hide-if-loading {
+  display: none !important;
+}
+
+.hide-if-loaded {
+  display: none !important;
+}
+
+.is-loading-user .hide-if-loaded {
+  display: block !important;
+}
+  
+.pointer {
+	pointer-events: none;
+}
+.dropdown-link-1:focus, .dropdown-link-2:focus, .dropdown-link-3:focus {
+	opacity:100% !important;  
+}
+.text-field {
+  	border-radius: 0px !important;
+}
+@supports ((backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px))) {
+  .dropdown-list {
+    background-color: rgba(51,51,51,.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .dropdown-list-mega {
+    background-color: rgba(51,51,51,.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .frost {
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+  }
+  .rain {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+  }
+}
+  
+a * {
+ pointer-events: none;
+}
+</style>
+
+<template id="gdpr-banner">
+      <div class="gdpr-container">
+        <style>
+          .box-border {
+            box-sizing: border-box;
+          }
+          .gdpr-banner {
+            z-index: 9999;
+          }
+          ._1su4iBQ8cMRt-mJn0XPZD2 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 528px;
+            padding: 30px;
+            color: #fff;
+            background-color: #000;
+            right: 0;
+          }
+          @media (min-width: 640px) {
+            .small\:mb-5 {
+              margin-bottom: 30px;
+            }
+            .small\:mr-5 {
+              margin-right: 30px;
+            }
+          }
+
+          .my-2 {
+            margin-top: 12px;
+            margin-bottom: 12px;
+          }
+          .ml-2 {
+            margin-left: 12px;
+          }
+          .text-accent, .text-green-20 {
+              color: #6eb800;
+          }
+          ._3FJfaRtMoNftylM1VfmvnP {
+            display: flex;
+            justify-content: flex-end;
+          }
+          ._22k7q5H0yfStErE4TBFKBg[data-skin="accent"] {
+            color: #fff;
+            background: #6eb800;
+          }
+          ._22k7q5H0yfStErE4TBFKBg[data-size="small"] {
+            min-width: 120px;
+            min-height: 36px;
+            font-size: .75rem;
+          }
+          .small\:flex-initial {
+            flex: 0 1 auto;
+          }
+          ._22k7q5H0yfStErE4TBFKBg {
+            line-height: 2;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 0 24px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            cursor: pointer;
+          }
+          ._22k7q5H0yfStErE4TBFKBg {
+            line-height: 2;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 0 24px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            cursor: pointer;
+          }
+        </style>      
+        <aside class="gdpr-banner _1su4iBQ8cMRt-mJn0XPZD2 box-border small:mr-5 small:mb-5" data-elem-id="cookiebanner_panel">
+          <h2 class="_3WJZ94BpjXPruVBRO1Zf_R">Privacy and Cookie Policy</h2>
+          <p class="my-2">
+            Your privacy is your business, and our priority. For decades, SmugMug has put member privacy first. Please know that we do use cookies to deliver a world-class experience with optimal site functionality. By continuing to use our site, <a class="text-accent hover:text-accentHover" data-testid="cookiebanner_policy_link" href="https://www.smugmug.com/about/privacy" target="_blank" rel="noopener noreferrer">you agree to our use of cookies and our stewardship of your data</a>.
+          </p>
+          <div class="_3FJfaRtMoNftylM1VfmvnP">
+            <button class="flex-1 small:flex-initial _22k7q5H0yfStErE4TBFKBg gdpr-dismiss" type="button" id="gdpr-reject-cookies" data-size="small" data-skin="accent" data-testid="cookiebanner_reject_button">
+              Reject
+            </button>
+            <button class="flex-1 ml-2 small:flex-initial _22k7q5H0yfStErE4TBFKBg gdpr-dismiss" type="button" id="gdpr-allow-cookies" data-size="small" data-skin="accent" data-testid="cookiebanner_allow_button">
+              Allow
+            </button>
+          </div>
+        </aside>    
+      </div>  
+    </template>
+
+   <template id="user-avatar">
+      <img
+        class="user-avatar"
+        src="https://photos.smugmug.com/photos/i-pLZs5Gm/0/c042a31f/30x30!/profileImg.jpg"
+        alt="username">
+    </template>
+
+    <template id="user-actions">
+      <div class="user-actions-container">
+        <style>
+          .user-actions {
+            padding-top: 18px;
+            padding-bottom: 18px;
+            padding-left:24px;
+          }
+          .user-actions-link {
+            display: flex;
+            padding-right: 24px;
+            align-items: center;
+            text-transform: uppercase;
+            color: gray;
+            text-decoration: none;
+          }
+          .user-actions-image {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-right: 6px;
+          }
+          .user-actions-default-avatar {
+            fill: #000000;
+            background-color: #f0f0f0;
+          }
+          .user-actions-username {
+            font-size: 0.66rem;
+            letter-spacing: 1px;
+          }
+        </style>
+        <div class="user-actions">
+          <a
+            href="/app/library"
+            aria-label="Username"
+            title="Username"
+            rel=""
+            class="user-actions-link"
+            data-tracking-category="Marketing Page"
+            data-tracking-action="Navigation Click"
+            data-tracking-property="/app/photos"
+            data-tracking-label="Username"
+            data-tracking-region="Header">
+            <span class="user-actions-image">
+              <svg
+                viewBox="0 0 30 30"
+                class="user-action-default-avatar"
+                xmlns="https://www.w3.org/2000/svg"
+                xmlns:xlink="https://www.w3.org/1999/xlink">
+                <path d="M24 22.667l-6.123-3.023.04-1.197s.819-1.212.976-2.882c.216-.023 1.336-2.972.965-3.059-.366-.089-.614.439-.614.439s.225-1.389.225-2.936c0-1.156-.875-2.998-2.931-3.375-1.535-.282-.765-.141-2.101-.634-.07.422-.372.575-.968.634-1.684.162-3.073 2.219-3.073 3.375 0 1.547.366 2.936.366 2.936s-.246-.528-.615-.439c-.369.087.748 3.036.968 3.059.158 1.67.977 2.882.977 2.882l.037 1.197L6 22.667v1.667h18v-1.667" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+
+            <span class="user-actions-username"></span>
+          </a>
+        </div>
+      </div>
+    </template>
+
+<style>
+  @media only screen and (max-width: 990px) {
+	.user-actions {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left:0px !important;
+    }
+  }
+</style>
+
+<script src="https://cdn.schemaapp.com/javascript/schemaFunctions.min.js"></script>
+<script>schemaLoad("Adam_Riemer_Marketing/SmugMug", "");</script></head><body class="body-9"><div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="c2474ced-86ae-686c-3e8a-13e80efeb2d4" data-easing="ease" data-easing2="ease" role="banner" class="navbar-light-copy w-nav"><div class="container-nav w-container"><a href="/" aria-current="page" class="brand w-nav-brand w--current"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5f7a64b9952b4ad1b9bebef2_logo.svg" loading="lazy" data-testid="controlbar_smlogo" alt="" class="logo"/></a><nav role="navigation" class="nav-menu w-nav-menu"><div class="nav-block"><div data-hover="true" data-delay="0" data-w-id="c2474ced-86ae-686c-3e8a-13e80efeb2da" class="dropdown navdark w-dropdown"><div class="nav-drop w-dropdown-toggle"><div class="carret w-icon-dropdown-toggle"></div><div data-testid="controlbar_navlink_features" class="nav-link">Features</div></div><nav class="dropdown-list w-dropdown-list"><div class="dropdown-column-wrap"><div class="nav-preface">Explore what you can do with your photos.</div><a href="https://www.smugmug.com/features/look-great" class="dropdown-link-1 w-inline-block"><div class="icon-square-look-great"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66856ecb9281a1d3a8c55c3e_site-customization.svg" alt="" class="image-114"/></div><div class="nav-content-wrap"><div class="nav-page-title">Look Great</div></div></a><a href="https://www.smugmug.com/features/earn-more" class="dropdown-link-2 w-inline-block"><div class="icon-square-sell"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66856f5b95cb60752915474f_earn%20more.svg" alt="" class="image-115"/></div><div class="nav-content-wrap"><div class="nav-page-title">Earn More</div></div></a><a href="https://www.smugmug.com/features/breathe-easy" class="dropdown-link-3 w-inline-block"><div class="icon-square-share"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66856efbaddc6f63e00d780c_automation.svg" alt="" class="image-116"/></div><div class="nav-content-wrap"><div class="nav-page-title">Breathe Easy</div></div></a><div class="navigation-column"><div class="nav-preface-more">More Features</div><a href="/features/apps" class="link-18">Apps</a><a href="/perks" class="link-18">Perks</a><a href="/features/sell-photos/print-products" class="link-18">Catalog</a></div></div></nav></div><a href="/plans" data-testid="controlbar_navlink_plans" class="nav-link w-nav-link">Plans</a><div data-hover="true" data-delay="0" data-w-id="588e5f31-a4fb-b52c-ab55-fec140ee00c1" class="dropdown navdark w-dropdown"><div class="nav-drop w-dropdown-toggle"><div class="carret w-icon-dropdown-toggle"></div><div data-testid="controlbar_navlink_community" class="nav-link">Community</div></div><nav class="dropdown-list w-dropdown-list"><div class="nav-preface">See what our community is up to.</div><a href="/films" class="dropdown-link-1 w-inline-block"><div class="nav-content-wrap"><div class="nav-page-title">Films</div></div></a><a href="/community/ambassadors" class="dropdown-link-2 w-inline-block"><div class="nav-content-wrap"><div class="nav-page-title">Ambassadors</div></div></a><a href="/stories" class="dropdown-link-2 w-inline-block"><div class="nav-content-wrap"><div class="nav-page-title">Stories</div></div></a><a href="/community/this-lens" class="dropdown-link---this-lens w-inline-block"><div class="nav-content-wrap"><div class="nav-page-title">This Lens</div></div></a><a href="/community/working-photographers" class="dropdown-link---this-lens w-inline-block"><div class="nav-content-wrap"><div class="nav-page-title">Get to work</div></div></a></nav></div><a data-w-id="331da8f2-3995-26fe-c44c-cc075ec9b5c6" href="/development-lab" class="raw-nav-new w-inline-block"><div class="nav-link">Development Lab</div><div data-w-id="331da8f2-3995-26fe-c44c-cc075ec9b5c9" class="new-tag"><div>new</div></div></a><a data-w-id="489af4be-0dad-bd06-d2c0-a1dec97e09db" href="/features/raw-photo-storage-management" class="raw-nav-new w-inline-block"><div class="nav-link">RAW Storage</div></a></div><div class="search"><a href="/search" class="search-nav w-inline-block"><div class="nav-link search">Search</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/60187a49ef74236b8b055c80_search.svg" loading="lazy" data-testid="controlbar_search_icon" alt="" class="search-icon"/></a></div><div id="navUserActions" class="login"><div class="nav-user-block"><a href="/login" data-testid="controlbar_login" class="nav-link uppercase w-nav-link">Log in</a><a data-testid="controlbar_tryfree" data-tracking-region="Header" data-tracking-category="Trial" data-tracking-action="Start" href="/signup" class="button try-it w-button">Try free</a></div></div></nav><a href="/signup" class="mobile-tryit w-button">TRY FREE</a><div class="menu-button w-nav-button"><div class="icon white w-icon-nav-menu"></div></div></div></div><div class="hero pro-motion"><div class="cta-container home"><div class="hero_diagonal"><div class="hero-left"><div class="div-block-208-copy"><h1 class="headline home">POWERING THE BUSINESS OF PHOTOGRAPHY</h1><p class="left-paragraph nopad home">You capture the moment in ways only you can. We help you do everything else. </p><a data-tracking-action="Start" data-tracking-category="Trial" href="/signup" target="_blank" class="primary-button w-button">START MY FREE TRIAL</a></div></div></div><div class="trapezoid"></div><div class="hero-right"><div data-poster-url="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65a6ab1c6f6e121b2576fe85_home page background video jan 23C 720p-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65a6ab1c6f6e121b2576fe85_home page background video jan 23C 720p-transcode.mp4,https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65a6ab1c6f6e121b2576fe85_home page background video jan 23C 720p-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video-11 w-background-video w-background-video-atom"><video id="6335b842-c5a1-49fc-986c-b609cbd39647-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65a6ab1c6f6e121b2576fe85_home page background video jan 23C 720p-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65a6ab1c6f6e121b2576fe85_home page background video jan 23C 720p-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65a6ab1c6f6e121b2576fe85_home page background video jan 23C 720p-transcode.webm" data-wf-ignore="true"/></video></div></div></div></div><div class="pro-motion-steps"><div data-ix="fade-up-1" class="accordion js-accordion-2"><div class="div-block-236"><div class="accordion-header js-accordion-header-2"><div class="accordion-header-wrap"><h2 class="content-headline accordion">We believe in your business. So much so we’re betting on it. <span class="text-span-21">Get SmugMug Pro FREE when you earn $500 in profit your first year.</span></h2></div><div data-w-id="51884b9e-af73-41d4-8ef5-531a541ad614" class="accordion-button"><div class="text-block-44">OPEN UP SHOP</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/644aca38dc5aa14f7a9eef37_Arrow%20Down%20dark.webp" loading="lazy" alt="" class="arrow-accordion home"/></div></div></div><div id="toc-1" class="accordion__item js-accordion-item active-2"><div data-ix="hide-on-load" style="height:0px" class="accordion-body js-accordion-body-2"><div class="w-layout-grid grid-15"><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad619-e553e22d" class="accordion-left"></div><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad61d-e553e22d" class="div-block-135 top"><div class="number-wrap blank"></div><div><h3 class="content-headline accordion scrunch"><span class="text-span-21">You could get the most powerful platform for your business—for free.</span></h3><p class="grid-text big">Here&#x27;s how it works:</p></div></div><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad622-e553e22d" class="div-block-135"><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad623-e553e22d" class="number-wrap"><div class="pm-number">1</div></div><div><p class="grid-text">Start your two-week free trial and subscribe to a one-year SmugMug Pro plan.</p></div></div><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad629-e553e22d" class="div-block-135"><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad62a-e553e22d" class="number-wrap"><div class="pm-number">2</div></div><div><p class="grid-text">Sell your photography! We have tons of resources to get you started in our <a href="/promo/success-starts-here" target="_blank" class="link-26">Learning Lab.</a></p></div></div><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad630-e553e22d" class="div-block-135"><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad631-e553e22d" class="number-wrap"><div class="pm-number">3</div></div><div><p class="grid-text">Once you hit the $500 mark in total profits, we’ll pay back the entirety of your Pro plan (valued at $384 USD).</p></div></div><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad639-e553e22d" class="div-block-135 bottom"><div id="w-node-_51884b9e-af73-41d4-8ef5-531a541ad63a-e553e22d" class="number-wrap"><div class="pm-number">4</div></div><div><p class="grid-text">Buy yourself something nice to celebrate, you earned it.</p></div></div></div><a href="https://www.smugmug.com/signup?utm_campaign=pro-motion-q3-2023&amp;utm_source=SmugMug&amp;utm_medium=website&amp;utm_content=new-hp-link" target="_blank" class="primary-button special w-button">GET STARTED</a></div></div></div></div><div class="pro-features w-clearfix"><div class="content-center flex"><h2 class="content-headline center blue">SmugMug is a business partner, sales assistant, and photo lab all in one.</h2><div class="p-wrap"></div></div><div class="div-block-306"><a href="/features/look-great" class="div-block-307 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834613d1fcac66411aabb7_look%20great.webp" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 78vw, (max-width: 991px) 66vw, 28vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834613d1fcac66411aabb7_look%20great-p-500.webp 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834613d1fcac66411aabb7_look%20great-p-800.webp 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834613d1fcac66411aabb7_look%20great-p-1080.webp 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834613d1fcac66411aabb7_look%20great.webp 1770w" alt="" class="image-99"/><div class="blog-read-more-copy"><h3 class="feature-block-text">Look great</h3><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/64189ce236481ac81b79521e_arrowrightorange.svg" loading="lazy" alt="" class="image-98"/></div></a><a href="/features/earn-more" class="div-block-307 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/668428c539688bb8af79e473_earn%20more.webp" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 78vw, (max-width: 991px) 66vw, 28vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/668428c539688bb8af79e473_earn%20more-p-500.webp 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/668428c539688bb8af79e473_earn%20more-p-800.webp 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/668428c539688bb8af79e473_earn%20more-p-1080.webp 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/668428c539688bb8af79e473_earn%20more-p-1600.webp 1600w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/668428c539688bb8af79e473_earn%20more.webp 1770w" alt="" class="image-99"/><div class="blog-read-more-copy"><h3 class="feature-block-text">Earn more</h3><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/64189ce236481ac81b79521e_arrowrightorange.svg" loading="lazy" alt="" class="image-98"/></div></a><a href="/features/breathe-easy" class="div-block-307 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66842943f63c31e1759655d9_breathe%20easy.webp" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 78vw, (max-width: 991px) 66vw, 28vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66842943f63c31e1759655d9_breathe%20easy-p-500.webp 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66842943f63c31e1759655d9_breathe%20easy-p-800.webp 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66842943f63c31e1759655d9_breathe%20easy-p-1080.webp 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66842943f63c31e1759655d9_breathe%20easy-p-1600.webp 1600w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66842943f63c31e1759655d9_breathe%20easy.webp 1770w" alt="" class="image-99"/><div class="blog-read-more-copy"><h3 class="feature-block-text">Breathe easy</h3><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/64189ce236481ac81b79521e_arrowrightorange.svg" loading="lazy" alt="" class="image-98"/></div></a></div></div><div class="social-proof w-clearfix"><div class="content-center flex"><h2 class="content-headline center">A platform for <strong>every</strong> photo business.</h2></div><div class="featured-social-proof"><div class="w-layout-grid featured-social-proof-grid"><div data-w-id="1137dd96-2215-d2ad-8ac5-a3a71bf559a7" class="photo-promotion"><div class="card-image-wrap"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630feb2331313e9d59b61c4b_richard.webp" loading="lazy" sizes="(max-width: 479px) 88vw, (max-width: 767px) 81vw, (max-width: 991px) 400px, 28vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630feb2331313e9d59b61c4b_richard-p-500.webp 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630feb2331313e9d59b61c4b_richard-p-800.webp 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630feb2331313e9d59b61c4b_richard-p-1080.webp 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630feb2331313e9d59b61c4b_richard.webp 1600w" alt="" class="card-image"/></div><div class="card-content"><div class="review-wrap"><p class="review-text">“4.7 million photos later we’re still going [with SmugMug]—if I posted one photo every minute, it would take me 7 ½ years to get through them all. We love it.”</p></div><div class="customer-info-wrap"><div class="customer-info-vertical"><div class="customer-name pink">RICHARD BURLEY</div><p class="cutomer-medium pink">Racing and event photography</p></div><div class="customer-story-wrap w-clearfix"><a data-action-category="Trial" data-tracking-action="Start" href="https://www.smugmug.com/development-lab/posts/smugmug-spotlight-richard-burley" target="_blank" class="link-block-5 orange small w-inline-block w-clearfix"><div class="text-link bright small">Read Richard&#x27;s story</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/6398dc980cbf71ae62ef29be_ArrowNext.png" loading="lazy" width="12" alt="" class="link-block-arrow small"/></a></div></div></div></div><div data-w-id="bba90c21-2c27-5c57-7a65-65ccf123778c" class="photo-promotion"><div class="card-image-wrap"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65983cc623216ceff35897c5_heidi-anderson.webp" loading="lazy" sizes="(max-width: 479px) 88vw, (max-width: 767px) 81vw, (max-width: 991px) 400px, 28vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65983cc623216ceff35897c5_heidi-anderson-p-500.webp 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65983cc623216ceff35897c5_heidi-anderson-p-800.webp 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65983cc623216ceff35897c5_heidi-anderson-p-1080.webp 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65983cc623216ceff35897c5_heidi-anderson.webp 1600w" alt="" class="card-image"/></div><div class="card-content"><div class="review-wrap"><p class="review-text">“The amount of time we save with the built-in sales tools is amazing. Literally, other than taking the photo, there’s not a single aspect of our business that’s not run through SmugMug.”</p></div><div class="customer-info-wrap"><div class="customer-info-vertical"><div class="customer-name pink">HEIDI ANDERSON</div><p class="cutomer-medium pink"><strong>Agriculture and rural photography</strong></p></div><div class="customer-story-wrap w-clearfix"><a data-action-category="Trial" data-tracking-action="Start" href="https://www.smugmug.com/stories/heidi-anderson" target="_blank" class="link-block-5 orange small w-inline-block w-clearfix"><div class="text-link bright small">Read Heidi&#x27;s story</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/6398dc980cbf71ae62ef29be_ArrowNext.png" loading="lazy" width="12" alt="" class="link-block-arrow small"/></a></div></div></div></div><div data-w-id="c6a45115-20c3-6a73-c1ac-54e675afcb12" class="photo-promotion"><div class="card-image-wrap"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630fe7ea3cd6cc6eb82b0c0a_Kamai-1%201.jpg" loading="lazy" sizes="(max-width: 479px) 88vw, (max-width: 767px) 81vw, (max-width: 991px) 400px, 28vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630fe7ea3cd6cc6eb82b0c0a_Kamai-1%201-p-500.jpg 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630fe7ea3cd6cc6eb82b0c0a_Kamai-1%201-p-800.jpg 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630fe7ea3cd6cc6eb82b0c0a_Kamai-1%201-p-1080.jpg 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630fe7ea3cd6cc6eb82b0c0a_Kamai-1%201-p-1600.jpg 1600w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/630fe7ea3cd6cc6eb82b0c0a_Kamai-1%201.jpg 1600w" alt="" class="card-image"/></div><div class="card-content"><div class="review-wrap"><p class="review-text">“I love SmugMug because of its integration with sales, and how I can seamlessly sell digital and printed products through my website.”</p></div><div class="customer-info-wrap"><div class="customer-info-vertical"><div class="customer-name pink">ERIKA SERESS</div><p class="cutomer-medium pink">Maternity and childhood photography</p></div><div class="customer-story-wrap w-clearfix"><a data-action-category="Trial" data-tracking-action="Start" href="https://www.smugmug.com/development-lab/posts/smugmug-spotlight-erika-seress" target="_blank" class="link-block-5 orange small w-inline-block w-clearfix"><div class="text-link bright small">Read Erika&#x27;s story</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/6398dc980cbf71ae62ef29be_ArrowNext.png" loading="lazy" width="12" alt="" class="link-block-arrow small"/></a></div></div></div></div></div></div></div><section class="venture-home"><div class="call-out"><div class="call-out-image plans"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66858bda10e3cd4c5687f254_venture-1.webp" loading="lazy" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 47vw, 55vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66858bda10e3cd4c5687f254_venture-1-p-500.webp 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66858bda10e3cd4c5687f254_venture-1-p-800.webp 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66858bda10e3cd4c5687f254_venture-1-p-1080.webp 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66858bda10e3cd4c5687f254_venture-1-p-1600.webp 1600w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66858bda10e3cd4c5687f254_venture-1.webp 1700w" class="image-55"/><div class="feature-block-copy"></div></div><div class="call-out-content plans"><h2 class="content-headline">Are you a business that wants to make money through photography?</h2><p class="paragraph-b">We can help with that, too.</p><a data-tracking-action="Start" data-tracking-category="Trial" href="https://smugmug.com/features/photography-revenue-for-businesses" class="link-block w-inline-block w-clearfix"><div class="text-link">Let&#x27;s talk</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5f7a64b9d92180009ba58e1c_ArrowNext.svg" loading="lazy" alt="" class="link-block-arrow"/></a></div></div></section><div><div class="cta-block"><div class="container-flex footer"><div class="center-header-wrap"><p class="center-header footer">Your photo business is a click away.</p><a data-tracking-action="Start" data-tracking-region="Footer" data-tracking-category="Trial" href="/signup" target="_blank" class="primary-button w-button">GET STARTED</a></div></div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta.webp" loading="lazy" alt="" sizes="100vw" srcset="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta-p-500.webp 500w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta-p-800.webp 800w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta-p-1080.webp 1080w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta-p-1600.webp 1600w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta-p-2000.webp 2000w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta-p-2600.webp 2600w, https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66834a58d4e72286a6dd853c_home-cta.webp 2878w" class="cta-bg-image"/></div></div><div data-testid="footer_footerobject" class="footer"><div class="container w-container"><div class="certification-block"><a href="http://www.awesome.co" class="link-block-17 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/66070d05d52e8ed03f8b1536_awesome-horizontal-logo.webp" loading="lazy" alt="" class="image-100"/></a><div class="certification-text"><div class="text-block-40">our good company is your good company.</div><div class="icon-wrap"><div class="tall-icons"><a href="https://www.tugboatinstitute.com/certified-evergreen/" target="_blank" class="link-block-12 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/6455325f05e295223f9da215_Certified%20evergreen_updated.svg" loading="lazy" alt="" class="image-63"/></a><a href="https://www.greatplacetowork.com/certified-company/7051750" target="_blank" class="link-block-13 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/65bbfb5ec0cd4ebfcf80d6d2_Great%20place%20to%20work%20certified%202024%20-2025%20white.svg" loading="lazy" alt="" class="image-64"/></a></div><div class="horizontal-icons"><a href="https://www.climateneutral.org/brand/smugmug" target="_blank" class="link-block-14 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/643ec53d1c9984b9b165eceb_Climate%20Neutral%20Certified%20Badge%20Vec%20Crop.svg" loading="lazy" width="124" alt=""/></a><a href="https://www.conservationalliance.com" target="_blank" class="link-block-15 w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/63f4fb6c8695327d0ba79be9_conservation%20alliance.svg" loading="lazy" alt="" class="image-65"/></a></div></div></div></div><div class="divider"></div><div class="footer-block"><div class="footer-link-wrapper"><div class="footer-links"><a data-testid="footer_apps" href="#" class="footer-header w-inline-block"><div class="button-text">Apps</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5fc99abf4012d3297ca7ba8c_Add.svg" loading="lazy" alt="" class="image-8"/></a><ul role="list" class="footer-list"><li><a data-testid="footer_ios" href="https://itunes.apple.com/us/app/smugmug/id364894061?mt=8" class="footer-text">iOS</a></li><li><a data-testid="footer_ios" href="https://www.smugmug.com/software-updates/macOS/latest?utm_campaign=native-apps&amp;utm_source=SmugMug&amp;utm_medium=website&amp;utm_content=macOS-download" class="footer-text">macOS</a></li><li><a data-testid="footer_android" href="https://play.google.com/store/apps/details?id=com.snapwood.smugfolio&amp;hl=en" class="footer-text">Android</a></li><li><a data-testid="footer_lightroom" href="https://help.smugmug.com/upload-from-lightroom-HkEIllw1Erz" class="footer-text">Lightroom</a></li></ul></div><div class="footer-links"><a data-testid="footer_community" href="#" class="footer-header w-inline-block"><div class="button-text">community</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5fc99abf4012d3297ca7ba8c_Add.svg" loading="lazy" alt="" class="image-8"/></a><ul role="list" class="footer-list"><li><a data-testid="footer_blog" href="/development-lab" class="footer-text">Development Lab</a></li><li><a data-testid="footer_smugmugfilms" href="/films" class="footer-text">SmugMug Films</a></li><li><a data-testid="footer_photographerstories" href="/stories" class="footer-text">Photographer Stories</a></li><li><a data-testid="footer_photographerstories" href="/community/climate-neutral" class="footer-text">Our Commitments</a></li><li><a data-testid="footer_ambassadors" href="/community/ambassadors" class="footer-text">Ambassadors</a></li><li><a data-testid="footer_forum" href="https://dgrin.com/" class="footer-text">Forum</a></li></ul></div><div class="footer-links"><a data-testid="footer_company" href="#" class="footer-header w-inline-block"><div class="button-text">company</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5fc99abf4012d3297ca7ba8c_Add.svg" loading="lazy" alt="" class="image-8"/></a><ul role="list" class="footer-list"><li><a data-testid="footer_flickr" href="https://www.flickr.com/" class="footer-text">Flickr</a></li><li><a data-testid="footer_flickr" href="https://thisweekinphoto.com/" class="footer-text">TWiP</a></li><li><a data-testid="footer_careers" href="/careers" class="footer-text">Careers</a></li><li><a data-testid="footer_referafriend" href="http://smugmug.com/refer-a-friend" class="footer-text">Refer-a-Friend</a></li><li><a data-testid="footer_giftofsmugmug" href="http://smugmug.com/gift" class="footer-text">Gift of SmugMug</a></li><li><a data-testid="footer_affiliateprogram" href="https://help.smugmug.com/customer/portal/articles/1463547" class="footer-text">Affiliate Program</a></li><li><a data-testid="footer_pressinquiries" href="mailto:press@smugmug.com" class="footer-text">Press Inquiries</a></li></ul></div><div class="footer-links"><a data-testid="footer_product" href="#" class="footer-header w-inline-block"><div class="button-text">product</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5fc99abf4012d3297ca7ba8c_Add.svg" loading="lazy" alt="" class="image-8"/></a><ul role="list" class="footer-list"><li><a data-testid="footer_sell" href="https://smugmug.com/features/professional-photo-sites" class="footer-text">Look Great</a></li><li><a data-testid="footer_share" href="https://www.smugmug.com/features/earn-money-selling-photos" class="footer-text">Earn More</a></li><li><a data-testid="footer_store" href="https://www.smugmug.com/features/photo-business-tools" class="footer-text">Breathe Easy</a></li><li><a data-testid="footer_plans" href="/plans" class="footer-text">Plans</a></li><li><a data-testid="footer_catalog" href="/features/sell-photos/print-products" class="footer-text">Catalog</a></li><li><a data-testid="footer_perks" href="/perks" class="footer-text">Perks</a></li></ul></div><div class="footer-links"><a data-testid="footer_support" href="#" class="footer-header w-inline-block"><div class="button-text">support</div><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5fc99abf4012d3297ca7ba8c_Add.svg" loading="lazy" alt="" class="image-8"/></a><ul role="list" class="footer-list"><li><a data-testid="footer_supportcenter" href="https://help.smugmug.com/" class="footer-text">Support Center</a></li><li><a data-testid="footer_contactahero" href="https://secure.smugmug.com/help/contact" class="footer-text">Contact a Hero</a></li><li><a data-testid="footer_productfeedback" href="https://feedback.smugmug.com/" class="footer-text">Product Feedback</a></li></ul></div></div><div class="newsletter-wrapper"><div data-testid="footer_signup_newslettertext" class="text-small right">Sign up for our newsletter</div><div class="form-block-2 w-form"><form id="wf-form-Newsletter" name="wf-form-Newsletter" data-name="Newsletter" method="get" class="form-2" data-wf-page-id="65611d87f32c4fcae553e22d" data-wf-element-id="06ad5767-db6a-cadf-8e96-edd2d2164100"><input class="text-field w-input" maxlength="256" name="email-2" data-name="Email 2" data-testid="footer_email_textfield" placeholder="Enter Email Address" type="email" id="email-2" required=""/><input type="submit" data-wait="Please wait..." data-testid="footer_signupbutton" class="button newsletter w-button" value="Sign Up"/></form><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div><div data-testid="footer_socialbuttonsblock" class="social-buttons"><a href="https://www.facebook.com/SmugMug" class="social-icon w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5f7a64b9cdacf74cf03f6b63_Facebook.svg" loading="lazy" data-testid="footer_facebooklink" alt=""/></a><a href="https://www.instagram.com/smugmug/" class="social-icon w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5f7a64b9ec144059692c158c_Instagram.svg" loading="lazy" data-testid="footer_instagramlink" alt=""/></a><a href="https://www.youtube.com/user/SmugMugFilms" class="social-icon w-inline-block"><img src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/5f7a64ba9e93b4021bfcc574_Youtube.svg" loading="lazy" data-testid="footer_youtubelink" alt=""/></a></div><div class="footer-term-privacy"><a data-testid="footer_terms" href="/about/terms" class="footer-text tp-links">Terms</a><a data-testid="footer_privacy" href="/about/privacy" class="footer-text tp-links">Privacy</a><div class="footer-text right tp-links">©2002-2025 SmugMug, Inc. </div></div><div data-testid="footer_slogan" class="footer-text right">Your photos look better here.®</div></div></div></div></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f7a5e204f25f20dc72567dc" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/5f7a5e204f25f20dc72567dc/js/3fc60d38f8844162f614def2adb2dcd2.e0a8795f02f6219ce68dd2858512649d.js" type="text/javascript"></script><script>
+parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"lMlK":[function(require,module,exports) {
+var define;
+var e;!function(n){var t;if("function"==typeof e&&e.amd&&(e(n),t=!0),"object"==typeof exports&&(module.exports=n(),t=!0),!t){var o=window.Cookies,r=window.Cookies=n();r.noConflict=function(){return window.Cookies=o,r}}}(function(){function e(){for(var e=0,n={};e<arguments.length;e++){var t=arguments[e];for(var o in t)n[o]=t[o]}return n}function n(e){return e.replace(/(%[0-9A-Z]{2})+/g,decodeURIComponent)}return function t(o){function r(){}function i(n,t,i){if("undefined"!=typeof document){"number"==typeof(i=e({path:"/"},r.defaults,i)).expires&&(i.expires=new Date(1*new Date+864e5*i.expires)),i.expires=i.expires?i.expires.toUTCString():"";try{var c=JSON.stringify(t);/^[\{\[]/.test(c)&&(t=c)}catch(a){}t=o.write?o.write(t,n):encodeURIComponent(String(t)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),n=encodeURIComponent(String(n)).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent).replace(/[\(\)]/g,escape);var f="";for(var u in i)i[u]&&(f+="; "+u,!0!==i[u]&&(f+="="+i[u].split(";")[0]));return document.cookie=n+"="+t+f}}function c(e,t){if("undefined"!=typeof document){for(var r={},i=document.cookie?document.cookie.split("; "):[],c=0;c<i.length;c++){var f=i[c].split("="),u=f.slice(1).join("=");t||'"'!==u.charAt(0)||(u=u.slice(1,-1));try{var a=n(f[0]);if(u=(o.read||o)(u,a)||n(u),t)try{u=JSON.parse(u)}catch(p){}if(r[a]=u,e===a)break}catch(p){}}return e?r[e]:r}}return r.set=i,r.get=function(e){return c(e,!1)},r.getJSON=function(e){return c(e,!0)},r.remove=function(n,t){i(n,"",e(t,{expires:-1}))},r.defaults={},r.withConverter=t,r}(function(){})});
+},{}],"s4Je":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.remove=exports.listen=exports.add=void 0;let e=new Map;const t=()=>{},s=(t,s)=>r=>{e[t].filter(e=>e.action===s).forEach(e=>{r.target.matches(e.selector)&&e.fns.map(e=>e(r))})},r=(e,t)=>s=>s.selector===e&&s.action==t,o=(e,t,s)=>e.filter(r(t,s)).length>0,n=(e,t)=>{e=e.filter(e=>e!==t)},l=(e,t)=>e.filter(e=>e!==t),c=(t,s)=>(n,l)=>{let c=e[t];o(c,n,s)?c.filter(r(n,s))[0].fns.push(l):c.push({selector:n,action:s,fns:[l]})};exports.add=c;const f=t=>(s,r)=>{let o=e[t];o.filter(e=>e.selector===s).forEach(e=>{e.fns.includes(r)&&(e.fns=l(e.fns,r)),e.fns.length<1&&n(o,e)})};exports.remove=f;const i=(t,r)=>(t.addEventListener(r,s(t,r)),e[t]=[],{add:c(t,r),remove:f(t)});exports.listen=i;
+},{}],"hHCd":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.setup=void 0;const e=()=>{!function(e,o,s,t,n,p,c){e[n]||(e.GlobalSnowplowNamespace=e.GlobalSnowplowNamespace||[],e.GlobalSnowplowNamespace.push(n),e[n]=function(){(e[n].q=e[n].q||[]).push(arguments)},e[n].q=e[n].q||[],p=o.createElement(s),c=o.getElementsByTagName(s)[0],p.async=1,p.src="//cdn.smugmug.com/include/js/snowplow_2-20200727051707.js",c.parentNode.insertBefore(p,c))}(window,document,"script",0,"_smugsp")};exports.setup=e;
+},{}],"x7Qx":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.callSnowplowMethod=void 0;const o=function(){try{window._smugsp(...arguments)}catch(o){console.error(o)}};exports.callSnowplowMethod=o;
+},{}],"gLDO":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.toContext=exports.getContexts=exports.CONTEXT=void 0;const e={CONTENT:"iglu:com.smugmug/content/jsonschema/1-0-1",DEVICE:"iglu:com.smugmug/device/jsonschema/1-0-1",TESTING:"iglu:com.smugmug/testing/jsonschema/1-0-0",USER:"iglu:com.smugmug/user/jsonschema/1-0-0",SCREEN:"iglu:com.smugmug/screen/jsonschema/1-0-0"};exports.CONTEXT=e;const t=(e,t)=>({schema:e,data:t});exports.toContext=t;const s=s=>{var o;let n=[],i=t(e.CONTENT,{page_type:"Marketing"});n.push(i);let r=window.devicePixelRatio;if(r&&r>0&&r<10){r=Math.floor(100*r)/100;t(e.DEVICE,{pixel_density:r});n.push()}if("undefined"!=typeof gaData&&gaData["UA-138402-23"].experiments)for(let[u,g]of Object.entries(gaData["UA-138402-23"].experiments)){let s=t(e.TESTING,{test_name:u,condition:"string"!=typeof g?g.toString():g});n.push(s)}if(null===(o=s.Response)||void 0===o||!o.User)return n;let a=t(e.USER,{action_source:"User",is_logged_in:!!s.Response.User.RefTag,is_trial_account:"1"===s.Response.User.isTrial});return n.push(a),n};exports.getContexts=s;
+},{}],"MOcg":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.initTracking=void 0;var e=require("./event-delegator.js"),t=require("./snowplow/globals.js"),o=require("./snowplow/callMethod.js"),n=require("./snowplow/context.js"),a=require("./gdpr-banner.js");let r=e=>e=>{let{event:t="trackStructEvent",category:a,action:r,property:i,label:l,region:d}=e,s=(0,n.toContext)(n.CONTEXT.SCREEN,{section_name:d});(0,o.callSnowplowMethod)(t,a,r,l,i,void 0,[s])},i=e=>e=>{var t,a;const r=null===(t=document.querySelector("html"))||void 0===t?void 0:null===(a=t.dataset)||void 0===a?void 0:a.wfPage;let i=(0,n.toContext)(n.CONTEXT.CONTENT,{page_id:r});(0,o.callSnowplowMethod)("trackPageView",null,[i])},l=e=>t=>{let o=t.target.dataset.trackingCategory||"Marketing Page",n=t.target.dataset.trackingAction||"Navigation Click",a=t.target.dataset.trackingRegion||"Body",i=t.target.dataset.trackingProperty||t.target.href,l=t.target.dataset.trackingLabel||t.target.innerText;r(e)({category:o,action:n,property:i,label:l,region:a})};const d=r=>{var d,c;(0,t.setup)(),window._smugsp("newTracker","primary",window.config.snowplowConfig.collectorUrl,{appId:"Marketing",cookieDomain:`.${window.config.snowplowConfig.cookieDomain}`,encodeBase64:!0,eventMethod:"beacon"}),(0,o.callSnowplowMethod)("setOptOutCookie",a.cookieOptOut);let g=window.flags,p=[];if(g)for(let[e,t]of Object.entries(g)){let o=(0,n.toContext)(n.CONTEXT.TESTING,{test_name:s(e),condition:"string"!=typeof t?t.toString():t});p.push(o)}let w=(0,n.getContexts)(r);var u,v;((0,o.callSnowplowMethod)("addGlobalContexts",[...w,...p]),i(r)(window.location.href),null!==(d=r.Response)&&void 0!==d&&null!==(c=d.User)&&void 0!==c&&c.RefTag)&&(0,o.callSnowplowMethod)("setUserId",null===(u=r.Response)||void 0===u?void 0:null===(v=u.User)||void 0===v?void 0:v.RefTag);let k=(0,e.listen)(document,"click");k.add("a",l(r)),k.add("button",l(r)),k.add("label",l(r))};function s(e){return e.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g,(e,t)=>t.toUpperCase())}exports.initTracking=d;
+},{"./event-delegator.js":"s4Je","./snowplow/globals.js":"hHCd","./snowplow/callMethod.js":"x7Qx","./snowplow/context.js":"gLDO","./gdpr-banner.js":"K9ik"}],"Zc6x":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.initGoogleTagManager=void 0;const e=function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if([...document.querySelectorAll("script")].filter(e=>e.src.includes("googletagmanager")).length>0)return;let t="h6epnKQSn20itACf3XLDFw",n="env-2";"dev"===e.env?(t="2sGgKkv-Zyi-OUklcU3y0A",n="env-5"):"test"===e.env&&(t="k9KjP1JUAYYNjQb7eIaZNg",n="env-7"),function(e,a,r,g,o){e[g]=e[g]||[],e[g].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var i=a.getElementsByTagName(r)[0],s=a.createElement(r);s.async=!0,s.src="https://www.googletagmanager.com/gtm.js?id=GTM-NMKWBR7&l=SMDataLayer"+`&gtm_auth=${t}&gtm_preview=${n}&gtm_cookies_win=x`,i.parentNode.insertBefore(s,i)}(window,document,"script","SMDataLayer")};exports.initGoogleTagManager=e;
+},{}],"K9ik":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.initBanner=exports.cookieOptOut=exports.cookieDismiss=void 0;var e=n(require("js-cookie")),o=require("./analytics.js"),t=require("./snowplow/gtm.js");function n(e){return e&&e.__esModule?e:{default:e}}const i="cbd";exports.cookieDismiss=i;const r="necoo";exports.cookieOptOut=r;const c={expires:365,secure:!0,sameSite:"Lax"},d=()=>{var e,o,t;return{...c,domain:null===(e=window)||void 0===e?void 0:null===(o=e.config)||void 0===o?void 0:null===(t=o.snowplowConfig)||void 0===t?void 0:t.cookieDomain}},l=n=>i=>{e.default.remove(r,d()),(0,t.initGoogleTagManager)(),(0,o.initTracking)(n)},s=()=>{e.default.set(r,1,d())},u=()=>{e.default.set(i,1,d()),document.querySelector(".gdpr-container").innerHTML=""},a=e=>{if("content"in document.createElement("template")){let o=document.querySelector("#gdpr-banner").content.cloneNode(!0);document.querySelector("body").appendChild(o),document.getElementById("gdpr-allow-cookies").addEventListener("click",l(e)),document.getElementById("gdpr-reject-cookies").addEventListener("click",s),[...document.querySelectorAll(".gdpr-dismiss")].forEach(e=>e.addEventListener("click",u))}};function p(){return Boolean(e.default.get(i))}function g(){return Boolean(e.default.get(r))}const m=e=>{if(!g())return p()?((0,t.initGoogleTagManager)(),void(0,o.initTracking)(e)):void a(e)};exports.initBanner=m;
+},{"js-cookie":"lMlK","./analytics.js":"MOcg","./snowplow/gtm.js":"Zc6x"}],"eqUI":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.listenForRedirect=void 0;const e=e=>{window.addEventListener("message",r=>{if(r.origin===e&&"string"==typeof r.data&&r.data.includes("smugmug-signup-submit-redirect"))try{let e=JSON.parse(r.data);"smugmug-signup-submit-redirect"==e.id&&window.location.assign(e.redirect)}catch(t){console.error("Error parsing message",t)}},!1)};exports.listenForRedirect=e;
+},{}],"bFcT":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.getFeatureFlags=exports.getContext=exports.detectUser=exports.defaultUser=void 0;const e=()=>fetch(`${window.config.api}/api/v2!authuser?_shorturis&APIKey=${window.config.key}&_accept=application/json&_filteruri=`,{credentials:"include"}).then(e=>e.json()).catch(e=>({Response:{}}));exports.getContext=e;const t=()=>{let e=document.querySelector("body");e.classList.add("is-loading-user"),e.classList.add("is-anonymous")};exports.defaultUser=t;const s=()=>fetch(`${window.config.api}/api/v2/featureflags?prefix=web.experiment.&_shorturis&APIKey=${window.config.key}&_accept=application/json&_filteruri=`,{credentials:"include"}).then(e=>e.json()).catch(e=>({Response:{}}));exports.getFeatureFlags=s;const o=e=>fetch(`${window.config.api}${e}!bioimage?_shorturis&APIKey=${window.config.key}&_accept=application/json&_filteruri=`,{credentials:"include"}).then(e=>e.json()).catch(e=>!1),i=e=>{o(e.Uri).then(t=>{if("content"in document.createElement("template")){let s=document.querySelector("#user-actions").content.cloneNode(!0);if(s.querySelector(".user-actions-username").innerHTML=e.NickName,t.Response.BioImage){const o=document.querySelector("#user-avatar").content.cloneNode(!0);o.querySelector("img").setAttribute("src",t.Response.BioImage.ThumbnailUrl),o.querySelector("img").setAttribute("alt",e.NickName),s.querySelector(".user-actions-image").innerHTML="",s.querySelector(".user-actions-image").appendChild(o)}let o=document.querySelector("#navUserActions");o.innerHTML="",o.appendChild(s)}})},n=e=>e.startsWith("Employees")||e.startsWith("Pro")||e.startsWith("Free")?"pro":e.startsWith("Portfolio")?"portfolio":e.startsWith("Power")?"power":e.startsWith("Basic")?"basic":e.startsWith("Guest")?"guest":"unknown",r=e=>{var t,s;let o=document.querySelector("body");var r,a,c,l,u,d;(o.classList.remove("is-loading-user"),null!=e&&null!==(t=e.Response)&&void 0!==t&&null!==(s=t.User)&&void 0!==s&&s.WebUri)&&(window.userNickName=null===(r=e.Response)||void 0===r?void 0:r.User.NickName,window.RefTag=null===(a=e.Response)||void 0===a?void 0:a.User.RefTag,window.IsTrialAccount=null===(c=e.Response)||void 0===c?void 0:c.User.IsTrial,o.classList.remove("is-anonymous"),o.classList.add("is-current-user"),null!==(l=e.Response)&&void 0!==l&&l.User.IsTrial&&o.classList.add("is-trial-user"),null!=e&&null!==(u=e.Response)&&void 0!==u&&null!==(d=u.User)&&void 0!==d&&d.Plan&&o.setAttribute("data-user-plan",n(e.Response.User.Plan)),i(e.Response.User),window.dispatchEvent(new Event("smUserNickNameIsLoaded")))};exports.detectUser=r;
+},{}],"Focm":[function(require,module,exports) {
+"use strict";var e=require("./src/gdpr-banner.js"),o=require("./src/iframe-redirect"),i=require("./src/context.js");"www.smugmug.com"==window.location.hostname?window.config={api:"https://api.smugmug.com",key:"W0g9oqdOrzuhEpIQ2qaTXimrzsfryKSZ",didDismissBanner:e.cookieDismiss,snowplowConfig:{collectorUrl:"stats-new.smugmug.com",cookieDomain:"smugmug.com",scriptUrl:"https://cdn.smugmug.com/include/js/snowplow_2-20200727051707.js"}}:window.config={api:"https://api."+window.location.hostname,key:"4iTbhjgoNNOQ2gavhZkb3bqCbsfPRx5x",didDismissBanner:e.cookieDismiss,snowplowConfig:{collectorUrl:"stats-new.smugmug.net",cookieDomain:"smugmug.net",scriptUrl:"https://cdn."+window.location.hostname+"/include/js/snowplow_2-20200727051707.js"}},(0,i.defaultUser)(),(0,o.listenForRedirect)(window.location.origin),(0,i.getFeatureFlags)().then(e=>{var o,i;let s=null==e?void 0:null===(o=e.Response)||void 0===o?void 0:null===(i=o.FeatureFlagsRoot)||void 0===i?void 0:i.Flags;if(window.flags=s,s){let e=[];for(let[i,t]of Object.entries(s))if(t){let o=i.replace("web.experiment.","").replace(/\./g,"-");"string"==typeof t&&(o+=`-${t}`),e.push(o)}let o=document.querySelector("body");e.forEach(e=>{o.classList.add(e)})}}).finally(()=>{(0,i.getContext)().then(o=>{(0,e.initBanner)(o),(0,i.detectUser)(o)})});
+},{"./src/gdpr-banner.js":"K9ik","./src/iframe-redirect":"eqUI","./src/context.js":"bFcT"}]},{},["Focm"], null)
+</script></body></html>

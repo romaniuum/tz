@@ -1,0 +1,62 @@
+[
+    {
+        "domain": "googletagmanager.com",
+        "cms": null,
+        "captcha": false,
+        "error": "404 Client Error: Not Found for url: http://googletagmanager.com/"
+    },
+    {
+        "domain": "google.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "apple.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "microsoft.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "wikipedia.org",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "linkedin.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "youtube.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "twitter.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "facebook.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    },
+    {
+        "domain": "instagram.com",
+        "cms": "Самопис",
+        "captcha": false,
+        "error": null
+    }
+]

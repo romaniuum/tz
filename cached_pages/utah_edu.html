@@ -1,0 +1,1052 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>The University of Utah</title>
+      <meta name="keywords" content="future students, students, faculty, staff, visitors, alumni, about the U, academics, research, arts, outreach, healthcare, athletics, give to the U">
+      <meta name="description" content="Founded in 1850, The University of Utah is the flagship institution of higher learning in Utah, and offers over 100 undergraduate and more than 90 graduate degree programs to over 30,000 students. As a preeminent research and teaching institution, the University cultivates an academic environment in which the highest standards of intellectual integrity and scholarship are practiced. ">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      <!-- DEFAULT SOCIAL IMAGE -->
+<meta property="og:image" content="https://www.utah.edu/_resources/images/social-default.jpg" />
+<meta property="twitter:image" content="https://www.utah.edu/_resources/images/social-default.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- END DEFAULT SOCIAL IMAGE -->
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NNDTGR');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<!-- Xenon START -->
+    <script src="https://cdn.jsdelivr.net/gh/xenonview-com/view-js-sdk@v0.1.33/dist/xenon_view_sdk.min.js"></script>
+    <script>
+        function timestamp() {
+            return (new Date()).getTime() / 1000
+        }
+
+        const startTime = timestamp()
+        let contentType = 'Landing Page'
+        let identifier = ''
+        let klaviyoOfferAccepted = false
+        let email = ''
+        let cartSummary = {}
+
+        if (window.location.pathname && window.location.pathname !== '') {
+            const path = `${window.location.pathname}`
+            const words = path.split('/')
+            let lenWords = words.length
+            if (words && lenWords && words[0] === "") {
+                words.shift()
+            }
+            lenWords = words.length
+            if (words && lenWords && words[lenWords - 1] === "") {
+                words.pop()
+            }
+            const query = window.location.search
+            if (words.length) {
+                if (words.length > 1) {
+                    identifier = words.pop() + query
+                    contentType = words.join('/')
+                } else {
+                    contentType = words.pop() + query
+                }
+            }
+        }
+
+        function contentViewedOccurred() {
+            Xenon.contentViewed(contentType, identifier)
+            Xenon.commit()
+        }
+
+        function captureAd() {
+            const queryFromUrl = window.location.search
+            if (queryFromUrl && queryFromUrl !== '' && queryFromUrl !== '?') {
+                const filteredQuery = Xenon.autodiscoverLeadFrom(queryFromUrl)
+                Xenon.commit()
+                window.history.replaceState({}, document.title, window.location.origin + window.location.pathname + filteredQuery)
+            } else {
+                Xenon.autodiscoverLeadFrom(queryFromUrl)
+            }
+        }
+
+        function hasClassInHierarchy(target, className, maxDepth) {
+            const searcher = (node, className, maxDepth, currentDepth) => {
+                if (currentDepth >= maxDepth) return false
+                if (node.className && node.className.toString().includes(className)) return true
+                if (!node.parentElement) return false
+                return searcher(node.parentElement, className, maxDepth, currentDepth + 1)
+            }
+
+            return searcher(target, className, maxDepth, 0)
+        }
+
+        function getElementWithClassInHierarchy(target, className, maxDepth, exact=false) {
+            const searcher = (node, className, maxDepth, currentDepth) => {
+                if (currentDepth >= maxDepth) return null
+                if (node.className && node.className.toString().includes(className) && !exact) return node
+                if (node.className && node.className.toString() === className) return node
+                if (!node.parentElement) return null
+                return searcher(node.parentElement, className, maxDepth, currentDepth + 1)
+            }
+            if (target.className && target.className.toString().includes(className) && !exact) return target
+            if (target.className && target.className.toString() === className) return target
+            return searcher(target, className, maxDepth, 0)
+        }
+
+        function trackSubmit(e) {
+            const elements = e.currentTarget.elements ? e.currentTarget.elements : e.target.elements
+            const topId = e.currentTarget.id ? e.currentTarget.id : e.target.id
+            const className = e.currentTarget.className ? e.currentTarget.className : e.target.className
+            // console.log("trackSubmit", topId, className)
+            Array.from(elements).forEach((element) => {
+                const {id, value, name, type} = element
+                // console.dir(element)
+                // console.log(className)
+                if (className.includes('search')) {
+                    Xenon.milestone('Selection', 'Search', value)
+                    Xenon.commit()
+                    return
+                }
+            })
+            // e.preventDefault()
+        }
+
+        function trackChange(e) {
+            const topId = e.currentTarget.id ? e.currentTarget.id : e.target.id
+            const className = e.currentTarget.className ? e.currentTarget.className : e.target.className
+            //console.log("trackChange", topId, className, e.target)
+
+            if (e.target.name.includes('email')) {
+                email = e.target.value
+            }
+        }
+
+        function getKlaviyoDescriptor() {
+            const form = document.querySelector('form.klaviyo-form')
+            const header = form.querySelector('h1')
+            let descriptor = 'Klaviyo - Offer'
+            if (header) {
+                descriptor = header.innerText
+                return 'Klaviyo - ' + (descriptor.trim().replace(/\n/g, " "))
+            }
+            const smallHeader = form.querySelector('p')
+            if (smallHeader) {
+                descriptor = smallHeader.innerText
+                return 'Klaviyo - ' + (descriptor.trim().replace(/\n/g, " "))
+            }
+            return 'Klaviyo - ' + (descriptor.trim().replace(/\n/g, " "))
+        }
+
+        function extractFinalPath(path) {
+            if (!path) return ''
+            const elements = path.split('/')
+            const filtered = elements.filter(function (a) {
+                return a !== ''
+            })
+            const last = filtered[filtered.length - 1]
+            return last ? last : 'home'
+        }
+
+        function trackButton(e) {
+            // console.dir(e)
+            const target = e.target.parentElement.nodeName === 'A' ? e.target.parentElement : e.target;
+            const topId = e.currentTarget && e.currentTarget.id ? e.currentTarget.id : target.id
+            const className = e.currentTarget && e.currentTarget.className ? e.currentTarget.className : target.className
+            // console.dir(target.pathname)
+            // console.dir(target.href)
+            // console.dir(target.id)
+            // console.dir(target.className)
+            // console.dir(e.currentTarget)
+            // console.dir(target)
+            // console.log(getElementWithClassInHierarchy(target, 'post', 2, true), target.parentElement.className, 'get')
+            // console.log(getElementWithClassInHierarchy(target, 'post', 2, true).innerText)
+
+            // console.log("trackButton", topId, className, target, e, target.innerText)
+
+            let path = target.pathname ? target.pathname : e.srcElement.pathname
+            path = path ? path : e.srcElement.baseURI
+            const url = extractFinalPath(path)
+            let text = e.srcElement.innerText
+            if (!text) {
+                const post = getElementWithClassInHierarchy(target, 'post', 2, true)
+                if (post) {
+                    text = post.innerText
+                }
+            }
+
+            const name = 'Button (' + text + ') - ' + url
+            const href = target.href
+
+            if (href && href.includes('mailto')) {
+                const content = {
+                    superOutcome: 'Lead Action',
+                    outcome: 'Email Started',
+                    id: name,
+                    result: 'success'
+                };
+                Xenon.outcomeAdd(content);
+                Xenon.commit()
+                return
+            }
+
+            if (href && href.includes('outlook.office.com')) {
+                const content = {
+                    superOutcome: 'Lead Action',
+                    outcome: 'Appointment Booking Started',
+                    id: name,
+                    result: 'success'
+                };
+                Xenon.outcomeAdd(content);
+                Xenon.commit()
+                return
+            }
+
+            const lowerName = name.toLowerCase()
+            if (lowerName.includes('schedule') ||
+                lowerName.includes('tour') ||
+                lowerName.includes('contact')) {
+                const cardBody = target.parentElement.innerText;
+                const cardHeading = cardBody.split('\n')[0]
+                const tourButtonName = 'Button (' + cardHeading + ') - ' + href
+                const content = {
+                    superOutcome: 'Lead Action',
+                    outcome: 'Appointment Booking Started',
+                    id: tourButtonName,
+                    result: 'success'
+                };
+                Xenon.outcomeAdd(content);
+                Xenon.commit()
+                return
+            }
+
+            if (href && href !== window.location.href) {
+
+                const {ariaHasPopup} = target
+                const parsedNextUrl = new URL(href)
+                const parsedCurrentUrl = new URL(window.location.href)
+
+                // console.log(ariaHasPopup, target)
+
+                if ((ariaHasPopup && ariaHasPopup === 'true') ||
+                    (parsedNextUrl.hostname === parsedCurrentUrl.hostname)) {
+                    const {ariaExpanded} = target
+                    const text2 = target.innerText
+                    const openClose = (ariaExpanded === 'true') ? 'Opened' : 'Closed'
+                    const name = 'Button (Navigation: ' + text2 + ') - ' + openClose
+                    Xenon.milestone('Selection', 'Clicked', name)
+                    Xenon.commit()
+                    return
+                }
+
+                const text2 = target.innerText
+                const buttonName = 'Button (' + text2 + ') - ' + href
+                const content = {
+                    superOutcome: 'Lead Handoff',
+                    outcome: href,
+                    id: buttonName,
+                    result: 'success'
+                };
+                Xenon.outcomeAdd(content);
+                Xenon.commit()
+                return
+            }
+
+            if (target.id.includes('jsNavTrigger')) {
+                const {ariaExpanded} = target
+                const openClose = (ariaExpanded === 'true') ? 'Opened' : 'Closed'
+                const name = 'Button (Site Navigation) - ' + openClose
+                Xenon.milestone('Selection', 'Clicked', name)
+                Xenon.commit()
+                return
+            }
+
+            if (className === 'btn') {
+                const url = extractFinalPath(e.srcElement.pathname)
+                const text = e.srcElement.innerText
+                const name = 'Button (' + text + ') - ' + url
+                Xenon.milestone('Selection', 'Clicked', name)
+                Xenon.commit()
+                return
+            }
+
+            if (klaviyoOfferAccepted && target.innerText.includes("SEND")) {
+                Xenon.milestone('Selection', 'Accepted', getKlaviyoDescriptor())
+                Xenon.commit()
+                return
+            }
+            if (hasClassInHierarchy(target, "fa-search", 10)) {
+                Xenon.milestone('Selection', 'Clicked', 'search')
+                Xenon.commit()
+                return
+            }
+            if (hasClassInHierarchy(target, "uu-header-logo", 10)) {
+                const url = extractFinalPath(target.href)
+                const name = 'Button (Home) - ' + url
+                Xenon.milestone('Selection', 'Clicked', name)
+                Xenon.commit().then()
+                return
+            }
+            if (hasClassInHierarchy(target, "klaviyo-spinner", 10)) {
+                if (email !== '') {
+                    let person = {email: email}
+                    Xenon.deanonymize(person)
+                }
+                Xenon.milestone('Selection', 'Accepted', getKlaviyoDescriptor())
+                Xenon.commit()
+                klaviyoOfferAccepted = true
+                return
+            }
+            if (klaviyoOfferAccepted && target.innerText.includes("NO THANKS")) {
+                // console.log("Shipping Only")
+                return
+            }
+            if (hasClassInHierarchy(target, "klaviyo-close-form", 10)) {
+                if (!klaviyoOfferAccepted) {
+                    Xenon.milestone('Selection', 'Declined', getKlaviyoDescriptor())
+                    Xenon.commit()
+                }
+                return
+            }
+            if (hasClassInHierarchy(target, "product__thumb-arrow", 10) ||
+                hasClassInHierarchy(target, "product__thumb", 10)) {
+                const view = document.querySelector(".flickity-slider")
+                const selected = document.querySelector(".is-selected")
+                const image = selected.querySelector('.photoswipe__image')
+                const imageHref = image.src
+                const parsedUrl = new URL(imageHref)
+                const imagePic = parsedUrl.pathname.split('/').pop()
+                Xenon.contentViewed("Product Image", imagePic)
+                Xenon.commit()
+                return
+            }
+            if (hasClassInHierarchy(target, "animation-contents", 10)) {
+                Xenon.contentViewed("Product Video", target.href)
+                Xenon.commit()
+                return
+            }
+            if (hasClassInHierarchy(target, "collapsible-trigger", 10)) {
+                const target = getElementWithClassInHierarchy(target, "is-open", 10)
+                if (target) {
+                    Xenon.contentViewed("Section Expanded", target.innerText.trim())
+                    Xenon.commit()
+                }
+                return
+            }
+            if (hasClassInHierarchy(target, "cart__checkout", 10)) {
+                Xenon.checkOut()
+                Xenon.commit()
+                return
+            }
+            if (url && url !== '') {
+                // console.log(url, 'clicked', name)
+                Xenon.milestone('Selection', 'Clicked', name)
+                Xenon.commit()
+                return
+            }
+        }
+
+
+    </script>
+    <script>
+        function debounce(callback, wait) {
+            let timeoutId = null;
+            return (...args) => {
+                window.clearTimeout(timeoutId);
+                timeoutId = window.setTimeout(() => {
+                    callback(...args);
+                }, wait);
+            };
+        }
+
+        let debouncedTrackSubmit
+        let debouncedTrackButton
+        let debouncedTrackChange
+
+        debouncedTrackSubmit = debounce(trackSubmit, 250)
+        debouncedTrackButton = debounce(trackButton, 250)
+        debouncedTrackChange = debounce(trackChange, 250)
+
+        function onLoaded() {
+            const loadTime = timestamp() - startTime
+            Xenon.pageLoadTime(loadTime, window.location.href)
+            Xenon.commit()
+            // const links = document.querySelectorAll('a')
+            // console.dir(links)
+            // links.forEach((link) => {
+            //     link.addEventListener("click", trackButton)
+            // })
+            const classBtns = document.querySelectorAll('.fa-search')
+            classBtns.forEach((classBtn) => {
+                classBtn.addEventListener("click", debouncedTrackButton)
+            })
+        }
+
+        function onDocument() {
+            if (!document.body) return
+            document.body.addEventListener('submit', debouncedTrackSubmit)
+            document.body.addEventListener('click', debouncedTrackButton)
+            document.body.addEventListener('input', debouncedTrackChange)
+            observer.disconnect()
+        }
+
+        document.addEventListener("DOMContentLoaded", onLoaded)
+
+        Xenon.init('ElpwfdWKYw8sCXq3e7RMHlAy8eAR84F82eOvWrNCzolxK5oWSWh/UFS1AyhE1LPT3RTowtVwnuW8U/8RM98imnvhtlGu8v383xi47LXOMIZQkTPqh2WF23wNIJGF5emHQMVpq4hmcspAaZymp+3x8cqrSUxOdpNJj/7k/UPrzjNqDj3I0qr0qZ+HI/9fg6urUGQdrscxtYT3gGomMvEpIh3Z0IWAtNU76lOR/ElIkEp3DVHb+EbsIulz15SPtf/2v8VxyF2+PyJxfZUiZ7dtZ7xeCIXmZahle5WfqxE+dyC7G0MLBhi+d2j3mYtqKpcDC9pcQBjBcAtDf43P3URsMx8bsSFBppXpS3Gjzw9sA0+v/mhdU9O4tx2PbbY7ydHIiaZ81rEBXe8lh9pMRAyiiw==')
+
+        const host = window.location.host
+        const siteParts = host.split('.utah.edu')
+        const site = siteParts.length > 0 ? siteParts[0] : 'main'
+        Xenon.variant([site, 'UofU-Instrumentation-v1.0.1'])
+        Xenon.pageURL(window.location.href)
+        contentViewedOccurred()
+        captureAd()
+        let observer = new MutationObserver(onDocument)
+        observer.observe(document.documentElement, {childList: true})
+    </script>
+    <!-- Xenon END -->
+
+      
+      <style>
+			/* change marquee defalut on mobile */
+			html.is-mobile .uu-marquee__default {
+				background-image: url(/_resources/images/marquee/vid-bg-1200-40.jpg) !important;
+			}
+			
+			
+			/* improve text contrast for marquee items */
+			.uu-marquee-banner .uu-marquee-banner-item {
+				background-color:#333;
+			}
+			
+			
+			/* customize video pause button position in marquee */
+			@media screen and (max-width: 1325px) {
+				#bg-video-btns button {
+					bottom: 18rem;
+				}
+			}
+
+			@media screen and (max-width: 950px) {
+				#bg-video-btns button {
+					bottom: 12rem;
+				}
+			}
+			
+			/* customize top section */
+			.uu-section.top-section {
+				padding-top:0;
+			}
+			
+			
+		</style>
+      <!-- Hotjar Tracking Code for https://utah.edu --><script>
+			(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:2158953,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+      <meta name="facebook-domain-verification" content="sbxf4lr1fsxf5ia6mro0p05qdbwtwa" />
+							<link rel="stylesheet" href="/_resources/css/owl.carousel.min.css" type="text/css" />
+							<link rel="stylesheet" href="/_resources/css/home-custom-1.css" type="text/css" />
+														<link rel="stylesheet" href="/_resources/css/umc-061623.css" type="text/css" />
+																														
+																												
+																															
+																															<!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="no-site-search no-header-title has-headernav has-quicknav has-marquee-quick-links"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNDTGR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->        <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+	<div class="uu-search__container">
+		<!-- SITE SEARCH -->
+		<form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+			<label for="inputSearchSite" class="sr-only">Search Site:</label>
+			<input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+			<input type="hidden" name="gcse_action" value="site" />
+
+			<div class="form-powered-by">
+				<span>Powered by</span> 
+				<img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+			</div>
+
+		</form>
+		<!-- END SITE SEARCH -->
+		<!-- CAMPUS SEARCH -->
+		<form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+			<label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+			<input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+			<input type="hidden" name="gcse_action" value="campus" />
+
+			<div class="form-powered-by">
+				<span>Powered by</span> 
+				<img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+			</div>
+		</form>
+		<!-- END CAMPUS SEARCH -->
+		
+		<!-- SEARCH TYPE TOGGLE -->
+		<div class="search-type-toggle">
+			<label class="uu-switch" for="search_campus_checkbox">
+				<input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+				<span class="uu-switch-slider"></span>
+				<span class="uu-switch-label">Search Campus</span>
+			</label>
+		</div>
+		<!-- END SEARCH TYPE TOGGLE -->
+		
+	</div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"><a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">University of Utah COVID-19 Updates </a></div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <!--
+<div class="uu-header__title">
+	<h2><a href="/">Main Title</a></h2>
+	<h3><a href="/">Sub Title</a></h3>
+</div>
+--><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     <nav class="uu-header__nav" aria-label="header">
+   <ul>
+      <li class="has-sub "><a href="#" aria-haspopup="true" aria-expanded="false">Apply</a><ul class="sub-menu">
+            <li><a href="https://admissions.utah.edu/apply/">Apply</a></li>
+            <li><a href="https://admissions.utah.edu/">Office of Admissions </a></li>
+            <li><a href="https://admissions.utah.edu/">Prospective Students</a><ul>
+                  <li><a href="https://futureu.admissions.utah.edu/portal/rfi_portal">Request information</a></li>
+                  <li><a href="https://admissions.utah.edu/visit-engage/">Campus Tours</a></li>
+                  <li><a href="https://admissions.utah.edu/visit-engage/upcoming-events/"><span class="c-mrkdwn__tab"></span>Events</a></li>
+                  <li><a href="https://admissions.utah.edu/apply/">Undergraduate</a></li>
+                  <li><a href="https://admissions.utah.edu/apply/graduate-admissions/"><span class="c-mrkdwn__tab"></span>Graduate</a></li>
+                  <li><a href="https://admissions.utah.edu/apply/international/"><span class="c-mrkdwn__tab"></span>International Students</a></li>
+                  <li><a href="https://asiacampus.utah.edu/">Asia Campus</a></li>
+               </ul>
+            </li>
+            <li><a href="https://admissions.utah.edu/">New Students</a><ul>
+                  <li><a href="https://admissions.utah.edu/admitted-students/admitted-freshman-next-steps/"><span class="c-mrkdwn__tab"></span>Freshman</a></li>
+                  <li><a href="https://admissions.utah.edu/admitted-students/confirm-intent-to-enroll/">Confirm/Deposit</a></li>
+                  <li><a href="https://financialaid.utah.edu/index.php">Financial Aid &amp; Scholarships</a></li>
+                  <li><a href="https://orientation.utah.edu/"><span class="c-mrkdwn__tab"></span>New Student Orientation</a></li>
+                  <li><a href="https://registrar.utah.edu/index.php">Registrar</a></li>
+                  <li><a href="https://www.housing.utah.edu/">Housing</a></li>
+                  <li><a href="https://registrar.utah.edu/academic-calendars/index.php">Academic Calendar</a></li>
+               </ul>
+            </li>
+         </ul>
+      </li>
+      <li class="has-sub "><a href="#" aria-haspopup="true" aria-expanded="false">Student Life</a><ul class="sub-menu">
+            <li><a href="https://studentaffairs.utah.edu/">Student Affairs</a></li>
+            <li><a href="https://www.housing.utah.edu/">Housing</a></li>
+            <li><a href="https://ulink.utah.edu/s/1077/20/signature.aspx?sid=1077&amp;gid=1&amp;pgid=941">The MUSS</a></li>
+            <li><a href="https://union.utah.edu/">The Union</a></li>
+            <li><a href="https://campusrec.utah.edu/index.php">Student Life Center</a></li>
+            <li><a href="https://leadership.utah.edu/">Student Leadership &amp; Involvement</a></li>
+            <li><a href="https://safeu.utah.edu">SafeU</a></li>
+            <li><a href="https://careers.utah.edu/">U Career Success</a></li>
+            <li><a href="https://belong.utah.edu/">Student Experience</a></li>
+            <li><a href="https://belong.utah.edu/parents-supporters/">Parents &amp; Supporters</a></li>
+         </ul>
+      </li>
+      <li class="has-sub "><a href="#" aria-haspopup="true" aria-expanded="false">Academics</a><ul class="sub-menu">
+            <li><a href="/academics/">Academic Resources </a></li>
+            <li><a href="https://registrar.utah.edu/Catalog-schedules.php"> Catalogs, Schedules &amp; Calendar </a></li>
+            <li><a href="/academics/colleges.php">Colleges &amp; Departments</a></li>
+            <li><a href="https://advising.utah.edu/majors/quick-look/index.php">Majors</a></li>
+            <li><a href="https://gradschool.utah.edu/">Graduate School</a></li>
+            <li><a href="https://ssc.utah.edu/index.php">Student Success</a></li>
+            <li><a href="/libraries/">Libraries</a></li>
+            <li><a href="https://www.global.utah.edu/">Global U</a></li>
+         </ul>
+      </li>
+      <li class="has-sub "><a href="#" aria-haspopup="true" aria-expanded="false">Research</a><ul class="sub-menu">
+            <li><a href="https://www.research.utah.edu/">VP of Research</a></li>
+            <li><a href="https://innovate.utah.edu/">Latest Research News</a></li>
+         </ul>
+      </li>
+      <li class="has-sub "><a href="#" aria-haspopup="true" aria-expanded="false">Arts</a><ul class="sub-menu">
+            <li><a href="/arts/">The Arts on Campus </a></li>
+            <li><a href="/arts/events.php"> Upcoming Events </a></li>
+            <li><a href="/arts/academic.php"> Academic Programs </a></li>
+            <li><a href="/arts/professional.php"> Professional Arts </a></li>
+            <li><a href="/arts/youth.php"> Youth Arts </a></li>
+         </ul>
+      </li>
+      <li class="has-sub "><a href="#" aria-haspopup="true" aria-expanded="false">U of U Health</a><ul class="sub-menu">
+            <li><a href="https://uofuhealth.utah.edu/education">Education</a></li>
+            <li><a href="https://uofuhealth.utah.edu/research">Research</a></li>
+            <li><a href="https://healthcare.utah.edu/">Patient Care</a></li>
+         </ul>
+      </li>
+      <li class="has-sub "><a href="#" aria-haspopup="true" aria-expanded="false">Athletics</a><ul class="sub-menu">
+            <li><a href="https://utahutes.com/">Utah Athletics</a></li>
+            <li><a href="https://utahtickets.com">Buy Tickets</a></li>
+            <li><a href="https://utahutes.com/calendar">Schedule</a></li>
+            <li><a href="https://utahcrimsonclub.com/">Crimson Club</a></li>
+            <li><a href="https://www.uredzone.com/home">Shop Utah Gear</a></li>
+         </ul>
+      </li>
+      <li class=""><a href="https://auxiliary.apps.utah.edu/ugive/">Donate</a></li>
+   </ul>
+</nav><!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://www.utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a>
+</header>
+               <nav class="uu-menu" aria-label="main"><h2 class="uu-menu__title">Main Menu</h2><hr><ul class="uu-menu__level1 ">
+   <li><a href="/">Home</a></li>
+   <li class="has-sublist"><a href="https://admissions.utah.edu/">Apply</a><ul class="uu-menu__level2">
+         <li><a href="https://admissions.utah.edu/apply/">Apply</a></li>
+         <li><a href="https://admissions.utah.edu/">Office of Admissions</a></li>
+         <li class="has-sublist"><a href="https://admissions.utah.edu/"> Prospective Students</a><ul class="uu-menu__level3">
+               <li><span class="c-mrkdwn__tab"></span><a href="https://futureu.admissions.utah.edu/portal/rfi_portal">Request information</a></li>
+               <li><a href="https://admissions.utah.edu/visit-engage/">Campus Tours</a></li>
+               <li><a href="https://admissions.utah.edu/visit-engage/upcoming-events/">Events</a></li>
+               <li><a href="https://admissions.utah.edu/apply/">Undergraduate</a></li>
+               <li><a href="https://admissions.utah.edu/apply/graduate-admissions/">Graduate</a></li>
+               <li><span class="c-mrkdwn__tab"></span><a href="https://admissions.utah.edu/apply/international/">International Students</a></li>
+               <li><a href="https://asiacampus.utah.edu/">Asia Campus</a></li>
+            </ul>
+         </li>
+         <li class="has-sublist"><a href="https://admissions.utah.edu/">New Students</a><ul class="uu-menu__level3">
+               <li><a href="https://admissions.utah.edu/admitted-students/admitted-freshman-next-steps/">Freshman</a></li>
+               <li><a href="https://admissions.utah.edu/admitted-students/confirm-intent-to-enroll/">Confirm/Deposit</a></li>
+               <li><a href="https://financialaid.utah.edu/index.php">Financial Aid &amp; Scholarships</a></li>
+               <li><a href="https://orientation.utah.edu/">New Student Orientation</a></li>
+               <li><a href="https://registrar.utah.edu/index.php">Registrar</a></li>
+               <li><a href="https://www.housing.utah.edu/">Housing</a></li>
+               <li><a href="https://registrar.utah.edu/academic-calendars/index.php">Academic Calendar</a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li class="has-sublist"><a href="/students/">Student Life</a><ul class="uu-menu__level2">
+         <li><a href="https://studentaffairs.utah.edu/">Student Affairs&nbsp;</a></li>
+         <li><a href="https://www.housing.utah.edu/">Housing</a></li>
+         <li><a href="https://ulink.utah.edu/s/1077/20/signature.aspx?sid=1077&amp;gid=1&amp;pgid=941">The MUSS</a></li>
+         <li><a href="https://union.utah.edu/">The Union</a></li>
+         <li><a href="https://campusrec.utah.edu/index.php">Student Life Center</a></li>
+         <li><a href="https://leadership.utah.edu/">Student Leadership &amp; Involvement</a></li>
+         <li><a href="https://safeu.utah.edu">SafeU</a></li>
+         <li><a href="https://careers.utah.edu/">U Career Success</a></li>
+         <li><a href="https://belong.utah.edu/">Student Experience</a></li>
+         <li><a href="https://belong.utah.edu/parents-supporters/">Parents &amp; Supporters</a></li>
+      </ul>
+   </li>
+   <li class="has-sublist"><a href="/academics/">Academics</a><ul class="uu-menu__level2">
+         <li><a href="/academics/">Academic Resources</a></li>
+         <li><a href="https://registrar.utah.edu/Catalog-schedules.php"> Catalogs, Schedules &amp; Calendar</a></li>
+         <li><a href="/academics/colleges.php">Colleges &amp; Departments</a></li>
+         <li><a href="https://advising.utah.edu/majors/quick-look/index.php">Majors</a></li>
+         <li><a href="https://gradschool.utah.edu/">Graduate School</a></li>
+         <li><a href="https://ssc.utah.edu/index.php">Student Success</a></li>
+         <li><a href="/libraries/">Libraries</a></li>
+         <li><a href="https://www.global.utah.edu/">Global U</a></li>
+      </ul>
+   </li>
+   <li class="has-sublist"><a href="#">Research</a><ul class="uu-menu__level2">
+         <li><a href="https://www.research.utah.edu/">VP of Research</a></li>
+         <li><a href="https://innovate.utah.edu/">Latest Research News</a></li>
+      </ul>
+   </li>
+   <li class="has-sublist"><a href="/arts/">Arts</a><ul class="uu-menu__level2">
+         <li><a href="/arts/">The Arts on Campus</a></li>
+         <li><a href="/arts/events.php"> Upcoming Events</a></li>
+         <li><a href="/arts/academic.php"> Academic Programs</a></li>
+         <li><a href="/arts/professional.php"> Professional Arts</a></li>
+         <li><a href="/arts/youth.php"> Youth Arts</a></li>
+      </ul>
+   </li>
+   <li class="has-sublist"><a href="https://healthcare.utah.edu/">U of U Health</a><ul class="uu-menu__level2">
+         <li><a href="https://uofuhealth.utah.edu/education">Education</a></li>
+         <li><a href="https://uofuhealth.utah.edu/research">Research</a></li>
+         <li><a href="https://healthcare.utah.edu/">Patient Care</a></li>
+      </ul>
+   </li>
+   <li class="has-sublist"><a href="https://utahutes.com/">Athletics</a><ul class="uu-menu__level2">
+         <li><a href="https://utahutes.com/">Utah Athletics</a></li>
+         <li><a href="https://utahtickets.com">Buy Tickets</a></li>
+         <li><a href="https://utahutes.com/calendar">Schedule</a></li>
+         <li><a href="https://utahcrimsonclub.com/">Crimson Club</a></li>
+         <li><a href="https://www.uredzone.com/home">Shop Utah Gear</a></li>
+      </ul>
+   </li>
+   <li><a href="https://auxiliary.apps.utah.edu/ugive/">Donate</a></li>
+</ul><h2 class="uu-menu__title margin-top-3x">U of U Health</h2><hr><ul class="uu-menu__level1 ">
+   <li><a href="https://uofuhealth.utah.edu/education">Education</a></li>
+   <li><a href="https://uofuhealth.utah.edu/research">Research</a></li>
+   <li><a href="https://healthcare.utah.edu/">Patient Care</a></li>
+</ul><h2 class="uu-menu__title margin-top-3x">U Quick Links</h2><hr><ul class="uu-menu__level1 ">
+   <li><a href="/a-z/">A-Z Index</a></li>
+   <li><a href="https://about.utah.edu/">About the U</a></li>
+   <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+   <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+   <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+   <li><a href="https://portal.app.utah.edu/?new">CIS</a></li>
+   <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+   <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+   <li><a href="https://accessibility.utah.edu/index.php">Accessibility</a></li>
+</ul></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         <div class="uu-mobile__quick-nav">
+	<ul>
+		<li>
+			<a href="https://admissions.utah.edu/">
+				<span class="fal fa-graduation-cap" aria-hidden="true"></span>Apply
+			</a>
+		</li>
+		<li>
+			<a href="https://admissions.utah.edu/visit-engage/">
+				<span class="fal fa-university" aria-hidden="true"></span>Visit
+			</a>
+		</li>
+		<li>
+			<a href="https://auxiliary.apps.utah.edu/ugive/">
+				<span class="fal fa-hands-heart" aria-hidden="true"></span>Give
+			</a>
+		</li>
+	</ul>
+</div>         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target"><!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1 top-section" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1><span class="sr-only">The University of Utah</span></h1>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border"><!-- MARQUEE BANNER -->
+                     <div id="uu_marquee_banner_loader" class="uu-marquee-banner-loader"></div>
+                     <div class="uu_marquee-wrapper">
+                        <div id="uu_marquee_banner" class="uu-marquee-banner owl-carousel"></div><button class="uu_marquee-pause" onclick="marqueePause()"><span>&nbsp;</span></button></div>
+                     <!-- END MARQUEE BANNER -->
+                     <p>&nbsp;</p>
+                     <!-- FEATURED CARDS -->
+                     <div class="uu-featured-cards-title"><!-- <h2 class="margin-top-0x">More happening at the U</h2> --></div>
+                     <div id="uu_featured_cards_loader" class="uu-featured-cards-loader"></div>
+                     <div id="uu_featured_cards" class="uu-featured-cards owl-carousel"></div>
+                     <!-- END FEATURED CARDS --></div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1 umc-news-events" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h2 class="text-center has-subheading hr-u-red-sm margin-top-0x">Campus News &amp; Events<span>The latest news from @theU and more</span></h2>
+                     <hr class="hr-u-red-sm margin-top-0x">
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <p><p><div class="uu-3col-container aos-container"><div class="uu-card" data-aos="fade-up"><div class="uu-card-img" style="background-image:url(https://d26toa8f6ahusa.cloudfront.net/wp-content/uploads/2025/01/17105204/Leg-Panel-Banner-768x432.jpg);"></div><div class="uu-card-details"><div class="uu-card-body"><h3 class="uu-card-title">Despite questions and critique, Utah higher education leaders are optimistic </h3><a href="https://attheu.utah.edu/facultystaff/despite-questions-and-critique-utah-higher-education-leaders-are-optimistic/" class="uu-card-cat">@ THE U</a><p><p>Ahead of Utah’s annual legislative session, University of Utah President Taylor Randall joined Geoffrey Landward, Utah’s commissioner of higher education, and Mitzi Montoya, the U’s provost and senior vice president for Academic Affairs, in a panel discussion. </p>
+</p><a href="https://attheu.utah.edu/facultystaff/despite-questions-and-critique-utah-higher-education-leaders-are-optimistic/" >Read Article<span class="sr-only"> - Despite questions and critique, Utah higher education leaders are optimistic </span></a></div><div class="uu-card-footer"><div class="uu-card-date">Jan 17, 2025</div></div></div></div><div class="uu-card" data-aos="fade-up"><div class="uu-card-img" style="background-image:url(https://d26toa8f6ahusa.cloudfront.net/wp-content/uploads/2025/01/16095047/IMG_0019-768x432.jpg);"></div><div class="uu-card-details"><div class="uu-card-body"><h3 class="uu-card-title">Driving economic growth through collaborative research</h3><a href="https://attheu.utah.edu/facultystaff/driving-economic-growth-through-collaborative-research/" class="uu-card-cat">@ THE U</a><p><p>Randall and Elizabeth Cantwell, president of Utah State University, joined together as the leaders of Utah’s two R1 institutions to present to the Utah Board of Higher Education. </p>
+</p><a href="https://attheu.utah.edu/facultystaff/driving-economic-growth-through-collaborative-research/" >Read Article<span class="sr-only"> - Driving economic growth through collaborative research</span></a></div><div class="uu-card-footer"><div class="uu-card-date">Jan 16, 2025</div></div></div></div><div class="uu-card" data-aos="fade-up"><div class="uu-card-img" style="background-image:url(https://d26toa8f6ahusa.cloudfront.net/wp-content/uploads/2025/01/15191029/LoveYourBlock_header-768x432.jpg);"></div><div class="uu-card-details"><div class="uu-card-body"><h3 class="uu-card-title">Love Your Block: Revitalizing SLC</h3><a href="https://attheu.utah.edu/facultystaff/love-your-block-revitalizing-slc/" class="uu-card-cat">@ THE U</a><p><p>Students in the Urban Ecology Planning Workshop conducted resident surveys and explored how data tools could improve neighborhoods for Love Your Block, with SLC&#8217;s Office of the Mayor.</p>
+</p><a href="https://attheu.utah.edu/facultystaff/love-your-block-revitalizing-slc/" >Read Article<span class="sr-only"> - Love Your Block: Revitalizing SLC</span></a></div><div class="uu-card-footer"><div class="uu-card-date">Jan 15, 2025</div></div></div></div><div class="uu-card" data-aos="fade-up"><div class="uu-card-img" style="background-image:url(https://d26toa8f6ahusa.cloudfront.net/wp-content/uploads/2025/01/15184906/Fox_Squirrel_1_Winter_GLEHeader-768x432.jpg);"></div><div class="uu-card-details"><div class="uu-card-body"><h3 class="uu-card-title">New Year, Who Dis?</h3><a href="https://attheu.utah.edu/facultystaff/new-year-who-dis/" class="uu-card-cat">@ THE U</a><p><p>With a fresh blanket of snow, the quiet solstice of the Garden transforms into a winter wonderland. </p>
+</p><a href="https://attheu.utah.edu/facultystaff/new-year-who-dis/" >Read Article<span class="sr-only"> - New Year, Who Dis?</span></a></div><div class="uu-card-footer"><div class="uu-card-date">Jan 15, 2025</div></div></div></div></div></p></p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p style="text-align: center;"><a class="uu-btn" href="https://attheu.utah.edu/">More U of U News</a></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1 umc-quick-facts" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h2 class="text-center has-subheading hr-u-red-sm margin-top-0x">Get to Know the U <span>Quick facts about the University of Utah</span></h2>
+                     <hr class="hr-u-red-sm margin-top-0x">
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border"><!-- FAST FACTS -->
+                     <div class="uu-fast-facts-container">
+                        <div class="uu-fast-facts-left">
+                           <div class="uu-fast-facts-left-icon"><img src="/_resources/images/fast-facts/icon-block-u.svg" alt="Block U"></div>
+                           <div class="uu-fast-facts-left-title"><span>ON THE RISE!</span></div>
+                           <div class="uu-fast-facts-left-desc">By nearly every measure, the University of Utah is on the rise—from graduation rates
+                              to research project funding and prestigious national rankings and recognitions.</div>
+                        </div>
+                        <div class="uu-fast-facts-right aos-container"><!-- FAST FACTS ITEM -->
+                           <div class="uu-fast-facts-item aos-init aos-animate" data-aos="fade">
+                              <div class="uu-fast-facts-item-icon"><img role="presentation" src="/_resources/images/fast-facts/icon-students.svg" alt=""></div>
+                              <div class="uu-fast-facts-item-data">
+                                 <div class="uu-fast-facts-item-title">36,000+</div>
+                                 <div class="uu-fast-facts-item-subtitle">ENROLLED STUDENTS (FALL 2024)</div>
+                                 <div class="uu-fast-facts-item-desc">Includes all credit-taking students</div>
+                              </div>
+                           </div>
+                           <!-- END FAST FACTS ITEM --><!-- FAST FACTS ITEM -->
+                           <div class="uu-fast-facts-item aos-init aos-animate" data-aos="fade">
+                              <div class="uu-fast-facts-item-icon"><img role="presentation" src="/_resources/images/fast-facts/icon-flag.svg" alt=""></div>
+                              <div class="uu-fast-facts-item-data">
+                                 <div class="uu-fast-facts-item-title">#1</div>
+                                 <div class="uu-fast-facts-item-subtitle">public university in the West</div>
+                                 <div class="uu-fast-facts-item-desc">Wall Street Journal</div>
+                              </div>
+                           </div>
+                           <!-- END FAST FACTS ITEM --><!-- FAST FACTS ITEM -->
+                           <div class="uu-fast-facts-item aos-init aos-animate" data-aos="fade">
+                              <div class="uu-fast-facts-item-icon"><img role="presentation" src="/_resources/images/fast-facts/icon-house.svg" alt=""></div>
+                              <div class="uu-fast-facts-item-data">
+                                 <div class="uu-fast-facts-item-title">5,500+</div>
+                                 <div class="uu-fast-facts-item-subtitle">STUDENTS LIVING ON CAMPUS</div>
+                                 <div class="uu-fast-facts-item-desc">Guaranteed housing for all first-year students.</div>
+                              </div>
+                           </div>
+                           <!-- END FAST FACTS ITEM --><!-- FAST FACTS ITEM -->
+                           <div class="uu-fast-facts-item aos-init aos-animate" data-aos="fade">
+                              <div class="uu-fast-facts-item-icon"><img role="presentation" src="/_resources/images/fast-facts/icon-faculty-ratio.svg" alt=""></div>
+                              <div class="uu-fast-facts-item-data">
+                                 <div class="uu-fast-facts-item-title">18:1</div>
+                                 <div class="uu-fast-facts-item-subtitle">student-to-faculty ratio</div>
+                                 <div class="uu-fast-facts-item-desc">the lowest among Utah public institutions</div>
+                              </div>
+                           </div>
+                           <!-- END FAST FACTS ITEM --><!-- FAST FACTS ITEM -->
+                           <div class="uu-fast-facts-item aos-init aos-animate" data-aos="fade">
+                              <div class="uu-fast-facts-item-icon"><img role="presentation" src="/_resources/images/fast-facts/icon-location-pin.svg" alt=""></div>
+                              <div class="uu-fast-facts-item-data">
+                                 <div class="uu-fast-facts-item-title">ASIA CAMPUS</div>
+                                 <div class="uu-fast-facts-item-subtitle">LOCATED IN INCHEON, SOUTH KOREA</div>
+                                 <div class="uu-fast-facts-item-desc">&nbsp;</div>
+                              </div>
+                           </div>
+                           <!-- END FAST FACTS ITEM --><!-- FAST FACTS ITEM -->
+                           <div class="uu-fast-facts-item aos-init aos-animate" data-aos="fade">
+                              <div class="uu-fast-facts-item-icon"><img role="presentation" src="/_resources/images/fast-facts/icon-renewable-energy2.svg" alt=""></div>
+                              <div class="uu-fast-facts-item-data">
+                                 <div class="uu-fast-facts-item-title">71%</div>
+                                 <div class="uu-fast-facts-item-subtitle">of energy used on campus is from renewable resources</div>
+                                 <div class="uu-fast-facts-item-desc">&nbsp;</div>
+                              </div>
+                           </div>
+                           <!-- END FAST FACTS ITEM --></div>
+                     </div>
+                     <!-- END FAST FACTS --></div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1 umc-social-media" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h2 class="text-center has-subheading">Social &amp; Media <span>See what’s being discussed &amp; shared around the U</span></h2>
+                     <hr class="hr-u-red-sm margin-top-0x">
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-transparent no-border">
+                     <div class="social-tabs-container">
+                        <div class="social-tab-buttons"><button class="social-tab-button active" name="instagram" type="button" data-target="social-tab-instagram"><i class="fab fa-instagram" aria-hidden="true">&nbsp;</i><span class="sr-only">Instagram</span></button><button class="social-tab-button" name="twitter" type="button" data-target="social-tab-twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true">&nbsp;</i><span class="sr-only">Twitter</span></button><button class="social-tab-button" name="facebook" type="button" data-target="social-tab-facebook"><i class="fab fa-facebook-f" aria-hidden="true">&nbsp;</i><span class="sr-only">Facebook</span></button><button class="social-tab-button" name="youtube" type="button" data-target="social-tab-youtube"><i class="fab fa-youtube" aria-hidden="true">&nbsp;</i><span class="sr-only">Youtube</span></button></div>
+                        <div class="social-tabs aos-container">
+                           <div id="social-tab-instagram" class="social-tab aos-init aos-animate" data-aos="fade-up"><iframe title="Instagram Feed" src="https://www.juicer.io/api/feeds/uofu-instagram-homepage/iframe?per=12" width="300" height="150"></iframe></div>
+                           <div id="social-tab-twitter" class="social-tab hidden aos-init aos-animate" data-aos="fade-up"><iframe title="X Feed" src="https://www.juicer.io/api/feeds/uutah-a6418f99-9a8d-43be-8201-5403cca0f2e1/iframe?per=12" width="300" height="150"></iframe></div>
+                           <div id="social-tab-facebook" class="social-tab hidden aos-init aos-animate" data-aos="fade-up"><iframe title="Facebook Feed" src="https://www.juicer.io/api/feeds/uofu-facebook-homepage/iframe?per=12" width="300" height="150"></iframe></div>
+                           <div id="social-tab-youtube" class="social-tab hidden aos-init aos-animate" data-aos="fade-up"><iframe title="Youtube Feed" src="https://www.juicer.io/api/feeds/uofu-youtube-homepage/iframe?per=12" width="300" height="150"></iframe></div>
+                        </div>
+                     </div>
+                     <div><a href="https://brand.utah.edu/communications/social-media-directory/" target="_blank" rel="noopener">Want to see more social media feeds?</a></div>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The University of Utah</h2>
+         </div>
+         <div class="department-address">
+            <p>201 Presidents Circle<br> Salt Lake City, UT 84112<br> 801.581.7200</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Resources</h2>
+         <hr>
+         <ul>
+            <li><a href="/future-students/">Future Students</a></li>
+            <li><a href="/students/index.php">Students</a></li>
+            <li><a href="https://orientation.utah.edu/parents/">Parents &amp; Families</a></li>
+            <li><a href="/faculty/">Faculty</a></li>
+            <li><a href="/staff/">Staff</a></li>
+            <li><a href="/visitors/">Visitors</a></li>
+            <li><a href="https://ulink.utah.edu/s/1077/23/home.aspx">Alumni</a></li>
+            <li><a href="https://accessibility.utah.edu/index.php">ACCESSIBILITY</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col3">
+         <h2 class="footer-heading">Initiatives</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.research.utah.edu/">Research</a></li>
+            <li><a href="https://sustainability.utah.edu/">Sustainability</a></li>
+            <li><a href="https://employment.utah.edu/">Employment</a></li>
+            <li><a href="https://administration.utah.edu/">U Leadership</a></li>
+            <li><a href="https://publicsafety.utah.edu/">University Safety</a></li>
+            <li><a href="https://about.utah.edu/">About the U</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col4">
+         <h2 class="footer-heading">Information</h2>
+         <hr>
+         <ul>
+            <li><a href="https://president.utah.edu/">Office of the President</a></li>
+            <li><a href="https://auxiliary.apps.utah.edu/ugive/">Give to the U</a></li>
+            <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+            <li><a href="https://uteproud.utah.edu/">Ute Proud</a></li>
+            <li><a href="https://events.utah.edu">Campus Events</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/contact/">Contact - Feedback</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://portal.app.utah.edu/?new">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2025 The University of Utah</p>
+            <ul>
+               <li><a href="/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="/disclaimer/">Disclaimer</a></li>
+               <li><a href="/privacy/">Privacy</a></li>
+               <li><a href="/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+      <script>
+			$(window).on('load', function () {
+				$('.owl-prev').attr('aria-label','previous slide');
+				$('.owl-next').attr('aria-label','next slide');
+			});
+		</script>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+							<script src="/_resources/js/owl.carousel.min.js"></script>
+							<script src="/_resources/js/umc-banner-1.js"></script>
+																						
+																												
+																															
+																															
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=utah_home2&amp;action=de&amp;path=/index.pcf">Last Updated: 12/11/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

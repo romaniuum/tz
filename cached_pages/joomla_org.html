@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="blue">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@joomla">
+	<meta name="twitter:description" content="The Flexible Platform Empowering Website Creators">
+	<meta name="twitter:image" content="https://cdn.joomla.org/images/sharing/joomla-twitter-card.png">
+	<meta name="twitter:title" content="Joomla.org">
+	<meta name="referrer" content="unsafe-url">
+	<meta property="og:site_name" content="Joomla!">
+	<meta property="og:image" content="https://cdn.joomla.org/images/sharing/joomla-org-og.jpg">
+	<meta name="description" content="Joomla! is the mobile-ready and user-friendly way to build your website. Choose from thousands of features and designs. Joomla! is free and open source.">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>Joomla Content Management System (CMS) - try it! It's free!</title>
+	<link href="/templates/joomla/images/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+	<link href="/templates/joomla/images/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+	<link href="/templates/joomla/images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+	<link href="/templates/joomla/images/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+	<link href="/templates/joomla/images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+	<link href="/templates/joomla/images/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+	<link href="/templates/joomla/images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+	<link href="/templates/joomla/images/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+	<link href="/templates/joomla/images/apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="https://www.joomla.org/search.opensearch" rel="search" title="Joomla.org" type="application/opensearchdescription+xml">
+	<link href="/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+<link href="/media/system/css/joomla-fontawesome.min.css?35279c" rel="stylesheet">
+	<link href="https://cdn.joomla.org/template/css/template_4.0.9.min.css?35279c" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet" crossorigin="anonymous">
+	<link href="/media/vendor/awesomplete/css/awesomplete.css?1.1.7" rel="stylesheet">
+	<link href="/media/vendor/joomla-custom-elements/css/joomla-alert.min.css?0.2.0" rel="stylesheet">
+	<link href="/media/templates/site/joomla/css/custom.css?35279c" rel="stylesheet">
+	<link href="/media/plg_system_jcepro/site/css/content.min.css?86aa0286b6232c4a5b58f892ce080277" rel="stylesheet">
+<script src="/media/templates/site/joomla/js/blockadblock.js?3.2.1" defer></script>
+	<script src="/media/templates/site/joomla/js/js.cookie.js?2.1.4" defer></script>
+	<script type="application/json" class="joomla-script-options new">{"joomla.jtext":{"RLTA_BUTTON_SCROLL_LEFT":"Scroll buttons to the left","RLTA_BUTTON_SCROLL_RIGHT":"Scroll buttons to the right","MOD_FINDER_SEARCH_VALUE":"Search &hellip;","JLIB_JS_AJAX_ERROR_OTHER":"An error has occurred while fetching the JSON data: HTTP %s status code.","JLIB_JS_AJAX_ERROR_PARSE":"A parse error has occurred while processing the following JSON data:<br><code style=\"color:inherit;white-space:pre-wrap;padding:0;margin:0;border:0;background:inherit;\">%s</code>","ERROR":"Error","MESSAGE":"Message","NOTICE":"Notice","WARNING":"Warning","JCLOSE":"Close","JOK":"OK","JOPEN":"Open"},"skipto-settings":{"settings":{"skipTo":{"enableActions":false,"enableHeadingLevelShortcuts":false,"accesskey":"9","displayOption":"popup","buttonLabel":"Keyboard Navigation","buttonTooltipAccesskey":"Access key is $key","landmarkGroupLabel":"Landmarks","headingGroupLabel":"Page Outline","mofnGroupLabel":" ($m of $n)","headingLevelLabel":"Heading level","mainLabel":"Main","searchLabel":"Search","navLabel":"Navigation","regionLabel":"Region","asideLabel":"Aside","footerLabel":"Footer","headerLabel":"Header","formLabel":"Form","msgNoLandmarksFound":"No landmarks to skip to","msgNoHeadingsFound":"No headings to skip to","headings":"h1, h2, h3","landmarks":"main, nav, search, aside, header, footer, form","attachElement":".navigation"}}},"finder-search":{"url":"/component/finder/?task=suggestions.suggest&format=json&tmpl=component&Itemid=122"},"system.paths":{"root":"","rootFull":"https://www.joomla.org/","base":"","baseFull":"https://www.joomla.org/"},"csrf.token":"020cb68f77043615ddddda9255887789"}</script>
+	<script src="/media/system/js/core.min.js?5b7728c412ac4d5ec35de9b1b4b61dd7"></script>
+	<script src="/media/vendor/skipto/js/skipto.min.js?4.1.7" defer></script>
+	<script src="/media/vendor/bootstrap/js/collapse.min.js?5.3.3" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/dropdown.min.js?5.3.3" type="module"></script>
+	<script src="/media/templates/site/joomla/js/template.js?35279c" defer></script>
+	<script src="/media/mod_menu/js/menu.min.js?35279c" type="module"></script>
+	<script src="/media/vendor/awesomplete/js/awesomplete.min.js?1.1.7" defer></script>
+	<script src="/media/com_finder/js/finder.min.js?5b7728c412ac4d5ec35de9b1b4b61dd7" type="module"></script>
+	<script src="/media/system/js/messages.min.js?5b7728c412ac4d5ec35de9b1b4b61dd7" type="module"></script>
+
+    <script>
+        var _prum = [['id', '59300ad15992c776ad970068'],
+            ['mark', 'firstbyte', (new Date()).getTime()]];
+        (function() {
+            var s = document.getElementsByTagName('script')[0]
+                , p = document.createElement('script');
+            p.async = 'async';
+            p.src = 'https://rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+        })();
+    </script>
+</head>
+<body class="site com_empty view-default layout-default task-display itemid-122">
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWC8WL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WWC8WL');</script>
+    <!-- End Google Tag Manager -->
+<!-- Top Nav -->
+<nav class="navigation" role="navigation" aria-label="Cross Site Menu">
+    <div id="mega-menu" class="navbar navbar-expand-md py-md-1">
+        <div class="container-xxl">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryMenu" aria-controls="primaryMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="primaryMenu">
+	<ul id="nav-joomla" class="navbar-nav">
+		<li class="dropdown">
+			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				<span dir="ltr"><span aria-hidden="true" class="fab fa-joomla"></span> Joomla!<sup>&reg;</sup></span> <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-item nav-header"><span>About us</span></li>
+				<li>
+					<a class="dropdown-item" href="https://www.joomla.org">
+						<span aria-hidden="true" class="icon-joomla"></span> Joomla Home
+					</a>
+				</li>
+				<li><a class="dropdown-item" href="https://www.joomla.org/about-joomla.html">What is Joomla?</a></li>
+				<li><a class="dropdown-item" href="https://www.joomla.org/core-features.html">Benefits &amp; Features</a></li>
+				<li><a class="dropdown-item" href="https://www.joomla.org/about-joomla/the-project.html">Project &amp; Leadership</a></li>
+				<li><a class="dropdown-item" href="https://tm.joomla.org">Trademark &amp; Licensing</a></li>
+				<li><a class="dropdown-item" href="https://joomlafoundation.org">The Joomla Foundation</a></li>
+				<li class="dropdown-divider"></li>
+				<li class="dropdown-item nav-header"><span>Support us</span></li>
+				<li><a class="dropdown-item" href="https://www.joomla.org/contribute-to-joomla.html">Contribute</a></li>
+				<li><a class="dropdown-item" href="https://www.joomla.org/sponsor.html">Sponsor</a></li>
+				<li><a class="dropdown-item" href="https://www.joomla.org/about-joomla/partners.html">Partner</a></li>
+				<li><a class="dropdown-item" href="https://shop.joomla.org">Shop</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Download &amp; Extend <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="https://downloads.joomla.org">Downloads</a></li>
+				<li><a class="dropdown-item" href="https://extensions.joomla.org">Extensions</a></li>
+				<li><a class="dropdown-item" href="https://community.joomla.org/translations.html">Languages</a></li>
+				<li><a class="dropdown-item" href="https://launch.joomla.org">Get a free site</a></li>
+				<li><a class="dropdown-item" href="https://domains.joomla.org">Get a domain</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Discover &amp; Learn <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="https://docs.joomla.org">Documentation</a></li>
+				<li><a class="dropdown-item" href="https://community.joomla.org/joomla-training.html">Training</a></li>
+				<li><a class="dropdown-item" href="https://certification.joomla.org">Certification</a></li>
+				<li><a class="dropdown-item" href="https://showcase.joomla.org">Site Showcase</a></li>
+				<li><a class="dropdown-item" href="https://www.joomla.org/announcements.html">Announcements</a></li>
+				<li><a class="dropdown-item" href="https://community.joomla.org/blogs.html">Blogs</a></li>
+				<li><a class="dropdown-item" href="https://magazine.joomla.org">Magazine</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Community &amp; Support <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="https://community.joomla.org">Community Portal</a></li>
+				<li><a class="dropdown-item" href="https://community.joomla.org/events.html">Events</a></li>
+				<li><a class="dropdown-item" href="https://community.joomla.org/user-groups.html">User Groups</a></li>
+				<li><a class="dropdown-item" href="https://forum.joomla.org">Forum</a></li>
+				<li><a class="dropdown-item" href="https://community.joomla.org/service-providers-directory.html">Service Providers Directory</a></li>
+				<li><a class="dropdown-item" href="https://volunteers.joomla.org">Volunteers Portal</a></li>
+				<li><a class="dropdown-item" href="https://extensions.joomla.org/vulnerable-extensions/vulnerable/">Vulnerable Extensions List</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Developer Resources <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="https://developer.joomla.org">Developer Network</a></li>
+				<li><a class="dropdown-item" href="https://developer.joomla.org/security.html">Security Centre</a></li>
+				<li><a class="dropdown-item" href="https://issues.joomla.org">Issue Tracker</a></li>
+				<li><a class="dropdown-item" href="https://github.com/joomla">GitHub</a></li>
+				<li><a class="dropdown-item" href="https://api.joomla.org">API Documentation</a></li>
+				<li><a class="dropdown-item" href="https://framework.joomla.org"><span dir="ltr">Joomla!</span> Framework</a></li>
+			</ul>
+		</li>
+	</ul>
+	<div id="nav-search" class="navbar-search float-md-end">
+		
+<form class="mod-finder js-finder-searchform form-search" action="/search.html" method="get" role="search">
+    <label for="mod-finder-searchword315" class="visually-hidden finder">Search</label><input type="text" name="q" id="mod-finder-searchword315" class="js-finder-search-query form-control" value="" placeholder="Search &hellip;">
+            </form>
+
+	</div>
+</div>
+        </div>
+    </div>
+</nav>
+<!-- Header -->
+<header class="header">
+    <div class="container-md">
+        <div class="row">
+            <div class="col-md-7">
+                <h1 class="page-title">
+                    <a href="/">
+                                                <img height="50px;" src="https://cdn.joomla.org/images/joomla-colours-logo.svg" alt="Joomla!" class="site-logo me-2 mb-1">
+                                                                    </a>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="btn-toolbar pt-md-1 row">
+                    <div class="btn-group col-6">
+                        <a href="https://downloads.joomla.org/" class="btn btn-lg btn-warning">Download</a>
+                    </div>
+                    <div class="btn-group col-6">
+                        <a href="https://launch.joomla.org" class="btn btn-lg btn-primary">Launch<span aria-hidden="true" class="icon-rocket"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="subnav-wrapper" aria-label="Primary Menu">
+    <div class="subnav">
+        <div class="container-md">
+            <ul class="mod-menu mod-list nav  nav-pills">
+<li class="nav-item item-122 default current active"><a href="/" class="nav-link" aria-current="page">Home</a></li><li class="nav-item item-153 parent"><a href="/about-joomla.html" class="nav-link">About Joomla!</a></li><li class="nav-item item-195"><a href="/core-features.html" class="nav-link">Benefits &amp; Features</a></li><li class="nav-item item-466"><a href="https://5.joomla.org/" class="nav-link">Joomla! 5</a></li><li class="nav-item item-154 parent"><a href="/announcements.html" class="nav-link">News</a></li><li class="nav-item item-348"><a href="/contribute-to-joomla.html" class="nav-link">Contribute</a></li><li class="nav-item item-220"><a href="/media-contact.html" class="nav-link">Press Enquiries</a></li></ul>
+
+        </div>
+    </div>
+</nav>
+<!-- Body -->
+<div class="body">
+    <div class="container-fluid g-0">
+        <div class="moduletable  topbanner">
+        
+<div id="mod-custom324" class="mod-custom custom">
+    <div class="hero-overlay">
+<div class="container">
+<div class="custom hero-heading text-center">
+<h2>The Flexible Platform Empowering Website Creators</h2>
+<p>Joomla! is an award-winning content management system (CMS), which enables you to build web sites and powerful online applications.</p>
+</div>
+<div class="hero-teaser row text-center">
+<div class="col-md-4">
+<article><header class="d-none d-sm-block"><a title="Download Joomla!" href="https://downloads.joomla.org"><span class="icon-circled icon-circled-sm icon-shadowed"> <span class="icon-download svg-icon"><span class="visually-hidden">Download Joomla!</span></span></span></a>
+<h3 class="hero-teaser-title">Download Joomla!</h3>
+</header>
+<div class="hero-teaser-body d-none d-sm-block">
+<p>Download and Install Joomla! in your own server or development environment.</p>
+</div>
+<footer><a title="Download Joomla!" href="https://downloads.joomla.org">Download Joomla! →</a></footer></article>
+</div>
+<div class="col-md-4">
+<article><header class="d-none d-sm-block"><a title="Free hosted Joomla! website" href="https://launch.joomla.org"><span class="icon-circled icon-circled-sm icon-shadowed"><span class="icon-rocket svg-icon"><span class="visually-hidden">Use launch.joomla.org</span></span> </span></a>
+<h3 class="hero-teaser-title">Use Joomla!</h3>
+</header>
+<div class="hero-teaser-body d-none d-sm-block">
+<p>Spin up a free and fully functional Joomla website on launch.joomla.org.</p>
+</div>
+<footer><a title="Free hosted Joomla! website" href="https://launch.joomla.org">Launch Joomla! →</a></footer></article>
+</div>
+<div class="col-md-4">
+<article><header class="d-none d-sm-block"><a title="Joomla! Training" href="https://training.joomla.org/"><span class="icon-circled icon-circled-sm icon-shadowed"> <span class="icon-screen svg-icon"><span class="visually-hidden">Joomla! Training</span></span> </span></a>
+<h3 class="hero-teaser-title">Learn Joomla!</h3>
+</header>
+<div class="hero-teaser-body d-none d-sm-block">
+<p>Learn how to manage a Joomla website with free video training classes.</p>
+</div>
+<footer><a title="Joomla! Training" href="https://training.joomla.org/">Learn Joomla! →</a></footer></article>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"> </div></div>
+</div>
+<div class="moduletable  announcements">
+        
+<div id="mod-custom325" class="mod-custom custom">
+    <div class="container">
+<div class="row">
+<div class="col-md-6 video-container">
+<iframe title="Joomla! 4.x Now Available" 
+src="https://www.youtube-nocookie.com/embed/kDE71jxAvfg?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href='https://www.youtube-nocookie.com/embed/kDE71jxAvfg?autoplay=1'><img src='https://img.youtube.com/vi/kDE71jxAvfg/hqdefault.jpg' alt='Joomla 4 | A new world of possibilities'><span>▶</span></a>"
+
+width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen" loading="lazy"></iframe></div>
+<div class="moduletable  col-md-6">
+            <h2 >Joomla! Announcements</h2>        <div class="newsflash">
+			<div class="newsflash-item">
+							<h3 class="newsflash-title">
+											<a href="/announcements/release-news/5919-joomla-5-2-3-security-bugfix-release.html">
+							Joomla 5.2.3 Security & Bugfix Release						</a>
+									</h3>
+			
+										
+			
+			
+			<div class="newsflash-body">Let’s celebrate! The Joomla! Project is pleased to announce the release of Joomla 5.2.3 and Joomla 4.4.10. This is a security and bug fix release for the 5.x and 4.x series of Joomla.
+</div>
+
+							
+<p class="readmore">
+            <a class="btn btn-secondary" href="/announcements/release-news/5919-joomla-5-2-3-security-bugfix-release.html" aria-label="Read more: Joomla 5.2.3 Security &amp; Bugfix Release">
+            <span class="icon-chevron-right" aria-hidden="true"></span>            Read more &hellip;        </a>
+    </p>
+					</div>
+			<div class="newsflash-item">
+							<h3 class="newsflash-title">
+											<a href="/announcements/release-news/5918-joomla-5-2-2-security-bugfix-release.html">
+							Joomla 5.2.2 Security & Bugfix Release						</a>
+									</h3>
+			
+										
+			
+			
+			<div class="newsflash-body">Let’s celebrate! The Joomla! Project is pleased to announce the release of Joomla 5.2.2. This is a security and bug fix release for the 5.x series of Joomla.
+</div>
+
+							
+<p class="readmore">
+            <a class="btn btn-secondary" href="/announcements/release-news/5918-joomla-5-2-2-security-bugfix-release.html" aria-label="Read more: Joomla 5.2.2 Security &amp; Bugfix Release">
+            <span class="icon-chevron-right" aria-hidden="true"></span>            Read more &hellip;        </a>
+    </p>
+					</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="clear"> </div></div>
+</div>
+<div class="moduletable  whyjoomla">
+        
+<div id="mod-custom326" class="mod-custom custom">
+    <div class="container">
+<div class="row">
+<div class="col-md-6">
+<h2>Why Joomla?</h2>
+<p>Hundreds of developers have been improving Joomla! since the first version was released in 2005. This immense effort has made Joomla! very popular, easy to use, stable and secure.</p>
+<p>Joomla! has thousands of free extensions and templates allowing you to customize your site to fit your specific needs.</p>
+<p class="text-center"><a class="btn btn-danger btn-lg" title="Discover Joomla! 5.x" href="https://5.joomla.org">Learn more about Joomla! 5</a></p>
+</div>
+<div class="col-md-6 video-container">&nbsp;
+<iframe title="Joomla! 5.x Now Available" 
+src="https://www.youtube-nocookie.com/embed/7DiNhBXqc18?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href='https://www.youtube-nocookie.com/embed/7DiNhBXqc18?autoplay=1'><img src='https://img.youtube.com/vi/7DiNhBXqc18/hqdefault.jpg' alt='Joomla! 5.x Now Available'><span>▶</span></a>"
+width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen" loading="lazy"></iframe>
+
+</div>
+</div>
+</div></div>
+</div>
+<div class="moduletable  features">
+        
+<div id="mod-custom327" class="mod-custom custom">
+    <div class="container">
+	<div class="row text-center">
+		<h2>Benefits &amp; Features</h2>
+		<div class="row text-center list-features">
+			<div class="col-md-2">
+				<div class="feature"><span class="icon-circled icon-circled-lg icon-shadowed icon-circled-additional-secondary-olive"> <span class="icon-options svg-icon"></span></span>
+					<p>Search Engine Friendly</p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="feature"><span class="icon-circled icon-circled-lg icon-shadowed icon-circled-secondary-yellow"> <span class="icon-mobile svg-icon"></span></span>
+					<p>Mobile Friendly</p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="feature"><span class="icon-circled icon-circled-lg icon-shadowed icon-circled-additional-secondary-green"> <span class="icon-palette svg-icon"></span></span>
+					<p>Unlimited Design</p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="feature"><span class="icon-circled icon-circled-lg icon-shadowed icon-circled-additional-secondary-scarlet"> <span class="icon-earth svg-icon"></span> </span>
+					<p>Multilingual</p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="feature"><span class="icon-circled icon-circled-lg icon-shadowed icon-circled-secondary-blue"> <span class="icon-cogs svg-icon"></span> </span>
+					<p>Flexible &amp; Fully Extensible</p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="feature"><span class="icon-circled icon-circled-lg icon-shadowed icon-circled-additional-secondary-red"> <span class="icon-users svg-icon"></span> </span>
+					<p>Multi-User Permission Levels</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="text-center"><a class="btn btn-danger btn-lg" title="Joomla! Features" href="/core-features.html">See benefits &amp; features</a></div>
+</div></div>
+</div>
+<div class="moduletable  feedshp">
+        
+<div id="mod-custom328" class="mod-custom custom">
+    <div class="container">
+<div class="row customcontainer">
+<div class="col-md-5 news">
+<h2>Announcements</h2>
+<div class="moduletable ">
+            <h3 >Development News</h3>        <div style="direction: ltr; text-align: left !important" class="feed">
+			<div class="newsfeed">
+															<div class="feed-item">
+																<h4 class="feed-link">
+							<a href="https://developer.joomla.org/news/953-your-first-glimpse-at-joomla-5-3-0-alpha2.html" target="_blank" rel="noopener">Your first glimpse at Joomla! 5.3.0 Alpha2</a>
+						</h4>
+					
+					<small class="feed-posted">
+						December 24, 2024						 by Tom van der Laan					</small>
+
+											<div class="feed-item-description">
+														The Joomla! Project is pleased to announce the availability of Joomla 5.3 Alpha 2 for testing.
+						</div>
+									</div>
+															<div class="feed-item">
+																<h4 class="feed-link">
+							<a href="https://developer.joomla.org/news/952-your-first-glimpse-at-joomla-5-3-0-alpha1.html" target="_blank" rel="noopener">Your first glimpse at Joomla! 5.3.0 Alpha1</a>
+						</h4>
+					
+					<small class="feed-posted">
+						November 26, 2024						 by Tom van der Laan					</small>
+
+											<div class="feed-item-description">
+														The Joomla! Project is pleased to announce the availability of the first Joomla 5.3 Alpha for testing.
+						</div>
+									</div>
+					</div>
+	</div>
+</div>
+<div class="moduletable ">
+            <h3 >Community News</h3>        <div style="direction: ltr; text-align: left !important" class="feed">
+			<div class="newsfeed">
+															<div class="feed-item">
+																<h4 class="feed-link">
+							<a href="https://community.joomla.org/blogs/leadership/call-for-manifestos-group2-2025.html" target="_blank" rel="noopener">Call for Candidate Manifestos - Group 2 (2025) - Elections</a>
+						</h4>
+					
+					<small class="feed-posted">
+						January 6, 2025						 by [DOT] marzo [AT] community [DOT] joomla [DOT] org (Luca Marzo					</small>
+
+											<div class="feed-item-description">
+														Elections for the Board of Open Source Matters, Inc. occur twice a year at 6 monthly intervals to ensure continuity of the board by electing half...						</div>
+									</div>
+															<div class="feed-item">
+																<h4 class="feed-link">
+							<a href="https://community.joomla.org/blogs/leadership/invitation-to-the-osm-semi-annual-members-meeting-december-2024.html" target="_blank" rel="noopener">Invitation to the OSM Semi-Annual Members Meeting - December 2024</a>
+						</h4>
+					
+					<small class="feed-posted">
+						December 6, 2024						 by [DOT] marzo [AT] community [DOT] joomla [DOT] org (Luca Marzo					</small>
+
+											<div class="feed-item-description">
+														To all the Members of Open Source Matters, Inc.
+It is with great pleasure that I invite you to attend the&nbsp;Semi-Annual Members Meeting of Open...						</div>
+									</div>
+					</div>
+	</div>
+</div>
+<div class="moduletable ">
+            <h3 >Team Reports</h3>        <div style="direction: ltr; text-align: left !important" class="feed">
+			<div class="newsfeed">
+															<div class="feed-item">
+																<h4 class="feed-link">
+							<a href="https://volunteers.joomla.org/departments/production/reports/2048-production-dept-meeting-january-7-2025" target="_blank" rel="noopener">Production Dept. Meeting January 7 2025</a>
+						</h4>
+					
+					<small class="feed-posted">
+						January 13, 2025						 by Christiane Maier-Stadtherr					</small>
+
+											<div class="feed-item-description">
+														Duration: 30 Mins.AttendeesSigrid Gramlinger, Benkamin Trenkle, Christiane Maier-Stadtherr, David Jardin, Hannes Papenberg, Martin Kopp, Olivier...						</div>
+									</div>
+															<div class="feed-item">
+																<h4 class="feed-link">
+							<a href="https://volunteers.joomla.org/teams/bug-squad/reports/2047-joomla-bugsquad-meeting-january-6-2025" target="_blank" rel="noopener">Joomla Bugsquad Meeting - January, 6, 2025</a>
+						</h4>
+					
+					<small class="feed-posted">
+						January 6, 2025						 by Martin Kopp					</small>
+
+											<div class="feed-item-description">
+														Attendees: Rolf, Brian, Martin (Teamlead) - Duration: 55 minutes - Discussed 12 issues closed 6, 501 Issues marked as bug, 751 in total. Thanks to...						</div>
+									</div>
+					</div>
+	</div>
+</div>
+</div>
+<div class="col-md-7 events">
+<div class="event">
+<h2>Upcoming Events</h2>
+<figure><img src="/images/homepage/joomla-events-1.jpg" alt="joomla events" /></figure>
+
+<p class="text-center"><a class="btn btn-primary btn-lg" title="Joomla! Events" href="https://community.joomla.org/events.html">More events</a></p>
+</div>
+<div class="contribute">
+<div>
+<h2>Joomla! Means Community</h2>
+<p>Joomla! is the only major CMS that is built entirely by volunteers from all over the world. We have a strong community bond and all take pleasure in building something that has a large global impact. If you are interested in volunteering please head over to the volunteer portal.</p>
+<p class="text-center"><a class="btn btn-danger btn-lg" title="Contribute to Joomla!" href="https://volunteers.joomla.org">Get involved</a></p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<div class="moduletable ">
+        
+<div id="mod-custom329" class="mod-custom custom">
+    <section class="section-4 numbers">
+<div class="container-fluid g-0">
+<div class="row g-0">
+<div class="col-6 col-sm-2 numbers-box installations">
+<div class="numbers-text"><a href="https://downloads.joomla.org" title="Download Joomla"><span class="number"><span class="count-up" data-from="0" data-to="110">141</span> <sup>+</sup></span><br />Million<br />Downloads</a></div>
+</div>
+<div class="col-6 col-sm-2 numbers-box installations d-none d-sm-block">
+<div class="numbers-img">
+<div class="numbers-overlay">&nbsp;</div>
+</div>
+</div>
+<div class="col-6 col-sm-2 numbers-box extensions">
+<div class="numbers-text"><a href="https://extensions.joomla.org" title="Joomla Extension Directory"><span class="number"><span class="count-up" data-from="0" data-to="10">10</span> <sup>+</sup></span><br />Thousand<br />Extensions &amp;<br />Templates</a></div>
+</div>
+<div class="col-6 col-sm-2 numbers-box extensions d-none d-sm-block">
+<div class="numbers-img">
+<div class="numbers-overlay">&nbsp;</div>
+</div>
+</div>
+<div class="col-6 col-sm-2 numbers-box support">
+<div class="numbers-text"><a href="https://showcase.joomla.org" title="Joomla Showcase"><span class="number"><span class="count-up" data-from="0" data-to="2">2</span> <sup>+</sup></span><br />Million<br />Web Sites</a></div>
+</div>
+<div class="col-6 col-sm-2 numbers-box support d-none d-sm-block">
+<div class="numbers-img">
+<div class="numbers-overlay">&nbsp;</div>
+</div>
+</div>
+<div class="col-6 col-sm-2 numbers-box volunteers d-none d-sm-block">
+<div class="numbers-img">
+<div class="numbers-overlay">&nbsp;</div>
+</div>
+</div>
+<div class="col-6 col-sm-2 numbers-box volunteers">
+<div class="numbers-text"><a href="https://volunteers.joomla.org" title="Download Joomla"><span class="number"><span class="count-up" data-from="0" data-to="1500">1500</span> <sup>+</sup></span><br />Volunteers</a></div>
+</div>
+<div class="col-6 col-sm-2 numbers-box development d-none d-sm-block">
+<div class="numbers-img">
+<div class="numbers-overlay">&nbsp;</div>
+</div>
+</div>
+<div class="col-6 col-sm-2 numbers-box development">
+<div class="numbers-text"><a href="https://github.com/joomla/joomla-cms" title="Joomla CMS on GitHub" target="_blank" rel="noopener"><span class="number"><span class="count-up" data-from="0" data-to="550">550</span> <sup>+</sup></span><br />Thousand<br />Lines of Code</a></div>
+</div>
+<div class="col-6 col-sm-2 numbers-box languages d-none d-sm-block">
+<div class="numbers-img">
+<div class="numbers-overlay">&nbsp;</div>
+</div>
+</div>
+<div class="col-6 col-sm-2 numbers-box languages">
+<div class="numbers-text"><a href="https://community.joomla.org/translations/joomla-3-translations.html" title="Joomla language Packs" target="_blank" rel="noopener"><span class="number"><span class="count-up" data-from="0" data-to="76">76</span></span><br />Languages</a></div>
+</div>
+</div>
+</div>
+</section>
+<script src="/media/vendor/jquery/js/jquery.min.js" type="text/javascript"></script>
+<script src="/templates/joomla/js/countup.min.js" type="text/javascript"></script></div>
+</div>
+<div class="moduletable  oursponsors text-center">
+        
+<div id="mod-custom331" class="mod-custom custom">
+    <div class="container-fluid">
+	<h2>Our Sponsors &amp; Partners</h2>
+	<p class="lead">Thanks to the following companies for their support of the Joomla Project</p>
+	<div class="row gy-4 gy-md-0">
+		<div class="col-md-2 offset-md-1"><a href="/about-joomla/partners.html#elasticemail" target="_blank" rel="noopener"><img class="h-100 member" src="/images/homepage/elasticemail-hp.svg" alt="elasticemail"></a></div>
+		<div class="col-md-2"><a href="/current-sponsors.html#scalahosting" target="_blank" rel="noopener"><img class="h-100 member" src="/images/homepage/scalahosting.svg" alt="Scalahosting"></a></div>
+		<div class="col-md-2"><a href="/about-joomla/partners.html#cloudaccess" target="_blank" rel="noopener"><img class="h-100 member" src="/images/homepage/cloudaccess.svg?=n" alt="cloudaccess"></a></div>
+		<div class="col-md-2"><a href="/about-joomla/partners.html#crowdin" target="_blank" rel="noopener"><img class="h-100 member" src="/images/homepage/crowdin.svg" alt="crowdin"></a></div>
+		<div class="col-md-2"><a href="/about-joomla/partners.html#reporturi"><img class="h-100 member" src="/images/homepage/reporturi.svg" alt="reporturi"></a></div>
+	</div>
+	<div class="center"><a class="btn btn-primary btn-lg" title="Joomla! sponsors" href="/current-sponsors.html">Joomla Sponsors</a> <a class="btn btn-danger btn-lg" title="Sponsor Joomla" href="/sponsorship-application.html">Sponsor us!</a> <a class="btn btn-primary btn-lg" title="Joomla! partners" href="/about-joomla/partners.html">Joomla Partners</a></div>
+</div></div>
+</div>
+<div class="moduletable  showcase">
+        
+<div id="mod-custom336" class="mod-custom custom">
+    <div class="container">
+<div class="row">
+<div class="col-md-6">
+<p class="lead">Stay up to date with the latest news and information about Joomla</p>
+</div>
+<div class="col-md-6 text-center"><a class="btn btn-danger btn-lg" title="Joomla Newsletters" href="https://community.joomla.org/general-newsletter.html">Subscribe to Joomla Newsletters</a></div>
+</div>
+</div></div>
+</div>
+
+        <div class="row">
+                        <main id="content" class="col-md-12">
+                <!-- Begin Content -->
+                
+                <div id="system-message-container" aria-live="polite"></div>
+
+                
+                
+                <!-- End Content -->
+            </main>
+                    </div>
+            </div>
+</div>
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <hr />
+        
+
+        <div class="social">
+	<ul class="soc">
+		<li><a href="https://twitter.com/joomla" target="_blank" rel="noopener" title="Joomla! on Twitter"><span aria-hidden="true" class="fab fa-twitter"></span><span class="visually-hidden">Joomla! on Twitter</span></a></li>
+		<li><a href="https://www.facebook.com/joomla" target="_blank" rel="noopener" title="Joomla! on Facebook"><span aria-hidden="true" class="fab fa-facebook"></span><span class="visually-hidden">Joomla! on Facebook</span></a></li>
+		<li><a href="https://www.youtube.com/user/joomla" target="_blank" rel="noopener" title="Joomla! on YouTube"><span aria-hidden="true" class="fab fa-youtube"></span><span class="visually-hidden">Joomla! on YouTube</span></a></li>
+		<li><a href="https://www.linkedin.com/company/joomla" target="_blank" rel="noopener" title="Joomla! on LinkedIn"><span aria-hidden="true" class="fab fa-linkedin"></span><span class="visually-hidden">Joomla! on LinkedIn</span></a></li>
+		<li><a href="https://www.pinterest.com/joomla" target="_blank" rel="noopener" title="Joomla! on Pinterest"><span aria-hidden="true" class="fab fa-pinterest"></span><span class="visually-hidden">Joomla! on Pinterest</span></a></li>
+		<li><a href="https://www.instagram.com/joomlaofficial/" target="_blank" rel="noopener" title="Joomla! on Instagram"><span aria-hidden="true" class="fab fa-instagram"></span><span class="visually-hidden">Joomla! on Instagram</span></a></li>
+		<li><a href="https://github.com/joomla" target="_blank" rel="noopener" title="Joomla! on GitHub"><span aria-hidden="true" class="fab fa-github"></span><span class="visually-hidden">Joomla! on GitHub</span></a></li>
+	</ul>
+</div>
+
+<div class="footer-menu">
+	<nav class="navbar navbar-expand">
+		<div class="container-fluid">
+			<ul class="navbar-nav mx-auto flex-wrap">
+				<li class="nav-item"><a class="nav-link" href="https://www.joomla.org"><span>Home</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.joomla.org/about-joomla.html"><span>About</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://community.joomla.org"><span>Community</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://forum.joomla.org"><span>Forum</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://extensions.joomla.org"><span>Extensions</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://community.joomla.org/service-providers-directory.html"><span>Services</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://docs.joomla.org"><span>Docs</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://developer.joomla.org"><span>Developer</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="https://community.joomla.org/the-joomla-shop.html"><span>Shop</span></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav class="navbar navbar-expand">
+		<div class="container-fluid">
+			<ul class="navbar-nav mx-auto flex-wrap">
+				<li class="nav-item"><a class="nav-link" href="https://www.joomla.org/accessibility-statement.html">Accessibility Statement</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.joomla.org/privacy-policy.html">Privacy Policy</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.joomla.org/cookie-policy.html">Cookie Policy</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://community.joomla.org/sponsorship-campaigns.html">Sponsor Joomla! with $5</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://joomla.crowdin.com" target="_blank" rel="noopener">Help Translate</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://github.com/joomla/joomla-websites/issues/new?title=[joomla.org]%20&body=Please%20describe%20the%20problem%20or%20your%20issue">Report an Issue</a></li>
+				<li class="nav-item"><a class="nav-link" href="/login.html?task=login.login&amp;profile=identity-provider">Log in</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<p class="copyright">&copy; 2005 - 2025 <a href="https://opensourcematters.org">Open Source Matters, Inc.</a> All Rights Reserved.</p>
+
+	<div class="hosting">
+		<div class="hosting-image"><a href="https://www.rochen.com/joomla-hosting" rel="noopener" target="_blank"><img class="rochen" src="https://cdn.joomla.org/rochen/rochen_footer_logo_white.svg" alt="Rochen" /></a></div>
+		<div class="hosting-text"><a href="https://www.rochen.com/joomla-hosting" rel="noopener" target="_blank"><span dir="ltr">Joomla!</span> Hosting by Rochen</a></div>
+	</div>
+</div>
+
+<div id="adblock-msg" class="alert alert-danger d-none">
+	<button class="btn-close" data-bs-dismiss="alert" href="#"><span class="visually-hidden">Close</span></button>
+	<span class="fa fa-triangle-exclamation"></span>
+	We have detected that you are using an ad blocker. The Joomla! Project relies on revenue from these advertisements so please consider disabling the ad blocker for this domain.
+</div>
+    </div>
+</footer>
+
+
+</body>
+</html>

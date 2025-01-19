@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="all">
+<meta name="description" content="Get share buttons for your website visitors to share content on any social sharing service. AddToAny is the universal sharing platform for websites and apps.">
+<meta name="keywords" content="AddToAny, share buttons, social share buttons, universal sharing">
+<meta property="og:description" content="Get share buttons for your website visitors to share content on any social sharing service. AddToAny is the universal sharing platform for websites and apps.">
+<meta property="og:image" content="https://static.addtoany.com/images/icon-200-3.png">
+<meta property="og:title" content="AddToAny: Share Buttons by the Universal Sharing Platform">
+<meta property="og:url" content="https://www.addtoany.com">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@AddToAny">
+<meta name="twitter:site" content="@AddToAny">
+<title>AddToAny: Share Buttons by the Universal Sharing Platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/css/main.18.min.css" rel="stylesheet">
+<script>!function(){var e;(e=document.documentElement).className+=e.className?" svg":"svg";}();</script>
+
+<style>
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
+}
+</style>
+<script type="module" src="/js/prefetch.1.min.js"></script>
+<script blocking="render" defer src="/js/transition.1.min.js"></script>
+<link rel="expect" href="#header .logo :first-child" blocking="render" />
+<link rel="expect" href="#header a[href='/share']" blocking="render" />
+
+<link rel="expect" href="#logo-svg" blocking="render" />
+
+<style>
+h1.logo {
+	background: url(/images/addtoany-logo-80.png) no-repeat bottom;
+	font-size: 0;
+	height: 120px;
+	margin: 0;
+	padding: 90px 0 0;
+	text-indent: -9999em;
+}
+
+h1.logo img {
+	border: 0;
+}
+
+h2.tagline {
+	color: #616c7d;
+	font-size: 24px;
+	font-weight: 300;
+	margin: 0 0 35px;
+}
+
+.container_12 .grid_6 p {
+	margin: 20px 30px;
+	text-align: left;
+}
+
+.home .container_12 .grid_6 {
+	height: 300px;
+}
+
+.home_banner {
+	padding: 0 0 80px;
+}
+
+.sample_buttons {
+	margin: 0 0 15px;
+}
+
+.sample_buttons .a2a_kit {
+	display: flex;
+	height: 32px;
+	justify-content: center;
+}
+.sample_buttons .a2a_kit > a {
+	display: inline-block;
+	height: 32px;
+	padding: 0 2px;
+	width: 32px;
+}
+.sample_buttons .a2a_kit .a2a_svg {
+	animation: a2aFadeIn .6s ease-in;
+	border-radius: 4px;
+	display: inline-block;
+	font-size: 0;
+}
+.sample_buttons .a2a_kit .a2a_svg:not(.a2a_s_a2a) svg {
+	animation: a2aFadeIn .3s ease-in;
+}
+.sample_buttons .a2a_dd .a2a_svg.a2a_s_a2a {
+	background-color: #0166ff;
+}
+.sample_buttons .a2a_dd .a2a_label {
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	-webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	overflow: hidden;
+	white-space: nowrap;
+	height: 1px;
+	width: 1px;
+}
+
+.menu_wrapper {
+	text-align: left;
+}
+h1.GET {
+	margin: 0 auto;
+	text-align: center;
+	width: 320px;
+}
+#addons-main,
+#addons-main .get_addon {
+	display: none;
+}
+h1.GET.get_addon {
+	margin: 40px auto;
+	position: relative;
+}
+h1.GET.get_addon .picon {
+	background-repeat: no-repeat;
+	background-size: 64px;
+	border-radius: 8px;
+	display: block;
+	height: 64px;
+	left: calc(50% - 32px);
+	line-height: 64px;
+	position: absolute;
+	top: 0px;
+	vertical-align: top;
+	width: 64px;
+
+	transition: all .9s;
+	transition-timing-function: linear;
+	transition-delay: .25s;
+}
+h1.GET.get_addon:hover .picon {
+	transform: rotate(720deg) rotateY(0deg) scale(1.5);
+	transition: all .5s;
+	transition-delay: 0s;
+}
+h1.GET.get_addon a.get_it {
+	margin-top: 20px;
+}
+.GET {
+	font-size: 16px;
+	padding: 15px 80px;
+	margin: 0
+}
+.GET a.get_it {
+	background-color: #0166ff;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 400;
+	padding: 15px 0px;
+	position: relative;
+}
+.GET a.get_it:hover, .menu_wrapper:hover .GET a#get_share_button {
+	background-color: #3988ff;
+	border: 2px solid #fff;
+}
+@keyframes a2aFadeIn {
+	from { opacity: 0; }
+	  to { opacity: 1; }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+	body.home div.addtoany-headlines {
+		border-radius: 10px;
+		margin: 0 10px 28px;
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	body div#addthis-addtoany {
+		border: 1px solid #d45a48;
+	}
+}
+@media (max-width: 1000px) {
+	.menu_wrapper .menu_items {
+		display: none !important; 	}
+	body div.addtoany-headlines {
+		border-left: none;
+		border-right: none;
+		border-radius: 0;
+		margin: 12px auto;
+		width: auto;
+	}
+	body div.addtoany-headlines {
+		display: block;
+	}
+}
+@media (max-width: 499px) {
+	.main {
+		background-position-y: -22px;
+		background-size: 100%;
+		padding: 0;
+	}
+	.main_other {
+		padding: 20px 10px;
+	}
+	h1.logo {
+		display: none;
+		background-size: 100%;
+		height: 52px;
+		padding: 10px 0 0;
+	}
+	h2.tagline {
+		display: none;
+		font-size: 17px;
+	}
+	.home_banner {
+		padding: 0 0 8px;
+	}
+	.sample_buttons {
+		margin: 40px 0 4px;
+	}
+	h1.GET {
+		padding: 20px 0;
+		width: 80%;
+	}
+	.GET a.get_it {
+		font-size: 20px;
+		padding: 12px 0;
+	}
+}
+#logo-svg {
+	display: none;
+}
+html.svg h1.logo {
+	background: none;
+}
+html.svg #logo-svg {
+	display: inline;
+	height: 120px;
+	margin: 0 auto;
+	width: 456px;
+}
+div.addtoany-headlines {
+	background-color: #fff;
+	border: 1px solid var(--gray-light);
+	border-radius: 10px;
+	color: #2a2a2a;
+	margin: 0 auto;
+	text-align: center;
+	padding: 30px 10px;
+	width: 980px;
+}
+div.addtoany-headlines a,
+div.addtoany-headlines a:visited {
+	color: #0166ff;
+	text-decoration: underline;
+}
+div.addtoany-headlines a:hover {
+	color: #82b0ff;
+}
+#addthis-addtoany div:first-child,
+#threads-addtoany .a2a_follow,
+#bluesky-addtoany .a2a_follow {
+	height: 40px;
+	margin: 0 auto 10px;
+	width: 40px;
+}
+.addthis-addtoany-icon-wrapper {
+	background: #d45a48;
+	background: linear-gradient(135deg, #d45a48 60%, #0166ff 80%);
+	border-radius: 4px;
+	height: 40px;
+	width: 40px;
+}
+#addthis-addtoany svg,
+#threads-addtoany .a2a_kit_size_40 a,
+#bluesky-addtoany .a2a_kit_size_40 a {
+	height: 40px;
+	width: 40px;
+}
+#threads-addtoany a.a2a_button_threads svg,
+#bluesky-addtoany a.a2a_button_bluesky svg {
+	transition: all .3s ease-in-out;
+}
+#threads-addtoany a.a2a_button_threads:hover svg,
+#bluesky-addtoany a.a2a_button_bluesky:hover svg {
+	transform: scale(1.1);
+}
+#addthis-addtoany {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+#threads-addtoany {
+	margin-top: 20px;
+}
+.addthis_noun{box-shadow:0px 2px 0px 0px #d45a48;}
+.addtoany_noun{box-shadow:0px 2px 0px 0px #0166FF;}
+.menu_items {
+	border: 1px solid #b1b1b1;
+	height: 342px;
+	margin: -10px 320px -25px;
+	max-height: 0;
+	outline: 0;
+	overflow: scroll;
+	overflow-x: hidden;
+	padding: 0;
+	position: absolute;
+	visibility: hidden;
+	width: 320px;
+	z-index:1001;
+	
+	transform: perspective(400px) rotate3d(1,0,0,-90deg);
+	transform-origin: 50% 0;
+	transition-duration: .3s;
+	transition-delay: .3s;
+}
+.GET a, .menu_wrapper:hover .GET a, .menu_items {
+	border-radius:10px;
+	display:block;
+	background-color:#FFF;
+	text-decoration: none;
+}
+.menu_opener:hover + .menu_items, .menu_items:hover {
+	display: block;
+	max-height: 500px;
+	visibility: visible;
+	
+	transform: perspective(400px) rotate3d(0,0,0,0deg);
+	transition-delay: .65s;
+}
+.menu_items a {
+	border-radius:10px;
+	display: block;
+	line-height: 1;
+	font-size: 16px;
+	padding: 10px 0;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: top;
+	width: 128px;
+}
+.menu_items a .picon {
+	background-repeat: no-repeat;
+	background-size: 64px;
+	border-radius: 50%;
+	display: block;
+	height: 64px;
+	line-height: 64px;
+	margin: 0 auto 8px;
+	vertical-align: top;
+	width: 64px;
+}
+.menu_items a:hover .picon {
+	opacity: .8;
+}
+.menu_items .column {
+	float:left;
+	width: 50%;
+}
+.menu_items .column.left a {
+	padding-left: 32px;
+}
+.menu_items .column.right a {
+	padding-right: 32px;
+}
+.menu_items .column a:first-child {
+	padding-top: 20px;
+}
+.menu_items .column a:last-child {
+	padding-bottom: 20px;
+}
+</style>
+<link rel="canonical" href="https://www.addtoany.com">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://static.addtoany.com/images/icon-180.png">
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ffpgijchhhkhnokafdeklpllijgnbche">
+<script>var platform_icons=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0],href=e[o&&n?0:o?1:2],sheets=t.document.styleSheets;r.rel="stylesheet",r.href=href,r.media="only x",a.parentNode.insertBefore(r,a);function toggleMedia(){var defined;for(var i=0;i<sheets.length;i++){if(sheets[i].href&&sheets[i].href.indexOf(href)>-1){defined=true;}}
+if(defined){r.media="all";}
+else{setTimeout(toggleMedia);}}
+toggleMedia();},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+platform_icons([ "https://static.addtoany.com/css/picons.2.svg.css", "https://static.addtoany.com/css/picons.2.png.css", "https://static.addtoany.com/css/picons.2.old.css" ]);</script>
+<noscript><link href="https://static.addtoany.com/css/picons.2.old.css" rel="stylesheet"></noscript><script>
+(function(doc){
+	function show(plat) {
+		doc.addEventListener('DOMContentLoaded', function(e) {
+			doc.getElementById('addons-main').style.display = 'block';
+				doc.getElementById(plat + '-addon').style.display = 'block';
+		});
+	}
+	var ua = navigator.userAgent;
+	if (/Chrome/.test(ua) && ! /Edge/.test(ua) ) {
+		show('chrome');
+	} else if (/Firefox/.test(ua)) {
+		show('firefox');
+	} else if (/iPhone|iPad|iPod/.test(ua) && ! window.MSStream) {
+		show('ios');
+	}
+})(document)
+</script>
+</head>
+
+<body class="home">
+		<div id="header">
+	<div class="header_content clearfix">
+		<div class="hdr_l">
+			<h2 class="logo"><span>AddToAny</span></h2>
+		</div>
+		<div class="hdr_r">
+			<a class="hdr_link" href="/buttons/" title="Get the share buttons">Get</a>
+			<a class="hdr_link" href="/buttons/customize/" title="Customize the share buttons">Customize</a>
+			<a class="hdr_link" href="/share" title="Share a link">Share</a>
+			<a class="hdr_link" href="/buttons/faq/" title="Frequently asked questions and answers">FAQ</a>
+		</div>
+	</div>
+</div>
+
+<div id="page">
+
+	<div class="main">
+				<h1 class="logo">
+				AddToAny
+<svg id="logo-svg" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" width="500" height="120"><g fill="#2A2A2A"><path d="m174.44 87.87h-11.52l-4-13.68h-16.92l-3.92 13.68h-11.08l16.8-56h13.68zm-17.68-22.87-6.16-23-6.24 23z" paint-order="stroke" stroke="white" stroke-width="4"/><path d="m210.68 87.87h-7.84l-1.6-4.56q-6.72 5-12.2 5c-3.65 0-6.67-1.73-9-5.16s-3.56-8.54-3.56-15.28 1.35-11.91 4-15.48a12.64 12.64 0 0 1 10.6-5.36q4.32 0 9.28 4v-19.16h10.32zm-10.4-12.32v-15.93q-4.25-3.51-7.12-3.51a5.17 5.17 0 0 0 -4.6 3q-1.73 3-1.72 8.8 0 11.19 6.08 11.2c2.08-.04 4.53-1.22 7.36-3.56z" paint-order="stroke" stroke="white" stroke-width="4"/><path d="m254 87.87h-7.8l-1.6-4.56q-6.72 5-12.2 5c-3.65 0-6.67-1.73-9-5.16s-3.56-8.54-3.56-15.28 1.35-11.91 4-15.48a12.64 12.64 0 0 1 10.6-5.36q4.32 0 9.28 4v-19.16h10.28zm-10.4-12.32v-15.93q-4.24-3.51-7.12-3.51a5.17 5.17 0 0 0 -4.6 3q-1.72 3-1.72 8.8 0 11.19 6.08 11.2c2.12-.04 4.57-1.22 7.4-3.56z" paint-order="stroke" stroke="white" stroke-width="4"/><path d="m275.08 87.87v-46.64h-12.88v-9.36h37.12v9.36h-12.72v46.64z" paint-order="stroke" stroke="white" stroke-width="4"/><path d="m335.24 68q0 9.6-4.88 15t-13.84 5.44q-9 0-13.6-5.44t-4.64-15.12q0-9.69 4.64-15.25t13.36-5.55q8.72 0 13.84 5.64t5.12 15.28zm-10.64-.16q0-12.26-7.84-12.24-8 0-8 12.16t8.08 12.16q4.32 0 6-3.08t1.76-9.05z" paint-order="stroke" stroke="white" stroke-width="4"/><path d="m384.76 87.87h-11.52l-4-13.68h-16.88l-3.92 13.68h-11.12l16.8-56h13.68zm-17.68-22.87-6.16-23-6.24 23z" paint-order="stroke" stroke="white" stroke-width="4"/><path d="m424.6 87.87h-10.6v-23.87a10 10 0 0 0 -1.28-5.33 4.63 4.63 0 0 0 -4.24-2c-2 0-4.43 1.22-7.36 3.68v27.6h-10.44v-40h8.8l1.68 3.6a24.5 24.5 0 0 1 6-3.48 17 17 0 0 1 5.88-.92 10.71 10.71 0 0 1 8.48 3.55q3.12 3.57 3.12 10.53z" paint-order="stroke" stroke="white" stroke-width="4"/><path d="m444.28 88.67-13.12-40.8h10.4l7.76 27.6 7.84-27.6h10.24l-13.4 40a35.17 35.17 0 0 1 -6.24 11.75 28.31 28.31 0 0 1 -9.44 7.13l-3.84-7.36a19.47 19.47 0 0 0 6-4.12 13.76 13.76 0 0 0 3.8-6.6z" paint-order="stroke" stroke="white" stroke-width="4"/></g><rect fill="#0166ff" height="80" rx="14" width="80" x="32.52" y="20" paint-order="stroke" stroke="white" stroke-width="4"/><g fill="#fff"><path d="m67.52 40h10v40h-10z"/><path d="m52.52 55h40v10h-40z"/></g></svg>
+
+			</h1>
+			<h2 class="tagline">Universal Sharing</h2>
+			<div class="home_banner">
+				<div class="sample_buttons">
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://www.addtoany.com/" data-a2a-title="AddToAny Share Buttons">
+						<a class="a2a_dd" href="https://www.addtoany.com/share">
+							<span class="a2a_svg a2a_s_a2a">
+								<svg title="AddToAny" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg>
+							</span>
+							<span class="a2a_label">Share</span>
+						</a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_pinterest"></a>
+						<a class="a2a_button_bluesky"></a>
+						<a class="a2a_button_mastodon"></a>
+						<a class="a2a_button_whatsapp"></a>
+						<a class="a2a_button_threads"></a>
+					</div>
+					<script defer src="https://static.addtoany.com/menu/page.js"></script>
+				</div>
+				<div class="menu_wrapper">
+					<h1 class="GET menu_opener"><a class="get_it" id="get_share_button" href="/buttons/">Get the Share Buttons</a></h1>
+						<div class="GET menu_items">
+		<div class="column left">
+			<a href="/buttons/for/website" title="Share buttons"><span class="picon picon_website"></span>Website</a>
+			<a href="https://wordpress.org/plugins/add-to-any/" title="WordPress Share plugin"><span class="picon picon_wordpress"></span>WordPress</a>
+			<a href="https://www.drupal.org/project/addtoany" title="Drupal Share module"><span class="picon picon_drupal"></span>Drupal</a>
+			<a href="https://www.cloudflare.com/apps/addtoany" title="Share buttons for Cloudflare"><span class="picon picon_cloudflare"></span>Cloudflare</a>
+			<a href="/buttons/for/blogger" title="Share button for every post on Blogger"><span class="picon picon_blogger"></span>Blogger</a>
+		</div>
+		<div class="column right">
+			<a href="/buttons/for/email_newsletter" title="Share/Bookmark button for email newsletter"><span class="picon picon_email"></span>Email</a>
+			<a href="/buttons/for/wordpress_com" title="WordPress.com Share button"><span class="picon picon_wordpress_com"></span>WordPress.com</a>
+			<a href="/buttons/for/joomla" title="Joomla Share extension"><span class="picon picon_joomla"></span>Joomla</a>
+			<a href="/buttons/for/tumblr" title="Tumblr Share button for every post"><span class="picon picon_tumblr"></span>Tumblr</a>
+			<a href="/buttons/for/typepad" title="Share button for every post on TypePad"><span class="picon picon_typepad"></span>TypePad</a>
+		</div>
+	</div>				</div>
+			</div>
+		</div>
+
+		<div class="main main_other">
+			<div class="container_12 columns_2">
+				<div class="grid_6">
+					<div class="picon_a2a"></div>
+					<h2>Share Anywhere</h2>
+					<p>Share to any service, or add a custom service to share to. AddToAny gets people to the right destination to share or save your content, whether it's in a native app or on the web.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_mobile"></div>
+					<h2>Mobile &amp; Responsive</h2>
+					<p>Universal menus react instantly to taps, clicks, and multiple forms of input and device orientations. Sharing on mobile lets you choose between a service's mobile app or mobile site.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_svg"></div>
+					<h2>Perfect Icons</h2>
+					<p>AddToAny icons are Scalable Vector Graphics, meaning they load fast, are mathematically precise, scalable to any size, and stunning on High-PPI screens such as Retina displays.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_code"></div>
+					<h2>Built For Good</h2>
+					<p>AddToAny's lightweight code follows best practices, and is optimized to load efficiently from locations all around the world. Accessibility, cross-browser compatibility, graceful fallbacks are a few AddToAny staples.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_ga"></div>
+					<h2>Google Analytics Integrated</h2>
+					<p>Sharing stats automatically roll into your Google Analytics, tying all metrics into <a href="/ext/google_analytics/" title="Sharing analytics">one dashboard</a>.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_works"></div>
+					<h2>No Account Necessary</h2>
+					<p>AddToAny just works. No registration, and no user accounts to manage.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_counts"></div>
+					<h2>Share Counters</h2>
+					<p>Official counts alongside your share buttons. <a href="/buttons/customize/share_counters">AddToAny counters</a> in the same style show numbers directly from major services.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_floating"></div>
+					<h2>Floating Share Bars</h2>
+					<p>Encourage visitors to share your content with a special <a href="/buttons/customize/floating_share_buttons" title="Floating share buttons">share buttons bar</a> that stays in place as you scroll.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_plugin"></div>
+					<h2>Plugins That Delight</h2>
+					<p>Open source <a href="/buttons/" title="Share plugins">plugins</a> for WordPress, Drupal, and other CMSs are tailored to each platform. AddToAny plugins load asynchronously, so your content loads first or in parallel with AddToAny.</p>
+				</div>
+				<div class="grid_6">
+					<div class="picon_customize"></div>
+					<h2>Highly Customizable</h2>
+					<p>Designed for <a href="/buttons/customize/">customization</a>, AddToAny supports color &amp; style overrides, event handling, service templates, URL shorteners, custom integrations, usually the next big thing, and much more.</p>
+				</div>
+			</div>
+		</div>
+		<div id="addthis-addtoany" class="addtoany-headlines">
+			<div class="addthis-addtoany-icon-wrapper">
+				<svg title="AddToAny icon" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg>
+			</div>
+			<div>Welcome <span class="addthis_noun">AddThis</span> users! Read the <a href="https://www.addtoany.com/blog/replace-addthis-with-addtoany-the-addthis-alternative/">blog post</a> and check out <a href="https://www.addtoany.com/ext/addthis/">our guide</a> for moving to AddToAny.</div>
+		</div>
+		<div id="bluesky-addtoany" class="addtoany-headlines">
+			<div class="a2a_follow a2a_kit a2a_kit_size_40">
+				<a class="a2a_button_bluesky" href="https://bsky.app/profile/addtoany.com" rel="noopener me" title="Follow AddToAny on Bluesky"></a>
+			</div>
+			<div><a href="https://www.addtoany.com/services/bluesky_button">Bluesky sharing is here</a>! Get your Bluesky <a href="https://www.addtoany.com/services/bluesky_button">share button</a> and set your Bluesky <a href="https://www.addtoany.com/buttons/customize/follow_buttons">follow button</a>.</div>
+		</div>
+		<div id="threads-addtoany" class="addtoany-headlines">
+			<div class="a2a_follow a2a_kit a2a_kit_size_40">
+				<a class="a2a_button_threads" href="https://www.threads.net/@addtoany" rel="noopener me" title="Follow AddToAny on Threads"></a>
+			</div>
+			<div><a href="https://www.addtoany.com/blog/threads-share-button/">Threads sharing is here</a>! Get your Threads <a href="https://www.addtoany.com/services/threads_button">share button</a> and set your Threads <a href="https://www.addtoany.com/buttons/customize/follow_buttons">follow button</a>.</div>
+		</div>
+		<div class="main main_other">
+			<h1 class="GET get_addon">
+				<a href="/buttons/" title="AddToAny Share Buttons">
+					<span class="picon picon_a2a"></span>
+				</a>
+				<a class="get_it" href="/buttons/">Get the Share Buttons</a>
+			</h1>
+		</div>
+		<div id="addons-main" class="main main_other">
+			<h1 id="chrome-addon" class="GET get_addon">
+				<a href="https://chrome.google.com/webstore/detail/addtoany-share-bookmark/ffpgijchhhkhnokafdeklpllijgnbche" title="AddToAny for Google Chrome">
+					<span class="picon picon_chrome"></span>
+				</a>
+				<a class="get_it" href="https://chrome.google.com/webstore/detail/addtoany-share-bookmark/ffpgijchhhkhnokafdeklpllijgnbche" title="AddToAny for Google Chrome">Get the Chrome Button</a>
+			</h1>
+			
+			<h1 id="firefox-addon" class="GET get_addon">
+				<a href="https://addons.mozilla.org/firefox/downloads/latest/addtoany-share/" title="Share Button for Firefox">
+					<span class="picon picon_firefox"></span>
+				</a>
+				<a class="get_it" href="https://addons.mozilla.org/firefox/downloads/latest/addtoany-share/" title="AddToAny for Firefox">Get the Firefox Button</a>
+			</h1>
+			
+			<h1 id="ios-addon" class="GET get_addon">
+				<a href="https://www.addtoany.com/users/ios">
+					<span class="picon picon_safari"></span>
+				</a>
+				<a class="get_it" href="https://www.addtoany.com/users/ios">Get the Bookmarklet</a>
+			</h1>
+		
+		</div>
+		<div id="footer">
+		<div class="footer_cols">
+			<div>
+				<h2>Features</h2>
+				<a href="/buttons/customize/floating_share_buttons" title="Floating Share Bars that are responsive for mobile and desktop, and can show and hide on scroll">Floating Share Buttons</a>
+				<a href="/buttons/customize/image_sharing" title="Share your images directly to Facebook, Pinterest, Tumblr, Houzz, and more">Image Share Buttons</a>
+				<a href="/buttons/customize/share_counters" title="Show the share count next to your share buttons">Share Counts</a>
+				<a href="/buttons/customize/share_count_recovery" title="Recover lost share counts after a change in URLs, a new domain, or a move to HTTPS from HTTP">Share Count Recovery</a>
+				<a href="/buttons/customize/follow_buttons" title="Link to your Instagram, Snapchat, YouTube, and other social media and RSS feeds">Follow Buttons</a>
+				<a href="/ext/google_analytics/" title="Sharing analytics in Google Analytics">Google Analytics</a>
+			</div>
+			<div>
+				<h2>Plugins</h2>
+				<a href="https://wordpress.org/plugins/add-to-any/" title="Share Buttons for WordPress, the most popular WordPress sharing plugin">WordPress Share Plugin</a>
+				<a href="https://www.drupal.org/project/addtoany" title="Share Buttons for Drupal, the most popular Drupal sharing module">Drupal Share Module</a>
+				<a href="/buttons/for/joomla" title="Share Buttons for Joomla, available as a plugin and a module in one extension">Joomla Share Extension</a>
+				<a href="https://www.cloudflare.com/apps/addtoany" title="Share Buttons for Cloudflare sites">Cloudflare Share App</a>
+				<a href="/buttons/" title="All share button plugins for WordPress.com, Blogger, Tumblr, and more platforms, websites and apps">Share Buttons for Sites</a>
+				<a href="/buttons/for/email_newsletter" title="Get share buttons for use in email">Share Buttons for Email</a>
+			</div>
+			<div>
+				<h2>Browser Tools</h2>
+				<a href="https://addons.mozilla.org/en-US/firefox/addon/addtoany-share/" title="Share button for Mozilla Firefox">AddToAny for Firefox</a>
+				<a href="https://chrome.google.com/webstore/detail/addtoany-share-anywhere/ffpgijchhhkhnokafdeklpllijgnbche" title="Share button for Google Chrome">AddToAny for Chrome</a>
+				<a href="/users/bookmarklet" title="Share button for your browser's Bookmarks Bar">AddToAny Bookmarklet</a>
+				<a href="/services/" title="Services directory and bookmarklets">Service Bookmarklets</a>
+				<a href="/share" title="Share a page to any service">Share a URL</a>
+				<a href="/share/preferences" title="Set your preferred services">Sharing Preferences</a>
+			</div>
+			<div>
+				<h2>Resources</h2>
+				<a href="/buttons/customize/" title="Customize your share buttons">Customize AddToAny</a>
+				<a href="/services/" title="Services directory and share button codes">Service Codes</a>
+				<a href="/buttons/api/" title="JavaScript API reference">JavaScript API</a>
+				<a href="/buttons/faq/" title="Answers to frequently asked questions">Questions &amp; Answers</a>
+				<a href="/blog/" title="The AddToAny Blog">AddToAny News</a>
+				<a href="/contact/" title="Contact AddToAny">Contact AddToAny</a>
+			</div>
+		</div>
+		<div class="legal">
+			<span>&copy; 2006&ndash;2025</span>
+			<a href="/terms" title="Terms of Service">Terms</a>
+			<a href="/privacy" title="Privacy Policy">Privacy</a>
+		</div>
+	</div>
+</div></body>
+</html>

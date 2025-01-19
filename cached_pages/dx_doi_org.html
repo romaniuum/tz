@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Resolve a DOI Name</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous">
+  </script>
+
+  <script src="https://kit.fontawesome.com/731b8140c4.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/static/css/style.css" integrity="">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100&display=swap");
+  </style>
+
+  <link rel="icon" sizes="48x48" href="/static/images/favicons/favicon.ico">
+  <link rel="icon" sizes="32x32" href="/static/images/favicons/favicon-32x32.png">
+  <link rel="icon" sizes="16x16" href="/static/images/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/images/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="/static/images/favicons/android-chrome-192x192.png">
+  <link rel="apple-touch-icon-precomposed" sizes="512x512" href="/static/images/favicons/android-chrome-512x512.png">
+
+</head>
+<body class="generic-page">
+<header>
+  <div class="row">
+    <div class="col logo">
+      <a href="https://www.doi.org"><img class="header-logo" src="/static/images/logos/header_logo_cropped.svg" /></a>
+    </div>
+    <div class="col home-link">
+      <div class="link-alt">
+        <a href="https://www.doi.org">
+          <span>VISIT DOI.ORG</span>
+          <i class="fa-solid fa-arrow-right-long hover-move-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+<main aria-role="main">
+  <header class="homepage-header">
+  </header>
+  <div class="homepage-content">
+
+    <section class="single-top">
+      <div class="row short"></div>
+    </section>
+
+    <div class="page-content">
+      <article>
+        <div>
+          <h2>Resolve a DOI Name</h2>
+          <div>
+            <section class="home-resolve">
+              <div class="maintext">
+                Type or paste a known DOI name exactly—including its prefix and suffix—into the text box below and then
+                ‘submit’ to resolve it.
+              </div>
+              <div class="form">
+                <form method="post" action="/" id="resolveID" accept-charset="utf-8">
+                  <input class="input-content" type="text" name="hdl" id="nameID" placeholder="10.nnnnnn/example">
+                  <input class="submit" type="submit" alt="Resolve your DOI" align="middle">
+                </form>
+              </div>
+              <div class="subtext">
+                <p>
+                  DOIs include a prefix (prefixes always start with <code>10.</code>) and a suffix, separated by a forward
+                  slash (<code>/</code>). Prefacing the DOI with <code>doi.org/</code> will turn it into an actionable
+                  link, for example, <a href="http://doi.org/10.1109/5.771073">https://doi.org/10.1109/5.771073</a>.
+                  Clicking that link will ‘resolve’ it, i.e. redirect to the latest information about the object it
+                  identifies, even if the object changes or moves.
+                </p>
+                <p>
+                  Send questions or comments to <a href="mailto:doi-help@doi.org">doi-help@doi.org</a>.
+                </p>
+                <p>
+                  <a href="/help.html">Further documentation is available here.</a>
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+
+  </div>
+</main>
+
+<footer>
+  <div class="row">
+    <div class="col footer-left">
+      <a href="https://www.doi.org"><img class="footer-logo" src="/static/images/logos/footer_logo_cropped.svg" /></a>
+    </div>
+    <div class="col footer-right">
+      <div class="row more-info-heading">
+        <div class="col">
+          <h2>More information on DOI resolution:</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li><a href="https://www.doi.org/the-identifier/resources/factsheets/doi-resolution-documentation">DOI Resolution Factsheet</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="https://www.doi.org/the-identifier/resources/handbook">The DOI Handbook</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="https://www.doi.org/privacy-policy/">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col copyright">
+      <p>Copyright © 2023 DOI Foundation. <i class="fa-brands fa-fw fa-creative-commons"></i><i class="fa-brands fa-fw fa-creative-commons-by"></i> The content of this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" title="Creative Commons" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p><p>DOI&reg;, DOI.ORG&reg;, and shortDOI&reg; are trademarks of the DOI Foundation.</p>
+    </div>
+    <div class="col socials">
+      <ul class="socials-footer">
+
+        <li><a href="https://twitter.com/DOI_Foundation"><i class="fa-brands fa-fw fa-twitter"></i></a></li>
+
+        <li><a href="https://www.linkedin.com/company/doi-foundation-inc/"><i class="fa-brands fa-fw fa-linkedin"></i></a></li>
+
+        <li><a href="mailto:info@doi.org"><i class="fa-solid fa-fw fa-envelope"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
