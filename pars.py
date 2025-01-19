@@ -11,48 +11,52 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 
 CACHE_DIR = "cached_pages"
 RESULTS_FILE = "results.json"
+
 CAPTCHA_KEYWORDS = [
     "captcha", "verify you are human", "cloudflare", "please solve",
     "robot verification", "verify your identity", "are you a robot",
     "security check", "access denied", "recaptcha", "protection by", "bot protection"
 ]
 
-MAX_WORKERS = 10  
+MAX_WORKERS = 10
 
 
-def load_domains_from_csv(csv_file):
-    """Читает список доменов из CSV файла."""
+def load_domains_from_csv(csv_file: str) -> list:
+    """Загружает список доменов из CSV файла."""
     domains = []
     with open(csv_file, "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            domains.append(row.get("Domain", "").strip())
+            domain = row.get("Domain", "").strip()
+            if domain:
+                domains.append(domain)
     logging.info(f"Загружено {len(domains)} доменов.")
     return domains
 
 
-def contains_captcha(html):
-    """Ищет ключевые слова капчи в HTML странице."""
+def contains_captcha(html: str) -> bool:
+    """Проверяет HTML на наличие капчи."""
     text = BeautifulSoup(html, "html.parser").get_text().lower()
     return any(keyword in text for keyword in CAPTCHA_KEYWORDS)
 
 
-def solve_recaptcha(api_key, site_key, url):
-    """Решает капчу с помощью Anti-Captcha."""
+def solve_recaptcha(api_key: str, site_key: str, url: str) -> str:
+    """Решает капчу с помощью Anti-Captcha API."""
     solver = recaptchaV2Proxyless()
     solver.set_key(api_key)
     solver.set_website_url(url)
     solver.set_website_key(site_key)
+    
     solution = solver.solve_and_return_solution()
     if solution:
-        logging.info("Капча решена.")
+        logging.info("Капча решена успешно.")
         return solution
     logging.error(f"Ошибка решения капчи: {solver.error_code}")
-    return None
+    return ""
 
 
-def identify_cms(html):
-    """Проверяет HTML на наличие ключевых фраз для определения CMS."""
+def identify_cms(html: str) -> str:
+    """Определяет CMS сайта по ключевым фразам в HTML."""
     cms_signatures = {
         "WordPress": ["wp-content", "wordpress"],
         "Drupal": ["drupal"],
@@ -64,14 +68,15 @@ def identify_cms(html):
         "PrestaShop": ["prestashop"],
         "Blogger": ["blogger"],
     }
+    
     for cms, keywords in cms_signatures.items():
         if any(keyword in html for keyword in keywords):
             return cms
     return "Самопис"
 
 
-def cache_html(domain, html):
-    """Сохраняет HTML страницы на диск."""
+def cache_html(domain: str, html: str):
+    """Сохраняет HTML страницу в кэш."""
     os.makedirs(CACHE_DIR, exist_ok=True)
     file_path = os.path.join(CACHE_DIR, f"{domain.replace('.', '_')}.html")
     with open(file_path, "w", encoding="utf-8") as file:
@@ -79,9 +84,10 @@ def cache_html(domain, html):
     logging.info(f"HTML страницы {domain} сохранен в {file_path}.")
 
 
-def process_site(domain, api_key):
+def process_site(domain: str, api_key: str) -> dict:
     """Обрабатывает сайт: проверяет капчу, определяет CMS, сохраняет HTML."""
     result = {"domain": domain, "cms": None, "captcha": False, "error": None}
+    
     for scheme in ["http", "https"]:
         url = f"{scheme}://{domain}"
         logging.info(f"Проверка сайта {url}.")
@@ -105,13 +111,14 @@ def process_site(domain, api_key):
         except requests.RequestException as e:
             logging.warning(f"Ошибка запроса {url}: {e}")
             result["error"] = str(e)
-            return result  
+            return result
+    
     result["error"] = "HTTP и HTTPS недоступны"
     return result
 
 
-def process_sites(domains, api_key):
-    """Запускает многопоточную обработку доменов и сохраняет результат."""
+def process_sites(domains: list, api_key: str):
+    """Обрабатывает несколько доменов параллельно и сохраняет результаты в файл."""
     results = []
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         futures = {executor.submit(process_site, domain, api_key): domain for domain in domains}
@@ -132,7 +139,7 @@ def process_sites(domains, api_key):
 if __name__ == "__main__":
     csv_file = "top_domains.csv"
     api_key = "224f03d7fc94f5c109770e0b57e2290f"
-
+    
     domains = load_domains_from_csv(csv_file)
     if domains:
         process_sites(domains[:10], api_key)
