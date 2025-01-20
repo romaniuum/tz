@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=gb2312"/>
+<html><head>
+    <meta http-equiv="Content-type" content="text/html; charset=gb2312">
     <title>Sina Visitor System</title>
 </head>
 <body>
 <span id="message"></span>
 <script type="text/javascript" src="/js/visitor/mini_original.js?v=20161116"></script>
 <script type="text/javascript">
-    window.use_fp = "1" == "1"; // ÊÇ·ñ²É¼¯Éè±¸Ö¸ÎÆ¡£
+    window.use_fp = "1" == "1"; // 是否采集设备指纹。
     var url = url || {};
     (function () {
         this.l = function (u, c) {
@@ -35,26 +33,26 @@
 
     var visitor_origin = function () {
         try {
-            var need_restore = "1" == "1"; // ÊÇ·ñ×ß»Ö¸´Éí·ÝÁ÷³Ì¡£
+            var need_restore = "1" == "1"; // 是否走恢复身份流程。
 
-            // Èç¹ûÐèÒª×ß»Ö¸´Éí·ÝÁ÷³Ì£¬³¢ÊÔ´Ó cookie »ñÈ¡ÓÃ»§Éí·Ý¡£
+            // 如果需要走恢复身份流程，尝试从 cookie 获取用户身份。
             if (!need_restore || !Store.CookieHelper.get("SRF")) {
 
-                // Èô»ñÈ¡Ê§°Ü×ß´´½¨·Ã¿ÍÁ÷³Ì¡£
-                // Á÷³ÌÖ´ÐÐÊ±¼ä¹ý³¤£¨³¬¹ý 3s£©£¬ÔòÈÏÎª³ö´í¡£
+                // 若获取失败走创建访客流程。
+                // 流程执行时间过长（超过 3s），则认为出错。
                 var error_timeout = window.setTimeout("error_back()", 5000);
 
                 tid.get(function (tid, where, confidence) {
-                    // È¡Ö¸ÎÆË³ÀûÍê³É£¬Çå³ý³ö´í timeout ¡£
+                    // 取指纹顺利完成，清除出错 timeout 。
                     window.clearTimeout(error_timeout);
                     incarnate(tid, where, confidence);
                 });
             } else {
-                // ÓÃ»§Éí·Ý´æÔÚ£¬³¢ÊÔ»Ö¸´ÓÃ»§Éí·Ý¡£
+                // 用户身份存在，尝试恢复用户身份。
                 restore();
             }
         } catch (e) {
-            // ³ö´í¡£
+            // 出错。
             error_back();
         }
     };
@@ -72,23 +70,23 @@
             });
         });
     }
-    // Á÷³ÌÈë¿Ú¡£
+    // 流程入口。
     wload(function () {
         visitor_gray();
     });
 
-    // ¡°·µ»Ø¡± »Øµ÷º¯Êý¡£
+    // “返回” 回调函数。
     var return_back = function (response) {
 
         if (response["retcode"] == 20000000) {
             back();
         } else {
-            // ³ö´í¡£
+            // 出错。
             error_back(response["msg"]);
         }
     };
 
-    // Ìø×ª»Ø³õÊ¼µØÖ·¡£
+    // 跳转回初始地址。
     var back = function () {
 
         var url = "https://weibo.com/";
@@ -97,7 +95,7 @@
         }
     };
 
-    // ¿çÓò¹ã²¥¡£
+    // 跨域广播。
     var cross_domain = function (response) {
 
         var from = "weibo";
@@ -116,12 +114,12 @@
             }
         } else {
 
-            // ³ö´í¡£
+            // 出错。
             error_back(response["msg"]);
         }
     };
 
-    // ¿çÓò¹ã²¥¡£
+    // 跨域广播。
     var cross_domain2 = function (response) {
 
         var from = "weibo";
@@ -139,12 +137,12 @@
             }
         } else {
 
-            // ³ö´í¡£
+            // 出错。
             error_back(response["msg"]);
         }
     };
 
-    // ÎªÓÃ»§¸³Óè·Ã¿ÍÉí·Ý ¡£
+    // 为用户赋予访客身份 。
     var incarnate = function (tid, where, conficence) {
 
         var gen_conf = "";
@@ -155,7 +153,7 @@
         url.l(incarnate_intr);
     };
 
-    // »Ö¸´ÓÃ»§¶ªÊ§µÄÉí·Ý¡£
+    // 恢复用户丢失的身份。
     var restore = function () {
 
         var from = "weibo";
@@ -165,10 +163,10 @@
         url.l(restore_intr);
     };
 
-    // ¿çÓò»Ö¸´¶ªÊ§µÄÉí·Ý¡£
+    // 跨域恢复丢失的身份。
     var restore_back = function (response) {
 
-        // Éí·Ý»Ö¸´³É¹¦×ß¹ã²¥Á÷³Ì£¬·ñÔò×ß´´½¨·Ã¿ÍÁ÷³Ì¡£
+        // 身份恢复成功走广播流程，否则走创建访客流程。
         if (response["retcode"] == 20000000) {
 
             var url = "https://weibo.com/";
@@ -193,7 +191,7 @@
         }
     };
 
-    // ³ö´íÇé¿ö·µ»ØµÇÂ¼Ò³¡£
+    // 出错情况返回登录页。
     var error_back = function (msg) {
 
         var url = "https://weibo.com/";
@@ -244,5 +242,5 @@
     };
 
 </script>
-</body>
-</html>
+
+<div style="position: absolute; height: 1px; width: 1px; left: 1px; top: 0px; z-index: 9999;"><div id="swfid1continner" style="visibility: visible;"></div></div><div id="ufp" style="display: none;"></div></body></html>

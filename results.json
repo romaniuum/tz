@@ -1,72 +1,7 @@
-[
-    {
-        "domain": "root-servers.net",
-        "cms": null,
-        "captcha": null,
-        "error": "HTTPConnectionPool(host='root-servers.net', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x00000206EEE8B4F0>: Failed to resolve 'root-servers.net' ([Errno 11001] getaddrinfo failed)\"))",
-        "html_cached": true
-    },
-    {
-        "domain": "googleapis.com",
-        "cms": null,
-        "captcha": null,
-        "error": "404 Not Found",
-        "html_cached": true
-    },
-    {
-        "domain": "google.com",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    },
-    {
-        "domain": "apple.com",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    },
-    {
-        "domain": "microsoft.com",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    },
-    {
-        "domain": "youtube.com",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    },
-    {
-        "domain": "amazonaws.com",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    },
-    {
-        "domain": "facebook.com",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    },
-    {
-        "domain": "mail.ru",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    },
-    {
-        "domain": "dzen.ru",
-        "cms": "Самопис",
-        "captcha": false,
-        "error": null,
-        "html_cached": true
-    }
-]
+[{
+    "domain": "guns.com",
+    "captcha": true,
+    "error": null,
+    "html_cached": true,
+    "cms": "Самопис"
+}]

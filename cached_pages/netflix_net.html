@@ -1,0 +1,901 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Netflix Authentication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <meta name="ulp-version" content="1.26.2">
+    
+    
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.103.3/css/main.cdn.min.css">
+    <style id="custom-styles-container">
+      
+        
+
+
+
+
+        
+          :root, .af-custom-form-container .af-form {
+    --primary-color: #4061e7;
+  }
+        
+      
+
+        
+          :root, .af-custom-form-container .af-form {
+    --button-font-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-border-color: #8c8c96;
+    --social-button-border-color: #8c8c96;
+    --radio-button-border-color: #8c8c96;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-text-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --link-color: #000000;
+  }
+        
+      
+
+        
+          :root {
+    --title-font-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --font-default-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --widget-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-color: #8c8c96;
+  }
+        
+      
+
+        
+          :root {
+    --font-light-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --input-text-color: #000000;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-color: #8c8c96;
+    --border-default-color: #8c8c96;
+  }
+        
+      
+
+        
+          :root {
+    --input-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --icon-default-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --error-color: #d03c38;
+    --error-text-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --success-color: #13a688;
+  }
+        
+      
+
+        
+          :root {
+    --base-focus-color: #4061e7;
+    --transparency-focus-color: rgba(64,97,231, 0.15);
+  }
+        
+      
+
+        
+          :root {
+    --base-hover-color: #000000;
+    --transparency-hover-color: rgba(0,0,0, var(--hover-transparency-value));
+  }
+        
+      
+
+        
+      
+
+
+
+
+        
+          
+        
+      
+
+        
+          html, :root, .af-custom-form-container .af-form {
+    font-size: 16px;
+    --default-font-size: 16px;
+  }
+        
+      
+
+        
+          body {
+    --title-font-size: 0.9375rem;
+    --title-font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c8c54e01f {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c98b16f8a {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+  .ulp-passkey-benefit-heading {
+    font-size: 1.025rem;
+  }
+        
+      
+
+        
+          .c643d8083, .ccc242569 {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          body {
+    --ulp-label-font-size: 0.875rem;
+    --ulp-label-font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c98a8747d, .ca7a2dfc9, [id^='ulp-container-'] a {
+    font-size: 0.875rem;
+    font-weight: var(--font-bold-weight) !important;
+  }
+        
+      
+
+        
+          .ca7a2dfc9, .c98a8747d {
+      text-decoration: underline;
+    }
+        
+      
+
+
+
+
+        
+          :root {
+    --button-border-width: 1px;
+    --social-button-border-width: 1px;
+    --radio-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --button-border-radius: 3px;
+    --radio-border-radius: 3px;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --input-border-radius: 3px;
+  }
+
+  .af-custom-form-container .af-form {
+    --border-radius: 3px;
+  }
+        
+      
+
+        
+          :root {
+    --border-radius-outer: 5px;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-width: 0px;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          
+    body {
+      --logo-alignment: 0 auto;
+    }
+  
+        
+      
+
+        
+          
+    .ce53807ef {
+      content: url('https://meechum.prod.netflix.net/cdn/brand/netflix/logo/rgb.png');
+    }
+  
+        
+      
+
+        
+          body {
+    --logo-height: 66px;
+  }
+  .ce53807ef {
+    height: var(--logo-height);
+  }
+  
+        
+      
+
+        
+          
+    body {
+      --header-alignment: center;
+    }
+  
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          .c6d89f32f {
+    --page-background-alignment: center;
+  }
+        
+      
+
+        
+          body {
+    --page-background-color: #000000;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+      
+    </style>
+    <style>
+    /* By default, hide features for javascript-disabled browsing */
+    /* We use !important to override any css with higher specificity */
+    /* It is also overriden by the styles in <noscript> in the header file */
+    .no-js {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  </style>
+  <noscript>
+    <style>
+      /* We use !important to override the default for js enabled */
+      /* If the display should be other than block, it should be defined specifically here */
+      .js-required { display: none !important; }
+      .no-js {
+        clip: auto;
+        clip-path: none;
+        height: auto;
+        overflow: auto;
+        position: static;
+        white-space: normal;
+        width: var(--prompt-width);
+      }
+    </style>
+  </noscript>
+    
+<link href="https://meechum.prod.netflix.net/cdn/brand/font/netflix-sans.css" rel="stylesheet" type="text/css">
+
+    <style>
+      :root {
+        --hawkins-typography-font-family-netflix-sans: "Netflix Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        --hawkins-typography-font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        --prompt-width: calc(var(--spacing)*50);
+      }
+
+      /* General */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: #f6f9fc;
+      }
+
+      html, body {
+        font-family: var(--hawkins-typography-font-family-sans);
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--hawkins-typography-font-family-netflix-sans);
+      }
+
+      .flex-display {
+        display: flex;
+        flex-direction: column;
+      }
+      #content-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        z-index: 2;
+      }
+      /* End general */
+
+      /* Gradient */
+      #gradient-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        z-index: 0;
+      }
+      #gradient-content {
+          z-index: 100;
+      }
+      .gradient {
+        /* So the 4 layers overlap */
+        position: absolute;
+        flex-grow: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* 5s must be smaller than how often we update this to prevent breaking for firefox */
+        transition: opacity 4s ease;
+        opacity: 0;
+        z-index: 1;
+      }
+      #gradient-red {
+        background: linear-gradient(330.93deg,
+                #dc1721 -7.96%,
+                rgba(68, 18, 77, 0.5) 42.31%,
+                transparent 81.62%);
+        opacity: 1;
+      }
+
+      #gradient-yellow {
+        background: linear-gradient(330.93deg,
+                #ffb234 -6.5%,
+                rgba(141, 42, 19, 0.5) 42.31%,
+                transparent 81.62%);
+      }
+
+      #gradient-green {
+        background: linear-gradient(330.93deg,
+                #10b892 0.43%,
+                rgba(32, 28, 113, 0.5) 42.31%,
+                rgba(5, 0, 0, 0) 81.62%);
+      }
+
+      #gradient-purple {
+        background: linear-gradient(330.93deg,
+                #4d61fe -7.96%,
+                rgba(44, 7, 37, 0.5) 42.31%,
+                rgba(5, 0, 0, 0) 81.62%);
+      }
+      /* End gradient */
+
+      #debugOverlay {
+            display: none; /* Ensure the overlay is hidden initially */
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white;
+            font-size: 16px; /* Smaller font size */
+            text-align: left;
+            z-index: 1000;
+            max-width: 300px; /* Limit the width of the overlay */
+            border-radius: 5px; /* Optional: Rounded corners */
+      }
+
+      /* Increase Widget Width */
+      body section>div {
+        padding: 0;
+      }
+      /* End Increase Widget Width */
+
+      /* Widget title and description */
+      body section div div header h1 {
+        margin-bottom: 0 !important;
+      }
+
+      body section>div div header div p {
+        font-size: 14px;
+      }
+      /* End widget title and description */
+
+      /* Custom Label */
+      label.custom-label {
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      /* End Hide Edit link */
+
+      /* Login Password */
+      
+      /* End Login Password */
+
+      @media screen and (max-width: 600px) and (min-width: 500px) {
+        ._widget-auto-layout section._prompt-box-outer {
+          min-height: unset;
+        }
+      }
+
+      
+    </style>
+
+    <script>  // Customization: Background
+      /* Gradient animation */
+      var index = 0;
+      const layers = ["gradient-red", "gradient-yellow", "gradient-green", "gradient-purple"];
+      setInterval(() => {
+        index = (index + 1) % layers.length;
+        for (var i = 0; i < layers.length; i++) {
+          let name = layers[i];
+          let elem = document.getElementById(name);
+          let opacity = i === index ? 1 : 0;
+          elem.style.opacity = opacity;
+        }
+        /*
+          Important:
+
+          This 3000ms must be greater than the ease period on the CSS transtision
+          to allow the previous transition to finish. Otherwise Firefox will make the
+          adjustment without animation.
+        */
+      }, 5000);
+      /* end gradient animation */
+    </script>
+
+    <script>
+      // Login Id
+      
+        // Loop till page loads
+        var DEBUG = false;
+        var intervalId = setInterval(function() {
+          var input = document.querySelector('input[id="username"]');
+          var label = document.querySelector('div[data-dynamic-label-for="username"]');
+          var submitButton = document.querySelector('button[type="submit"][name="action"]');
+          if (!input || !submitButton) {
+            console.log("Missing elements.")
+            return;
+          }
+          clearInterval(intervalId);
+          // Attach listeners
+          if (label) {
+            input.addEventListener('input', function() {
+              // grab the label and div elements
+              var label = document.querySelector('div[data-dynamic-label-for="username"]');
+              // check the value of the input
+              if (input?.value?.trim() !== '') {
+                // hide the label and div if input has some value
+                label.style.display = "none";
+              } else {
+                // show the label and div if input is empty
+                label.style.display = "";
+              }
+            });
+          }
+
+          // Function to get a cookie value
+          function getCookie(name) {
+            const value = "; " + document.cookie;
+            const parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+          }
+
+          // Function to set a cookie value
+          function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+          // Step 1: inject event listener logic to save identifier on submit
+          if (DEBUG) { console.log('Found  input && submitButton', input, submitButton); }
+          submitButton.addEventListener('click', function(event) {
+            var username = input.value;
+            localStorage.setItem('username', username);
+            setCookie('username', username, 365);
+            // Optional: Display a message or perform other actions
+            if (DEBUG) { console.log('Username saved: ' + username); }
+          });
+          // Step 2: Then load identifier from storage if there is one
+          var usernameFromLocalStorage = localStorage.getItem('username');
+          var usernameFromCookie = getCookie('username');
+          if (DEBUG) {
+            console.log('Loaded usernameFromLocalStorage: ' + usernameFromLocalStorage);
+            console.log('Loaded usernameFromCookie: ' + usernameFromCookie);
+          }
+          if (!usernameFromLocalStorage && !usernameFromCookie) {
+            if (DEBUG) { console.log('No username available, return early.'); }
+            return;
+          }
+          if (DEBUG) { console.log('Writing loaded username value to input box:' + usernameFromLocalStorage); }
+          input.value =  usernameFromCookie || usernameFromLocalStorage;
+        }, 100);
+      
+      // End Login Id
+    </script>
+
+    <script> // Customization: Debug block
+      document.addEventListener('DOMContentLoaded', function() {
+          const cookieCounterName = 'cookieCounter';
+          const localStorageCounterName = 'localStorageCounter';
+
+          // Function to get a cookie value
+          function getCookie(name) {
+            const value = "; " + document.cookie;
+            const parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+          }
+
+          // Function to set a cookie value
+          function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+          // Increment and store the counter in cookies
+          let cookieCounter = parseInt(getCookie(cookieCounterName)) || 0;
+          cookieCounter++;
+          setCookie(cookieCounterName, cookieCounter, 365);
+
+          // Increment and store the counter in local storage
+          let localStorageCounter = parseInt(localStorage.getItem(localStorageCounterName)) || 0;
+          localStorageCounter++;
+          localStorage.setItem(localStorageCounterName, localStorageCounter);
+
+          // Set up Shift key detection
+          let shiftPressCount = 0;
+          let lastShiftPressTime = 0;
+          const shiftPressLimit = 5;
+          const timeLimit = 2000; // 2 seconds
+
+          // Ensure the overlay is hidden on page load
+          const overlay = document.getElementById('debugOverlay');
+          overlay.style.display = 'none';
+
+          document.addEventListener('keydown', function(event) {
+              if (event.key === 'Shift') {
+                  const currentTime = new Date().getTime();
+
+                  if (currentTime - lastShiftPressTime <= timeLimit) {
+                      shiftPressCount++;
+                  } else {
+                      shiftPressCount = 1; // Reset count if not within time limit
+                  }
+
+                  if (shiftPressCount === shiftPressLimit) {
+                      var storedIdentifierLocalStorage = localStorage.getItem('username');
+                      var storedIdentifierFromCookie = getCookie('username');
+                      var input = document.querySelector('input[id="username"]');
+                      var submitButton = document.querySelector('button[type="submit"][name="action"]');
+                      showOverlay(
+                          "CIC Debug Mode: " + 
+                          "<br>prompt.name:" + (prompt?.name || "") +
+                          "<br>Visits(cookie): " + cookieCounter + 
+                          "<br>Visits(localstorage): " + localStorageCounter + 
+                          "<br>Identifier (localStorage): " + storedIdentifierLocalStorage +
+                          "<br>Identifier (cookie): " + storedIdentifierFromCookie +
+                          "<br>InputElementFound:" + (!!input) +
+                          "<br>SubmitButtonElementFound: " + (!!submitButton)
+                      );
+                      shiftPressCount = 0; // Reset after showing overlay
+                  }
+
+                  lastShiftPressTime = currentTime;
+              }
+          });
+
+          function showOverlay(message) {
+              const debugOverlay = document.getElementById('debugOverlay');
+              debugOverlay.innerHTML = message;
+              debugOverlay.style.display = 'flex';
+              setTimeout(() => {
+                  debugOverlay.style.display = 'none';
+              }, 2000); // Hide after 2 seconds
+          }
+      });
+    </script>
+</head>
+
+<body class="_widget-auto-layout">
+    <div id="gradient-container">
+        <div class="gradient" id="gradient-red"></div>
+        <div class="gradient" id="gradient-yellow"></div>
+        <div class="gradient" id="gradient-green"></div>
+        <div class="gradient" id="gradient-purple"></div>
+    </div>
+    <div id="debugOverlay" style="display: none;"></div>
+    <div class="widget"><main class="_widget login-id">
+  <section class="cfed79e48 _prompt-box-outer c0180704f">
+    <div class="c2e9a7048 c0b182b12">
+      
+    
+      
+    
+      <div class="c23bba766">
+        <header class="c999ee256 c7d6213a0">
+          <div title="Pandora Prod Users" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+        
+          <img class="ce53807ef cb39fea2d" id="prompt-logo-center" src="https://meechum.prod.netflix.net/cdn/brand/netflix/logo/rgb.png" alt="Pandora Prod Users">
+        
+          
+            <h1 class="cfd4df32c c3ae41e28">Log in</h1>
+          
+        
+          <div class="c8c54e01f c20342e50">
+            <p class="c18e175dc c25fb11c2">Enter the username you'd like to log in with.</p>
+          </div>
+        </header>
+      
+        <div class="c98b16f8a c49294d49">
+          
+        
+          
+            <div class="cb0378539 c8ae292a8">
+              <div class="ccf09c273">
+                
+              
+                
+                  <form method="POST" class="cc7925496 _form-login-id" data-form-primary="true" id="form-id">
+                    <input type="hidden" name="state" value="hqFo2SBwNE44RWROemRKSVYzWTZhVFJWMGt2c1ZYeEpxTEhzbKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHdCa0N5Nm1DMnBpd2ZhZHBQVDVtQUQtdEFyZmxtYmJ1o2NpZKtlc2VsYXVuY2hlcqVvcmdpZLRvcmdfakVMZFRnRXNFelg0UWhLUadvcmduYW1lqHByb2Qtb3Jn">
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    <div class="cb0378539 c8ae292a8">
+                      <div class="ccf09c273">
+                        
+                      
+                        
+                          
+                            <div class="input-wrapper _input-wrapper">
+                              <div class="c784d8eee c37b812fc text cdaf261a2 c704a8499" data-action-text="" data-alternate-action-text="">
+                                <label class="custom-label" for="username">Username</label>
+                              
+                                <input class="input c0c6dd439 c1a91fce3" inputmode="email" name="username" id="username" type="text" value="" required="" autocomplete="email" autocapitalize="none" spellcheck="false" autofocus="">
+                              
+                                
+                              </div>
+                            
+                              
+                            </div>
+                          
+                        
+                      
+                        
+                      
+                        
+                      </div>
+                    </div>
+                  
+                    
+                  
+                    <input class="hide" type="password" autocomplete="off" tabindex="-1" aria-hidden="true">
+                  
+                    <input type="hidden" id="js-available" name="js-available" value="true">
+                  
+                    <input type="hidden" id="webauthn-available" name="webauthn-available" value="true">
+                  
+                    <input type="hidden" id="is-brave" name="is-brave" value="false">
+                  
+                    <input type="hidden" id="webauthn-platform-available" name="webauthn-platform-available" value="true">
+                  
+                    
+                  
+                    <div class="c21f9f2f0">
+                      
+                        <button type="submit" name="action" value="default" class="c643d8083 ceeead7ba c6a3dba2c cb420a972 _button-login-id" data-action-button-primary="true" id="continue-action">Continue</button>
+                      
+                    </div>
+                  </form>
+                
+              </div>
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        </div>
+      </div>
+    </div>
+  
+    
+  </section>
+</main>
+<script id="client-scripts">
+window.ulpFlags = {"enable_ulp_wcag_compliance":false};!function(){var e,t,E,A,C,S,F,T,n,r,a={exports:function(e,t){return"object"==typeof e.ulpFlags&&null!==e.ulpFlags?e.ulpFlags:{}}}.exports(window,document),i=((e={}).exports=function(n,a){var r={},i={};function u(e,t){if(e.classList)return e.classList.add(t);var n=e.className.split(" ");-1===n.indexOf(t)&&(n.push(t),e.className=n.join(" "))}function o(e,t,n,r){return e.addEventListener(t,n,r)}function c(e){return"string"==typeof e}function l(e,t){return c(e)?a.querySelector(e):e.querySelector(t)}function s(e,t){if(e.classList)return e.classList.remove(t);var n=e.className.split(" "),r=n.indexOf(t);-1!==r&&(n.splice(r,1),e.className=n.join(" "))}function f(e,t){return e.getAttribute(t)}function d(e,t,n){return e.setAttribute(t,n)}var e=["text","number","email","password","tel","url"],t="select,textarea,"+e.map(function(e){return'input[type="'+e+'"]'}).join(",");return{addClass:u,toggleClass:function(e,t,n){if(!0===n||!1===n)return r=e,a=t,!0!==n?s(r,a):u(r,a);var r,a;if(e.classList)return e.classList.toggle(t);var i=e.className.split(" "),o=i.indexOf(t);-1!==o?i.splice(o,1):i.push(t),e.className=i.join(" ")},hasClass:function(e,t){return e.classList?e.classList.contains(t):-1!==e.className.split(" ").indexOf(t)},addClickListener:function(e,t){return o(e,"click",t)},addEventListener:o,getAttribute:f,hasAttribute:function(e,t){return e.hasAttribute(t)},getElementById:function(e){return a.getElementById(e)},getParent:function(e){return e.parentNode},isString:c,loadScript:function(e,t){var n=a.createElement("script");for(var r in t)r.startsWith("data-")?n.dataset[r.replace("data-","")]=t[r]:n[r]=t[r];n.src=e,a.body.appendChild(n)},removeScript:function(e){a.querySelectorAll('script[src="'+e+'"]').forEach(function(e){e.remove()})},poll:function(e){var i=e.interval||2e3,t=e.url||n.location.href,o=e.condition||function(){return!0},u=e.onSuccess||function(){},c=e.onError||function(){};return setTimeout(function r(){var a=new XMLHttpRequest;return a.open("GET",t),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var e="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return o(e)?u():setTimeout(r,i)}if(429!==a.status)return c({status:a.status,responseText:a.responseText});var t=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),n=t-(new Date).getTime();return setTimeout(r,i<n?n:i)},a.send()},i)},querySelector:l,querySelectorAll:function(e,t){var n=c(e)?a.querySelectorAll(e):e.querySelectorAll(t);return Array.prototype.slice.call(n)},removeClass:s,removeElement:function(e){return e.remove()},setAttribute:d,removeAttribute:function(e,t){return e.removeAttribute(t)},swapAttributes:function(e,t,n){var r=f(e,t),a=f(e,n);d(e,n,r),d(e,t,a)},setGlobalFlag:function(e,t){r[e]=!!t},getGlobalFlag:function(e){return!!r[e]},setSubmittedForm:function(e,t){i[e]=t},getSubmittedForm:function(e){return i[e]},preventFormSubmit:function(e){e.stopPropagation(),e.preventDefault()},matchMedia:function(e){return"function"!=typeof n.matchMedia&&n.matchMedia(e).matches},dispatchEvent:function(e,t,n){var r;"function"!=typeof Event?(r=a.createEvent("Event")).initCustomEvent(t,n,!1):r=new Event(t,{bubbles:n}),e.dispatchEvent(r)},timeoutPromise:function(e,a){return new Promise(function(t,n){var r=setTimeout(function(){n(new Error("timeoutPromise: promise timed out"))},e);a.then(function(e){clearTimeout(r),t(e)},function(e){clearTimeout(r),n(e)})})},createMutationObserver:function(e){return"undefined"==typeof MutationObserver?null:new MutationObserver(e)},consoleWarn:function(){(console.warn||console.log).apply(console,arguments)},getConfigJson:function(e){try{var t=l(e);if(!t)return null;var n=t.value;return n?JSON.parse(n):null}catch(e){return null}},getCSSVariable:function(e){return getComputedStyle(a.documentElement).getPropertyValue(e)},removeAndTrimString:function(e,t){var n=new RegExp(t,"g"),r=e.replace(n,"");return r=r.replace(/\s+/g,"  ").trim()},setTimeout:setTimeout,globalWindow:n,SUPPORTED_INPUT_TYPES:e,ELEMENT_TYPE_SELECTOR:t,RUN_INIT:!0}},e.exports)(window,document),o=function(){var e={};function v(e){if(!("string"==typeof e||e instanceof String)){var t=typeof e;throw null===e?t="null":"object"===t&&(t=e.constructor.name),new TypeError("Expected a string but received a "+t)}}function m(e,t){var n,r;v(e),r="object"==typeof t?(n=t.min||0,t.max):(n=t,arguments[2]);var a=encodeURI(e).split(/%..|./).length-1;return n<=a&&(void 0===r||a<=r)}function h(e,t){for(var n in void 0===e&&(e={}),t)void 0===e[n]&&(e[n]=t[n]);return e}var g={require_tld:!0,allow_underscores:!1,allow_trailing_dot:!1,allow_numeric_tld:!1,allow_wildcard:!1,ignore_max_length:!1},t="(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])",n="("+t+"[.]){3}"+t,r=new RegExp("^"+n+"$"),a="(?:[0-9a-fA-F]{1,4})",i=new RegExp("^((?:"+a+":){7}(?:"+a+"|:)|(?:"+a+":){6}(?:"+n+"|:"+a+"|:)|(?:"+a+":){5}(?::"+n+"|(:"+a+"){1,2}|:)|(?:"+a+":){4}(?:(:"+a+"){0,1}:"+n+"|(:"+a+"){1,3}|:)|(?:"+a+":){3}(?:(:"+a+"){0,2}:"+n+"|(:"+a+"){1,4}|:)|(?:"+a+":){2}(?:(:"+a+"){0,3}:"+n+"|(:"+a+"){1,5}|:)|(?:"+a+":){1}(?:(:"+a+"){0,4}:"+n+"|(:"+a+"){1,6}|:)|(?::((?::"+a+"){0,5}:"+n+"|(?::"+a+"){1,7}|:)))(%[0-9a-zA-Z-.:]{1,})?$");function b(e,t){return void 0===t&&(t=""),v(e),(t=String(t))?"4"===t?r.test(e):"6"===t&&i.test(e):b(e,4)||b(e,6)}var w={allow_display_name:!1,allow_underscores:!1,require_display_name:!1,allow_utf8_local_part:!0,require_tld:!0,blacklisted_chars:"",ignore_max_length:!1,host_blacklist:[],host_whitelist:[]},y=/^([^\x00-\x1F\x7F-\x9F\cX]+)</i,_=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~]+$/i,x=/^[a-z\d]+$/,E=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f]))*$/i,A=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\u00A1-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/i,C=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*$/i,S=254;function o(e,t){if(v(e),(t=h(t,w)).require_display_name||t.allow_display_name){var n=e.match(y);if(n){var r=n[1];if(e=e.replace(r,"").replace(/(^<|>$)/g,""),r.endsWith(" ")&&(r=r.slice(0,-1)),!function(e){var t=e.replace(/^"(.+)"$/,"$1");if(!t.trim())return!1;if(/[\.";<>]/.test(t)){if(t===e)return!1;if(t.split('"').length!==t.split('\\"').length)return!1}return!0}(r))return!1}else if(t.require_display_name)return!1}if(!t.ignore_max_length&&e.length>S)return!1;var a=e.split("@"),i=a.pop(),o=i.toLowerCase();if(t.host_blacklist.includes(o))return!1;if(0<t.host_whitelist.length&&!t.host_whitelist.includes(o))return!1;var u=a.join("@");if(t.domain_specific_validation&&("gmail.com"===o||"googlemail.com"===o)){var c=(u=u.toLowerCase()).split("+")[0];if(!m(c.replace(/\./g,""),{min:6,max:30}))return!1;for(var l=c.split("."),s=0;s<l.length;s++)if(!x.test(l[s]))return!1}if(!(!1!==t.ignore_max_length||m(u,{max:64})&&m(i,{max:254})))return!1;if(!function(e,t){v(e),(t=h(t,g)).allow_trailing_dot&&"."===e[e.length-1]&&(e=e.substring(0,e.length-1)),!0===t.allow_wildcard&&0===e.indexOf("*.")&&(e=e.substring(2));var n=e.split("."),r=n[n.length-1];if(t.require_tld){if(n.length<2)return!1;if(!t.allow_numeric_tld&&!/^([a-z\u00A1-\u00A8\u00AA-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]{2,}|xn[a-z0-9-]{2,})$/i.test(r))return!1;if(/\s/.test(r))return!1}return!(!t.allow_numeric_tld&&/^\d+$/.test(r))&&n.every(function(e){return!(63<e.length&&!t.ignore_max_length||!/^[a-z_\u00a1-\uffff0-9-]+$/i.test(e)||/[\uff01-\uff5e]/.test(e)||/^-|-$/.test(e)||!t.allow_underscores&&/_/.test(e))})}(i,{require_tld:t.require_tld,ignore_max_length:t.ignore_max_length,allow_underscores:t.allow_underscores})){if(!t.allow_ip_domain)return!1;if(!b(i)){if(!i.startsWith("[")||!i.endsWith("]"))return!1;var f=i.slice(1,-1);if(0===f.length||!b(f))return!1}}if('"'===u[0])return u=u.slice(1,u.length-1),t.allow_utf8_local_part?C.test(u):E.test(u);for(var d=t.allow_utf8_local_part?A:_,p=(l=u.split("."),0);p<l.length;p++)if(!d.test(l[p]))return!1;return!t.blacklisted_chars||-1===u.search(new RegExp("["+t.blacklisted_chars+"]+","g"))}return e.exports=function(e,t){return{ulpRequiredFunction:function(e,t){return!t||!!e.value},ulpEmailValidationFunction:function(e,t){return!t||!e.value||!!o(e.value)},ulpPatternCheckFunction:function(e,t){return!t||!e.value||function(e){if("password"===e.name)return!0;var t=e.getAttribute("pattern");return!t||null!==e.value.match(t)}(e)}}},e.exports}()(window,document),u={exports:function(e,t){for(var i="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_",s=new Uint8Array(256),o=0;o<i.length;o++)s[i.charCodeAt(o)]=o;function u(e){var t,n=new Uint8Array(e),r=n.length,a="";for(t=0;t<r;t+=3)a+=i[n[t]>>2],a+=i[(3&n[t])<<4|n[t+1]>>4],a+=i[(15&n[t+1])<<2|n[t+2]>>6],a+=i[63&n[t+2]];return r%3==2?a=a.substring(0,a.length-1):r%3==1&&(a=a.substring(0,a.length-2)),a}function n(){return navigator&&navigator.credentials&&"undefined"!=typeof PublicKeyCredential}return{base64URLEncode:u,base64URLDecode:function(e){var t,n,r,a,i,o=.75*e.length,u=e.length,c=0,l=new Uint8Array(o);for(t=0;t<u;t+=4)n=s[e.charCodeAt(t)],r=s[e.charCodeAt(t+1)],a=s[e.charCodeAt(t+2)],i=s[e.charCodeAt(t+3)],l[c++]=n<<2|r>>4,l[c++]=(15&r)<<4|a>>2,l[c++]=(3&a)<<6|63&i;return l.buffer},publicKeyCredentialToJSON:function e(t){if(t instanceof Array){var n=[];for(o=0;o<t.length;o+=1)n.push(e(t[o]));return n}if(t instanceof ArrayBuffer)return u(t);if(t instanceof Object){var r={};for(var a in t)r[a]=e(t[a]);return r}return t},str2ab:function(e){for(var t=new ArrayBuffer(e.length),n=new Uint8Array(t),r=0,a=e.length;r<a;r++)n[r]=e.charCodeAt(r);return t},isWebAuthnAvailable:n,isWebauthnPlatformAuthenticatorAvailableAsync:function(e){return n()?e(1e3,PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()):Promise.resolve(!1)}}}}.exports(window,document);({exports:function(e,r,a,t){var n=e(".c26eee422"),i=e("#alert-trigger"),o=e(".cc751f72c"),u=e(".c8ec42d5a"),c=!1;i&&u&&n&&t(n,function(e){var t=e.target===i,n=u.contains(e.target);return t&&!c?(r(o,"show"),void(c=!0)):t&&c||c&&!n?(a(o,"show"),void(c=!1)):void 0})}}).exports(i.querySelector,i.addClass,i.removeClass,i.addClickListener),(E="recaptcha_v2",A="recaptcha_enterprise",C="hcaptcha",S="friendly_captcha",F="arkose",T="auth0_v2",(t={}).exports=function(i,o,a,u,c,l,s){var f=500,d=3,p=0,v=a("div[data-captcha-sitekey]"),t=a("div[data-captcha-sitekey] input");function m(){switch(b()){case E:return window.grecaptcha;case A:return window.grecaptcha.enterprise;case C:return window.hcaptcha;case S:return window.friendlyChallenge;case F:return window.arkose;case T:return window.turnstile}}function h(){return a(function(){switch(b()){case E:case A:return"#ulp-recaptcha";case C:return"#ulp-hcaptcha";case S:return"#ulp-friendly-captcha";case F:return"#ulp-arkose";case T:return"#ulp-auth0-v2-captcha"}}())}function g(){return v.getAttribute("data-captcha-lang")}function b(){return v.getAttribute("data-captcha-provider")}function w(){return v.getAttribute("data-captcha-sitekey")}function y(){return a('form[data-form-primary="true"]')}function _(e){return t.value=e}function x(){var e=m(),t=l("--ulp-captcha-widget-theme")||"light";if(b()===S){"dark"===t&&u(a(".frc-captcha"),"dark");var n=new e.WidgetInstance(h(),{sitekey:w(),language:g(),doneCallback:function(e){_(e)}})}else{var r={sitekey:w(),theme:t,"expired-callback":function(){_(""),u(v,"c6540f3ad"),e.reset(n)},callback:function(e){_(e),c(v,"c6540f3ad")}};b()===T&&(r.language=g(),r.retry="never",r["response-field"]=!1,r["error-callback"]=function(e){return fetch("https://www.cloudflarestatus.com/api/v2/summary.json").then(function(e){return e.json()}).then(function(e){for(var t=0;t<e.components.length;t++){var n=e.components[t];if("Turnstile"===n.name)return"operational"===n.status}return!1}).catch(function(e){return!1}).then(function(e){e&&p<d?(_(""),u(v,"c6540f3ad"),m().reset(n),p++):(_("BYPASS_CAPTCHA"),c(v,"c6540f3ad"))}),!0}),n=e.render(h(),r)}}v&&function(){var e="captchaCallback_"+Math.floor(1000001*Math.random()),t=b(),n={async:!0,defer:!0},r=function(e,t,n,r){switch(b()){case E:return"https://www.recaptcha.net/recaptcha/api.js?render=explicit&hl="+e+"&onload="+t;case A:return"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl="+e+"&onload="+t;case C:return"https://js.hcaptcha.com/1/api.js?render=explicit&hl="+e+"&onload="+t;case S:return"https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.14/widget.min.js";case F:return"https://"+n+".arkoselabs.com/v2/"+r+"/api.js";case T:return"https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload="+t}}(g(),e,v.getAttribute("data-captcha-client-subdomain"),w());if(t===F||t===T){n["data-callback"]=e,n.onerror=function(){if(p<d)return o(r),i(r,n),void p++;o(r),_("BYPASS_CAPTCHA")};var a=function(e){var t,n;t=e,n=function(e){setTimeout(function(){t.run()},f),e.preventDefault()},y().addEventListener("submit",n),t.setConfig({onCompleted:function(e){_(e.token),y().submit()},onError:function(e){return fetch("https://status.arkoselabs.com/api/v2/status.json").then(function(e){return e.json()}).then(function(e){var t=e.status.indicator;return"none"===t}).catch(function(e){return!1}).then(function(e){if(e&&p<d)return t.reset(),new Promise(function(e){setTimeout(function(){e(t.run())},f),p++});_("BYPASS_CAPTCHA"),y().removeEventListener("submit",n)})}})};t===T&&(a=function(){x()}),window[e]=a}else window[e]=function(){delete window[e],x()},t===S&&(u(h(),"frc-captcha"),s(h(),"data-sitekey",w()),n.onload=window[e]);i(r,n)}()},t.exports)(i.loadScript,i.removeScript,i.querySelector,i.addClass,i.removeClass,i.getCSSVariable,i.setAttribute),((n={}).exports=function(r,e,a,i,o,u,c,l,n,s,t){if(!t.enable_ulp_wcag_compliance){if(r("body._simple-labels"))return e(".c5ceec00e.no-js").forEach(function(e){o(e,"no-js")}),void e(".c5ceec00e.js-required").forEach(function(e){i(e,"hide")});e(".c784d8eee:not(.c156c97c5):not(disabled)").forEach(function(e){i(e,"c704a8499");var t,n=r(e,".input");n.value&&i(e,"c3682ed85"),a(e,"change",f),a(n,"blur",f),a(n,"animationstart",d),t=n,c(function(){t.value&&l(t,"change",!0)},100)})}function f(e){var t=e.target,n=u(t);t.value||s(t,"data-autofilled")?i(n,"c3682ed85"):o(n,"c3682ed85")}function d(e){var t=e.target;"onAutoFillStart"===e.animationName&&(n(t,"data-autofilled",!0),l(e.target,"change",!0),a(t,"keyup",p,{once:!0}))}function p(e){var t=e.target;n(t,"data-autofilled","")}},n.exports)(i.querySelector,i.querySelectorAll,i.addEventListener,i.addClass,i.removeClass,i.getParent,i.setTimeout,i.dispatchEvent,i.setAttribute,i.getAttribute,a),{exports:function(e,t,r,a,i,o,u,c){function n(e){var t=r("submitted"),n=i("submittedForm");a("submitted",!0),o("submittedForm",e.currentTarget),t&&n&&n===e.currentTarget?u(e):"apple"===c(e.target,"data-provider")&&setTimeout(function(){a("submitted",!1)},2e3)}var l=e("form");l&&l.forEach(function(e){t(e,"submit",n)})}}.exports(i.querySelectorAll,i.addEventListener,i.getGlobalFlag,i.setGlobalFlag,i.getSubmittedForm,i.setSubmittedForm,i.preventFormSubmit,i.getAttribute),{exports:function(t,e,n){var r=t("form._form-detect-browser-capabilities"),a=t("main.login-id"),i=t("main.signup-with-passkeys"),o=t("div#passkey-detect-browser-capabilities");if(r||a||i||o){var u=e.isWebAuthnAvailable();t("#webauthn-available").value=u?"true":"false",t("#js-available").value="true",navigator.brave?navigator.brave.isBrave().then(function(e){t("#is-brave").value=e,c()}):c()}function c(){u?e.isWebauthnPlatformAuthenticatorAvailableAsync(n).then(function(e){t("#webauthn-platform-available").value=e?"true":"false",r&&r.submit()}).catch(function(e){t("#webauthn-platform-available").value="false",r&&r.submit()}):(t("#webauthn-platform-available").value="false",r&&r.submit())}}}.exports(i.querySelector,u,i.timeoutPromise),function(){var e={};function u(e,n,r,t,a,i){var o="user-initiated-passkey-challenge",u=n("#allow-passkeys");if(u&&u.value){var c=a("#passkey-config-json");if(c){var l=n(".passkey-begin-button"),s=r.isWebauthnPlatformAuthenticatorAvailableAsync(t),f=n("#username"),d=c,p=new AbortController;d.publicKey.challenge=r.base64URLDecode(d.publicKey.challenge),l&&e(l,function(e){l.disabled=!0,p.abort(o),navigator.credentials.get(d).then(function(e){var t=g(e);s.then(function(e){t.isUserVerifyingPlatformAuthenticatorAvailable=e,h(JSON.stringify(t)),v()})}).catch(function(e){m(e)})}),window.PublicKeyCredential&&window.PublicKeyCredential.isConditionalMediationAvailable&&window.PublicKeyCredential.isConditionalMediationAvailable().then(function(e){if(e){var t=Object.assign({},d,{mediation:"conditional",signal:p.signal});navigator.credentials.get(t).then(function(e){f.blur();var t=g(e);s.then(function(e){t.isUserVerifyingPlatformAuthenticatorAvailable=e,h(JSON.stringify(t)),v()})}).catch(function(e){e!==o&&"AbortError"!==e.name&&i("autofill UI error",e)})}}).catch(function(){})}}function v(){n("form._form-passkey-challenge").submit()}function m(e){var t;n("#action").value="showError::"+(t=e,JSON.stringify({name:t.name,message:t.message,stack:t.stack})),n("form._form-passkey-challenge").submit()}function h(e){n("#passkey").value=e}function g(e){var t={id:e.id,rawId:r.base64URLEncode(e.rawId),type:e.type,response:{clientDataJSON:r.base64URLEncode(e.response.clientDataJSON),authenticatorData:r.base64URLEncode(e.response.authenticatorData),signature:r.base64URLEncode(e.response.signature),userHandle:e.response.userHandle?r.base64URLEncode(e.response.userHandle):null}};return e.authenticatorAttachment&&(t.authenticatorAttachment=e.authenticatorAttachment),t}}return e.exports=function(e,t,n,r,a,i,o){return e(window,"load",function(e){u(t,n,r,a,i,o)}),{configurePasskeys:u}},e.exports}()(i.addEventListener,i.addClickListener,i.querySelector,u,i.timeoutPromise,i.getConfigJson,i.consoleWarn),{exports:function(t,e,n){var r=e(".passkey-hidden-ui"),a=navigator.userAgent.toLowerCase(),i=!!window.safari||a.match(/safari/)&&!a.match(/chrome/)&&!a.match(/chromium/);!r||r.length<=0||(i?r.forEach(function(e){t(e,"passkey-hidden-ui")}):window.PublicKeyCredential&&window.PublicKeyCredential.isConditionalMediationAvailable&&window.PublicKeyCredential.isConditionalMediationAvailable().then(function(e){e?r.forEach(function(e){n(e)}):r.forEach(function(e){t(e,"passkey-hidden-ui")})}).catch(function(e){r.forEach(function(e){t(e,"passkey-hidden-ui")})}))}}.exports(i.removeClass,i.querySelectorAll,i.removeElement),{exports:function(n,e,r,a,i,o,u,c,l,t,s,f){if(f.enable_ulp_wcag_compliance){var d=e("[id^='ulp-container-']");if(d&&d.length){var p=t(_);if(p)for(var v=0;v<d.length;v++)p.observe(d[v],{childList:!0,subtree:!0})}_()}function m(e){var t=e.target,n=o(t);t.value||c(t,"data-autofilled")?a(n,"c3682ed85"):i(n,"c3682ed85")}function h(e){var t=e.target,n=o(t);a(n,"focus"),y(t,n)}function g(e){var t=e.target,n=o(t);i(n,"focus"),m(e),y(t,n)}function b(e){var t=e.target;l(t,"data-autofilled","")}function w(e){var t=e.target;"onAutoFillStart"===e.animationName&&(l(t,"data-autofilled",!0),dispatchEvent(e.target,"change",!0),r(t,"keyup",b,{once:!0}))}function y(e,t){e.value?a(t,"c3682ed85"):i(t,"c3682ed85")}function _(){e(".ulp-field").forEach(function(e){if(!u(e,"c704a8499")){var t=n(e,s);t&&(a(e,"c704a8499"),y(t,e),setTimeout(function(){y(t,e)},50),t===document.activeElement&&a(e,"focus"),r(t,"change",m),r(t,"focus",h),r(t,"blur",g),r(t,"animationstart",w))}})}}}.exports(i.querySelector,i.querySelectorAll,i.addEventListener,i.addClass,i.removeClass,i.getParent,i.hasClass,i.getAttribute,i.setAttribute,i.createMutationObserver,i.ELEMENT_TYPE_SELECTOR,a),{exports:function(n,e,r,a,i,o,u,t,c,l){if(!l.enable_ulp_wcag_compliance){var s=e("[id^='ulp-container-']");if(s&&s.length){var f=t(g);if(f)for(var d=0;d<s.length;d++)f.observe(s[d],{childList:!0,subtree:!0});g()}}function p(e){var t=e.target,n=o(t);t.value?a(n,"c3682ed85"):i(n,"c3682ed85")}function v(e){var t=e.target,n=o(t);a(n,"focus"),h(t,n)}function m(e){var t=e.target,n=o(t);i(n,"focus"),h(t,n)}function h(e,t){e.value?a(t,"c3682ed85"):i(t,"c3682ed85")}function g(){e("[id^='ulp-container-'] .ulp-field").forEach(function(e){if(!u(e,"c704a8499")){var t=n(e,c);t&&(a(e,"c704a8499"),h(t,e),setTimeout(function(){h(t,e)},50),t===document.activeElement&&a(e,"focus"),r(t,"change",p),r(t,"focus",v),r(t,"blur",m))}})}}}.exports(i.querySelector,i.querySelectorAll,i.addEventListener,i.addClass,i.removeClass,i.getParent,i.hasClass,i.createMutationObserver,i.ELEMENT_TYPE_SELECTOR,a),{exports:function(r,o,a,i,u,c,l,s,f,d,p,v,t,m,h,e,n,g){if(g.enable_ulp_wcag_compliance){var b=!1,w=e+',input[type="checkbox"]';return F(),[w,y,_,x,E,A,C,S,F]}function y(e){var t=u(e,"data-ulp-validation-function"),n=i(e);return{functionName:t,element:r(n,w),parent:n}}function _(e){var a=[],i=[];return o(e,"[data-ulp-validation-function]").forEach(function(e){var t=y(e),n=[];if(t.element){if("input"===t.element.tagName.toLowerCase()){var r=u(t.element,"type");"checkbox"!==r&&-1===h.indexOf(r)&&n.push("Unsupported input type: "+r)}}else n.push("Could not find element");v[t.functionName]||n.push("Could not find function with name: "+t.functionName),n.length?i=i.concat(n):a.push(e)}),i.length&&t(i.join("\r\n")),a}function x(e,t,n){var r=y(e),a=(0,v[r.functionName])(r.element,t,n);a?s(e,"ulp-validator-error")&&(d(e,"ulp-validator-error"),l(e,"data-is-error")):s(e,"ulp-validator-error")||(f(e,"ulp-validator-error"),c(e,"data-is-error",!0));var i=o(r.parent,".ulp-validator-error");return p(r.parent,"ulp-error",!!i.length),a}function E(t){var n=y(t),e=(u(t,"data-ulp-validation-event-listeners")||"").replace(/\s/g,"").split(",").filter(function(e){return!!e});e.length&&e.forEach(function(e){a(n.element,e,function(){x(t,b,e)})})}function A(e,t,n){b=!0;var r=n.filter(function(e){return!x(e,b,"submit")});if(!r.length)return c(t.submitter,"disabled",!0),void e.submit();m(t);var a=y(r[0]);a.element.focus({preventScroll:!0}),a.parent.scrollIntoView({behavior:"smooth"})}function C(){var t=r('form[data-form-primary="true"]'),n=_(t);0!==n.length&&(n.forEach(function(e){E(e)}),a(t,"submit",function(e){A(t,e,n)}))}function S(){if(n)for(var e in n)n.hasOwnProperty(e)&&(v[e]=n[e])}function F(){var e=r("form[data-disable-html-validations]");e&&(S(),c(e,"novalidate",""),C())}}}.exports(i.querySelector,i.querySelectorAll,i.addEventListener,i.getParent,i.getAttribute,i.setAttribute,i.removeAttribute,i.hasClass,i.addClass,i.removeClass,i.toggleClass,i.globalWindow,i.consoleWarn,i.preventFormSubmit,i.SUPPORTED_INPUT_TYPES,i.ELEMENT_TYPE_SELECTOR,o,a),{exports:function(r,o,a,i,u,c,l,t,s,f,e,n){if(!n.enable_ulp_wcag_compliance){var d=!1,p=e+',input[type="checkbox"]';return y(),[p,v,m,h,g,b,w,y]}function v(e){var t=u(e,"data-ulp-validation-function"),n=i(e);return{functionName:t,element:r(n,p),parent:n}}function m(e){var a=[],i=[];return o(e,"[data-ulp-validation-function]").forEach(function(e){var t=v(e),n=[];if(t.element){if("input"===t.element.tagName.toLowerCase()){var r=u(t.element,"type");"checkbox"!==r&&-1===f.indexOf(r)&&n.push("Unsupported input type: "+r)}}else n.push("Could not find element");l[t.functionName]||n.push("Could not find function with name: "+t.functionName),n.length?i=i.concat(n):a.push(e)}),i.length&&t(i.join("\r\n")),a}function h(e,t,n){var r=v(e),a=(0,l[r.functionName])(r.element,t,n);c(e,"ulp-validator-error",!a);var i=o(r.parent,".ulp-validator-error");return c(r.parent,"ulp-error",!!i.length),a}function g(t){var n=v(t),e=(u(t,"data-ulp-validation-event-listeners")||"").replace(/\s/g,"").split(",").filter(function(e){return!!e});e.length&&e.forEach(function(e){a(n.element,e,function(){h(t,d,e)})})}function b(e,t,n){d=!0;var r=n.filter(function(e){return!h(e,d,"submit")});if(r.length){s(t);var a=v(r[0]);a.element.focus({preventScroll:!0}),a.parent.scrollIntoView({behavior:"smooth"})}else e.submit()}function w(){var t=r('form[data-form-primary="true"]'),n=m(t);0!==n.length&&(n.forEach(function(e){g(e)}),a(t,"submit",function(e){b(t,e,n)}))}function y(){var e=o("[id^='ulp-container-']");e&&e.length&&w()}}}.exports(i.querySelector,i.querySelectorAll,i.addEventListener,i.getParent,i.getAttribute,i.toggleClass,i.globalWindow,i.consoleWarn,i.preventFormSubmit,i.SUPPORTED_INPUT_TYPES,i.ELEMENT_TYPE_SELECTOR,a),{exports:function(e,t,n){function r(n){t(n,"click",function(e){e.preventDefault();var t=document.createElement("input");t.name="action",t.type="hidden",t.value=n.value,n.form.appendChild(t),n.form.submit(),n.form.removeChild(t)})}function a(){e('form button[type="submit"][formnovalidate]').forEach(function(e){r(e)})}return n&&a(),[a,r]}}.exports(i.querySelectorAll,i.addEventListener,i.RUN_INIT),((r={}).exports=function(o,e,u,c,l,s,t,f,n){if(n.enable_ulp_wcag_compliance){var r=e('[class*="aria-error-check"]');if(r&&r.length){var a=t(function(e){e&&e.length&&e.map(function(e){if(e.target&&u(e.target,"aria-error-check")){var t=o('[id="'+c(e.target,"data-ulp-validation-target")+'"');if(t){var n=c(t,"aria-describedby");c(e.target,"data-is-error")?(r=t,a=n,i=e.target.id,a&&-1!==a.search(i)||l(r,"aria-describedby",a?a+" "+i:i),l(r,"aria-invalid",!0)):function(e,t,n){if(t){var r=f(t,n);r.length?l(e,"aria-describedby",r):(s(e,"aria-invalid"),s(e,"aria-describedby"))}else s(e,"aria-invalid"),s(e,"aria-describedby")}(t,n,e.target.id)}}var r,a,i})});a&&r.map(function(e){a.observe(e,{attributes:!0,attributeFilter:["class","data-is-error"]})})}}},r.exports)(i.querySelector,i.querySelectorAll,i.hasClass,i.getAttribute,i.setAttribute,i.removeAttribute,i.createMutationObserver,i.removeAndTrimString,a)}();
+</script>
+</div>
+    
+
+    <script>
+      // Login Id
+      
+      // Alter Username Input
+      // Add Username label custom class
+      var usernameInput = document.getElementById('username');
+      document.querySelector('._form-login-id').id =  'form-id';
+      document.querySelector('._button-login-id').id =  'continue-action';
+
+      var submitButton = document.querySelector('._button-login-id');
+      var usernameInputByName = document.getElementsByName('username');
+
+      var usernameLabel = usernameInput.parentNode.getElementsByTagName('label');
+      usernameLabel[0].innerHTML = usernameLabel[0].innerHTML.trim().replace('*', '');
+      usernameLabel[0].setAttribute('class', 'custom-label');
+      // End add Username label custom class
+      // Remove Username label div
+      var usernameLabelDiv = usernameInput.parentNode.getElementsByTagName('div');
+      usernameLabelDiv[0].remove();
+      // End remove Username label div
+      // End Alter Username Input
+
+      // Block Double Click for Test Automation
+      //disableButtonOnFirstClick(usernameInputByName[0].value, submitButton);
+      
+      // End Login Id
+
+      // Login Password
+      
+      // End Login Password
+
+      function disableButtonOnFirstClick(username, button) {
+            document.addEventListener("DOMContentLoaded", function () {
+                // Check if the username matches the test automation pattern
+                const regexTestUser = /(netflix|contractor|partner)\.testautomation$/;
+                if (username && regexTestUser.test(username)) {
+                    // Disable the continue button after one click
+                    button.addEventListener('click', function (event) {
+                        // Disable button to prevent multiple clicks
+                        button.disabled = true;
+                    });
+                }
+            });
+        }
+    </script>
+
+
+</body></html>

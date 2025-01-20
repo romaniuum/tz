@@ -1,0 +1,1173 @@
+<html class="js picture eventlistener" lang="en" dir="ltr"><head>
+    <title>Visual Studio App Center | iOS, Android, Xamarin &amp; React Native</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Continuously build, test, release and monitor apps for every platform.">
+    <meta name="google-site-verification" content="Vuufl0l1CGYNF1SA0lLw6ZWKjt_o91UPIiqI0qUSYno">
+    <!-- Meta additions -->
+
+    <!-- Visit the CDN documentation to learn about versions. -->
+    <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.26.0/css/mwf-west-european-default.min.css">
+
+    <!-- Stylesheet additions -->
+    <!-- Include as a single optimized css file on CDN. -->
+    <style>
+        /* Utility classes */
+
+        .ac-f-pad-top-6x.ac-f-pad-top-6x {
+            padding-top: 24px;
+        }
+
+        .ac-f-pad-top-12x.ac-f-pad-top-12x {
+            padding-top: 48px;
+        }
+
+        .m-feature-group .m-feature.ac-f-background-neutral-05 {
+            background: #F2F2F2;
+        }
+
+        .x-visible-flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .section-padding-h {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        @media (max-width: 1084px) {
+            .x-visible-flex {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+        }
+
+        .x-type-center.x-visible-flex {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .x-float-none {
+            float: none;
+        }
+
+        .ac-check {
+            left: 0;
+            margin-right: 8px;
+        }
+
+        .ac-paragraph-hanging-indent {
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .ac-paragraph-hanging-indent .ac-check {
+            margin-top: 6px;
+            position: absolute;
+            vertical-align: baseline;
+        }
+
+        .m-list-elements {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 5px 0px 3px 28px;
+            font-weight: 200;
+        }
+
+        .m-feature-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .m-feature {
+            max-width: 1200px;
+        }
+
+        .m-feature>div .c-heading {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 500;
+        }
+
+        .m-feature>div .c-paragraph {
+            font-weight: 300;
+        }
+
+        @media (min-width: 1084px) {
+            .ac-push-heading span {
+              font-size: 85%;
+            }
+        }
+
+        /* Heading container
+      - scrolls with page */
+
+        #header .nav-brand {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 200;
+            display: inline-block;
+        }
+
+        #header .nav-brand .ac-vs span {
+            display: none;
+        }
+
+        #header .nav-brand .ac-vs:before {
+            display: inline;
+            content: "VS ";
+        }
+
+        #header .nav-brand strong {
+            font-weight: 600;
+        }
+
+        #header .cta-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        #header .sticky-nav .cta-container {
+          align-items: center;
+        }
+
+        #header .c-call-to-action {
+            background: transparent;
+            color: white;
+            font-size: 12px;
+            line-height: 12px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 6px 8px;
+        }
+
+        #header .c-call-to-action:after {
+            display: none;
+            content: "";
+        }
+
+        #header .c-call-to-action.primary {
+            color: #0078D4;
+            background: white;
+        }
+
+        #header .c-call-to-action.primary span {
+          min-height: 14px;
+        }
+
+        #header .c-call-to-action.secondary {
+            display: none;
+        }
+
+        #header .c-call-to-action:focus {
+          outline: #fff solid 2px;
+        }
+
+        #sticky-nav-container.stuck {
+            height: 64px;
+        }
+
+        #sticky-nav-container.stuck .sticky-nav-complete {
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            padding-left: 5%;
+            padding-right: 5%;
+            justify-content: center;
+            background-color: #0F1D51;
+        }
+
+        .sticky-nav {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            background-color: #0F1D51;
+            width: 100%;
+            max-width: calc(1600px);
+            padding: 12px 0;
+        }
+
+        .nav-left {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .nav-left>* {
+            padding: 0 16px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .nav-left>*:first-child {
+            padding-left: 0;
+        }
+
+        .nav-link {
+            display: none;
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        #hero .cta-container.single-nav-link-container {
+          max-width: 320px;
+          display: flex;
+          justify-content: center;
+        }
+
+        @media (min-width: 420px) {
+            #header .nav-brand .ac-vs span {
+                display: inline;
+            }
+
+            #header .nav-brand .ac-vs:before {
+                display: none;
+            }
+
+            #header .c-call-to-action {
+                padding: 10px 8px 7px 8px;
+                line-height: 1.3;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav-link {
+                display: block;
+            }
+            #header .nav-brand {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            #hero .cta-container.substitute-nav-link-container {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .nav-left>* {
+                padding: 0 24px;
+            }
+
+            #header .c-call-to-action {
+                padding: 10px 22px 7px 22px;
+                font-size: 13px;
+            }
+
+            #header .c-call-to-action.secondary {
+                display: inline-block;
+                color: #fff;
+                background: #006FC8;
+                margin: 0 8px 0 0;
+            }
+        }
+
+        /* Hero item
+      - without background image
+      - with background color
+      */
+
+        #hero {
+            background-color: #0F1D51;
+            color: white;
+            padding-bottom: 20px;
+        }
+
+        #hero .x-visible-flex {
+            justify-content: space-between;
+        }
+
+        #hero .c-heading {
+            font-size: 32px;
+            line-height: 36px;
+            padding: 37px 0 3px;
+            padding-top: 0;
+            font-weight: 700;
+            opacity: .95;
+        }
+
+        #hero .c-subheading {
+            max-width: 470px;
+            font-size: 24px;
+            line-height: 36px;
+            padding: 8px 0 4px;
+            font-weight: 400;
+        }
+
+        @media (min-width: 540px) {
+            #hero .c-heading {
+                font-size: 34px;
+                line-height: 40px;
+            }
+
+            #hero .c-subheading {
+                font-size: 26px;
+                line-height: 40px;
+            }
+        }
+
+        @media (max-width: 368px) {
+          #hero .cta-container.single-nav-link-container {
+            justify-content: left;
+          }
+      }
+
+        #pricing .c-call-to-action, #hero .c-call-to-action {
+          font-size: 15px;
+          line-height: 1.3;
+          margin-top: 20px;
+          height: 45px;
+          border-radius: 3px;
+          color: #fff;
+          background: #006FC8;
+          text-transform: uppercase;
+        }
+
+        #hero .c-call-to-action {
+            width: 152px;
+            margin-right: 8px;
+        }
+
+        #pricing .c-call-to-action {
+            width: 175px;
+        }
+
+        #pricing .c-call-to-action:after, #hero .c-call-to-action:after {
+            display: none;
+            content: "";
+        }
+
+        /* Keep size while loading */
+
+        .welcome-container {
+            align-self: center;
+            margin-top: 60px;
+            margin-bottom: 130px;
+        }
+
+        @media (max-width: 1084px) {
+            .welcome-container {
+                margin-bottom: 30px;
+            }
+        }
+
+        #hero img {
+            height: 50vw;
+            max-height: 650px;
+            max-width: 1378px;
+            margin: 0 auto;
+            padding-right: 5%;
+        }
+
+        @media (max-width: 1084px) {
+            #hero img {
+                height: auto;
+                width: 90vw;
+                padding-right: 0%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #hero .c-subheading {
+                font-weight: 200;
+                font-size: 26px;
+                line-height: 40px;
+            }
+        }
+
+
+        /* Top-level container
+      - with bottom padding (improves background color appearance)
+      *
+      NB: Containers with `.theme-dark` or `.theme-light` cannot have
+      `[data-grid="container"]` because they must extend full-width.
+      This selector compensates for that. */
+
+        #mainContent>[data-grid*=container],
+        #mainContent>.theme-dark,
+        #mainContent>.theme-light {
+            padding-bottom: 48px;
+        }
+
+        @media (min-width: 1084px) {
+            #mainContent>[data-grid*=container]:not(#follow),
+            #mainContent>.theme-dark,
+            #mainContent>.theme-light {
+                padding-bottom: 72px;
+            }
+        }
+
+        /* Top-level container
+      - with background color */
+
+        .ac-background-accent {
+            background-color: #0F1D51;
+        }
+
+        /* Platform container
+      - with list item padding
+      - with muted text color */
+
+        .ac-os {
+            padding: 12px;
+        }
+
+        .ac-os .c-image {
+            height: 80px;
+        }
+
+        .ac-os [class^=c-paragraph] {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 13px;
+        }
+
+        /* Build service container
+      - logo spacing */
+        #build {
+            padding-top: 32px;
+        }
+
+        #build .ac-logos {
+            margin-left: -6px;
+            margin-right: -6px;
+        }
+
+        #build .ac-logos img {
+            padding: 6px;
+        }
+
+        /* Test service container
+      - with background image on large screen */
+
+        #test {
+            background-color: #162A75;
+        }
+
+        @media (min-width: 540px) {
+            #test {
+                background-image: url("images/app-center-test-background.png");
+                background-position: center top;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        @media (min-width: 540px) and (-webkit-min-device-pixel-ratio: 2),
+        (min-width: 540px) and (min-resolution: 2dppx) {
+            #test {
+                background-image: url("images/app-center-test-background@2x.png");
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .ac-area-heading-6x {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        /* Good company container
+      - with list item padding */
+
+        #good-company .c-logo {
+            padding: 12px;
+        }
+
+        /* Pricing
+      - with list item relatively positioned */
+
+        #pricing {
+            background-image: url("images/pricing-bg.svg");
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #pricing .x-clearfix {
+            justify-content: center;
+            display: flex;
+        }
+
+        .m-list-container {
+          max-width: 1100px;
+        }
+
+        @media (max-width: 1083px) {
+            .m-list-container {
+                max-width: 700px;
+            }
+        }
+
+        .ac-highlight-feature{
+            max-width: 900px;
+            justify-content: center;
+        }
+
+        @media (max-width: 1083px) {
+            .ac-highlight-feature{
+                max-width: 700px;
+            }
+        }
+
+        .ac-highlight-feature-item {
+            background: white;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            border-radius: 3px;
+            display: flex;
+            max-width: 365px;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+            -webkit-transform: none;
+            transform: none;
+        }
+
+        @media (max-width: 1083px) {
+            .ac-highlight-feature-item.primary {
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                max-width: 100%;
+            }
+            .ac-highlight-feature-item.secondary {
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                max-width: 100%;
+            }
+        }
+
+        .ac-highlight-feature-item [class^="c-heading"] {
+            color: black;
+            font-weight: 600;
+            font-size: 24px;
+            padding-top: 0;
+        }
+
+        .ac-highlight-feature-item .c-paragraph {
+            color: black;
+            max-width: 100%;
+        }
+
+        .ac-highlight-feature-item [class^=c-paragraph].f-lean {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 13px;
+            margin-left: auto;
+        }
+
+        .ac-highlight-feature-item .ac-label {
+            font-weight: 300;
+            padding: 8px 12px;
+        }
+
+        .bordered-image {
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer container
+      - with top & bottom padding */
+
+        #footer {
+            padding-top: 36px;
+            padding-bottom: 36px;
+        }
+
+        #footer .x-visible-flex {
+            justify-content: space-between;
+        }
+
+        .ac-footer-nav {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .ac-footer-nav li {
+            color: rgba(0, 0, 0, 0.6);
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        .ac-footer-nav li :hover, :focus {
+          color: #004578 !important;
+        }
+
+        .ac-footer-nav li a {
+            text-decoration: underline;
+        }
+
+        .ac-footer-nav li:last-child {
+            margin-right: 0;
+        }
+
+        @media (max-width: 640px) {
+            .ac-footer-nav {
+                margin-top: 10px;
+                font-size: 13px;
+            }
+            .warnalert {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+
+        .ac-content-by-center {
+            justify-content: center;
+        }
+
+        .warnalert {
+            display: flex;
+            background-color: rgba(189, 145, 63, 0.6);
+            width: 100%;
+            color: white;
+            align-items: center;
+            height: 100%;
+            border-radius: 5px;
+        .warnicon {
+            padding: 10px;
+        }
+        .warntext {
+            .warnhyperlink {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <!-- Accessibility requirement -->
+    <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+
+    <!-- Universal header -->
+    <div id="header" class="theme-dark ac-background-accent ac-f-pad-top-6x">
+        <div class="section-padding-h" data-grid="container">
+            <div>
+                <img itemprop="logo" itemscope="itemscope" class="c-image x-hidden-focus" alt="Microsoft" height="24" src="images/logo-microsoft.svg">
+            </div>
+            <div id="sticky-nav-container">
+                <div class="sticky-nav-complete" id="sticky-nav-complete">
+                    <div class="sticky-nav" id="sticky-nav">
+                        <div class="nav-left">
+                            <div class="nav-brand">
+                                <span class="ac-vs"><span>Visual Studio </span></span>
+                                <strong>App Center</strong>
+                            </div>
+                            <!-- <a href="#" class="nav-link">
+                                <span>About</span>
+                            </a> -->
+                            <a href="#pricing" class="nav-link">
+                                <span>Pricing</span>
+                            </a>
+                            <a href="https://docs.microsoft.com/en-us/appcenter" class="nav-link">
+                                <span>Documentation</span>
+                            </a>
+                            <a href="https://blogs.msdn.microsoft.com/vsappcenter" class="nav-link">
+                                <span>Blog</span>
+                            </a>
+                        </div>
+                        <div class="cta-container">
+                            <a href="/create-account" class="c-call-to-action primary">
+                                <span>🚀 Get started</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main"for Accessibility. -->
+    <main id="mainContent">
+        <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
+        <div id="hero">
+            <section class="f-align-bottom">
+                <div class="section-padding-h" data-grid="container">
+                    
+                        <div class="warnalert">
+                            <div class="warnicon">
+                                <svg width="25" height="25" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0l15 30H0L15 0zm0 4.47L3.23 28h23.54L15 4.47zM14 12h2v10h-2V12zm0 14v-2h2v2h-2z" fill="#FDD835" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="warntext">
+                              Visual Studio App Center is scheduled for retirement on March 31, 2025.
+                              <a href="https://aka.ms/appcenter/retire" target="blank" class="warnhyperlink">Learn more about support timelines and recommended alternatives.</a> 
+                            </div>
+                        </div>
+                    
+                    <div class="x-visible-flex">
+                        <div class="welcome-container">
+                          <h1 class="c-heading">Welcome to App&nbsp;Center.</h1>
+                          <p class="c-subheading">Continuously build, test, release, and monitor apps for every platform.</p>
+                          <div class="cta-container">
+                            <a href="/create-account" class="c-call-to-action">
+                                <span>Start free</span>
+                            </a>
+                            <a href="/sign-in" class="c-call-to-action">
+                                <span>Sign In</span>
+                            </a>
+                          </div>
+                          <div class="cta-container substitute-nav-link-container">
+                            <a href="/create-account" class="c-call-to-action">
+                                <span>Pricing</span>
+                            </a>
+                            <a href="/sign-in" class="c-call-to-action">
+                                <span>Blog</span>
+                            </a>
+                          </div>
+                          <div class="cta-container substitute-nav-link-container single-nav-link-container">
+                            <a href="/create-account" class="c-call-to-action nav-link-in-main-area " style="width: auto;">
+                                <span>Documentation</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <picture class="c-image">
+                          <img srcset="images/app-center-hero.svg" src="images/app-center-hero.svg" alt="App Center" class="x-hidden-focus">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="os-support">
+            <div data-grid="container">
+                <h2 class="x-type-center f-initial-baseline-large c-heading-4" style="font-weight: normal;">App&nbsp;Center is awesome for:</h2>
+                <div class="x-clearfix">
+                    <div class="x-type-center x-visible-flex ac-f-pad-top-6x" data-grid="col-12 stack-6" style="justify-content: center">
+                        <span data-grid="col-4" class="ac-os">
+                            <img class="c-image x-visible-inline-block" src="images/logo-ios.svg" alt="iOS logo">
+                            <p class="c-heading-6">iOS apps</p>
+                            <p class="c-paragraph-6">Swift and Objective-C</p>
+                        </span>
+                        <span data-grid="col-4" class="ac-os">
+                            <img class="c-image x-visible-inline-block" src="images/logo-android.svg" alt="Android logo">
+                            <p class="c-heading-6">Android apps</p>
+                            <p class="c-paragraph-6">Java and Kotlin</p>
+                        </span>
+                        <span data-grid="col-4" class="ac-os">
+                            <img class="c-image x-visible-inline-block" src="images/logo-windows.svg" alt="Windows logo">
+                            <p class="c-heading-6">Windows apps</p>
+                            <p class="c-paragraph-6">UWP, WPF and WinForms</p>
+                        </span>
+                        <span data-grid="col-4" class="ac-os">
+                            <img class="c-image x-visible-inline-block" src="images/logo-react-native.svg" alt="React Native logo">
+                            <p class="c-heading-6">React Native apps</p>
+                            <p class="c-paragraph-6">iOS and Android</p>
+                        </span>
+                        <span data-grid="col-4" class="ac-os">
+                            <img class="c-image x-visible-inline-block" src="images/logo-xamarin.svg" alt="Xamarin logo">
+                            <p class="c-heading-6">Xamarin apps</p>
+                            <p class="c-paragraph-6">iOS and Android</p>
+                        </span>
+                        <span data-grid="col-4" class="ac-os">
+                            <img class="c-image x-visible-inline-block" src="images/party-popper-emoji.png" alt="Party popper emoji">
+                            <p class="c-heading-6">Even more!</p>
+                            <p class="c-paragraph-6">macOS, tvOS and Unity</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="build" data-grid="container">
+            <div class="m-area-heading">
+                <h2 class="c-heading">Connect your repo, build your app. It’s that simple.</h2>
+                <p class="c-paragraph">Connect to GitHub, Bitbucket, GitLab, or Azure DevOps and build your app in the cloud on every commit.
+                    <br class="x-hidden-vp1 x-hidden-vp2"> Automatically run unit tests, release to testers and stores, or test your UI on real devices.</p>
+            </div>
+            <div class="m-feature-container">
+              <section class="m-feature f-align-left f-image-priority">
+                <picture>
+                    <img srcset="images/app-center-build-branches.png" src="images/app-center-build-branches.png" alt="Visual Studio App Center Build service screenshot">
+                </picture>
+                <div>
+                    <h3 class="c-heading">Easy setup</h3>
+                    <p class="c-paragraph">Connect your repo and pick a branch. App&nbsp;Center analyzes your code to suggest a build configuration.
+                        iOS or Android? You bet! React Native? No sweat! Windows? Certainly.</p>
+                    <div class="ac-logos ac-f-pad-top-6x">
+                        <img src="images/logo-github.svg" alt="GitHub logo">
+                        <img src="images/logo-vsts.svg" alt="Azure DevOps logo">
+                        <img src="images/logo-bitbucket.svg" alt="Bitbucket logo">
+                        <img src="images/logo-gitlab.svg" alt="GitLab logo">
+                    </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="m-feature-container">
+              <section class="m-feature f-align-right f-image-priority">
+                  <picture>
+                      <source srcset="images/app-center-build-workflows.png" media="(min-width:0)">
+                      <img src="images/app-center-build-workflows.png" alt="Visual Studio App Center Build service screenshot">
+                  </picture>
+                  <div>
+                      <h3 class="c-heading">Automate your Build, Test, and Release pipeline</h3>
+                      <p class="c-paragraph">Commit to a feature branch to build and test. Commit to a beta branch to distribute to testers. Commit
+                          to master to submit to the App Store. Customize to fit your team’s workflow.</p>
+                  </div>
+              </section>
+            </div>
+        </div>
+
+        <div id="test" class="theme-dark section-padding-h">
+            <div data-grid="container">
+                <div class="x-clearfix">
+                    <div class="x-float-right" data-grid="col-6">
+                        <div class="m-area-heading ac-area-heading-6x x-type-left">
+                            <h2 class="c-heading">Find bugs on any device before release.</h2>
+                            <p class="c-paragraph x-visible-inline-block" style="max-width: 100%">Does your app still work after your latest change? How does it perform on an LG G2? Find out
+                                by testing your app in a hosted device lab with 1000s of real iOS and Android devices. You’ll
+                                receive test results, full-resolution screenshots of every step, along with performance metrics.
+                            </p>
+                            <picture class="c-image f-pad-top-6x x-type-center">
+                                <img class="x-visible-inline-block" srcset="images/app-center-test-devices.png, images/app-center-test-devices@2x.png 2x" src="images/app-center-test-devices.png" alt="Visual Studio App Center devices">
+                            </picture>
+                            <div data-grid="col-12" class="x-type-center ac-f-pad-top-6x">
+                              <p class="c-paragraph">Test every step of every feature. On every device. On every commit.
+                                  <br class="x-hidden-vp1 x-hidden-vp2"> Welcome to the future of app testing.
+                              </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="distribute" data-grid="container">
+            <div class="m-area-heading">
+                <h2 class="c-heading">Ship fixes and enhancements as fast as you build them.</h2>
+                <p class="c-paragraph">Whether you prefer private distribution, public open betas, Microsoft&nbsp;Intune, TestFlight, Google&nbsp;Play,
+                    or the App&nbsp;Store, App&nbsp;Center makes releasing your app a delight.</p>
+            </div>
+            <div class="m-feature-container">
+                <section class="m-feature f-align-left f-image-priority">
+                    <picture>
+                        <img srcset="images/app-center-distribute-flow@2x.png" src="images/app-center-distribute-flow@2x.png" alt="Visual Studio App Center Distribution service screenshot" style="padding: 0 8%;">
+                    </picture>
+                    <div>
+                        <h3 class="c-heading">Automate your release process</h3>
+                        <p class="c-paragraph">Specify a group of testers or create an open beta recruitment page. Connect that group to a branch to
+                            automatically send updates whenever code is merged.</p>
+                    </div>
+                </section>
+            </div>
+            <div class="m-feature-container">
+                <section class="m-feature f-align-right f-image-priority">
+                    <picture class="m-feature-container">
+                        <img srcset="images/app-center-distribute-stores.svg" src="images/app-center-distribute-stores.svg" alt="Visual Studio App Center Distribution service screenshot">
+                    </picture>
+                    <div>
+                        <h3 class="c-heading">Promote validated builds to app stores</h3>
+                        <p class="c-paragraph">Once you’ve beta tested a release candidate, promote the same build directly to Intune, Google&nbsp;Play,
+                            or App&nbsp;Store&nbsp;Connect. App&nbsp;Center tracks your builds through every release.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="crashes" class="theme-light section-padding-h">
+            <div data-grid="container">
+                <div class="m-area-heading">
+                    <h2 class="c-heading">Collect real-time diagnostics,
+                        <br class="x-hidden-vp1 x-hidden-vp2"> prioritize and fix critical issue.</h2>
+                    <p class="c-paragraph">Integrate the App&nbsp;Center SDK for automatic crash reporting. Build your app in App&nbsp;Center,
+                        <br class="x-hidden-vp1 x-hidden-vp2 x-hidden-vp3 x-hidden-vp4"> and get automatic symbol management for richer reports.</p>
+                </div>
+                <picture class="c-image f-pad-top-6x x-type-center">
+                    <img class="x-visible-inline-block" srcset="images/app-center-diagnostics.png, images/app-center-diagnostics@2x.png 2x" src="images/app-center-diagnostics.png" alt="Screenshot of the Visual Studio App Center crash service" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                </picture>
+                <div data-grid="col-12" class="x-float-left x-type-center ac-f-pad-top-6x">
+                    <p class="c-paragraph">Crash reports are grouped by common cause, highlighting the relevant stack frame so you can locate errors by file and
+                        <br class="x-hidden-vp1 x-hidden-vp2 x-hidden-vp3"> line number. Search specific users' crashes and browse individual reports for event breadcrumbs and custom data attachments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="analytics" data-grid="container">
+            <div data-grid="col-12">
+                <div class="m-area-heading">
+                    <h2 class="c-heading">App analytics, made for developers.</h2>
+                    <p class="c-paragraph">Developer-friendly analytics make it easy to discover how to improve your apps.</p>
+                </div>
+                <div class="m-feature-container">
+                    <section class="m-feature f-align-left f-image-priority">
+                        <picture>
+                            <source srcset="images/app-center-live-analytics@2x.png" media="(min-width:0)">
+                            <img srcset="images/app-center-live-analytics@2x.png" src="images/app-center-live-analytics@2x.png" alt="Visual Studio App Center Analytics service screenshot">
+                        </picture>
+                        <div>
+                            <h3 class="c-heading">Live analytics for sessions, events, crashes, and more</h3>
+                            <p class="c-paragraph">See streaming activity for sessions and events immediately, and collect metrics that become more
+                                useful over time.</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="m-feature-container">
+                    <section class="m-feature f-align-right f-image-priority">
+                        <picture>
+                            <img srcset="images/app-center-analytics-graphs.svg" src="images/app-center-analytics-graphs.png" alt="Visual Studio App Center Analytics service screenshot">
+                        </picture>
+                        <div>
+                            <h3 class="c-heading">Who? What? Where? When? Why? How?</h3>
+                            <p class="c-paragraph">Is your audience growing? What devices and operating systems are most common? What features are popular?
+                                Get straightforward answers to the questions you care about.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="good-company" data-grid="container">
+            <div class="x-clearfix">
+                <div class="m-area-heading" data-grid="col-12">
+                    <h2 class="c-heading">You’re in good company.</h2>
+                    <p class="c-paragraph">These companies already use App&nbsp;Center.</p>
+                </div>
+            </div>
+            <div class="x-clearfix">
+                <div class="x-type-center x-visible-flex ac-f-pad-top-6x" data-grid="col-12 stack-3">
+                    <div class="x-type-center x-visible-flex" data-grid="col-6 pad-6x">
+                        <span data-grid="col-4" class="c-logo">
+                            <img class="c-image x-visible-inline-block" src="images/logo-quora.svg" alt="Quora logo">
+                        </span>
+                        <span data-grid="col-4" class="c-logo">
+                            <img class="c-image x-visible-inline-block" src="images/logo-fox-sports.svg" alt="Fox Sports logo" style="height: 80px;">
+                        </span>
+                        <span data-grid="col-4" class="c-logo">
+                            <img class="c-image x-visible-inline-block" src="images/logo-ring.svg" alt="Ring logo">
+                        </span>
+                    </div>
+                    <div class="x-type-center x-visible-flex" data-grid="col-6 pad-6x">
+                        <span data-grid="col-4" class="c-logo">
+                            <img class="c-image x-visible-inline-block" src="images/logo-highrise.svg" alt="Highrise logo">
+                        </span>
+                        <span data-grid="col-4" class="c-logo">
+                            <img class="c-image x-visible-inline-block" src="images/logo-freshdirect.svg" alt="Freshdirect logo">
+                        </span>
+                        <span data-grid="col-4" class="c-logo">
+                            <img class="c-image x-visible-inline-block" src="images/logo-bbc-goodfood.svg" alt="BBC GoodFood logo">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pricing" class="m-area-heading theme-dark">
+            <div data-grid="container">
+                <h2 class="c-heading">You’ll go a long way, for free.</h2>
+                <div class="x-clearfix x-type-left">
+                    <div data-grid="col-11 stack-3 pad-6x" class="ac-f-pad-top-6x x-float-none x-visible-block m-list-container" style="margin: 0 auto;">
+                        <ul data-grid="col-4">
+                          <li>
+                              <p class="m-list-elements ac-paragraph-hanging-indent">
+                                  <img class="ac-check" role="presentation" src="images/icon-check.svg">
+                                  <strong>Build</strong>: 240 build minutes per month</p>
+                          </li>
+                          <li>
+                              <p class="m-list-elements ac-paragraph-hanging-indent">
+                                  <img class="ac-check" role="presentation" src="images/icon-check.svg">
+                                  <strong>Test</strong>: Free 30 day trial</p>
+                          </li>
+                        </ul>
+                        <ul data-grid="col-4">
+                            <li>
+                              <p class="m-list-elements ac-paragraph-hanging-indent">
+                                  <img class="ac-check" role="presentation" src="images/icon-check.svg">
+                                  <strong>Distribute</strong>: Unlimited distributions and users</p>
+                            </li>
+                            <li>
+                              <p class="m-list-elements ac-paragraph-hanging-indent">
+                                  <img class="ac-check" role="presentation" src="images/icon-check.svg">
+                                  <strong>Analytics</strong>: All features included</p>
+                            </li>
+                        </ul>
+                        <ul data-grid="col-4">
+                            <li>
+                                <p class="m-list-elements ac-paragraph-hanging-indent">
+                                    <img class="ac-check" role="presentation" src="images/icon-check.svg">
+                                    <strong>Crash Reporting</strong>: All features included</p>
+                            </li>                            
+                            <li>
+                                <p class="m-list-elements ac-paragraph-hanging-indent">
+                                    <img class="ac-check" role="presentation" src="images/icon-check.svg">
+                                    <strong>General</strong>: Unlimited apps, organizations, and teams
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 class="c-heading ac-f-pad-top-12x" style="font-size: 30px;">Pay as your app grows.</h2>
+                <div class="x-clearfix ac-f-pad-top-12x">
+                    <div class="x-visible-flex ac-highlight-feature" data-grid="col-12 pad-6x stack-3">
+                        <div class="x-visible-flex ac-content-by-center" data-grid="col-6">
+                            <div class="x-type-left ac-highlight-feature-item primary">
+                                <div>
+                                    <h3 class="c-heading-5">Add concurrent builds as your team grows</h3>
+                                    <p class="c-paragraph">Ship your app faster with multiple builds running in parallel. </p>
+                                </div>
+                                <div class="x-type-left ac-f-pad-top-12x">
+                                    <div class="ac-label x-visible-inline-block" style="color: #008905;"><span style="font-size: 55px;">+$40</span>/month</div>
+                                    <p class="c-paragraph-4 f-lean">per build concurrency</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x-visible-flex ac-content-by-center" data-grid="col-6">
+                            <div class="x-type-left ac-highlight-feature-item secondary">
+                                <div>
+                                    <h3 class="c-heading-5">Test on more devices in parallel</h3>
+                                    <p class="c-paragraph">Run UI test on thousands of real devices and hundreds of configurations.</p>
+                                </div>
+                                <div class="x-type-left ac-f-pad-top-12x">
+                                    <div class="ac-label x-visible-inline-block" style="color: #9250BC;"><span style="font-size: 55px;">+$99</span>/month</div>
+                                    <p class="c-paragraph-4 f-lean">per standard device concurrency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/create-account" class="c-call-to-action" style="margin-top: 58px;">
+                  <span>Get started</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="follow" data-grid="container" class="section-padding-h">
+            <div class="m-social f-horizontal f-share" itemscope="" itemtype="http://schema.org/Organization">
+                <span>Follow VS App&nbsp;Center</span>
+                <ul>
+                    <li>
+                        <a itemprop="sameAs" aria-label="Follow on Twitter" href="https://twitter.com/VSAppCenter">
+                            <picture>
+                                <img src="images/logo-twitter.svg" alt="Twitter logo">
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a itemprop="sameAs" aria-label="Connect on LinkedIn" href="https://www.linkedin.com/company/microsoft/">
+                            <picture>
+                                <img src="images/logo-linkedin.svg" alt="LinkedIn logo">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Universal footer -->
+    <div id="footer" class="theme-light">
+        <div data-grid="container" class="section-padding-h">
+            <div class="x-visible-flex">
+                <div>Made with ❤️ by Microsoft</div>
+                <ul class="ac-footer-nav">
+                    <li>
+                        <a href="https://azure.microsoft.com/en-us/support/legal/">
+                            Terms of use
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://go.microsoft.com/fwlink/?LinkId=248681">
+                            Privacy &amp; cookies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/en-us.aspx">
+                            Trademarks
+                        </a>
+                    </li>
+                    <li>
+                        © Microsoft <script>document.write(new Date().getFullYear());</script>2025
+                    <script src="https://az416426.vo.msecnd.net/next/ai.2.min.js"></script></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript requirements -->
+    <!-- Include before </body>. Use the script file based on preference (UMD, AMD, CommonJS, Auto, etc.) -->
+    <script async="async" src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+    <noscript></noscript>
+
+    
+      <script type="text/javascript">
+        var sdkInstance="appInsightsSDK";window[sdkInstance]="appInsights";var aiName=window[sdkInstance],aisdk=window[aiName]||function(e){
+           function n(e){t[e]=function(){var n=arguments;t.queue.push(function(){t[e].apply(t,n)})}}var t={config:e};t.initialize=!0;var i=document,a=window;setTimeout(function(){var n=i.createElement("script");n.src=e.url||"https://az416426.vo.msecnd.net/next/ai.2.min.js",i.getElementsByTagName("script")[0].parentNode.appendChild(n)});try{t.cookie=i.cookie}catch(e){}t.queue=[],t.version=2;for(var r=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];r.length;)n("track"+r.pop());n("startTrackPage"),n("stopTrackPage");var s="Track"+r[0];if(n("start"+s),n("stop"+s),n("setAuthenticatedUserContext"),n("clearAuthenticatedUserContext"),n("flush"),!(!0===e.disableExceptionTracking||e.extensionConfig&&e.extensionConfig.ApplicationInsightsAnalytics&&!0===e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking)){n("_"+(r="onerror"));var o=a[r];a[r]=function(e,n,i,a,s){var c=o&&o(e,n,i,a,s);return!0!==c&&t["_"+r]({message:e,url:n,lineNumber:i,columnNumber:a,error:s}),c},e.autoExceptionInstrumented=!0}return t
+        }({
+           instrumentationKey:"d2520d6e-507b-4765-aeaa-cfa16b964e7a",
+           maxBatchInterval: 2000
+        });
+        var utms = window.location.search.replace(/^(\?)/,"").split("&").filter(function(word) { return word.startsWith("utm_"); }).reduce(function(combined, word) {
+          var parts = word.split("=");
+          if (parts.length !== 2) {
+            return combined;
+          }
+          return Object.assign(combined, { [parts[0]]: parts[1] });
+        }, {});
+        window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackEvent({ name: "page-view", properties: { routePath: "/", ...utms }});
+     </script>
+    
+    <!-- ... -->
+
+    <!-- JavaScript additions -->
+    <script>
+      var stickyNav = document.getElementById('sticky-nav');
+      var stickyNavContainer = document.getElementById('sticky-nav-container');
+      var scrollPosition = window.scrollY;
+      var stickyHeight = stickyNav.clientHeight;
+      var stickyThreshold = stickyNav.offsetTop;
+      if (scrollPosition >= stickyThreshold) {
+          stickyNavContainer.classList.add('stuck');
+      }
+
+      function scrollHandler() {
+        if (scrollPosition < stickyThreshold && window.scrollY >= stickyThreshold) {
+            stickyNavContainer.classList.add('stuck');
+        } else if (scrollPosition >= stickyThreshold && window.scrollY < stickyThreshold) {
+            stickyNavContainer.classList.remove('stuck');
+        }
+
+        scrollPosition = window.scrollY;
+      }
+
+      document.addEventListener('scroll', scrollHandler);
+    </script>
+    <!-- ... -->
+
+
+
+</body></html>

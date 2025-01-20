@@ -1,0 +1,1513 @@
+<html data-wf-domain="new2.instabug.com" data-wf-page="656f0a33d018c8f8650059f8" data-wf-site="62706e0299180d3045eb2cab" lang="en" class=" w-mod-js w-mod-ix"><head><style>.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}</style><meta charset="utf-8"><title>Exceptional Mobile App Performance. Better User Experience | Instabug</title><meta content="Instabug empowers mobile teams to monitor, prioritize, and debug performance and stability issues throughout the app development lifecycle." name="description"><meta content="Exceptional Mobile App Performance. Better User Experience | Instabug" property="og:title"><meta content="Instabug empowers mobile teams to monitor, prioritize, and debug performance and stability issues throughout the app development lifecycle." property="og:description"><meta content="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66eaa56ed0647d05eb05593a_Home-OG.png" property="og:image"><meta content="Exceptional Mobile App Performance. Better User Experience | Instabug" property="twitter:title"><meta content="Instabug empowers mobile teams to monitor, prioritize, and debug performance and stability issues throughout the app development lifecycle." property="twitter:description"><meta content="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66eaa56ed0647d05eb05593a_Home-OG.png" property="twitter:image"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><meta content="O3qMR8RNJAVs9wuUpo4wTveyzNjj_lnDjs0cstp4JwM" name="google-site-verification"><link href="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/css/instabug.f1be6edb2.min.css" rel="stylesheet" type="text/css"><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://snap.licdn.com/li.lms-analytics/insight.old.min.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-875720479&amp;l=dataLayer&amp;cx=c&amp;gtm=45je51g0v890544665za200"></script><script src="https://x.clearbitjs.com/v2/pk_9790c22ab5419f9cad4f18a4d53e0618/tracking.min.js" referrerpolicy="strict-origin-when-cross-origin" async=""></script><script src="https://x.clearbitjs.com/v2/pk_9790c22ab5419f9cad4f18a4d53e0618/destinations.min.js" referrerpolicy="strict-origin-when-cross-origin" async=""></script><script async="" src="https://snap.licdn.com/li.lms-analytics/insight.old.min.js"></script><script src="https://js.hs-banner.com/v2/46623086/banner.js" type="text/javascript" id="cookieBanner-46623086" data-cookieconsent="ignore" data-hs-ignore="true" data-loader="hs-scriptloader" data-hsjs-portal="46623086" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="https://js.hsadspixel.net/fb.js" type="text/javascript" id="hs-ads-pixel-46623086" data-ads-portal-id="46623086" data-ads-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="46623086" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="https://js.hs-analytics.net/analytics/1737378300000/46623086.js" type="text/javascript" id="hs-analytics"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TKW5WCK"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TKW5WCK"></script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65ba5ca7525f8dea4c6e731e_favicon.png" rel="shortcut icon" type="image/x-icon"><link href="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627a58e31280d2223ddbd811_webclip.png" rel="apple-touch-icon"><link href="https://www.instabug.com/" rel="canonical"><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N7L05LN4LM"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-N7L05LN4LM');</script><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="instabug">
+<meta name="twitter:site:id" content="1209448764">
+<meta name="twitter:creator" content="@instabug">
+<meta name="twitter:creator:id" content="1209448764">
+
+<meta name="image" content="/assets/images/instabug-logo.png">
+<meta name="google-site-verification" content="P95_BXWINaFfzjYcBugibBrmFcLsr-bhQ9ACShijfbg">
+<meta name="google-site-verification" content="1VsekIApImDnKT-u7m_wFiT1KRMdtcnYd0Lw2Lo6dv0">
+<meta name="google-site-verification" content="O3qMR8RNJAVs9wuUpo4wTveyzNjj_lnDjs0cstp4JwM">
+<meta name="msvalidate.01" content="296CC36EC0991838DD71FACDBAA2B6DC">
+<meta name="theme-color" content="#2c3e50">
+<meta name="fragment" content="!">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Instabug">
+<meta name="msapplication-TileColor" content="#ffffff">
+
+<!-- JQUERY library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+<style>
+  /* medium query for thing which are min width 991px and max width 1440.98px */
+  @media (min-width: 991px) and (max-width: 1440.98px) { 
+  	 body {
+    	zoom:0.83;
+    }
+  }
+  #target-container > div > div {
+  padding: 1rem 1.5rem;
+  background-color: #e5f4ff;
+  color: #16253f;
+  text-align: start;
+  font-size: 1rem;
+  font-family: 'ProximaNova', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  & p {
+    margin-bottom: 0 !important;
+    line-height: 20px;
+  }
+
+  & > div:last-child {
+    flex: 0 0 auto;
+
+    & button {
+      font-weight: 600;
+      font-size: 0.875rem;
+
+      &:last-child {
+        color: #00287a;
+      }
+    }
+  }
+}
+ 
+</style>
+
+<script>
+// not sure what this does yet
+document.documentElement.dataset.wfDomain = 'new2.instabug.com';
+
+</script>
+
+
+ <style>
+    .v-table > tbody > tr {
+        display: table-row;
+        width: 100%;
+        padding: 20px 0;
+        align-items: center;
+    }
+
+    .v-table > tbody > tr > td {
+        display: table-cell;
+        color: #7f93bc;
+        font-size: 18px;
+        line-height: 36px;
+        border-bottom: 1px solid rgba(173,176,182,0.3);
+        padding: 10px 20px;
+        vertical-align: middle;
+    }
+
+    .v-table > tbody > tr:first-child > td {
+        border-top: 1px solid rgba(173,176,182,0.3);
+        border-bottom: 1px solid rgba(173,176,182,0.3);
+        font-weight: 700;
+        color: #7f93bc;
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .v-table > tbody > tr > td:first-child {
+        padding-left: 0;
+    }
+
+    .v-table > tbody > tr > td:last-child {
+        padding-right: 0;
+    }
+
+    .v-table-scroll .v-table-right {
+      transform: rotate(180deg);
+      animation: 1.5s infinite none slideinRight;
+      position: relative;
+    }
+
+    .v-table-scroll .v-table-left {
+      animation: 1.5s infinite none slideinLeft;
+      position: relative;
+    }
+  
+ 	 .v-table-scroll > div:first-child { display: none; text-align: center; color: #007aff; font-weight: 500; position: sticky; top: 20px; margin-bottom: 10px; }
+    
+
+	@media only screen and (max-width: 767px) {
+      .v-table {
+            display: block;
+            white-space: nowrap;
+            overflow-x: scroll;
+      }
+      
+      .v-table-scroll > div:first-child { display: block; }
+    }
+
+    @keyframes slideinRight {
+      0% {
+        left: 0px;
+        opacity: 1;
+      }
+      75% {
+        left: 12.5px;
+        opacity: 0;
+      }
+      90% {
+        left: 0px;
+        opacity: 0;
+      }
+      100% {
+        left: 0px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideinLeft {
+      0% {
+        left: 0px;
+        opacity: 1;
+      }
+      75% {
+        left: -12.5px;
+        opacity: 0;
+      }
+      90% {
+        left: 0px;
+        opacity: 0;
+      }
+      100% {
+        left: 0px;
+        opacity: 1;
+      }
+    }
+</style>
+
+<!-- Clearbit -->
+<script>
+  function mapVisitorIndustry(industry) {
+  	const mappingDictionary = {
+      "Internet Software & Services": "IT services",
+      "Banks": "Financial services",
+      "Diversified Financial Services": "Financial services",
+      "Education Services": "Educational services",
+      "Technology Hardware, Storage & Peripherals": "IT services",
+      "Consumer Goods": "Retail",
+      "Marine": "Food & beverage",
+      "Construction & Engineering": "Construction & Engineering",
+      "Health Care Equipment & Supplies": "Health care",
+      "Pharmaceuticals": "Health care",
+      "Food & Staples Retailing": "Food & beverage",
+      "Gas Utilities": "Energy",
+      "Capital Markets": "Financial services",
+      "Commercial Services & Supplies": "Financial services",
+      "IT Services": "IT services",
+      "Industrial Conglomerates": "Construction & Engineering",
+      "Real Estate": "Real estate",
+      "Beverages": "Food & beverage",
+      "Specialized Consumer Services": "Retail",
+      "Consumer Services": "Retail",
+      "Food Products": "Food & beverage",
+      "Aerospace & Defense": "Transportation",
+      "Life Sciences Tools & Services": "Construction & Engineering",
+      "Transportation": "Transportation",
+      "Electrical Equipment": "Energy",
+      "Containers & Packaging": "Construction & Engineering",
+      "Diversified Telecommunication Services": "Telecom",
+      "Professional Services": "Consumer services",
+      "Health Care Providers & Services": "Health care",
+      "Media": "Media",
+      "Renewable Electricity": "Energy",
+      "Household Durables": "Retail",
+      "Textiles, Apparel & Luxury Goods": "Retail",
+      "Air Freight & Logistics": "Airlines",
+      "Diversified Consumer Services": "Consumer services",
+      "Communications Equipment": "Machinery",
+      "Consumer Discretionary": "Consumer services",
+      "Automotive": "Automotive",
+      "Electric Utilities": "Energy",
+      "Utilities": "Energy",
+      "Hotels, Restaurants & Leisure": "Hotels, Restaurants & Leisure",
+      "Software": "IT services",
+      "Insurance": "Insurance",
+      "Specialty Retail": "Retail",
+      "Road & Rail": "Construction & Engineering",
+      "Building Materials": "Construction & Engineering",
+      "Chemicals": "Chemicals",
+      "Semiconductors & Semiconductor Equipment": "Chemicals",
+      "Consumer Staples": "Consumer Services",
+      "Retailing": "Retail",
+      "Personal Products": "Consumer Services",
+      "Airlines": "Airlines",
+      "Distributors": "Consumer Services",
+      "Family Services": "Machinery",
+      "Machinery": "Machinery",
+      "Biotechnology": "Health care",
+      "Trading Companies & Distributors": "Financial services",
+      "Metals & Mining": "Construction & Engineering",
+      "Tobacco": "Consumer Services",
+      "Leisure Products": "Travel and Leisure",
+      "Paper & Forest Products": "Machinery",
+      "Industrials": "Construction & Engineering"
+    };
+
+    return mappingDictionary[industry] ? mappingDictionary[industry] : industry;
+  }
+  function mapClearbitData(clearbitObject) {
+    if (!clearbitObject) return;
+    
+    const user_properties = clearbitObject[2];
+
+    const userProperties = {
+    	clearbit_reveal_company_category_industry: user_properties.cb_co_industry,
+      	clearbit_reveal_company_category_industry_group: user_properties.cb_co_industryGroup,
+      	clearbit_reveal_company_category_naics_code: user_properties.cb_co_naicsCode,
+      	clearbit_reveal_company_category_sector: user_properties.cb_co_sector,
+      	clearbit_reveal_company_category_sic_code: user_properties.cb_co_sicCode,
+      	clearbit_reveal_company_category_sub_industry: user_properties.cb_co_subIndustry,
+      	//clearbit_reveal_company_crunchbase_handle: user_properties.company.crunchbase.handle,
+      	clearbit_reveal_company_description: user_properties.cb_co_description,
+      	clearbit_reveal_company_domain: user_properties.cb_domain,
+      	//clearbit_reveal_company_domain_aliases: user_properties.company.domainAliases,
+      	clearbit_reveal_company_email_provider: user_properties.cb_co_emailProvider,
+      	//clearbit_reveal_company_facebook_handle: user_properties.company.facebook.handle,
+      	clearbit_reveal_company_founded_year: user_properties.cb_co_foundedYear,
+      	//clearbit_reveal_company_geo_city: user_properties.user_properties.company.geo.city,
+      	clearbit_reveal_company_geo_country: user_properties.cb_co_geo_country,
+      	clearbit_reveal_company_geo_country_code: user_properties.cb_co_geo_countryCode,
+      	//clearbit_reveal_company_geo_lat: user_properties.company.geo.lat,
+      	//clearbit_reveal_company_geo_lng: user_properties.company.geo.lng,
+      	//clearbit_reveal_company_geo_postal_code: user_properties.company.geo.postalCode,
+      	clearbit_reveal_company_geo_state: user_properties.cb_co_geo_state,
+      	//clearbit_reveal_company_geo_state_code: user_properties.company.geo.stateCode,
+      	//clearbit_reveal_company_geo_street_name: user_properties.company.geo.streetName,
+      	clearbit_reveal_company_geo_street_number: user_properties.cb_co_geo_streetNumber,
+      	//clearbit_reveal_company_geo_sub_premise: user_properties.company.geo.subPremise,
+      	//clearbit_reveal_company_indexed_at: user_properties.company.indexedAt,
+      	//clearbit_reveal_company_legal_name: user_properties.company.legalName,
+      	//clearbit_reveal_company_linkedin_handle: user_properties.company.linkedin.handle,
+      	//clearbit_reveal_company_location: user_properties.company.location,
+      	//clearbit_reveal_company_logo: user_properties.company.logo,
+      	clearbit_reveal_company_metrics_alexa_global_rank: user_properties.cb_co_alexaGlobalRank,
+      	//clearbit_reveal_company_metrics_alexa_us_rank: user_properties.company.metrics.alexaUsRank,
+      	//clearbit_reveal_company_metrics_annual_revenue: user_properties.company.metrics.annualRevenue,
+      	clearbit_reveal_company_metrics_employees: user_properties.cb_co_employees,
+      	clearbit_reveal_company_metrics_employees_range: user_properties.cb_co_employeesRange,
+        clearbit_reveal_company_metrics_estimated_annual_revenue: user_properties.cb_co_estAnnualRevenue,
+      	//clearbit_reveal_company_metrics_market_cap: user_properties.company.metrics.marketCap,
+      	clearbit_reveal_company_metrics_raised: user_properties.cb_co_raised,
+      	clearbit_reveal_company_name: user_properties.cb_co_name,
+      	clearbit_reveal_company_parent_domain: user_properties.cb_co_domain,
+      	//clearbit_reveal_company_phone: user_properties.company.phone,
+      	//clearbit_reveal_company_site_email_addresses: user_properties.company.site.emailAddresses,
+      	//clearbit_reveal_company_site_phone_numbers: user_properties.company.site.phoneNumbers,
+      	clearbit_reveal_company_tags: user_properties.cb_co_tags,
+      	clearbit_reveal_company_tech: user_properties.cb_co_tech,
+      	//clearbit_reveal_company_ticker: user_properties.company.ticker,
+      	clearbit_reveal_company_time_zone: user_properties.cb_co_timeZone,
+      	//clearbit_reveal_company_twitter_followers: user_properties.company.twitter.followers,
+      	//clearbit_reveal_company_twitter_following: user_properties.company.twitter.following,
+      	//clearbit_reveal_company_twitter_handle: user_properties.company.twitter.handle,
+      	clearbit_reveal_company_type: user_properties.cb_type,
+      	clearbit_reveal_company_utc_offset: user_properties.cb_co_utcOffset,
+      	//clearbit_reveal_fuzzy: user_properties.fuzzy,
+    };
+    
+    analytics.identify(userProperties);
+
+    if (user_properties.cb_co_industry) {
+      const visitorIBGIndustry = mapVisitorIndustry(user_properties.cb_co_industry);
+      
+      analytics.track("industry_category", {
+        industry: visitorIBGIndustry,
+      });
+    }
+  }
+  
+  var clearbitTriesCount = 0;
+  var clearbitMaxTries = 5;
+  var clearbitIntervalDuration = 1000;
+  var clearbitIntervalId;
+
+  function clearbitDataCaptured() {
+    const foundObject = dataLayer.find(
+      (obj) => obj['0'] === 'set' && obj['1'] === 'user_properties'
+    );
+
+    if (foundObject) {
+      mapClearbitData(foundObject)
+      clearInterval(clearbitIntervalId);
+    } else {
+      clearbitTriesCount++;
+
+      if (clearbitTriesCount >= clearbitMaxTries) {
+        // Clear the interval after the maximum number of tries
+        clearInterval(clearbitIntervalId);
+      }
+    }
+  }
+</script>
+<!-- End Clearbit -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKW5WCK');</script>
+<!-- End Google Tag Manager -->
+<meta name="keywords" content="user feedback, user experience, app quality, user surveys, APM, app performance monitoring, connect with customers, improve app quality"><script src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab%2F66ba5a08efe71070f98dd10a%2F66e235e9b33abc05e4450c8b%2Ftkw5wck-1.1.1.js" type="text/javascript"></script><link rel="preconnect" href="https://www.googletagmanager.com"><script type="application/javascript" async="" src="https://tracking.g2crowd.com/attribution_tracking/conversions/1022.js?p=https://www.instabug.com/&amp;e="></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-875720479"></script></head><body class="body"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKW5WCK" height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript><div class="global-custom-css w-embed"><style> body {
+     overflow-x: hidden;
+ }
+
+ .skew-bg-silver,
+ .skew-bg-dark,
+ .skew-bg-drk {
+     transform: matrix(0.85, -0.22, 0.74, 0.95, 0, 0) translateX(-50%);
+ }
+
+ .skew-bg-silver-sharp,
+ .clippy-silver-wrapper,
+ .clippy {
+     clip-path: polygon(0 14%, 100% 0, 100% 86%, 0% 100%);
+ }
+
+ .dark-testimonials-area.developers {
+     clip-path: polygon(0 28%, 100% 0, 100% 72%, 0% 100%);
+ }
+
+ .dark-testimonials-area.startups {
+     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+ }
+
+ @media (max-width: 991.98px) {
+     * {
+         clip-path: none !important;
+     }
+ }
+
+ .infinite-scroll {
+     animation: scrollText 36s infinite linear;
+ }
+
+ @-webkit-keyframes scrollText {
+     from {
+         transform: translateX(0%);
+     }
+
+     to {
+         transform: translateX(-50%);
+     }
+ }
+
+ @keyframes scrollText {
+     from {
+         transform: translateX(0%);
+     }
+
+     to {
+         transform: translateX(-50%);
+     }
+ }
+
+ @media (min-width: 992px) {
+     .testimonials-slider-row > div:first-child {
+         position: relative;
+         top: -40px;
+     }
+
+     .testimonials-slider-row > div:last-child {
+         position: relative;
+         top: 40px;
+     }
+ }
+
+ @media (max-width: 767px) {
+
+     .single-testimonial .swiper-button-next,
+     .single-testimonial .swiper-button-prev {
+         display: none;
+     }
+ }
+
+ .testimonials-swiper .swiper-slide {
+     transition: 1s !important
+ }
+
+ .integration-item {
+     background: #FFFFFF;
+     border: 5px solid #FFFFFF;
+     box-sizing: border-box;
+     box-shadow: 0px 28px 84px rgba(0, 0, 0, 0.1), inset 0px 16px 57px rgba(0, 0, 0, 0.04);
+     border-radius: 32px;
+ }
+
+ /* light bg header */
+ .light-bg-navbar .nav-menu a.navbar-link {
+     color: #00287A;
+ }
+
+ .light-bg-navbar .default-button.transparent-white {
+     color: #246aff;
+ }
+
+ .light-bg-navbar .default-button.transparent-white:hover {
+     color: white
+ }
+
+ .light-bg-navbar .default-button.transparent-white.sandbox,
+ .light-bg-navbar .default-button.transparent-white.sandbox:hover {
+     color: #00287A;
+ }
+
+ .light-bg-navbar .whitelogo {
+     display: none;
+ }
+
+ .light-bg-navbar .darklogo {
+     display: block
+ }
+
+ .checkmarks-grid li::before {
+     content: "";
+     background: url(https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62720b6ab896b68effdd4f56_check%204.svg ) no-repeat;
+     width: 24px;
+     height: 24px;
+     position: relative;
+     top: -3px;
+     min-width: 24px;
+ }
+
+ .popup-explanation:empty {
+     display: none !Important
+ }
+
+ .popup-explanation {
+     visibility: hidden
+ }
+
+ .pricing-card__flex:hover {
+     z-index: 10;
+ }
+
+ .pricing-card__flex:hover .popup-explanation {
+     opacity: 100%;
+     visibility: visible;
+ }
+
+ .pricing-compare-box {
+     overflow-y: auto;
+     overflow-x: hidden;
+ }
+
+ pre[class*=language-] {
+     border: none;
+     box-shadow: none;
+     border-radius: 24px 24px 0 0;
+ }
+
+ :not(pre) > code[class*=language-],
+ pre[class*=language-] {
+     background: #252C40;
+ }
+
+ div.code-toolbar > .toolbar {
+     top: 10px;
+     right: 10px;
+ }
+
+ div.code-toolbar > .toolbar > .toolbar-item > a,
+ div.code-toolbar > .toolbar > .toolbar-item > button,
+ div.code-toolbar > .toolbar > .toolbar-item > span {
+     color: white !important;
+     font-size: 12px;
+     box-shadow: none;
+     padding: 3px 15px;
+ }
+
+ pre[class*=language-].line-numbers {
+     padding-top: 16px;
+     padding-bottom: 16px;
+ }
+
+ pre[class*=language-].line-numbers {
+     padding-left: 50px;
+     margin: 0;
+ }
+
+ .line-numbers .line-numbers-rows {
+     left: -50px;
+     width: 35px;
+     border-right: 1px solid #ffffff17;
+ }
+
+ .line-numbers-rows > span:before {
+     color: #c5d7fea6;
+ }
+
+ .language-css .token.string,
+ .style .token.string,
+ .token.attr-name,
+ .token.attr-value,
+ .token.char,
+ .token.entity,
+ .token.inserted,
+ .token.operator,
+ .token.string,
+ .token.url,
+ .token.variable {
+     color: #16FCE7;
+ }
+
+ code[class*=language-],
+ pre[class*=language-] {
+     text-shadow: none;
+ }
+
+ .token.builtin,
+ .token.constant,
+ .token.keyword,
+ .token.property,
+ .token.selector,
+ .token.symbol {
+     color: #ffa286;
+ }
+
+ ol li {
+     margin-bottom: 10px
+ }
+
+ .testimonials-item {
+     height: max-content
+ }
+
+ .platform-code em {
+     font-style: normal;
+     background: #e9e9e9;
+     padding: 3px;
+     margin: 0 3px;
+ }
+
+ .skew-card-item * {
+     transition: 0.2s
+ }
+
+ .skew-card-item:hover .floating-logo {
+     top: 37%;
+ }
+
+ .skew-card-item:hover .skewimg {
+     transform: translateY(5px)
+ }
+
+ .skew-card-item:hover .dark-text {
+     color: #246aff
+ }
+
+ .menu-wrapper {
+     position: absolute;
+     top: 9px;
+     right: 15px;
+     margin: auto;
+     width: 30px;
+     height: 100%;
+     cursor: pointer;
+     z-index: 10000;
+     height: 50px;
+ }
+
+ .menu-wrapper.fixed {
+     position: fixed;
+ }
+
+ .hamburger-menu,
+ .hamburger-menu:after,
+ .hamburger-menu:before {
+     width: 30px;
+     height: 3px;
+ }
+
+ .hamburger-menu {
+     position: relative;
+     transform: translateY(25px);
+     background: #246aff;
+     transition: all 0ms 300ms;
+ }
+
+ .hamburger-menu.animate {
+     background: rgba(255, 255, 255, 0) !important;
+ }
+
+ .hamburger-menu:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 7px;
+     background: #246aff;
+     transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+ }
+
+ .hamburger-menu:after {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 7px;
+     background: #246aff;
+     transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+ }
+
+ .hamburger-menu.animate:after {
+     top: 0;
+     transform: rotate(45deg);
+     transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+ }
+
+ .hamburger-menu.animate:before {
+     bottom: 0;
+     transform: rotate(-45deg);
+     transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+ }
+
+
+
+ .dropdowns__wrap div {
+     white-space: pre-wrap;
+ }
+
+ .platform-code strong {
+     word-break: break-word;
+ }
+
+ .scrolling-logos {
+     position: relative;
+ }
+
+ .scrolling-logos::before {
+     content: "";
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     background: linear-gradient(90deg, #000c25, transparent);
+     z-index: 3;
+ }
+
+ .scrolling-logos::after {
+     content: "";
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     right: 0;
+     top: 0;
+     background: linear-gradient(270deg, #000c25, transparent);
+     z-index: 3;
+ }
+
+ .decorated-hero-dark.lighter .scrolling-logos::before {
+     background: linear-gradient(90deg, #d7e3fc, transparent);
+ }
+
+ .decorated-hero-dark.lighter .scrolling-logos::after {
+     background: linear-gradient(270deg, #d7e3fc, transparent);
+ }
+
+ @media (max-width: 767px) {
+
+     .scrolling-logos::before,
+     .scrolling-logos::after {
+         width: 130px;
+     }
+ }
+
+ /* @media (min-width: 1920px) {
+     .decorated-hero-dark:not(.careers):not([class*="blog"]) {
+         background-image: url('https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/628d06c12974bce98a8412f1_Group%2040-1.svg') !important;
+     }
+
+     .decorated-hero-dark.lighter:not([class*="blog"]) {
+         background-image: url('https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/628d06c12974bc33a88412f2_Group%2040.svg') !important;
+     }
+ } */
+
+ .whr-date {
+     display: none;
+ }
+
+ .req-input::placeholder {
+     color: #00287A
+ }
+
+ .dropdown-list .pricing-table-grid:nth-child(odd) {
+     background: #F1F6FF;
+ }
+
+ form * {
+     font-family: Axiforma, sans-serif !important;
+ }
+ </style>
+<!-- form select.mktoField {
+     -webkit-appearance: none;
+     -moz-appearance: none !important;
+     background: transparent !important;
+     background-image: url(data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>) !important;
+     background-repeat: no-repeat !important;
+     background-position-x: 98% !important;
+     background-position-y: 14px !important;
+     padding-right: 40px !important;
+ }
+-->
+<style> .pricing-dropdown .dropdown-list {
+     display: none
+ }
+
+ .pricing-dropdown.open .dropdown-list {
+     display: block;
+ }
+
+ .pricing-dropdown.open .drop-icon {
+     transform: rotate(180deg)
+ }
+
+ </style> <style>
+
+ /* pagination */
+ .fs-pagination ul li a {
+     border: none;
+     opacity: 0.5
+ }
+
+ .fs-pagination ul li:last-child a {
+     border-right: none
+ }
+
+ .fs-pagination ul li.fs-pagination-active a {
+     background-color: transparent;
+     opacity: 1;
+     color: #246AFF;
+ }
+
+ .fs-pagination ul li a {
+     color: #246AFF;
+     font-size: 20px;
+     font-weight: 600;
+ }
+
+ .fs-pagination ul li a:hover {
+     opacity: 1;
+ }
+
+ .pagination-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .blog-cat {
+     position: relative;
+     transition: 0.2s;
+     top: 0;
+ }
+
+ .author {
+     transition: 0.2s;
+ }
+
+ .blog-auth-flex:hover .author {
+     color: #246AFF;
+ }
+
+ .readarrow {
+     left: 0
+ }
+
+ .read-post:hover .readarrow {
+     left: 3px;
+ }
+
+ .blog-categories {
+     position: relative;
+ }
+
+ .blog-categories::after {
+     width: 120px;
+     content: "";
+     right: 0;
+     top: 0;
+     height: 100%;
+     height: 33px;
+     position: absolute;
+     z-index: 1;
+     pointer-events: none;
+ }
+
+ .swiper-slide.opacity100.blog-cat-slide.w--current {
+     border-bottom: none;
+ }
+
+ .swiper-slide.swiper-slide-active {
+     opacity: 100% !important;
+ }
+
+
+
+ .category-dropdown-list {
+     border-radius: 4px !important;
+ }
+ 
+.wistia_embed {
+     max-width: 100% !important;
+}
+
+time {
+		display: none !important;
+}
+
+.navbar-mobile {
+	z-index: 10;
+}
+
+
+ </style></div><nav class="navbar"><nav class="navbar"><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="new-nav w-nav"><div class="nav-close w-embed w-script"><script>
+$(document).ready(function() {
+  $('#toggle-1').removeClass('w--open')
+  $('#dropdown-list-1').removeClass('w--open')
+});
+
+
+   window.addEventListener('scroll', function() {
+  // Check the scroll position
+  if (window.scrollY > 0) {
+    // Scrolled down - hide elementToHide, show elementToShow
+    $('#w-logo').addClass('hide');
+    $('#c-logo').removeClass('hide');
+    $('#w-logo-m').addClass('hide');
+    $('#c-logo-m').removeClass('hide');
+    $('.new-nav, .nav-drop-text, .nav-link, .sandbox-btn, .nav-btn-login').addClass('white');
+  } else {
+    // Scrolled back to the top - show elementToHide, hide elementToShow
+    $('#c-logo').addClass('hide');
+    $('#w-logo').removeClass('hide');
+    $('#c-logo-m').addClass('hide');
+    $('#w-logo-m').removeClass('hide');
+    $('.new-nav, .nav-drop-text, .nav-link, .sandbox-btn, .nav-btn-login').removeClass('white');
+  }
+});
+
+  </script></div><div class="banner"><div class="banner-container"><a href="https://www.instabug.com/blog/ai-enabled-mobile-observability" target="_blank" class="banner-wrapper w-inline-block"><div class="banner-tag">UPDATES</div><div class="banner-text-new">Discover how Instabug's AI-powered mobile observability is transforming app development with zero-maintenance apps<br></div><div class="banner-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 7 13" fill="none" class="svg-4"><path d="M0.731668 2.04059C0.422922 1.68789 0.422922 1.11683 0.731667 0.764129C1.04041 0.411948 1.54068 0.411426 1.84989 0.764129L6.26832 5.86163C6.57706 6.21433 6.57706 6.78591 6.26832 7.13861L1.84989 12.2356C1.54068 12.5883 1.04088 12.5883 0.731668 12.2356C0.422923 11.8829 0.422923 11.3118 0.731668 10.9591L4.35516 6.49999L0.731668 2.04059Z" fill="currentColor"></path></svg></div></a></div></div><div class="nav-container w-container"><div class="main-nav"><a href="/" aria-current="page" class="nav-brand w-nav-brand w--current" aria-label="home"><img id="w-logo" loading="eager" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627d2a2524a45baccfc69ebf_LogoOnDark.svg" class="navlogo-white"><img id="c-logo" loading="lazy" alt="Instabug Logo" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627d2a253b5874d74cc35bf1_LogoOnWhite.svg" class="navlogo-colored hide"></a><nav role="navigation" class="nav-menu-4 w-nav-menu"><div data-delay="0" data-hover="true" data-w-id="ce04ce47-7768-c701-0fe7-d8e0dc7c503b" class="nav-drop w-dropdown" style="max-width: 1460px;"><nav id="toggle-1" class="nav-drop-toggle w-dropdown-toggle" aria-controls="dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0"><div class="nav-drop-text">Product</div><div class="icon-4 w-icon-dropdown-toggle" aria-hidden="true"></div></nav><nav id="dropdown-list-1" class="product-drop w-dropdown-list" aria-labelledby="toggle-1"><div class="nav-big-container"><div class="nav-grid-wrapper updated"><div class="nav-grid-left"><a data-w-id="ce04ce47-7768-c701-0fe7-d8e0dc7c5043" href="/mobile-observability" class="nav-grid-left-product w-inline-block" tabindex="0"><div class="nav-item-text"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66e852be46c78102de730bd8_whatis-icon.svg" alt="" class="nav-item-img pb size"><div class="nav-item-title">What is Mobile Observability?</div><div class="nav-item-desc">The complete mobile observability platform for app growth and performance</div></div></a><a id="w-node-_24e2bd41-21c1-23b3-15e0-d5a550aed0a5-f63731ae" data-w-id="24e2bd41-21c1-23b3-15e0-d5a550aed0a5" href="/ai" class="nav-grid-left-ai w-inline-block" tabindex="0"><div class="nav-item-text ai"><div class="nav-item-text"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/672bad15f1d6054f6da01e77_ai-icon.svg" alt="" class="nav-item-img pb size"><div class="nav-item-title"><strong>AI-Powered Mobile Observability</strong></div><div class="nav-item-desc">Delivering smarter insights to optimize mobile app performance and user experience<br></div></div></div></a></div><div id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c504c-f63731ae" class="nav-grid-right updated"><div id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c504d-f63731ae" class="nav-column no-border"><div class="nav-col-title show">Instabug's Mobile Observability Platform</div><a href="/usecase/test" class="nav-col-link w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66e0422e5833eb8f995d054b_test-nav.svg" alt="" class="nav-item-img sm"><div class="nav-item-text"><div class="nav-item-title">Test Your App Before Every Release</div><div class="nav-item-desc">Release seamless apps with proactive bug and crash detection</div></div></a><a href="/usecase/improve" class="nav-col-link last w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66e0422e683c03e3c730ed61_improve-nav.svg" alt="" class="nav-item-img sm"><div class="nav-item-text"><div class="nav-item-title">Improve Your App Stability and Performance</div><div class="nav-item-desc">Optimize stability and performance for exceptional app experiences</div></div></a><a href="/usecase/collect" class="nav-col-link w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66e0422e00e7444138e4632c_collect-nav.svg" alt="" class="nav-item-img sm"><div class="nav-item-text"><div class="nav-item-title">Collect Actionable User Feedback</div><div class="nav-item-desc">Harness user insights to continuously enhance app quality<br></div></div></a></div></div><div id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c5066-f63731ae" class="nav-grid-right-3"><div class="nav-platforms-col-title">Integrations</div><div class="platforms-grid"><a href="/integrations/jira" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90d9f9a51c860012f5848_Jira.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Jira</div></a><a href="/integrations/github" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90da890efb53a9bef44ee_Github.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Github</div></a><a href="/integrations/datadog" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90db2de5db15d8751c31e_Datadog.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Datadog</div></a><a href="/integrations/slack" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90dbb5a43bcdcff7168f7_Slack.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Slack</div></a><a href="/integrations/zapier" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90dc4a764c71cf42f0358_Zapier.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Zapier</div></a><a href="/integrations/okta" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90dcde62514e6774d488e_Okta.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Okta</div></a></div><a href="/integrations" class="link-block-7 w-inline-block" tabindex="0"><div class="text-block-66">Browse all integrations</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5-copy"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></a></div></div></div></nav></div><a href="/pricing" class="nav-link w-nav-link" style="max-width: 1460px;">Pricing</a><a href="/customers" class="nav-link w-nav-link" style="max-width: 1460px;">Customers</a><div data-delay="0" data-hover="true" data-w-id="ce04ce47-7768-c701-0fe7-d8e0dc7c508b" class="nav-drop w-dropdown" style="max-width: 1460px;"><nav class="nav-drop-toggle w-dropdown-toggle" id="w-dropdown-toggle-1" aria-controls="w-dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0"><div class="nav-drop-text">Developers</div><div class="icon-4 w-icon-dropdown-toggle" aria-hidden="true"></div></nav><nav class="developers-drop w-dropdown-list" id="w-dropdown-list-1" aria-labelledby="w-dropdown-toggle-1"><div class="nav-big-container"><div class="nav-grid-wrapper-3 updated"><div class="developers-grid-left"><a href="https://docs.instabug.com/" target="_blank" class="developers-left-btn w-inline-block" tabindex="0"><div class="div-block-121"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65d282710207cf0ac272f93a_docs.svg" alt="" class="image-61"><div class="text-block-65">Docs</div></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></a><a href="https://help.instabug.com/en/?utm_source=website-hc&amp;utm_medium=hc&amp;utm_campaign=header-hc&amp;utm_content=v1" target="_blank" class="developers-left-btn w-inline-block" tabindex="0"><div class="div-block-121"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65d282d02f515b199fe20f81_helpcenter.svg" alt="" class="image-61"><div class="text-block-65">Help Center</div></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></a></div><div id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c50a2-f63731ae" class="nav-grid-right-3"><div class="nav-platforms-col-title">platforms</div><div class="platforms-grid-v2"><a href="/platforms/ios" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90b62370802239691c834_iOS.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">iOS</div></a><a href="/platforms/android" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90d6bc0c261198ed5b996_Android.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Android</div></a><a href="/platforms/flutter" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90d765068892699dbc782_Flutter.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">Flutter</div></a><a href="/platforms/react-native" class="nav-platforms-item w-inline-block" tabindex="0"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b90d8ae3cf8397e15d8963_React.svg" alt="" class="nav-platforms-icon"><div class="text-block-65">React Native</div></a></div><a href="/platforms" class="link-block-7 w-inline-block" tabindex="0"><div class="text-block-66">Browse all platforms</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5-copy"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></a></div></div></div></nav></div><div data-delay="0" data-hover="true" data-w-id="ce04ce47-7768-c701-0fe7-d8e0dc7c50c3" class="nav-drop w-dropdown" style="max-width: 1460px;"><nav class="nav-drop-toggle w-dropdown-toggle" id="w-dropdown-toggle-2" aria-controls="w-dropdown-list-2" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0"><div class="nav-drop-text">Blog and Resources<br></div><div class="icon-4 w-icon-dropdown-toggle" aria-hidden="true"></div></nav><nav class="resources-drop w-dropdown-list" id="w-dropdown-list-2" aria-labelledby="w-dropdown-toggle-2"><div class="nav-big-container"><div class="nav-grid-wrapper-3"><div class="resources-grid-left"><a href="/blog" class="developers-left-btn w-inline-block" tabindex="0"><div class="div-block-121"><div class="text-block-65">Blog</div></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></a><a id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c50d3-f63731ae" href="/reviews" class="developers-left-btn w-inline-block" tabindex="0"><div class="div-block-121"><div class="text-block-65">Reviews</div></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></a><a href="/newsroom" class="developers-left-btn w-inline-block" tabindex="0"><div class="div-block-121"><div class="text-block-65">Newsroom</div></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></a></div><a href="/mobile-app-stability-outlook-2024" target="_blank" class="nav-featured w-inline-block" tabindex="0"><div class="nav-featured-wrapper"><div id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c50e1-f63731ae" class="nav-featured-left"><div class="nav-featured-label"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="featured-svg"><g clip-path="url(#clip0_1774_3430)"><path d="M12.6665 5.99994L13.4998 4.16663L15.3332 3.3333L13.4998 2.49996L12.6665 0.666626L11.8332 2.49996L9.99982 3.3333L11.8332 4.16663L12.6665 5.99994ZM7.66652 6.33329L5.99982 2.66663L4.33317 6.33329L0.666504 7.99994L4.33317 9.66664L5.99982 13.3333L7.66652 9.66664L11.3332 7.99994L7.66652 6.33329ZM12.6665 9.99994L11.8332 11.8333L9.99982 12.6666L11.8332 13.4999L12.6665 15.3333L13.4998 13.4999L15.3332 12.6666L13.4998 11.8333L12.6665 9.99994Z" fill="currentColor"></path></g><defs><clipPath id="clip0_1774_3430"><rect width="16" height="16" fill="currentColor"></rect></clipPath></defs></svg><div class="label-text">Featured</div></div><div class="nav-featured-sub">Benchmark Report</div><div class="nav-featured-head">Mobile App Stability Outlook 2024</div><div class="nav-featured-desc">Get a holistic view of the current state of mobile app stability</div><div class="link-block-8"><div class="text-block-66">Read More</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 12" fill="none" class="svg-5-copy"><path d="M0.231545 1.54047C-0.0771999 1.18777 -0.0772 0.61671 0.231545 0.264007C0.540291 -0.0881743 1.04056 -0.088696 1.34977 0.264007L5.7682 5.36151C6.07694 5.71421 6.07694 6.28579 5.7682 6.63849L1.34977 11.7355C1.04056 12.0882 0.540753 12.0882 0.231546 11.7355C-0.077199 11.3828 -0.0771991 10.8117 0.231546 10.459L3.85504 5.99987L0.231545 1.54047Z" fill="currentColor"></path></svg></div></div><div id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c50f6-f63731ae" class="nav-featured-right"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65b99a8dc0c8af63eb42ceab_nav-featured.png" alt="" class="image-62"></div></div></a><div id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c50f8-f63731ae" class="nav-grid-right-3"><div class="nav-platforms-col-title">Tools</div><div class="tools-grid"><a id="w-node-ce04ce47-7768-c701-0fe7-d8e0dc7c50fc-f63731ae" href="/sentiment-analysis" target="_blank" class="nav-item-link w-inline-block" tabindex="0"><div class="nav-item-text"><div class="nav-item-title">Sentiment Analysis</div><div class="nav-item-desc">Reproduce crashes and bugs without the need to maintain breadcrumbs</div></div></a></div></div></div></div></nav></div></nav><div class="nav-cta-wrapper"><a href="https://demo-dashboard.instabug.com/demo" class="sandbox-btn w-inline-block">Sandbox</a><a href="https://dashboard.instabug.com/login" target="_blank" class="nav-btn-login">Login</a><a href="https://dashboard.instabug.com/signup" target="_blank" class="nav-btn blue">Get Started</a></div></div><div class="mobile-nav"><a href="#" class="nav-brand w-nav-brand" aria-label="home"><img id="w-logo-m" loading="lazy" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627d2a2524a45baccfc69ebf_LogoOnDark.svg" class="navlogo-white"><img id="c-logo-m" loading="lazy" alt="Instabug Logo" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627d2a253b5874d74cc35bf1_LogoOnWhite.svg" class="navlogo-colored hide"></a><nav role="navigation" class="nav-menu-mobile w-nav-menu"><div data-delay="0" data-hover="false" class="nav-drop-mobile w-dropdown" style="max-width: 1460px;"><nav id="toggle-1" class="nav-drop-toggle-mobile w-dropdown-toggle" aria-controls="dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0"><div class="nav-drop-text-mobile">Product</div><div class="icon-4 w-icon-dropdown-toggle" aria-hidden="true"></div></nav><nav id="dropdown-list-1" class="mobile-drop w-dropdown-list" aria-labelledby="toggle-1"><div class="mobile-drop-wrapper"><a href="/mobile-observability" class="mobile-drop-item" tabindex="0">What is Mobile Observability?</a><a href="/ai" class="mobile-drop-item" tabindex="0">AI-Powered Mobile Observability</a><a href="/usecase/test" class="mobile-drop-item" tabindex="0">Test Your App Before Every Release</a><a href="/usecase/improve" class="mobile-drop-item" tabindex="0">Improve Your App Stability and Performance</a><a href="/usecase/collect" class="mobile-drop-item" tabindex="0">Collect Actionable User Feedback</a><a href="/integrations" class="mobile-drop-item" tabindex="0">Integrations</a></div></nav></div><a href="/pricing" class="nav-link-mobile">Pricing</a><a href="/customers" class="nav-link-mobile">Customers</a><div data-delay="0" data-hover="false" class="nav-drop-mobile w-dropdown" style="max-width: 1460px;"><nav id="toggle-1" class="nav-drop-toggle-mobile w-dropdown-toggle" aria-controls="dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0"><div class="nav-drop-text-mobile">Developers</div><div class="icon-4 w-icon-dropdown-toggle" aria-hidden="true"></div></nav><nav id="dropdown-list-1" class="mobile-drop w-dropdown-list" aria-labelledby="toggle-1"><div class="mobile-drop-wrapper"><a href="https://docs.instabug.com/" target="_blank" class="mobile-drop-item" tabindex="0">Docs</a><a href="https://help.instabug.com/en/?utm_source=website-hc&amp;utm_medium=hc&amp;utm_campaign=header-hc&amp;utm_content=v1" target="_blank" class="mobile-drop-item" tabindex="0">Help Center</a><div class="mobile-drop-label">Platforms</div><a href="/platforms/ios" class="mobile-drop-item-2" tabindex="0">iOS</a><a href="/platforms/android" class="mobile-drop-item-2" tabindex="0">Android</a><a href="/platforms/flutter" class="mobile-drop-item-2" tabindex="0">Flutter</a><a href="/platforms" class="mobile-drop-item-2" tabindex="0">Browse all Platforms</a></div></nav></div><div data-delay="0" data-hover="false" class="nav-drop-mobile w-dropdown" style="max-width: 1460px;"><nav id="toggle-1" class="nav-drop-toggle-mobile last w-dropdown-toggle" aria-controls="dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0"><div class="nav-drop-text-mobile">Resources</div><div class="icon-4 w-icon-dropdown-toggle" aria-hidden="true"></div></nav><nav id="dropdown-list-1" class="mobile-drop w-dropdown-list" aria-labelledby="toggle-1"><div class="mobile-drop-wrapper"><a href="/blog" class="mobile-drop-item" tabindex="0">Blog</a><a href="/reviews" class="mobile-drop-item" tabindex="0">Reviews</a><a href="/faq" class="mobile-drop-item" tabindex="0">FAQs</a><div class="mobile-drop-label">Tools</div><a href="/sentiment-analysis" target="_blank" class="mobile-drop-item-2" tabindex="0">Sentiment Analysis</a><a href="/roi-calculator" target="_blank" class="mobile-drop-item-2" tabindex="0">ROI Calculator</a><a href="/mobile-app-stability-outlook-2024" class="mobile-drop-item" tabindex="0">Benchmark Report 2024</a></div></nav></div></nav><div class="menu-button-2 w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false"><div class="icon-5 w-icon-nav-menu"></div></div></div></div><div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div></div></nav></nav><div class="homepage-hero no-spacing"><div class="container"><div class="hp-hero"><div class="hp-hero-content"><h1 class="h2 home">Boost Mobile Growth with <span class="ai-gradient">AI-Powered </span>Insights</h1><p class="hp-hero-para">Test new features, improve app quality and collect actionable feedback across the mobile development lifecycle with our AI-powered mobile observability platform</p><div class="ctas-flex-start"><a href="/request-demo" target="_blank" class="default-button blue big v2">Request a Demo</a><a href="https://dashboard.instabug.com/signup" target="_blank" class="default-button big transparent-white open-calendly">Get Started</a></div><div class="div-block-124"><div class="text-block-67">Recognized excellence in mobile performance</div><div class="home-g2-badges"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/673e2c9a1a8b4b3fe0c27e3e_G2-Leader-Fall-2024.svg" loading="eager" alt="" class="g2-home"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/673e2c9aa7562749b1207785_G2-HUA-Fall-2024.svg" loading="eager" alt="" class="g2-home"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/673e2c9a06ab6530762387fd_G2-ETDBW-Fall-2024.svg" loading="eager" alt="" class="g2-home"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/673e2c9ac83076a4e9db0d4a_G2-BS-Fall-2024.svg" loading="eager" alt="" class="g2-home"></div></div></div><div class="div-block-89"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66d592f1156ebfcfe35ec24f_Homepage.svg" loading="eager" alt=""></div></div></div></div><div class="spacer-60"></div><div class="logos-section"><div class="container"><div class="hp-logos-home no-bg"><p class="cwhite tcenter fs18">Join <span class="cbluish">25,000+</span> Mobile Teams who Rely on Instabug</p><div class="logos-grid flex-grid"><div id="w-node-_20cc3c80-83a3-e08b-5a55-28da3a3ce585-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62707d5e50620d55e4ec5ef6_Lyft_logo.svg" loading="lazy" alt="Lyft logo" class="max-height-75"></div><div id="w-node-_61bf38a8-1e07-750e-93f2-01c669a77597-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62707d5e50620d5e1aec5ef7_DoorDash_Logo%201.svg" loading="lazy" alt="DoorDash logo" class="max-height-75"></div><div id="w-node-_7c8ad560-f00a-82ae-79b6-1db7b7a4f8fb-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/668d2d9cf0cfceac2251b7b8_decathlon-logo-mono.svg" loading="lazy" alt="" height="48" class="max-height-75 decathlon"></div><div id="w-node-ba762d35-1527-4a3a-c0f5-0079a0aef5f9-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62707d5f9287447f119cd511_T-Mobile_logo.svg" loading="lazy" alt="T-mobile logo" class="max-height-75"></div><div class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6466152bc10579959521bab0_GM.svg" loading="lazy" alt="GM logo" height="64" class="max-height-75"></div></div><div class="logos-grid flex-grid mt20-mobile"><div id="w-node-d7b13b92-c3ac-5192-5abb-7693755d9e04-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/646615b86174bc9ab612000a_Verizon.svg" loading="lazy" height="28" alt="Verizon logo" class="max-height-75"></div><div class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62707d5e971e10a3a611305f_ABInbev_Logo%201.svg" loading="lazy" alt="Abinbev logo" class="max-height-75"></div><div id="w-node-d7b13b92-c3ac-5192-5abb-7693755d9e06-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6466155e7ff69a780dbd690b_Hotstar.svg" loading="lazy" alt="Disney Hotstar logo" height="54" class="max-height-75"></div><div id="w-node-d7b13b92-c3ac-5192-5abb-7693755d9e08-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6543baa30550dc065132fcb2_figma_logo_homepage.svg" loading="lazy" alt="Figma Logo" height="28" class="figma"></div><div id="w-node-d7b13b92-c3ac-5192-5abb-7693755d9e0a-650059f8" class="center-logo flex-grow"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6466153dea76d577595de7ec_IncHealth.svg" loading="lazy" alt="IncHealth logo" height="32" class="max-height-75"></div></div></div></div></div><div class="spacer-60"></div><section class="cycle-section"><div class="container"><h3 class="cycle-heading">Made-For-Mobile Life Cycle</h3><div class="cycle-wrapper"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/670d7a3b4e4b40b73bd3dfe4_instabug-cycle.svg" loading="lazy" alt="" class="image-73"><div data-current="Tab" data-easing="ease" data-duration-in="300" data-duration-out="100" class="tabs-2 w-tabs"><div id="home-tabs" class="tabs-menu-4 w-tab-menu" role="tablist"><a data-w-tab="Tab" class="empty-tab w-inline-block w-tab-link w--current" id="w-tabs-0-data-w-tab-0" href="#w-tabs-0-data-w-pane-0" role="tab" aria-controls="w-tabs-0-data-w-pane-0" aria-selected="true"></a><a data-w-tab="test-tab" data-w-id="7c0a64b1-262c-973b-a913-6f4c3f5c992e" class="test-tab w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-1" href="#w-tabs-0-data-w-pane-1" role="tab" aria-controls="w-tabs-0-data-w-pane-1" aria-selected="false"><div class="test"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 64 85" fill="none"><g style="mix-blend-mode:multiply" opacity="0.8"></g><path d="M15.4128 1.89078C20.5694 -1.08863 27.7315 -0.687553 35.6384 3.89615C51.3376 12.949 64.0573 34.9508 64.0001 52.9991C64.0001 61.9946 60.7915 68.2972 55.6921 71.2193L46.582 76.5479C51.6813 73.5685 54.8326 67.2659 54.8899 58.3277C54.8899 40.2793 42.2274 18.2775 26.5283 9.22471C19.8819 5.38586 13.7512 4.52641 8.88098 6.13071V5.72964L15.4128 1.94808V1.89078Z" fill="url(#paint1_linear_62_1071)"></path><path d="M28.5909 8.02147C12.8344 -1.08864 0 6.24529 0 24.2936C0 42.3993 12.6625 64.4011 28.419 73.5112C44.1755 82.6213 56.9525 75.2874 57.0098 57.239C57.0098 39.1334 44.3474 17.1316 28.5909 8.02147Z" fill="url(#paint2_linear_62_1071)" class="svg-bg"></path><path d="M28.2471 32.0287L26.471 27.2731L25.6115 26.8147L24.8094 26.3563L23.0332 29.1065L19.8246 29.3357V31.2265L23.0332 35.1227L24.8094 39.8783L25.6688 40.3939L26.471 40.8523L28.2471 38.1021L31.513 37.8729V35.9248L28.2471 32.0287ZM26.3564 34.8362H26.2418L25.6688 35.8102L25.0958 34.2632L24.924 33.9767L24.8094 33.7475L23.778 32.487H24.8094L24.9813 32.3151H25.0958L25.6688 31.3411L26.2418 32.8881L26.4137 33.1746L26.5283 33.4038L26.7001 33.5757L27.5596 34.607H26.5283L26.3564 34.7789V34.8362Z" fill="url(#paint3_linear_62_1071)" class="svg-element"></path><path d="M43.2588 60.4476L35.581 47.3268C37.0135 45.8371 37.8729 43.5452 37.8729 40.4512C37.8729 32.6016 32.3724 23.2623 25.6115 19.5954C18.8505 15.9284 13.6938 19.2516 13.6938 26.872C13.6938 34.4924 19.0224 43.7171 25.6115 47.556C28.3044 49.103 30.7109 49.504 32.7735 48.9311L40.3939 62.0519L43.2588 60.4476ZM17.5327 28.992C17.5327 23.8353 21.1424 21.6007 25.6115 24.1218C30.1379 26.6428 33.8622 32.9454 33.8622 38.2167C33.8622 43.4879 30.1379 45.6079 25.6115 43.0296C21.1424 40.4512 17.5327 34.2059 17.5327 29.0493V28.992Z" fill="url(#paint4_linear_62_1071)" class="svg-element"></path><defs><linearGradient id="paint0_linear_62_1071" x1="18.6463" y1="73.2143" x2="100.924" y2="93.7264" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient><linearGradient id="paint1_linear_62_1071" x1="86.6894" y1="92.0179" x2="-15.5272" y2="-28.9919" gradientUnits="userSpaceOnUse"><stop stop-color="#BBC1EA"></stop><stop offset="0.19" stop-color="#C5CBEF"></stop><stop offset="0.37" stop-color="#CFD3EF"></stop><stop offset="0.38" stop-color="#D0D4EF"></stop><stop offset="0.71" stop-color="#BCC2E8"></stop><stop offset="0.91" stop-color="#AEB5E4"></stop><stop offset="0.99" stop-color="#B8BFE9"></stop><stop offset="1" stop-color="#BBC1EA"></stop></linearGradient><linearGradient id="paint2_linear_62_1071" x1="-15.1835" y1="-53.171" x2="36.5551" y2="58.1558" gradientUnits="userSpaceOnUse"><stop stop-color="#ADB4E3"></stop><stop offset="0.06" stop-color="#B3BAE6"></stop><stop offset="0.16" stop-color="#C5CBEF"></stop><stop offset="0.26" stop-color="#E3E7FF"></stop><stop offset="0.92" stop-color="#F2F2F9"></stop><stop offset="1" stop-color="#F5F4F9"></stop></linearGradient><linearGradient id="paint3_linear_62_1071" x1="-4.41176" y1="-24.6947" x2="32.4298" y2="46.6965" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient><linearGradient id="paint4_linear_62_1071" x1="-4.41179" y1="-24.752" x2="32.487" y2="46.6392" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient></defs></svg></div><div class="cycle-tab-text">Test Your App Before Every Release</div><div class="test-line"></div></a><a data-w-tab="improve-tab" data-w-id="7c0a64b1-262c-973b-a913-6f4c3f5c995f" class="improve-tab w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-2" href="#w-tabs-0-data-w-pane-2" role="tab" aria-controls="w-tabs-0-data-w-pane-2" aria-selected="false"><div class="improve"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 64 85" fill="none"><g style="mix-blend-mode:multiply" opacity="0.8"></g><path d="M15.4126 1.89078C20.5693 -1.08863 27.7314 -0.687553 35.6382 3.89615C51.3374 12.949 64.0572 34.9508 63.9999 52.9991C63.9999 61.9946 60.7913 68.2972 55.692 71.2193L46.5818 76.5479C51.6812 73.5685 54.8325 67.2659 54.8898 58.3277C54.8898 40.2793 42.2273 18.2775 26.5281 9.22471C19.8818 5.38586 13.751 4.52641 8.88086 6.13071V5.72964L15.4126 1.94808V1.89078Z" fill="url(#paint1_linear_62_1082)"></path><path d="M28.5909 8.02147C12.8344 -1.08864 0 6.24529 0 24.2936C0 42.3993 12.6625 64.4011 28.419 73.5112C44.1755 82.6213 56.9525 75.2874 57.0098 57.239C57.0098 39.1334 44.3474 17.1316 28.5909 8.02147Z" fill="url(#paint2_linear_62_1082)" class="svg-bg"></path><path d="M41.3679 40.6804L34.4924 36.8989V40.6804L37.3572 42.2274L32.6589 44.3474V41.2534C32.6589 40.222 32.0859 38.9042 31.1119 37.9875C30.1378 37.0707 28.9919 36.6697 28.3617 36.9562L22.0591 38.8469L22.1737 25.898C22.1737 25.5542 22.4601 25.3823 22.8612 25.6115L33.9194 31.6276C34.2632 31.7995 34.607 32.3151 34.5497 32.6589V34.6643L38.3312 36.727V34.7216C38.3885 32.2579 36.4404 29.2211 33.9767 27.846L22.9185 21.7726C20.4548 20.3975 18.3921 21.3143 18.3921 23.778L18.2202 44.3474C18.2202 46.7538 20.2256 49.8478 22.6893 51.1656L33.6329 57.0672C36.0967 58.385 38.102 57.4682 38.102 55.0618V52.9418L34.3778 50.8792V53.0564C34.3778 53.4002 34.034 53.5721 33.6902 53.3429L22.7466 47.4414C22.4028 47.2695 22.0591 46.7538 22.0591 46.41V43.8317L28.9346 41.7117V44.5766C28.9346 45.7225 29.5649 47.0976 30.5962 48.0716C31.6276 49.0457 32.8308 49.504 33.6902 49.1603L39.9928 46.2955V49.0457L43.7171 51.1083L43.8317 44.3474C43.8317 43.0296 42.8003 41.368 41.4252 40.6231L41.3679 40.6804Z" fill="url(#paint3_linear_62_1082)" class="svg-element"></path><defs><linearGradient id="paint0_linear_62_1082" x1="18.5294" y1="73.0879" x2="100.807" y2="93.5427" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient><linearGradient id="paint1_linear_62_1082" x1="56.8379" y1="92.0179" x2="18.5067" y2="-31.7422" gradientUnits="userSpaceOnUse"><stop stop-color="#BBC1EA"></stop><stop offset="0.19" stop-color="#C5CBEF"></stop><stop offset="0.37" stop-color="#CFD3EF"></stop><stop offset="0.38" stop-color="#D0D4EF"></stop><stop offset="0.71" stop-color="#BCC2E8"></stop><stop offset="0.91" stop-color="#AEB5E4"></stop><stop offset="0.99" stop-color="#B8BFE9"></stop><stop offset="1" stop-color="#BBC1EA"></stop></linearGradient><linearGradient id="paint2_linear_62_1082" x1="-33.8621" y1="-96.0859" x2="41.3679" y2="68.9275" gradientUnits="userSpaceOnUse"><stop stop-color="#ADB4E3"></stop><stop offset="0.06" stop-color="#B3BAE6"></stop><stop offset="0.16" stop-color="#C5CBEF"></stop><stop offset="0.26" stop-color="#E3E7FF"></stop><stop offset="0.92" stop-color="#F2F2F9"></stop><stop offset="1" stop-color="#F5F4F9"></stop></linearGradient><linearGradient id="paint3_linear_62_1082" x1="9.74036" y1="-5.44313" x2="33.0027" y2="49.2176" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient><linearGradient id="paint5_linear_62_1091" x1="28.4508" y1="265.617" x2="28.4508" y2="217.76" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient></defs></svg></div><div class="cycle-tab-text">Improve App Stability and Performance</div><div class="test-line"></div></a><a data-w-tab="collect-tab" data-w-id="7c0a64b1-262c-973b-a913-6f4c3f5c998f" class="collect-tab w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-3" href="#w-tabs-0-data-w-pane-3" role="tab" aria-controls="w-tabs-0-data-w-pane-3" aria-selected="false"><div class="collect"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 64 84" fill="none"><path opacity=""></path><path d="M15.4561 1.88296C20.6082 -1.08413 27.7638 -0.684711 35.6636 3.88004C51.3488 12.8954 64.0572 34.8063 64 52.78C64 61.7383 60.7942 68.0149 55.6994 70.9249L46.5974 76.2314C51.6923 73.2643 54.8407 66.9878 54.898 58.0865C54.898 40.1128 42.2468 18.202 26.5617 9.18657C19.9212 5.36359 13.796 4.5077 8.93018 6.10536V5.70595L15.4561 1.94002V1.88296Z" fill="url(#paint1_linear_62_1062)"></path><path d="M28.5653 7.98831C12.8229 -1.08414 0 6.21947 0 24.1932C0 42.224 12.6512 64.1348 28.3936 73.2073C44.136 82.2797 56.9016 74.9761 56.9588 57.0024C56.9588 38.9716 44.3077 17.0608 28.5653 7.98831Z" fill="url(#paint2_linear_62_1062)" class="svg-bg"></path><path d="M38.6404 34.0074C37.6673 32.1245 36.2934 30.5268 34.805 29.6709L22.3256 22.3673C20.8372 21.5114 19.4633 21.5114 18.4902 22.1961C17.517 22.8808 16.8873 24.3644 16.8873 26.3044L16.7728 38.5151C16.7728 40.5122 17.3453 42.6805 18.3184 44.5634C19.2916 46.4464 20.6655 48.0441 22.1539 48.957L26.161 51.2964L30.6834 58.2006V53.9782L34.7478 56.3177C36.2362 57.1736 37.61 57.1736 38.5832 56.4318C39.5564 55.69 40.1861 54.2635 40.1861 52.2665V39.9987C40.1861 38.0587 39.5564 35.8904 38.5832 34.0074H38.6404ZM28.966 48.0441L26.5617 46.6176L22.2111 44.0499C21.6959 43.7646 21.2379 43.2511 20.9517 42.5664C20.6082 41.9387 20.4365 41.254 20.4365 40.5693V28.3586C20.551 27.6738 20.7227 27.2174 21.0662 26.9891C21.4097 26.7609 21.8676 26.7609 22.3256 26.9891L34.805 34.3498C35.3202 34.6351 35.7782 35.1486 36.0644 35.7763C36.4079 36.4039 36.5796 37.0886 36.5796 37.7734V50.0411C36.5796 50.7259 36.3506 51.1823 36.0072 51.4106C35.6637 51.6388 35.2057 51.6388 34.7478 51.4106L29.9964 48.6147L28.966 47.987V48.0441Z" fill="url(#paint3_linear_62_1062)" class="svg-element"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 81 94" fill="none"><path opacity="0.15" d="M49.2 93.4C43.8 93.4 38.2 91.7 32.4 88.4C14.2 77.9 0 53.3 0 32.3C0 20.4 4.8 11 13.2 6.7L19.4 3C22.9 1 26.8 0 31 0C36.4 0 42 1.7 47.8 5C66 15.5 80.2 40.1 80.1 61C80.1 72.6 75.7 81.6 67.8 86.1L58.2 91.6L57.6 91.8C55 92.8 52.1 93.3 49.2 93.3V93.4Z" fill="currentColor"></path></svg></path><path d="M33.9464 44.8488L23.0698 38.4581L23.1271 33.7222L33.9464 40.0558V44.8488Z" fill="url(#paint4_linear_62_1062)" class="svg-element"></path><defs><linearGradient id="paint0_linear_62_1062" x1="18.3886" y1="72.6989" x2="100.561" y2="93.1941" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient><linearGradient id="paint1_linear_62_1062" x1="-17.8033" y1="-67.7296" x2="101.031" y2="137.392" gradientUnits="userSpaceOnUse"><stop stop-color="#BBC1EA"></stop><stop offset="0.19" stop-color="#C5CBEF"></stop><stop offset="0.28" stop-color="#D0D4EF"></stop><stop offset="0.36" stop-color="#BCC2E8"></stop><stop offset="0.41" stop-color="#AEB5E4"></stop><stop offset="0.91" stop-color="#AEB5E4"></stop><stop offset="0.99" stop-color="#B8BFE9"></stop><stop offset="1" stop-color="#BBC1EA"></stop></linearGradient><linearGradient id="paint2_linear_62_1062" x1="28.4508" y1="264.756" x2="28.4508" y2="217.054" gradientUnits="userSpaceOnUse"><stop stop-color="#ADB4E3"></stop><stop offset="0.06" stop-color="#B3BAE6"></stop><stop offset="0.16" stop-color="#C5CBEF"></stop><stop offset="0.26" stop-color="#E3E7FF"></stop><stop offset="0.92" stop-color="#F2F2F9"></stop><stop offset="1" stop-color="#F5F4F9"></stop></linearGradient><linearGradient id="paint3_linear_62_1062" x1="12.7657" y1="-19.1149" x2="31.4285" y2="50.8702" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient><linearGradient id="paint4_linear_62_1062" x1="12.8802" y1="-19.1149" x2="31.4861" y2="50.8131" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient><linearGradient id="paint5_linear_62_1091" x1="28.4508" y1="265.617" x2="28.4508" y2="217.76" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"></stop><stop offset="0.28" stop-color="#B4CCFF" stop-opacity="0.34"></stop><stop offset="0.54" stop-color="#76A2FF" stop-opacity="0.62"></stop><stop offset="0.75" stop-color="#4A83FF" stop-opacity="0.83"></stop><stop offset="0.91" stop-color="#2E71FF" stop-opacity="0.95"></stop><stop offset="1" stop-color="#246AFF"></stop></linearGradient></defs></svg></div><div class="cycle-tab-text">Collect Actionable User Feedback</div><div class="test-line"></div></a></div><div class="tabs-content-4 w-tab-content"><div data-w-tab="Tab" class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-0"><div class="cycle-links-wrapper wide"><div id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99cc-650059f8" class="div-block-144"><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99cd-650059f8" href="/product/bug-reporting" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M18 8.11024V5.86022H13.6865H11.3765C10.5486 5.86022 9.87393 6.53522 9.87393 7.36363V17.6727C11.2334 17.642 12.4804 17.1716 13.4821 16.4046L15.0767 18L16.6712 16.4046L14.9847 14.7171C15.3527 14.1239 15.6183 13.4591 15.7614 12.7534H18V10.5034H15.8943V8.11024H18Z" fill="currentColor"></path><path d="M6.62347 5.86021H4.31342H0V8.11023H2.10561V10.5034H0V12.7534H2.2385C2.3816 13.4591 2.6473 14.1239 3.01527 14.717L1.32877 16.4045L2.92332 18L4.51786 16.4045C5.51956 17.1716 6.76654 17.642 8.12599 17.6727V7.36363C8.12599 6.53522 7.45141 5.86021 6.62347 5.86021Z" fill="currentColor"></path><path d="M9.16869 0H8.83137C6.44977 0 4.50771 1.80002 4.24195 4.11139H13.7683C13.5026 1.80002 11.5605 0 9.17892 0H9.16869Z" fill="currentColor"></path></svg><p class="cycle-link-title">Bug Reporting</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99d4-650059f8" href="/product/crash-reporting" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5607 4.83197L13.1681 0.43927C12.8885 0.159736 12.5092 0 12.1098 0H5.89016C5.49082 0 5.11146 0.159736 4.83192 0.43927L0.439271 4.83197C0.159736 5.11151 0 5.49087 0 5.89021V12.1098C0 12.5092 0.159736 12.8885 0.439271 13.1681L4.83192 17.5608C5.11146 17.8403 5.49082 18 5.89016 18H12.1098C12.5092 18 12.8885 17.8403 13.1681 17.5608L17.5607 13.1681C17.8403 12.8885 18 12.5092 18 12.1098V5.89021C18 5.49087 17.8403 5.11151 17.5607 4.83197ZM8.99497 13.5574C8.30612 13.5574 7.75704 12.9984 7.75704 12.3195C7.75704 11.6406 8.3161 11.0815 8.99497 11.0815C9.67384 11.0815 10.2429 11.6406 10.2429 12.3195C10.2429 12.9984 9.68383 13.5574 8.99497 13.5574ZM7.92681 10.0632L7.72713 4.49251H10.2729L10.0732 10.0632H7.93674H7.92681Z" fill="currentColor"></path></svg><p class="cycle-link-title">Crash Reporting</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99d9-650059f8" href="/product/app-performance-monitoring" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M5.15284 7.93559L7.1163 12.4731L9.67774 3.76789C9.71761 3.62797 9.78738 3.49806 9.86711 3.37813C9.94685 3.25819 10.0565 3.15824 10.1661 3.08828C10.3954 2.92837 10.6445 2.85843 10.9037 2.85843C11.0831 2.85843 11.2625 2.8984 11.4319 2.97835C11.6013 3.05831 11.7608 3.17823 11.8904 3.33814C11.9701 3.44808 12.0399 3.56803 12.0897 3.69796L13.6744 7.94559H18V1.49917C18 0.669628 17.3322 0 16.505 0H1.52492C0.69768 0 0.0299054 0.669628 0.0299054 1.49917V7.94559H5.17277L5.15284 7.93559Z" fill="currentColor"></path><path d="M12.4485 9.68462L10.9435 5.63689L8.41196 14.2321C8.3721 14.372 8.30233 14.5019 8.22259 14.6219C8.14286 14.7418 8.03324 14.8418 7.9236 14.9117C7.70433 15.0716 7.44518 15.1416 7.18604 15.1416C7.0166 15.1416 6.83722 15.1116 6.67775 15.0317C6.50832 14.9617 6.3588 14.8517 6.22924 14.7018C6.1495 14.6019 6.06978 14.492 6.01994 14.372L3.99669 9.67462H0V16.5008C0 17.3304 0.667774 18 1.49502 18H16.4751C17.3023 18 17.9701 17.3304 17.9701 16.5008V9.67462H12.4386L12.4485 9.68462Z" fill="currentColor"></path></svg><p class="cycle-link-title">App Performance</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99df-650059f8" href="/product/session-replay" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M16.4203 1.43889H16.1588C16.1588 1.43889 16.1588 1.51827 16.1588 1.55796V16.4422C16.1588 16.4422 16.1588 16.5216 16.1588 16.5613H16.4203C17.2957 16.5613 18 15.8667 18 15.0034V2.99675C18 2.13346 17.2957 1.43889 16.4203 1.43889Z" fill="currentColor"></path><path d="M1.57966 1.43889H1.84127C1.84127 1.43889 1.84127 1.51827 1.84127 1.55796V16.4422C1.84127 16.4422 1.84127 16.5216 1.84127 16.5613H1.57966C0.704311 16.5613 0 15.8667 0 15.0034V2.99675C0 2.13346 0.704311 1.43889 1.57966 1.43889Z" fill="currentColor"></path><path d="M13.2107 0H4.84964C3.9441 0 3.20961 0.724372 3.20961 1.61743V16.4421C3.20961 17.3054 3.91392 18 4.78927 18H13.2107C14.0861 18 14.7904 17.3054 14.7904 16.4421V1.55789C14.7904 0.694605 14.0861 0 13.2107 0ZM9.00503 14.1797C6.4796 14.1797 4.43711 12.1654 4.43711 9.67476H6.58021C6.58021 10.3396 6.85186 10.925 7.29457 11.3617C7.73727 11.7983 8.33091 12.0662 9.00503 12.0662C9.67915 12.0662 10.2728 11.7983 10.7155 11.3617C11.1582 10.925 11.4299 10.3396 11.4299 9.67476C11.4299 9.00993 11.1582 8.42447 10.7155 7.98787C10.2728 7.55126 9.67915 7.28335 9.00503 7.28335H8.72331V8.93055L4.84964 6.23154L8.72331 3.53253V5.17972H9.00503C11.5305 5.17972 13.573 7.19406 13.573 9.68469C13.573 12.1753 11.5305 14.1896 9.00503 14.1896V14.1797Z" fill="currentColor"></path></svg><p class="cycle-link-title">Session Replay</p></a></div><div id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99e6-650059f8" class="div-block-145"><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99e7-650059f8" href="/product/flows" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><g clip-path="url(#clip0_13_65)"><path d="M7.98928 6.36159C7.61715 7.76353 6.34916 8.79775 4.82848 8.79775C3.92802 8.79775 3.10567 8.43003 2.51761 7.83708C1.92496 7.24872 1.55743 6.42595 1.55743 5.52503C1.55743 3.71859 3.02297 2.2523 4.82848 2.2523C5.72894 2.2523 6.5513 2.62002 7.13936 3.21297C7.54364 3.61747 7.84227 4.13228 7.98928 4.71144L17.9954 4.69305V1.49847C17.9954 0.671093 17.3247 0 16.4977 0H1.4977C0.67075 0 0 0.671093 0 1.49847V11.666L10.0107 11.6476C10.3828 10.2457 11.6508 9.21144 13.1715 9.21144C14.072 9.21144 14.8943 9.57916 15.4824 10.1721C16.075 10.7605 16.4426 11.5832 16.4426 12.4842C16.4426 13.3851 16.075 14.2079 15.4824 14.7962C14.8943 15.3892 14.072 15.7569 13.1715 15.7569C12.2711 15.7569 11.4487 15.3892 10.8606 14.7962C10.4564 14.3917 10.1577 13.8769 10.0107 13.2978L0.00459418 13.3161V16.5015C0.00459418 17.3289 0.675345 18 1.5023 18H16.5023C17.3292 18 18 17.3289 18 16.5015V6.33861L7.98928 6.357V6.36159Z" fill="currentColor"></path><path d="M14.3153 13.6287C14.6093 13.3345 14.7885 12.9346 14.7885 12.4842C14.7885 12.0337 14.6093 11.6338 14.3153 11.3397C14.0213 11.0455 13.6216 10.8662 13.1714 10.8662C12.7211 10.8662 12.3214 11.0455 12.0274 11.3397C11.7334 11.6338 11.5542 12.0337 11.5542 12.4842C11.5542 12.9346 11.7334 13.3345 12.0274 13.6287C12.3214 13.9229 12.7211 14.1022 13.1714 14.1022C13.6216 14.1022 14.0213 13.9229 14.3153 13.6287Z" fill="currentColor"></path><path d="M3.68463 4.38049C3.3906 4.67466 3.21143 5.07456 3.21143 5.52502C3.21143 5.97548 3.3906 6.37538 3.68463 6.66956C3.97865 6.96373 4.37835 7.143 4.82858 7.143C5.27881 7.143 5.6785 6.96373 5.97253 6.66956C6.26656 6.37538 6.44573 5.97548 6.44573 5.52502C6.44573 5.07456 6.26656 4.67466 5.97253 4.38049C5.6785 4.08631 5.27881 3.90704 4.82858 3.90704C4.37835 3.90704 3.97865 4.08631 3.68463 4.38049Z" fill="currentColor"></path></g><defs><clipPath id="clip0_13_65"><rect width="18" height="18" fill="currentColor"></rect></clipPath></defs></svg><p class="cycle-link-title">Flows</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99f2-650059f8" href="/product/release-management" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M4.52349 2.50056C4.52349 1.94488 4.98055 1.49834 5.54931 1.49834H12.7504C12.7504 0.664814 12.0597 0 11.2167 0H4.53366C3.6805 0 3 0.674737 3 1.49834V13.6142C3 14.4477 3.69066 15.1126 4.53366 15.1126V2.49063L4.52349 2.50056Z" fill="currentColor"></path><path d="M14.1621 3.00652H7.60098C6.74783 3.00652 6.06733 3.68125 6.06733 4.50485V10.1709L7.75329 11.7287L10.1706 9.68461L8.85022 8.39464L13.8777 7.24358L12.7504 12.1951L11.43 10.9051L7.69236 14.2491L6.07749 12.7607V16.5016C6.07749 17.3352 6.76815 18 7.61115 18H14.1723C15.0254 18 15.7059 17.3252 15.7059 16.5016V4.50485C15.7059 3.67133 15.0153 3.00652 14.1723 3.00652H14.1621Z" fill="currentColor"></path></svg><p class="cycle-link-title">Release Management</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c99f8-650059f8" href="/product/feature-flags" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><g clip-path="url(#clip0_13_66)"><path d="M16.4977 0H1.4977C0.67075 0 0 0.67075 0 1.4977V16.4977C0 17.3247 0.67075 17.9954 1.4977 17.9954H16.4977C17.3247 17.9954 17.9954 17.3247 17.9954 16.4977V1.4977C17.9954 0.67075 17.3247 0 16.4977 0ZM6.65697 18L2.94946 5.6049L4.52067 5.08576L8.38438 18H6.65697ZM11.0031 10.8698C11.0031 10.8698 7.98469 9.81776 6.94181 10.9847L5.32925 5.39357C6.37213 4.23124 9.39051 5.27871 9.39051 5.27871C11.8806 6.15161 13.438 5.34303 13.438 5.34303L15.0505 10.9341C15.0505 10.9341 13.4931 11.7427 11.0031 10.8698Z" fill="currentColor"></path></g><defs><clipPath id="clip0_13_66"><rect width="18" height="18" fill="currentColor"></rect></clipPath></defs></svg><p class="cycle-link-title">Feature Flags</p></a></div><div id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a01-650059f8" class="div-block-146"><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a02-650059f8" href="/product/in-app-surveys" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><g clip-path="url(#clip0_13_68)"><mask id="mask0_13_68" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="0" width="15" height="18"><path d="M16.7615 0H2V18H16.7615V0Z" fill="currentColor"></path></mask><g mask="url(#mask0_13_68)"><path d="M6.76527 4.72699C6.76527 3.67655 7.61796 2.82386 8.6684 2.82386H10.5673V0.952628C10.5673 0.427407 10.142 0 9.61465 0H2.95263C2.42528 0 2 0.425281 2 0.952628V12.7967C2 13.3219 2.42528 13.7493 2.95263 13.7493H6.76527V4.72699Z" fill="currentColor"></path><path d="M12.6384 14.3937L9.22976 10.985L10.6034 9.61139L12.6384 11.6379L16.7615 7.52752V5.20336C16.7615 4.67814 16.3362 4.25073 15.8089 4.25073H9.14471C8.61948 4.25073 8.19208 4.67601 8.19208 5.20336V17.0474C8.19208 17.5726 8.61736 18.0001 9.14471 18.0001H15.8089C16.3341 18.0001 16.7615 17.5748 16.7615 17.0474V10.277L12.6384 14.3937Z" fill="currentColor"></path></g></g><defs><clipPath id="clip0_13_68"><rect width="15" height="18" fill="currentColor" transform="translate(2)"></rect></clipPath></defs></svg><p class="cycle-link-title">In-App Surveys</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a0f-650059f8" href="/product/app-ratings-reviews" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M2.53186 4.81434C2.53186 3.57754 3.53647 2.58603 4.76653 2.58603H13.8382V1.29815C13.8382 0.582644 13.2539 0 12.5364 0H1.30184C0.584301 0 0 0.582644 0 1.29815V12.5009C0 13.2164 0.584301 13.799 1.30184 13.799H2.53186V4.81434Z" fill="currentColor"></path><path d="M16.6982 4.20105H5.46347C4.74593 4.20105 4.16176 4.78366 4.16176 5.49917V16.7019C4.16176 17.4174 4.74593 18 5.46347 18H18V5.49917C18 4.78366 17.4157 4.20105 16.6982 4.20105ZM15.2733 10.5486L13.5 12.276L13.9202 14.7189C13.9817 15.0767 13.6024 15.3527 13.2744 15.1891L11.0809 14.0341L8.88725 15.1891C8.55923 15.3629 8.17995 15.0869 8.24146 14.7189L8.66164 12.276L6.88832 10.5486C6.6218 10.293 6.77555 9.8433 7.13432 9.7922L9.59448 9.43444L10.6914 7.21637C10.8554 6.88928 11.3268 6.88928 11.4908 7.21637L12.5877 9.43444L15.0478 9.7922C15.4066 9.8433 15.5604 10.293 15.2938 10.5486H15.2733Z" fill="currentColor"></path></svg><p class="cycle-link-title">App Ratings &amp; Reviews</p></a></div></div></div><div data-w-tab="test-tab" class="tab-pane-test-tab w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-1"><div class="cycle-links-wrapper"><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a17-650059f8" href="/product/bug-reporting" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M18 8.11024V5.86022H13.6865H11.3765C10.5486 5.86022 9.87393 6.53522 9.87393 7.36363V17.6727C11.2334 17.642 12.4804 17.1716 13.4821 16.4046L15.0767 18L16.6712 16.4046L14.9847 14.7171C15.3527 14.1239 15.6183 13.4591 15.7614 12.7534H18V10.5034H15.8943V8.11024H18Z" fill="currentColor"></path><path d="M6.62347 5.86021H4.31342H0V8.11023H2.10561V10.5034H0V12.7534H2.2385C2.3816 13.4591 2.6473 14.1239 3.01527 14.717L1.32877 16.4045L2.92332 18L4.51786 16.4045C5.51956 17.1716 6.76654 17.642 8.12599 17.6727V7.36363C8.12599 6.53522 7.45141 5.86021 6.62347 5.86021Z" fill="currentColor"></path><path d="M9.16869 0H8.83137C6.44977 0 4.50771 1.80002 4.24195 4.11139H13.7683C13.5026 1.80002 11.5605 0 9.17892 0H9.16869Z" fill="currentColor"></path></svg><p class="cycle-link-title">Bug Reporting</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a1e-650059f8" href="/product/crash-reporting" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5607 4.83197L13.1681 0.43927C12.8885 0.159736 12.5092 0 12.1098 0H5.89016C5.49082 0 5.11146 0.159736 4.83192 0.43927L0.439271 4.83197C0.159736 5.11151 0 5.49087 0 5.89021V12.1098C0 12.5092 0.159736 12.8885 0.439271 13.1681L4.83192 17.5608C5.11146 17.8403 5.49082 18 5.89016 18H12.1098C12.5092 18 12.8885 17.8403 13.1681 17.5608L17.5607 13.1681C17.8403 12.8885 18 12.5092 18 12.1098V5.89021C18 5.49087 17.8403 5.11151 17.5607 4.83197ZM8.99497 13.5574C8.30612 13.5574 7.75704 12.9984 7.75704 12.3195C7.75704 11.6406 8.3161 11.0815 8.99497 11.0815C9.67384 11.0815 10.2429 11.6406 10.2429 12.3195C10.2429 12.9984 9.68383 13.5574 8.99497 13.5574ZM7.92681 10.0632L7.72713 4.49251H10.2729L10.0732 10.0632H7.93674H7.92681Z" fill="currentColor"></path></svg><p class="cycle-link-title">Crash Reporting</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a23-650059f8" href="/product/release-management" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M4.52349 2.50056C4.52349 1.94488 4.98055 1.49834 5.54931 1.49834H12.7504C12.7504 0.664814 12.0597 0 11.2167 0H4.53366C3.6805 0 3 0.674737 3 1.49834V13.6142C3 14.4477 3.69066 15.1126 4.53366 15.1126V2.49063L4.52349 2.50056Z" fill="currentColor"></path><path d="M14.1621 3.00652H7.60098C6.74783 3.00652 6.06733 3.68125 6.06733 4.50485V10.1709L7.75329 11.7287L10.1706 9.68461L8.85022 8.39464L13.8777 7.24358L12.7504 12.1951L11.43 10.9051L7.69236 14.2491L6.07749 12.7607V16.5016C6.07749 17.3352 6.76815 18 7.61115 18H14.1723C15.0254 18 15.7059 17.3252 15.7059 16.5016V4.50485C15.7059 3.67133 15.0153 3.00652 14.1723 3.00652H14.1621Z" fill="currentColor"></path></svg><p class="cycle-link-title">Release Management</p></a></div></div><div data-w-tab="improve-tab" class="tab-pane-improve-tab w-tab-pane" id="w-tabs-0-data-w-pane-2" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-2"><div class="cycle-links-wrapper"><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a2b-650059f8" href="/product/app-performance-monitoring" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M5.15284 7.93559L7.1163 12.4731L9.67774 3.76789C9.71761 3.62797 9.78738 3.49806 9.86711 3.37813C9.94685 3.25819 10.0565 3.15824 10.1661 3.08828C10.3954 2.92837 10.6445 2.85843 10.9037 2.85843C11.0831 2.85843 11.2625 2.8984 11.4319 2.97835C11.6013 3.05831 11.7608 3.17823 11.8904 3.33814C11.9701 3.44808 12.0399 3.56803 12.0897 3.69796L13.6744 7.94559H18V1.49917C18 0.669628 17.3322 0 16.505 0H1.52492C0.69768 0 0.0299054 0.669628 0.0299054 1.49917V7.94559H5.17277L5.15284 7.93559Z" fill="currentColor"></path><path d="M12.4485 9.68462L10.9435 5.63689L8.41196 14.2321C8.3721 14.372 8.30233 14.5019 8.22259 14.6219C8.14286 14.7418 8.03324 14.8418 7.9236 14.9117C7.70433 15.0716 7.44518 15.1416 7.18604 15.1416C7.0166 15.1416 6.83722 15.1116 6.67775 15.0317C6.50832 14.9617 6.3588 14.8517 6.22924 14.7018C6.1495 14.6019 6.06978 14.492 6.01994 14.372L3.99669 9.67462H0V16.5008C0 17.3304 0.667774 18 1.49502 18H16.4751C17.3023 18 17.9701 17.3304 17.9701 16.5008V9.67462H12.4386L12.4485 9.68462Z" fill="currentColor"></path></svg><p class="cycle-link-title">App Performance</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a31-650059f8" href="/product/release-management" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M4.52349 2.50056C4.52349 1.94488 4.98055 1.49834 5.54931 1.49834H12.7504C12.7504 0.664814 12.0597 0 11.2167 0H4.53366C3.6805 0 3 0.674737 3 1.49834V13.6142C3 14.4477 3.69066 15.1126 4.53366 15.1126V2.49063L4.52349 2.50056Z" fill="currentColor"></path><path d="M14.1621 3.00652H7.60098C6.74783 3.00652 6.06733 3.68125 6.06733 4.50485V10.1709L7.75329 11.7287L10.1706 9.68461L8.85022 8.39464L13.8777 7.24358L12.7504 12.1951L11.43 10.9051L7.69236 14.2491L6.07749 12.7607V16.5016C6.07749 17.3352 6.76815 18 7.61115 18H14.1723C15.0254 18 15.7059 17.3252 15.7059 16.5016V4.50485C15.7059 3.67133 15.0153 3.00652 14.1723 3.00652H14.1621Z" fill="currentColor"></path></svg><p class="cycle-link-title">Release Management</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a37-650059f8" href="/product/session-replay" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M16.4203 1.43889H16.1588C16.1588 1.43889 16.1588 1.51827 16.1588 1.55796V16.4422C16.1588 16.4422 16.1588 16.5216 16.1588 16.5613H16.4203C17.2957 16.5613 18 15.8667 18 15.0034V2.99675C18 2.13346 17.2957 1.43889 16.4203 1.43889Z" fill="currentColor"></path><path d="M1.57966 1.43889H1.84127C1.84127 1.43889 1.84127 1.51827 1.84127 1.55796V16.4422C1.84127 16.4422 1.84127 16.5216 1.84127 16.5613H1.57966C0.704311 16.5613 0 15.8667 0 15.0034V2.99675C0 2.13346 0.704311 1.43889 1.57966 1.43889Z" fill="currentColor"></path><path d="M13.2107 0H4.84964C3.9441 0 3.20961 0.724372 3.20961 1.61743V16.4421C3.20961 17.3054 3.91392 18 4.78927 18H13.2107C14.0861 18 14.7904 17.3054 14.7904 16.4421V1.55789C14.7904 0.694605 14.0861 0 13.2107 0ZM9.00503 14.1797C6.4796 14.1797 4.43711 12.1654 4.43711 9.67476H6.58021C6.58021 10.3396 6.85186 10.925 7.29457 11.3617C7.73727 11.7983 8.33091 12.0662 9.00503 12.0662C9.67915 12.0662 10.2728 11.7983 10.7155 11.3617C11.1582 10.925 11.4299 10.3396 11.4299 9.67476C11.4299 9.00993 11.1582 8.42447 10.7155 7.98787C10.2728 7.55126 9.67915 7.28335 9.00503 7.28335H8.72331V8.93055L4.84964 6.23154L8.72331 3.53253V5.17972H9.00503C11.5305 5.17972 13.573 7.19406 13.573 9.68469C13.573 12.1753 11.5305 14.1896 9.00503 14.1896V14.1797Z" fill="currentColor"></path></svg><p class="cycle-link-title">Session Replay</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a3e-650059f8" href="/product/crash-reporting" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5607 4.83197L13.1681 0.43927C12.8885 0.159736 12.5092 0 12.1098 0H5.89016C5.49082 0 5.11146 0.159736 4.83192 0.43927L0.439271 4.83197C0.159736 5.11151 0 5.49087 0 5.89021V12.1098C0 12.5092 0.159736 12.8885 0.439271 13.1681L4.83192 17.5608C5.11146 17.8403 5.49082 18 5.89016 18H12.1098C12.5092 18 12.8885 17.8403 13.1681 17.5608L17.5607 13.1681C17.8403 12.8885 18 12.5092 18 12.1098V5.89021C18 5.49087 17.8403 5.11151 17.5607 4.83197ZM8.99497 13.5574C8.30612 13.5574 7.75704 12.9984 7.75704 12.3195C7.75704 11.6406 8.3161 11.0815 8.99497 11.0815C9.67384 11.0815 10.2429 11.6406 10.2429 12.3195C10.2429 12.9984 9.68383 13.5574 8.99497 13.5574ZM7.92681 10.0632L7.72713 4.49251H10.2729L10.0732 10.0632H7.93674H7.92681Z" fill="currentColor"></path></svg><p class="cycle-link-title">Crash Reporting</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a43-650059f8" href="/product/flows" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><g clip-path="url(#clip0_13_65)"><path d="M7.98928 6.36159C7.61715 7.76353 6.34916 8.79775 4.82848 8.79775C3.92802 8.79775 3.10567 8.43003 2.51761 7.83708C1.92496 7.24872 1.55743 6.42595 1.55743 5.52503C1.55743 3.71859 3.02297 2.2523 4.82848 2.2523C5.72894 2.2523 6.5513 2.62002 7.13936 3.21297C7.54364 3.61747 7.84227 4.13228 7.98928 4.71144L17.9954 4.69305V1.49847C17.9954 0.671093 17.3247 0 16.4977 0H1.4977C0.67075 0 0 0.671093 0 1.49847V11.666L10.0107 11.6476C10.3828 10.2457 11.6508 9.21144 13.1715 9.21144C14.072 9.21144 14.8943 9.57916 15.4824 10.1721C16.075 10.7605 16.4426 11.5832 16.4426 12.4842C16.4426 13.3851 16.075 14.2079 15.4824 14.7962C14.8943 15.3892 14.072 15.7569 13.1715 15.7569C12.2711 15.7569 11.4487 15.3892 10.8606 14.7962C10.4564 14.3917 10.1577 13.8769 10.0107 13.2978L0.00459418 13.3161V16.5015C0.00459418 17.3289 0.675345 18 1.5023 18H16.5023C17.3292 18 18 17.3289 18 16.5015V6.33861L7.98928 6.357V6.36159Z" fill="currentColor"></path><path d="M14.3153 13.6287C14.6093 13.3345 14.7885 12.9346 14.7885 12.4842C14.7885 12.0337 14.6093 11.6338 14.3153 11.3397C14.0213 11.0455 13.6216 10.8662 13.1714 10.8662C12.7211 10.8662 12.3214 11.0455 12.0274 11.3397C11.7334 11.6338 11.5542 12.0337 11.5542 12.4842C11.5542 12.9346 11.7334 13.3345 12.0274 13.6287C12.3214 13.9229 12.7211 14.1022 13.1714 14.1022C13.6216 14.1022 14.0213 13.9229 14.3153 13.6287Z" fill="currentColor"></path><path d="M3.68463 4.38049C3.3906 4.67466 3.21143 5.07456 3.21143 5.52502C3.21143 5.97548 3.3906 6.37538 3.68463 6.66956C3.97865 6.96373 4.37835 7.143 4.82858 7.143C5.27881 7.143 5.6785 6.96373 5.97253 6.66956C6.26656 6.37538 6.44573 5.97548 6.44573 5.52502C6.44573 5.07456 6.26656 4.67466 5.97253 4.38049C5.6785 4.08631 5.27881 3.90704 4.82858 3.90704C4.37835 3.90704 3.97865 4.08631 3.68463 4.38049Z" fill="currentColor"></path></g><defs><clipPath id="clip0_13_65"><rect width="18" height="18" fill="currentColor"></rect></clipPath></defs></svg><p class="cycle-link-title">Flows</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a4e-650059f8" href="/product/feature-flags" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><g clip-path="url(#clip0_13_66)"><path d="M16.4977 0H1.4977C0.67075 0 0 0.67075 0 1.4977V16.4977C0 17.3247 0.67075 17.9954 1.4977 17.9954H16.4977C17.3247 17.9954 17.9954 17.3247 17.9954 16.4977V1.4977C17.9954 0.67075 17.3247 0 16.4977 0ZM6.65697 18L2.94946 5.6049L4.52067 5.08576L8.38438 18H6.65697ZM11.0031 10.8698C11.0031 10.8698 7.98469 9.81776 6.94181 10.9847L5.32925 5.39357C6.37213 4.23124 9.39051 5.27871 9.39051 5.27871C11.8806 6.15161 13.438 5.34303 13.438 5.34303L15.0505 10.9341C15.0505 10.9341 13.4931 11.7427 11.0031 10.8698Z" fill="currentColor"></path></g><defs><clipPath id="clip0_13_66"><rect width="18" height="18" fill="currentColor"></rect></clipPath></defs></svg><p class="cycle-link-title">Feature Flags</p></a></div></div><div data-w-tab="collect-tab" class="tab-pane-collect-tab w-tab-pane" id="w-tabs-0-data-w-pane-3" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-3"><div class="cycle-links-wrapper"><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a59-650059f8" href="/product/bug-reporting" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M18 8.11024V5.86022H13.6865H11.3765C10.5486 5.86022 9.87393 6.53522 9.87393 7.36363V17.6727C11.2334 17.642 12.4804 17.1716 13.4821 16.4046L15.0767 18L16.6712 16.4046L14.9847 14.7171C15.3527 14.1239 15.6183 13.4591 15.7614 12.7534H18V10.5034H15.8943V8.11024H18Z" fill="currentColor"></path><path d="M6.62347 5.86021H4.31342H0V8.11023H2.10561V10.5034H0V12.7534H2.2385C2.3816 13.4591 2.6473 14.1239 3.01527 14.717L1.32877 16.4045L2.92332 18L4.51786 16.4045C5.51956 17.1716 6.76654 17.642 8.12599 17.6727V7.36363C8.12599 6.53522 7.45141 5.86021 6.62347 5.86021Z" fill="currentColor"></path><path d="M9.16869 0H8.83137C6.44977 0 4.50771 1.80002 4.24195 4.11139H13.7683C13.5026 1.80002 11.5605 0 9.17892 0H9.16869Z" fill="currentColor"></path></svg><p class="cycle-link-title">Bug Reporting</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a60-650059f8" href="/product/in-app-surveys" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><g clip-path="url(#clip0_13_68)"><mask id="mask0_13_68" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="0" width="15" height="18"><path d="M16.7615 0H2V18H16.7615V0Z" fill="currentColor"></path></mask><g mask="url(#mask0_13_68)"><path d="M6.76527 4.72699C6.76527 3.67655 7.61796 2.82386 8.6684 2.82386H10.5673V0.952628C10.5673 0.427407 10.142 0 9.61465 0H2.95263C2.42528 0 2 0.425281 2 0.952628V12.7967C2 13.3219 2.42528 13.7493 2.95263 13.7493H6.76527V4.72699Z" fill="currentColor"></path><path d="M12.6384 14.3937L9.22976 10.985L10.6034 9.61139L12.6384 11.6379L16.7615 7.52752V5.20336C16.7615 4.67814 16.3362 4.25073 15.8089 4.25073H9.14471C8.61948 4.25073 8.19208 4.67601 8.19208 5.20336V17.0474C8.19208 17.5726 8.61736 18.0001 9.14471 18.0001H15.8089C16.3341 18.0001 16.7615 17.5748 16.7615 17.0474V10.277L12.6384 14.3937Z" fill="currentColor"></path></g></g><defs><clipPath id="clip0_13_68"><rect width="15" height="18" fill="currentColor" transform="translate(2)"></rect></clipPath></defs></svg><p class="cycle-link-title">In-App Surveys</p></a><a id="w-node-_7c0a64b1-262c-973b-a913-6f4c3f5c9a6d-650059f8" href="/product/app-ratings-reviews" class="cycle-link-tag w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none" class="cycle-link-img"><path d="M2.53186 4.81434C2.53186 3.57754 3.53647 2.58603 4.76653 2.58603H13.8382V1.29815C13.8382 0.582644 13.2539 0 12.5364 0H1.30184C0.584301 0 0 0.582644 0 1.29815V12.5009C0 13.2164 0.584301 13.799 1.30184 13.799H2.53186V4.81434Z" fill="currentColor"></path><path d="M16.6982 4.20105H5.46347C4.74593 4.20105 4.16176 4.78366 4.16176 5.49917V16.7019C4.16176 17.4174 4.74593 18 5.46347 18H18V5.49917C18 4.78366 17.4157 4.20105 16.6982 4.20105ZM15.2733 10.5486L13.5 12.276L13.9202 14.7189C13.9817 15.0767 13.6024 15.3527 13.2744 15.1891L11.0809 14.0341L8.88725 15.1891C8.55923 15.3629 8.17995 15.0869 8.24146 14.7189L8.66164 12.276L6.88832 10.5486C6.6218 10.293 6.77555 9.8433 7.13432 9.7922L9.59448 9.43444L10.6914 7.21637C10.8554 6.88928 11.3268 6.88928 11.4908 7.21637L12.5877 9.43444L15.0478 9.7922C15.4066 9.8433 15.5604 10.293 15.2938 10.5486H15.2733Z" fill="currentColor"></path></svg><p class="cycle-link-title">App Ratings &amp; Reviews</p></a></div></div></div></div><div class="code-embed-2 w-embed w-script"><style>
+.svg-bg {
+  transition: fill 0.5s cubic-bezier(0.42, 0, 0.58, 1); /* Custom cubic-bezier easing */
+}
+
+/* Define the floating animation */
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0); /* Original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move upward */
+  }
+  100% {
+    transform: translateY(0); /* Back to original position */
+  }
+}
+
+/* Apply the animation on hover */
+.test-tab:hover svg, 
+.collect-tab:hover svg, 
+.improve-tab:hover svg {
+  animation: floatUpDown 2s infinite; /* Loop animation */
+}
+
+/* Apply the animation when active (w--current class) */
+.test-tab.w--current svg, 
+.collect-tab.w--current svg, 
+.improve-tab.w--current svg {
+  animation: floatUpDown 2s infinite;
+}
+
+
+</style>
+<script>
+// Function to change fill on hover or when the element has the "w--current" class
+function updateFillOnHoverOrActive() {
+  // Select all elements with the classes .test-tab, .collect-tab, and .improve-tab
+  const tabs = document.querySelectorAll('.test-tab, .collect-tab, .improve-tab');
+
+  tabs.forEach(tab => {
+    const svgBg = tab.querySelector('.svg-bg');
+    const svgElements = tab.querySelectorAll('.svg-element'); // Select all .svg-element instances
+    const cycleTabText = tab.querySelector('.cycle-tab-text'); // Select the .cycle-tab-text
+
+    // Store the original fill values of all .svg-elements and the original font color of .cycle-tab-text
+    const originalSvgElementFills = Array.from(svgElements).map(svgElement => svgElement.getAttribute('fill'));
+    const originalTextColor = cycleTabText ? window.getComputedStyle(cycleTabText).color : '';
+
+    // Hover effect
+    tab.addEventListener('mouseenter', () => {
+      if (svgBg) svgBg.setAttribute('fill', 'url(#paint5_linear_62_1091)'); // Update to paint5_linear_62_1091
+      svgElements.forEach(svgElement => svgElement.setAttribute('fill', '#FFFFFF')); // Set all .svg-element fills to #FFFFFF
+      if (cycleTabText) cycleTabText.style.color = '#246aff'; // Change font color to #246aff
+    });
+
+    tab.addEventListener('mouseleave', () => {
+      if (!tab.classList.contains('w--current')) {
+        if (svgBg) svgBg.setAttribute('fill', 'url(#paint2_linear_62_1071)'); // Reset fill to 1071
+        svgElements.forEach((svgElement, index) => svgElement.setAttribute('fill', originalSvgElementFills[index])); // Reset all .svg-elements fills to their original values
+        if (cycleTabText) cycleTabText.style.color = originalTextColor; // Reset font color to original
+      }
+    });
+
+    // Active state when the "w--current" class is added
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          if (tab.classList.contains('w--current')) {
+            if (svgBg) svgBg.setAttribute('fill', 'url(#paint5_linear_62_1091)'); // Update to paint5_linear_62_1091
+            svgElements.forEach(svgElement => svgElement.setAttribute('fill', '#FFFFFF')); // Set all .svg-element fills to #FFFFFF
+            if (cycleTabText) cycleTabText.style.color = '#246aff'; // Change font color to #246aff
+          } else {
+            if (svgBg) svgBg.setAttribute('fill', 'url(#paint2_linear_62_1071)'); // Reset fill to 1071
+            svgElements.forEach((svgElement, index) => svgElement.setAttribute('fill', originalSvgElementFills[index])); // Reset all .svg-elements fills to their original values
+            if (cycleTabText) cycleTabText.style.color = originalTextColor; // Reset font color to original
+          }
+        }
+      });
+    });
+
+    observer.observe(tab, { attributes: true }); // Watch for class changes
+  });
+}
+
+// Initialize the function after DOM loads
+document.addEventListener('DOMContentLoaded', updateFillOnHoverOrActive);
+
+</script>
+
+
+
+<!--<script>
+// Auto Play
+  document.addEventListener("DOMContentLoaded", function () {
+    let tabs = document.querySelectorAll('#home-tabs .w-tab-link');
+    let currentIndex = 0;
+
+    function rotateTabs() {
+      // Trigger the current tab
+      tabs[currentIndex].click();
+      
+      // Move to the next tab, loop back to the first one if at the end
+      currentIndex = (currentIndex + 1) % tabs.length;
+    }
+
+    // Start the auto rotation
+    setInterval(rotateTabs, 7000); // 7000ms = 7 seconds
+  });
+</script>--></div></div></div></section><div class="spacer-110"></div><div class="spacer-60"></div><section class="market-section"><div class="big-container market-container"><div class="container"><h2 class="market-header">Instabug’s Mobile Observability Platform</h2><div class="market-wrapper"><div id="w-node-_5130c025-8ac7-ed52-30a9-034ca3707eb6-650059f8" class="market-cell"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c128f03d83b3c2c1162cd_test2.svg" loading="lazy" alt="test icon" class="market-spot"><h3 class="market-heading">Test Your App Before <br>Every Release</h3><div class="products-wrapper-2"><a id="w-node-_3019634d-c1e7-36b0-970f-fd3760e16373-650059f8" href="/product/bug-reporting" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c1518fa7b60ad8a049255_br.svg" loading="lazy" alt="Bug Reporting Icon" class="product-link-icon"><p class="product-link-title">Bug Reporting</p></a><a id="w-node-c67c02df-d746-cced-f001-2b957ae3005d-650059f8" href="/product/crash-reporting" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c15293282f3651b1f9789_cr.svg" loading="lazy" alt="Crash Reporting Icon" class="product-link-icon"><p class="product-link-title">Crash Reporting</p></a></div></div><div id="w-node-f43dcb61-ec44-eaf4-b6ec-9ab07ec8547a-650059f8" class="line-cell"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64f8ef269768258069ae2465_line.svg" loading="lazy" alt=""></div><div id="w-node-e2f74a39-bc53-5b05-afb7-e163295ef3f2-650059f8" class="market-cell"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c1298576115209e839ee4_improve2.svg" loading="lazy" alt="Improve Your App Stability and Performance" class="market-spot"><h3 class="market-heading">Improve Your App Stability <br>and Performance</h3><div class="products-wrapper-4"><a id="w-node-dd26aba7-7373-9202-c129-b32b074237b5-650059f8" href="/product/app-performance-monitoring" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c1544997be9a662899ed2_apm.svg" loading="lazy" alt="APM Icon" class="product-link-icon"><p class="product-link-title">App Performance</p></a><a id="w-node-_1596e831-4fd3-4e82-76b4-714ab1f25ef6-650059f8" href="/product/release-management" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c154c2ba0f43372905b18_rm.svg" loading="lazy" alt="Release Management" class="product-link-icon"><p class="product-link-title">Release Management</p></a><a id="w-node-dd26aba7-7373-9202-c129-b32b074237b9-650059f8" href="/product/session-replay" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c15566582addbb0236643_sr.svg" loading="lazy" alt="Session Replay Icon" class="product-link-icon"><p class="product-link-title">Session Replay</p></a><a id="w-node-cc6fb551-f755-bb5e-0d86-333f63c3a3f2-650059f8" href="/product/crash-reporting" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c15293282f3651b1f9789_cr.svg" loading="lazy" alt="Crash Reporting Icon" class="product-link-icon"><p class="product-link-title">Crash Reporting</p></a><a id="w-node-c2a2629d-d74d-36d3-4b00-d362dc54a603-650059f8" href="/product/flows" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66855c5aca9eedec7926ac82_flows-small.svg" loading="lazy" alt="" class="product-link-icon"><p class="product-link-title">Flows</p></a><a id="w-node-_02185078-1187-6893-ae37-3ab32d37c51a-650059f8" href="/product/feature-flags" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66855c678b4a5b8abebf646d_flags-small.svg" loading="lazy" alt="" class="product-link-icon"><p class="product-link-title">Feature Flags</p></a></div></div><div id="w-node-b4de8834-4cc9-1a8e-ad23-94dfd6b1ba34-650059f8" class="line-cell"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64f8ef269768258069ae2465_line.svg" loading="lazy" alt=""></div><div id="w-node-_15885c0e-8fb7-9af5-45aa-fb0f60566ce4-650059f8" class="market-cell"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64f8f1c1d455ccd1c8c317c5_collect.svg" loading="lazy" alt="Collect Actionable Feedback From Users" class="market-spot"><h3 class="market-heading">Collect Actionable <br>User Feedback</h3><div class="products-wrapper-3"><a id="w-node-_6df084b4-66a3-5b7d-10c7-94a9c7d401fc-650059f8" href="/product/bug-reporting" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c1518fa7b60ad8a049255_br.svg" loading="lazy" alt="Bug Reporting Icon" class="product-link-icon"><p class="product-link-title">Bug Reporting</p></a><a id="w-node-_7d1c77e9-fa88-1008-2cb7-f224ed2568b2-650059f8" href="/product/in-app-surveys" class="product-link-tag hide w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65d49e1417dccb882faf7347_asr.svg" loading="lazy" alt="In-App Surveys Icon" class="product-link-icon"><p class="product-link-title">In-App Surveys</p></a><a id="w-node-_6df084b4-66a3-5b7d-10c7-94a9c7d40200-650059f8" href="/product/app-ratings-reviews" class="product-link-tag w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/651c156dfcd56316374d7e74_ar.svg" loading="lazy" alt="App Ratings icon" class="product-link-icon"><p class="product-link-title">App Ratings &amp; Reviews</p></a></div></div></div></div></div></section><section class="home-benefits"><div class="container"><div class="home-benefits-wrapper"><div class="home-benefit"><div id="w-node-_3674cf09-f961-17fc-53f7-4bfc00b85e90-650059f8" class="benefit-left"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65000c971dff030d7d72ed1a_Scale%20Your%20App%20With%20Exceptional%20Performance%20and%20User%20Experience.svg" loading="lazy" alt="Scale Your App With Exceptional Performance and User Experience" class="benefit-image"></div><div id="w-node-_3674cf09-f961-17fc-53f7-4bfc00b85e92-650059f8" class="benefit-right"><div class="benefit-text"><h3 class="benefit-heading">Deliver Exceptional App Performance with Our AI-Powered Mobile Observability Platform</h3><p class="benefit-p">With comprehensive performance monitoring, crash analytics, bug reporting, app ratings and reviews, release management, and session replay, Instabug's &nbsp;AI-powered mobile observability platform helps &nbsp;your team to seamlessly balance innovation and app stability.</p><a href="/product" class="benefit-link w-inline-block w-clearfix"><p class="benefit-link-text">Explore Instabug's Products</p><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62718997e550056a0cd38fbe_arrow-blue.svg" loading="lazy" alt="Balance Between Performance Improvements and New Features" class="benefit-link-icon"></a></div></div></div><div class="home-benefit"><div id="w-node-_3674cf09-f961-17fc-53f7-4bfc00b85e9d-650059f8" class="benefit-right"><div class="benefit-text"><h3 class="benefit-heading">Scale Large Mobile Dev Teams While Enhancing App Security and Maintaining Privacy</h3><p class="benefit-p">Empower your mobile enterprise with Instabug's seamless support, unmatched availability, and robust redundancy solutions. Our mobile-first approach guarantees that as you scale, your privacy and security remain top priorities.</p><a href="/product" class="benefit-link hide w-inline-block w-clearfix"><p class="benefit-link-text">Explore Instabug's Products</p><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62718997e550056a0cd38fbe_arrow-blue.svg" loading="lazy" alt="Balance Between Performance Improvements and New Features" class="benefit-link-icon"></a></div></div><div id="w-node-_3674cf09-f961-17fc-53f7-4bfc00b85ea7-650059f8" class="benefit-left"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66d594031f36b3d864eff12b_Scale.svg" loading="lazy" alt="" class="benefit-image"></div></div><div class="home-benefit last"><div id="w-node-_3674cf09-f961-17fc-53f7-4bfc00b85eaa-650059f8" class="benefit-left"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/66d593915cc75d02bd99ca31_AI.svg" loading="lazy" alt="" class="benefit-image"></div><div id="w-node-_3674cf09-f961-17fc-53f7-4bfc00b85eac-650059f8" class="benefit-right"><div class="benefit-text"><h3 class="benefit-heading"><strong>Unlock Mobile Growth with AI-Driven Insights</strong></h3><p class="benefit-p">Transform your mobile app development process with AI-powered observability, enabling faster issue resolution, deeper performance insights, and proactive user experience optimization. Drive innovation and scale effortlessly while maintaining app stability and security.<br></p><a href="/ai" class="benefit-link w-inline-block w-clearfix"><p class="benefit-link-text">Explore our AI Platform</p><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62718997e550056a0cd38fbe_arrow-blue.svg" loading="lazy" alt="Balance Between Performance Improvements and New Features" class="benefit-link-icon"></a><a href="https://dashboard.instabug.com/signup" class="benefit-link hide w-inline-block w-clearfix"><p class="benefit-link-text">Get Started Now</p><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62718997e550056a0cd38fbe_arrow-blue.svg" loading="lazy" alt="Balance Between Performance Improvements and New Features" class="benefit-link-icon"></a></div></div></div></div></div></section><div class="themes-section"><div class="container themes-container"><h3 class="themes-subheading">Why Instabug</h3><h3 class="themes-heading">Balance Stability, Performance, and Feature Development</h3><div class="w-layout-grid grid-4"><a id="w-node-_790bdcf6-e55c-880a-0445-6ad2e9804ed9-650059f8" data-w-id="790bdcf6-e55c-880a-0445-6ad2e9804ed9" href="/platform/automated-reproduction" class="theme-item w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64660f3d9ac983ebfa9837d9_Automated_Reproduction.svg" loading="lazy" alt="Automated Reproduction" class="theme-image"><h4 class="theme-heading">Automated Reproduction</h4><p class="theme-desc">Reproduce crashes and bugs without the need to maintain breadcrumbs</p></a><a id="w-node-e460297d-3a27-14a2-1ca9-c0c9050b36d2-650059f8" data-w-id="e460297d-3a27-14a2-1ca9-c0c9050b36d2" href="/platform/release-centered" class="theme-item w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64660f339d345c3d49c34848_Release_Centered.svg" loading="lazy" alt="Release Centered" class="theme-image"><h4 class="theme-heading">Release Centered</h4><p class="theme-desc">Track and organize release-specific metrics to improve performance</p></a><a id="w-node-_80a2507f-1385-323d-3a1b-5409f572f007-650059f8" data-w-id="80a2507f-1385-323d-3a1b-5409f572f007" href="/platform/team-performance" class="theme-item w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64660f46d4e888e5cdd6cb88_Team_Performance.svg" loading="lazy" alt="Team Performance" class="theme-image"><h4 class="theme-heading">Team Performance</h4><p class="theme-desc">Adopt a performance mindset to balance &nbsp;quality and feature development</p></a><a id="w-node-_3ab19e2e-f84d-9b68-cb42-884e239957ae-650059f8" data-w-id="3ab19e2e-f84d-9b68-cb42-884e239957ae" href="/platform/user-centric-insights" class="theme-item w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64660c71fdb086cb2570d1bb_User-Centric.svg" loading="lazy" alt="User-Centric Insights" class="theme-image"><h4 class="theme-heading">User-Centric Insights</h4><p class="theme-desc">Get a clear picture of exactly what your users experience to prioritize and fix issues</p></a></div><div class="themes-cta"><a href="https://dashboard.instabug.com/signup" target="_blank" class="default-button blue big">Get Started</a><a href="/request-demo" class="default-button big transparent-white blue-font">Request a Demo</a></div></div></div><div class="protect-data zindex5"><div class="protect-blur-bg"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62709eff99180dfdd0ec690d_blur%20bg%20(3).svg" loading="lazy" alt="" class="image-3"></div><div class="container zindex5"><div class="protect-data-box"><h3 class="tcenter mb10">Protect Your Users and Your Data. <br>Accelerate Your Business With a Secure Solution.</h3><p class="mw500 fs18 prot-sub">Instabug applies the highest security standards, as well as high availability and redundancy to ensure your data security and maximize business uptime</p><div class="protect-grid"><div class="protect-item"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62709d652398f83ba4172525_icn-shield.svg" loading="lazy" alt="SOC2 Compliance" class="protect-box-image"><div><h4 class="cwhite mb10">SOC2 Compliance</h4><p class="csilver">SOC2 Type II attestation and secure hosting on AWS</p></div></div><div class="protect-item"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62709d6512a7a2b538ecf44b_icn-protection.svg" loading="lazy" alt="User Data Protection" class="protect-box-image"><div><h4 class="cwhite mb10">User Data Protection</h4><p class="csilver">GDPR compliant ensuring user data privacy and protection</p></div></div><div class="protect-item"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62709d65e69528e7ed6a909b_icn-audits.svg" loading="lazy" alt="3rd Party Security Audits" class="protect-box-image"><div><h4 class="cwhite mb10">3rd Party Security Audits</h4><p class="csilver">Regular third-party penetration tests against applications and APIs</p></div></div><div class="protect-item"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62709d65991bfb7f798a6d53_icn-lock.svg" loading="lazy" alt="Data Encryption" class="protect-box-image"><div><h4 class="cwhite mb10">Data Encryption</h4><p class="csilver">Data protection through encryption in transit and at rest</p></div></div></div></div></div></div><div class="support-code-section"><div class="skew-bg-silver-sharp"></div><div class="container zindex5 mw940"><div class="support-head"><h2 class="cdark mb10">Support for Multiple Platforms</h2><p class="cblue-text mw920 fs18">In less than a minute, integrate the Instabug SDK for iOS, Android, React Native, Xamarin, Cordova, Flutter, and Unity mobile apps</p></div><div class="codes-get-started"><div class="codes-logos"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/65678f5eace085edef6032e8_ios.svg" loading="lazy" alt="" class="code-item active"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/655e5b6fa33f033ba7b8480a_Android.svg" loading="lazy" alt="" class="code-item"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/655e53053545bdabe4a97117_react.svg" loading="lazy" alt="" class="code-item"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/655e5324ba6b3c6cb076bf51_Flutter.svg" loading="lazy" alt="" class="code-item"><div class="protect-blur-bg"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6270a91a971e10eba51257a7_blur%20bg%20(4).svg" loading="lazy" alt="" class="image-4"></div></div><div class="code-tabs"><div class="code-tab active"><div class="mt40 zindex5"><div class="line-numbers"><pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-javascript" style="white-space:pre"><span>Instabug.start(
+</span><span>	withToken: </span><span style="color:#abe338">"YOUR_APP_TOKEN_HERE"</span><span>, 
+</span><span>	</span><span class="hljs-attr">invocationEvents</span><span>: [.shake, .screenshot]
+</span>)</code></pre></div><div class="learn-more-under-code"><a href="/platforms/ios" class="blue-link fs16">Learn More &nbsp;→</a></div></div></div><div class="code-tab andorid"><div class="mt40 zindex5"><div class="line-numbers"><pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-java" style="white-space:pre"><span style="color:#dcc6e0">new</span><span> Instabug.Builder(</span><span style="color:#dcc6e0">this</span><span>, </span><span style="color:#abe338">"YOUR_APP_TOKEN_HERE"</span><span>)
+</span>.setInvocationEvents(
+	InstabugInvocationEvent.SHAKE,
+	InstabugInvocationEvent.SCREENSHOT)
+.build();</code></pre></div><div class="learn-more-under-code"><a href="/platforms/android" class="blue-link fs16">Learn More →</a></div></div></div><div class="code-tab xamarin"><div class="mt40 zindex5"><div class="line-numbers"><pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-javascript" style="white-space:pre"><span style="color:#dcc6e0">import</span><span> Instabug </span><span style="color:#dcc6e0">from</span><span> </span><span style="color:#abe338">'instabug-reactnative'</span><span>;
+</span>
+Instabug.init({
+<span>  </span><span class="hljs-attr">token</span><span>: </span><span style="color:#abe338">'APP_TOKEN'</span><span>,
+</span><span>  </span><span class="hljs-attr">invocationEvents</span><span>: [InvocationEvent.shake],
+</span>});
+</code></pre></div><div class="learn-more-under-code"><a href="/platforms/react-native" class="blue-link fs16">Learn More &nbsp;→</a></div></div></div><div class="code-tab react"><div class="mt40 zindex5"><div class="line-numbers"><pre contenteditable="false" class="code-block w-code-block" style="display:block;overflow-x:auto;background:#2b2b2b;color:#f8f8f2;padding:0.5em"><code class="language-javascript" style="white-space:pre"><span>Instabug.startWithToken(</span><span style="color:#abe338">'YOUR_APP_TOKEN_HERE'</span><span>, [
+</span>	Instabug.invocationEvent.shake</code></pre></div><div class="learn-more-under-code"><a href="/platforms/react-native" class="blue-link fs16">Learn More &nbsp;→</a></div></div></div></div></div></div><div class="spacer-60"></div><div class="container zindex5"><div class="tcenter"><h3 class="cdark mb10">More Than 25,000 Mobile Teams Rely on Instabug</h3></div><div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="w-tabs"><div class="testimonials-head w-tab-menu" role="tablist"><a data-w-tab="Tab 1" class="testimonials-head-item w-inline-block w-tab-link w--current" id="w-tabs-1-data-w-tab-0" href="#w-tabs-1-data-w-pane-0" role="tab" aria-controls="w-tabs-1-data-w-pane-0" aria-selected="true"><img width="123" loading="lazy" alt="Figma Logo" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6543bda047e4dd417a40b9f9_Figma.svg" class="tab-logo fig"></a><a data-w-tab="Tab 2" class="testimonials-head-item w-inline-block w-tab-link" tabindex="-1" id="w-tabs-1-data-w-tab-1" href="#w-tabs-1-data-w-pane-1" role="tab" aria-controls="w-tabs-1-data-w-pane-1" aria-selected="false"><img width="123" loading="lazy" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62718883985f6f01e0c438af_verizon.svg" class="tab-logo"></a><a data-w-tab="Tab 3" class="testimonials-head-item w-inline-block w-tab-link" tabindex="-1" id="w-tabs-1-data-w-tab-2" href="#w-tabs-1-data-w-pane-2" role="tab" aria-controls="w-tabs-1-data-w-pane-2" aria-selected="false"><img loading="lazy" height="32" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/668d2d495627f62965c6f451_decathlon-logo.svg" class="tab-logo"></a><a data-w-tab="Tab 4" class="testimonials-head-item w-inline-block w-tab-link" tabindex="-1" id="w-tabs-1-data-w-tab-3" href="#w-tabs-1-data-w-pane-3" role="tab" aria-controls="w-tabs-1-data-w-pane-3" aria-selected="false"><img width="175.5" loading="lazy" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64522f5dfdafeb204e20929e_saturn%20Logo.png" class="tab-logo"></a><a data-w-tab="Tab 5" class="testimonials-head-item w-inline-block w-tab-link" tabindex="-1" id="w-tabs-1-data-w-tab-4" href="#w-tabs-1-data-w-pane-4" role="tab" aria-controls="w-tabs-1-data-w-pane-4" aria-selected="false"><img width="108" height="" alt="RBFA logo" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/64522f6ae17c723ccbc776c7_RBFA%20logo.png" loading="lazy"></a><a data-w-tab="Tab 6" id="w-node-d969aefb-713b-b2f9-69de-2e0152304357-650059f8" class="testimonials-head-item w-inline-block w-tab-link" tabindex="-1" href="#w-tabs-1-data-w-pane-5" role="tab" aria-controls="w-tabs-1-data-w-pane-5" aria-selected="false"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6283fe292fa0761e9d4e4c85_poparazzi-wide-logo.png" alt="Poparazzi Logo" class="tab-logo"></a></div><div class="w-tab-content"><div data-w-tab="Tab 1" class="w-tab-pane w--tab-active" id="w-tabs-1-data-w-pane-0" role="tabpanel" aria-labelledby="w-tabs-1-data-w-tab-0"><div class="testimonials-content"><div class="testimonials-content-left"><p class="fs18 mb10 cblack">“Instabug gives us a finger on the pulse of our users and their experience, helping us catch and fix major issues in production before their impact grows.”</p><div class="test-author"><img width="35" loading="lazy" alt="Vivek Karuturi Native Apps Engineering Lead" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6543bdecda0132f5f03d8fdc_CE06A088-CD53-434C-9FAE-69982ECC4CFE-3.jpg" class="image-6"><p class="cblack">Vivek Karuturi<span class="test-position">Native Apps Engineering Lead</span></p></div><a href="/customers/figma" class="story-link">Read the full story →</a></div><div class="testimonials-content-right"><img width="550" loading="lazy" alt="Figma Mobile App" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6543be2494aa57612f87e053_Figma%20Story_FigmaStory-Header.webp" class="image-5"></div></div></div><div data-w-tab="Tab 2" class="w-tab-pane" id="w-tabs-1-data-w-pane-1" role="tabpanel" aria-labelledby="w-tabs-1-data-w-tab-1"><div class="testimonials-content"><div class="testimonials-content-left"><p class="fs18 mb10 cblack">“Because of Instabug, we are now 99.9% crash free on Android. And on iOS we dropped by a factor of five. And this was the first go around. The application became very stable and quite robust because it has Instabug to track and measure and manage crash data.”</p><div class="test-author"><img width="35" loading="lazy" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/62753860ef9624dc7111db0f_MoHariri-cropped.png" class="image-6"><p class="cblack">Mohammad Hariri<span class="test-position">Distinguished Member of Technical Services</span></p></div><a href="/customers/verizon" class="story-link">Read the full story →</a></div><div class="testimonials-content-right"><img width="550" loading="lazy" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6684933cb76308285d0c40fb_verizon.png" class="image-5"></div></div></div><div data-w-tab="Tab 3" class="w-tab-pane" id="w-tabs-1-data-w-pane-2" role="tabpanel" aria-labelledby="w-tabs-1-data-w-tab-2"><div class="testimonials-content"><div class="testimonials-content-left"><p class="fs18 mb10 cblack">“Before Instabug, we didn’t have a workflow.” With a single centralized location for app data, developers could now quickly assess which situations needed their attention most urgently and strategize best solutions faster."</p><div class="test-author"><img sizes="70px" srcset="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/646a920bc22c46352a60a76e_Decathalon%20Maxime%20Harter%20(1)-2-p-500.jpeg 500w, https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/646a920bc22c46352a60a76e_Decathalon%20Maxime%20Harter%20(1)-2.jpeg 800w" alt="Decathlon employee" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/646a920bc22c46352a60a76e_Decathalon%20Maxime%20Harter%20(1)-2.jpeg" loading="lazy" class="image-6"><p class="cblack">Maxime Harter<span class="test-position">Engineering Manager</span></p></div><a href="/customers/decathlon-outdoor" class="story-link">Read the full story →</a></div><div class="testimonials-content-right"><img sizes="(max-width: 479px) 100vw, (max-width: 580px) 93vw, (max-width: 767px) 540px, (max-width: 1279px) 47vw, 540px" srcset="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6452551c630f6014e23127da_63b5ff69d7e7dd70f4e98065_image%209-p-500.png 500w, https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6452551c630f6014e23127da_63b5ff69d7e7dd70f4e98065_image%209.png 540w" alt="Decathlon image" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6452551c630f6014e23127da_63b5ff69d7e7dd70f4e98065_image%209.png" loading="lazy" class="image-5"></div></div></div><div data-w-tab="Tab 4" class="w-tab-pane" id="w-tabs-1-data-w-pane-3" role="tabpanel" aria-labelledby="w-tabs-1-data-w-tab-3"><div class="testimonials-content"><div class="testimonials-content-left"><p class="fs18 mb10 cblack">“We have integrations with Instabug to manage our releases and automatically label them. Then we're able to go in very quickly and look at all the issues that were reported on that release version.”</p><div class="test-author"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/646c7cb5ee77d854081229d3_6409d0c910a993e61de53b8c_1517702866512.png" alt="" class="image-6"><p class="cblack">DJ Tarazona<span class="test-position">Director of Engineering</span></p></div><a href="/customers/saturn" class="story-link">Read the full story →</a></div><div class="testimonials-content-right"><img width="500" loading="lazy" alt="" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6684938496aa64b25c6abe5d_saturn.png" class="image-5"></div></div></div><div data-w-tab="Tab 5" class="w-tab-pane" id="w-tabs-1-data-w-pane-4" role="tabpanel" aria-labelledby="w-tabs-1-data-w-tab-4"><div class="testimonials-content"><div class="testimonials-content-left"><p class="fs18 mb10 cblack">“Instabug makes it easier for the tech teams to find the source of the problem thanks to the many details included in the reported tickets. By grouping tickets together, you can discover trends.”</p><div class="test-author"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/646a93759edfdb7aedcdcb45_63c96ece46993dd47ed142a9_1673990293677-p-500.jpeg" alt="" class="image-6"><p class="cblack"><strong>Kim Van Wynendaele</strong></p></div><a href="/customers/rbfa" class="story-link">Read the full story →</a></div><div class="testimonials-content-right"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 47vw, (max-width: 1279px) 48vw, 602px" srcset="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6452555a4e7c9fc44a7ae310_63c96b68d95e467626f7bdb2_instabugxrbfa-p-800-p-500.jpeg 500w, https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6452555a4e7c9fc44a7ae310_63c96b68d95e467626f7bdb2_instabugxrbfa-p-800.jpeg 800w" alt="RBFA image" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6452555a4e7c9fc44a7ae310_63c96b68d95e467626f7bdb2_instabugxrbfa-p-800.jpeg" loading="lazy" class="image-5"></div></div></div><div data-w-tab="Tab 6" class="w-tab-pane" id="w-tabs-1-data-w-pane-5" role="tabpanel" aria-labelledby="w-node-d969aefb-713b-b2f9-69de-2e0152304357-650059f8"><div class="testimonials-content"><div class="testimonials-content-left"><p class="fs18 mb10 cblack">“I highly recommend Instabug to anyone on the product development journey. Listening to feedback from users, making sure you’re building an app that works and that is high quality, is critical and crucial to finding product-market fit. Instabug played a really big role in doing that for us… For mobile, it’s world-class.”</p><div class="test-author"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627538fc0487d38414a71d17_Alex-cropped.png" alt="" class="image-6"><p class="cblack">Alex Ma<span class="test-position">CEO and Co-Founder</span></p></div><a href="/customers/poparazzi" class="story-link">Read the full story →</a></div><div class="testimonials-content-right"><img loading="lazy" src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6684939596aa64b25c6ac829_pop.png" alt="" class="image-5"></div></div></div></div></div><div class="mt60 ctas-center"><a href="/customers" class="default-button large darkbg">View More&nbsp;Customers</a><a href="/reviews" class="default-button large darkbg">Read The Reviews</a></div></div></div><div class="start-trial"><div class="container"><div><h2 class="cwhite tcenter">Start Your 14-Day Full Access Trial</h2><p class="trial-paragraph">Install the SDK in less than a minute and start tracking your app's performance</p><div class="ctas-center mt30"><a href="https://dashboard.instabug.com/signup" target="_blank" class="default-button blue big">Get Started</a><a href="/request-demo" target="_blank" class="default-button big transparent-white open-calendly">Request a Demo</a></div></div></div></div><div class="footer"><div class="big-container footer"><div class="footer-column"><div class="footer-column-pack"><h3 class="footer-pack-title">PRODUCT</h3><a href="/product" class="footer-link">Overview</a><a href="/product/bug-reporting" class="footer-link">Bug Reporting</a><a href="/product/crash-reporting" class="footer-link">Crash Reporting</a><a href="/product/app-performance-monitoring" class="footer-link">App Performance</a><a href="/product/session-replay" class="footer-link">Session Replay</a><a href="/product/release-management" class="footer-link">Release <br>Management</a><a href="/product/in-app-surveys" class="footer-link">In-App Surveys</a><a href="/product/app-ratings-reviews" class="footer-link">App Ratings <br>and Reviews</a><a href="/product/flows" class="footer-link">Flows</a><a href="/product/feature-flags" class="footer-link">Feature Flags</a></div></div><div class="footer-column"><div class="footer-column-pack"><h3 class="footer-pack-title">Integrations</h3><a href="/integrations/jira" class="footer-link">Jira</a><a href="/integrations/slack" class="footer-link">Slack</a><a href="/integrations/trello" class="footer-link">Trello</a><a href="/integrations/github" class="footer-link">GitHub</a><a href="/integrations/zendesk" class="footer-link">Zendesk</a><a href="/integrations" class="footer-link">View All</a></div></div><div class="footer-column"><div class="footer-column-pack"><h3 class="footer-pack-title">Platforms</h3><a href="/platforms/ios" class="footer-link">iOS</a><a href="/platforms/android" class="footer-link">Android</a><a href="/platforms/react-native" class="footer-link">React Native</a><a href="/platforms/flutter" class="footer-link">Flutter</a></div></div><div class="footer-column"><div class="footer-column-pack"><h3 class="footer-pack-title">Comparisons</h3><a href="/appcenter-alternative" class="footer-link">App Center</a><a href="/bugsnag-alternative" class="footer-link">Bugsnag</a><a href="/crashlytics-alternative" class="footer-link">Crashlytics</a><a href="/firebase-alternative" class="footer-link">Firebase</a><a href="/newrelic-alternative" class="footer-link">New Relic</a><a href="/sentry-alternative" class="footer-link">Sentry</a><a href="/testfairy-alternative" class="footer-link">TestFairy</a><a href="/embrace-alternative" class="footer-link">Embrace</a><a href="/datadog-alternative" class="footer-link">Datadog</a></div></div><div class="footer-column"><div class="footer-column-pack"><h3 class="footer-pack-title">RESOURCES</h3><a href="/customers" class="footer-link">Customers</a><a href="/reviews" class="footer-link">Reviews</a><a href="/blog" class="footer-link">Blog</a><a href="/newsroom" class="footer-link">Newsroom</a><a href="https://docs.instabug.com/" target="_blank" class="footer-link">Docs</a><a href="https://help.instabug.com/en/?utm_source=website-hc&amp;utm_medium=hc&amp;utm_campaign=footer-hc&amp;utm_content=v1" target="_blank" class="footer-link">Help Center</a><a href="/faq" class="footer-link">FAQs</a><a href="/ux-research-program" class="footer-link">Research Program<br></a><a href="/sentiment-analysis" class="footer-link">Sentiment Analysis<br></a><a href="/mobile-app-stability-outlook-2023" class="footer-link">Benchmark Report 2023<br></a><a href="/mobile-app-stability-outlook-2024" class="footer-link">Benchmark Report 2024<br></a></div></div><div class="footer-column"><div class="footer-column-pack"><h3 class="footer-pack-title">COMPANY</h3><a href="/careers" class="footer-link">Careers</a><a href="/life-at-instabug" class="footer-link">Culture</a></div></div></div><div class="big-container"><div class="footer-bottom__wrap"><div class="footer-logos__line"><a href="/" aria-current="page" class="w-inline-block w--current"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627d2a253b5874d74cc35bf1_LogoOnWhite.svg" loading="lazy" alt="Instabug Logo" class="logofooter"></a><div class="footer-social__wrap"><a href="https://www.facebook.com/Instabug/" target="_blank" class="social-footer w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/628278eb3da21fe2a7749f4f_facevook%20logo%20new.svg" loading="lazy" alt="Facebook icon" class="social-footer__img"></a><a href="https://twitter.com/instabug" target="_blank" class="social-footer w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/6568b85f7b3ddff20b549194_x-logo.svg" loading="lazy" alt="" class="social-footer__img"></a><a href="https://www.instagram.com/lifeatinstabug/" target="_blank" class="social-footer w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627288df5d1e3bd2c91bee6d_instagram.svg" loading="lazy" alt="Instagram icon" class="social-footer__img"></a><a href="mailto:contactus@instabug.com" class="social-footer w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627288de1392925b046ae58d_email.svg" loading="lazy" alt="Email icon" class="social-footer__img"></a><a href="https://github.com/instabug" target="_blank" class="social-footer w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627288de172a4a591a8b1fcd_github.svg" loading="lazy" alt="Github icon" class="social-footer__img"></a><a href="https://stackoverflow.com/questions/tagged/instabug" target="_blank" class="social-footer w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627288dfb896b630d7e11747_stackOverflow.svg" loading="lazy" alt="Stack Overflow icon" class="social-footer__img"></a><a href="https://www.linkedin.com/company/instabug/" target="_blank" class="social-footer last w-inline-block"><img src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/627288df393e4e4284e24831_linkedIn.svg" loading="lazy" alt="Linkedin icon" class="social-footer__img"></a></div></div><div class="footer-bootm__line"><p class="copyright"></p><p class="copyright"><a href="/terms" class="footer-link terms">Terms and Conditions</a> / <a href="/website-terms-of-use" class="footer-link terms">Website Terms of Use</a> / <a href="/privacy" class="footer-link terms">Privacy Policy</a> © 2024 Instabug, Inc.</p></div></div></div></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=62706e0299180d3045eb2cab" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/62706e0299180d3045eb2cab/js/instabug.9701862837f97749a9d2c7ee6528e4af.js" type="text/javascript"></script>
+<!-- Consent Manager -->
+<script>
+  window.consentManagerConfig = function(exports) {
+    var React = exports.React
+    var inEU = exports.inEU
+    
+
+    var bannerContent = React.createElement(
+      'span',
+      null,
+      'We use cookies to collect data to improve your experience on our site. By using our website, you՚re agreeing to the collection of data as described in our',
+      ' ',
+      React.createElement(
+        'a',
+        { href: '/privacy/', target: '_blank' },
+        'Privacy Policy'
+      ),
+      '.'
+    )
+    var bannerSubContent = 'You can change your preferences at any time.'
+    var preferencesDialogTitle = 'Website Data Collection Preferences'
+    var preferencesDialogContent =
+      'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
+    var cancelDialogTitle = 'Are you sure you want to cancel?'
+    var cancelDialogContent =
+      'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
+    
+
+
+    
+ var customCategories = {
+    'Analytics': {
+        integrations: [
+            'Google Analytics', 'Heap','Google Tag Manager','Actions Google Analytic 4'
+        ],
+        purpose: 'Cookies that help us and our partners understand how our websites are engaged with, such as usage statistics or to reconstruct viewed UI elements, in order to improve and customize our services.',
+    },
+    'General marketing and advertising': {
+    integrations: ['Marketo V2', 'Google Adwords (Classic)','AdWords','MailChimp'
+        ],
+        purpose: 'Cookies that are used by Instabug and our partners to better understand the types of individuals who are interested in our products and services and how we can promote those services based on that information.',
+    },
+    'Performance and functionality': {
+        integrations: [
+            'Intercom','Vitally','All'
+        ],
+        purpose: 'Cookies which help us remember your preferences and settings in order to improve your experience when interacting with our sites and services.',
+    },
+    'Social media advertising': {
+        integrations: [
+            'Facebook Pixel', 'LinkedIn Insight Tag', 'Twitter Ads'
+            
+        ],
+        purpose: 'Cookies that are used by Instabug and our partners to understand the effectiveness of our advertisements on social media services. These cookies also help them understand your advertising preferences so they can more effectively show you our advertisements which are relevant to your interests.',
+    },
+};
+    
+
+    
+    return {
+      container: '#target-container',
+      writeKey: 'qxYy6vsb3KcnmIk4RYI3l5CY4zj5raOY',
+      shouldRequireConsent: inEU,
+      bannerContent: bannerContent,
+      bannerBackgroundColor: '#246aff',
+      customCategories: customCategories,
+      bannerSubContent: bannerSubContent,
+      preferencesDialogTitle: preferencesDialogTitle,
+      preferencesDialogContent: preferencesDialogContent,
+      cancelDialogTitle: cancelDialogTitle,
+      cancelDialogContent: cancelDialogContent,
+      bannerActionsBlock: true,
+      bannerHideCloseButton: true
+    }
+  }
+  
+  
+</script>
+<!-- End Consent Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKW5WCK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script>
+function loadStyle (src) {
+    return new Promise((resolve, reject) => {
+      let s = document.createElement('link');
+      s.rel = 'stylesheet';
+      s.href = src;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.head.append(s);
+    });
+};
+
+
+function loadJS (src) {
+    return new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onload = resolve;
+      script.onerror = reject;
+      script.src = src;
+      document.head.append(script);
+    });
+};
+let sentimentSlider = null;
+var slidersDictionary = {
+  'testimonials-swiper': {
+    condition: !!document.querySelector('.testimonials-swiper') && window.innerWidth > 991,
+    callback: () => {
+      var swiper = new Swiper(".testimonials-swiper", {
+        direction: "vertical",
+        loopFillGroupWithBlank: true,
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 8000,
+          disableOnInteraction: true,
+        },
+      });
+    },
+  },
+  'logos-grid-swiper': {
+    condition: !!document.querySelector('.logos-grid-swiper'),
+    callback: () => {
+      var logosswiper = new Swiper(".logos-grid-swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 8000,
+          disableOnInteraction: true,
+        },
+      });
+    }
+  },
+  'careers-images-swiper': {
+    condition: !!document.querySelector('.careers-images-swiper'),
+    callback: () => {
+      var careersSwiper = new Swiper(".careers-images-swiper", {
+        spaceBetween: 24,
+        centeredSlides: true,
+        loop:true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 24,
+          }
+        },
+
+      });
+    }
+  },
+  'testimonial-swiper-single': {
+    condition: !!document.querySelector('.testimonial-swiper-single'),
+    callback: () => {
+      var testswipersingle = new Swiper(".testimonial-swiper-single", {
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1.2,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 1,
+          }
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    },
+  },
+  'sentiment-loading-slider': {
+    condition: !!document.querySelector('.sentiment-loading-slider'),
+    callback: () => {
+       sentimentSlider = new Swiper(".sentiment-loading-slider", {
+        slidesPerView: 1,
+		autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        
+      });
+    }
+  }
+}
+
+var sliderKeys = [];
+
+Object.keys(slidersDictionary).forEach(key => {
+	if (slidersDictionary[key].condition)
+    	sliderKeys.push(key);
+})
+
+if (sliderKeys.length) {
+  Promise.all([
+      loadStyle('https://unpkg.com/swiper@10/swiper-bundle.min.css'),
+      loadJS('https://unpkg.com/swiper@10/swiper-bundle.min.js'),
+  ]).then(() => {
+      sliderKeys.forEach(key => {
+        slidersDictionary[key].callback();
+      })
+
+     if(sentimentSlider) {
+      sentimentSlider.autoplay.stop()
+      }
+  })
+}
+  
+</script>
+
+
+<script>
+
+//code tabs
+$(document).on('click','.codes-get-started  .code-item',function(){
+  let ind = $(this).index();
+  $(this).parent().find(".code-item").removeClass("active");
+  $(this).addClass("active");
+  
+  $(this).closest(".codes-get-started").find(".code-tab").hide();
+  $(this).closest(".codes-get-started").find(".code-tab").eq(ind).show();
+});
+
+  
+</script>
+
+
+
+
+<script>
+// something to do with safari browser
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+
+  
+$.fn.isInViewport = function() {
+  	
+  	let h = $(window).height();
+    let x = $(window).height() / 2.5;
+  
+  	if ( $(window).width() < 1441) {
+    	 h = h * 1.4;
+      	 x = x * 0.83;
+    }
+  	
+    
+    var elementTop = $(this).offset().top + x;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + h;
+
+    return elementTop < viewportBottom;
+};
+
+
+
+</script>
+
+
+<script>
+
+$( document ).ready(function() {
+   $("#w-dropdown-toggle-0").mouseup();   
+  $("#w-dropdown-toggle-0").trigger("tap");
+
+  /* Scrolling for Tables */
+  $('.v-table').each(function()
+                     {
+    if($(this).parents('.v-table-scroll').length)
+    {
+      return;
+    }
+
+    $(this).wrap('<div class="v-table-scroll"></div>');
+    $(this).parents('.v-table-scroll').prepend(`
+      <div>
+        <img class="v-table-left" src="https://assets-global.website-files.com/62706e0299180d3045eb2cab/62f645a9cea3730b3705eccf_arrow-left.svg" alt=” ” loading="lazy">
+        Scroll for more
+        <img class="v-table-right" src="https://assets-global.website-files.com/62706e0299180d3045eb2cab/62f645a9cea3730b3705eccf_arrow-left.svg" alt=” ” loading="lazy">
+      </div>
+    `);
+  });
+  
+});
+
+
+</script>
+
+<script>
+$( function() {
+    function changeTab() {
+        var tabName = window.location.hash.substr(1);
+        var tabEl = $('[data-w-tab="' + tabName + '"]');
+        if (tabEl.length) {
+            tabEl.click();
+        }
+    }
+
+    //when page is first loaded
+    if(window.location.hash){
+        changeTab();
+    }
+
+    //internal page linking
+    $(window).on('hashchange', changeTab);
+
+    $('[data-w-tab]').on('click', function(){
+        history.pushState({}, '', '#'+$(this).data("w-tab"));
+    });
+});
+</script>
+
+
+<script>	
+document.addEventListener('mousemove', addIntegrations, false)
+document.addEventListener('touchmove', addIntegrations, false)
+
+function _AddIntegration(IntegrationUrl, allowDefer) {
+  var script = document.createElement('script')
+  script.setAttribute('src', IntegrationUrl)
+  script.defer = allowDefer
+  document.body.appendChild(script)
+
+  return script
+}
+
+function addCookieConsentToFooter() {
+    const privacyElement = document.querySelector('a[href="/privacy"].footer-link.terms');
+
+if (privacyElement) {
+  // Create a new element for "Cookies Manager"
+  const cookiesManagerElement = document.createElement('a');
+  cookiesManagerElement.href = '#cookies-preferences';
+  cookiesManagerElement.textContent = ' / Cookie Preferences';
+  cookiesManagerElement.classList.add('footer-link', 'terms');
+  cookiesManagerElement.onclick = function() {
+   consentManager.openConsentManager();
+  };
+
+  // Insert the "Cookies Manager" element after the privacy element
+  privacyElement.insertAdjacentElement('afterend', cookiesManagerElement);
+}}
+
+function addIntegrations() {
+  document.removeEventListener('mousemove', addIntegrations)
+  document.removeEventListener('touchmove', addIntegrations)
+  _addConsentManager()
+   _addSegmentIntegration()
+  _addGTM()
+  _AddIntegration('https://assets.calendly.com/assets/external/widget.js', true)
+  addCookieConsentToFooter()
+  // Start the interval and store the interval ID
+  clearbitIntervalId = setInterval(clearbitDataCaptured, clearbitIntervalDuration);
+}
+  
+function _addSegmentIntegration() {
+  !(function () {
+    var analytics = (window.analytics = window.analytics || [])
+    if (!analytics.initialize) {
+      if (analytics.invoked)
+        window.console &&
+          console.error &&
+          console.error('Segment snippet included twice.')
+      else {
+        analytics.invoked = !0
+        analytics.methods = [
+          'trackSubmit',
+          'trackClick',
+          'trackLink',
+          'trackForm',
+          'pageview',
+          'identify',
+          'reset',
+          'group',
+          'track',
+          'ready',
+          'alias',
+          'debug',
+          'page',
+          'once',
+          'off',
+          'on',
+          'addSourceMiddleware',
+          'addIntegrationMiddleware',
+          'setAnonymousId',
+          'addDestinationMiddleware',
+        ]
+        analytics.factory = function (e) {
+          return function () {
+            var t = Array.prototype.slice.call(arguments)
+            t.unshift(e)
+            analytics.push(t)
+            return analytics
+          }
+        }
+        for (var e = 0; e < analytics.methods.length; e++) {
+          var key = analytics.methods[e]
+          analytics[key] = analytics.factory(key)
+        }
+        analytics.load = function (key, e) {
+          var t = document.createElement('script')
+          t.type = 'text/javascript'
+          t.async = !0
+          t.src =
+            'https://cdn.segment.com/analytics.js/v1/' +
+            key +
+            '/analytics.min.js'
+          var n = document.getElementsByTagName('script')[0]
+          n.parentNode.insertBefore(t, n)
+          analytics._loadOptions = e
+        }
+        analytics._writeKey = 'qxYy6vsb3KcnmIk4RYI3l5CY4zj5raOY'
+        analytics.SNIPPET_VERSION = '4.15.3'
+        analytics.load('qxYy6vsb3KcnmIk4RYI3l5CY4zj5raOY')
+        analytics.page()
+      }
+    }
+  })()
+}
+
+
+function _addGTM() {
+  !(function (w, d, s, l, i) {
+    w[l] = w[l] || []
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : ''
+    j.async = true
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script', 'dataLayer', 'GTM-TKW5WCK')
+}
+  
+  
+function _addConsentManager() {
+  !(function (w, d, s) {
+    w = w|| []
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s)
+    j.async = true
+    j.src = 'https://unpkg.com/@segment/consent-manager@5.3.0/standalone/consent-manager.js'
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script')
+}  
+</script>
+
+ 
+
+
+<div id="target-container" style="
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;"></div>
+<style>
+  .css-ueuzok {
+    z-index:1000000;
+  }
+  
+</style>
+
+<!-- G2 Pixel Script -->
+<script>
+(function (c, p, d, u, id, i) {
+  id = ''; // Optional Custom ID for user in your system
+  u = 'https://tracking.g2crowd.com/attribution_tracking/conversions/' + c + '.js?p=' + encodeURI(p) + '&e=' + id;
+  i = document.createElement('script');
+  i.type = 'application/javascript';
+  i.async = true;
+  i.src = u;
+  d.getElementsByTagName('head')[0].appendChild(i);
+}("1022", document.location.href, document));
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async="" defer="" src="//js.hs-scripts.com/46623086.js"></script>
+<!-- End of HubSpot Embed Code --><script id="" text="" charset="" type="text/javascript" src="https://dashboard.instabug.com/enhance-sandbox.js"></script><script id="" text="" charset="" type="text/javascript" src="https://tag.clearbitscripts.com/v1/pk_9790c22ab5419f9cad4f18a4d53e0618/tags.js"></script><script type="text/javascript" id="" charset="">window.intercomTracking=function(){window.Intercom("onShow",function(){dataLayer.push({event:"intercom_widget_opened"})})};window.intercomTracking();</script>
+<script type="text/javascript" id="" charset="">window.intercomMessageTracking=function(){window.Intercom("onMessageSent",function(){dataLayer.push({event:"intercom_message_sent"})})};window.intercomMessageTracking();</script><script type="text/javascript" id="" charset="">!function(a){window.ko||(window.ko=[],"identify track removeListeners on off qualify ready".split(" ").forEach(function(b){ko[b]=function(){var c=[].slice.call(arguments);return c.unshift(b),ko.push(c),ko}}),a=document.createElement("script"),a.async=!0,a.setAttribute("src","https://cdn.getkoala.com/v1/pk_735b5ccca6d729bb03599ad13aac4b96db03/sdk.js"),(document.body||document.head).appendChild(a))}();</script><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><script async="" src="https://cdn.getkoala.com/v1/pk_735b5ccca6d729bb03599ad13aac4b96db03/sdk.js"></script></body></html>

@@ -1,0 +1,1700 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title>Samsung Galaxy Store Seller Portal</title>
+<script>
+	window.onpageshow = function(event) {
+	    if (event.persisted || window.performance && 
+	            window.performance.navigation.type == 2) 
+	        {
+	            location.reload();
+	        }
+	};
+</script>
+<script type="text/javascript">
+		var Global_DepthPathImage = "";
+		var _thisPage_ = "/WEB-INF/jsp/gate/portalGate.jsp";
+		var _jspPage_ = _thisPage_;
+		var GLOBAL_SSL_URL = "https://seller.samsungapps.com";
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+
+
+
+	
+	<meta name="description" content="About Samsung Galaxy Store Seller Portal, Seller Sign-up, Submission and Sale of Apps, Guidelines, Android Apps, Submission of Galaxy Watch Apps">
+	<meta name="keywords" content="samsung, app, application, seller office, app store, galaxy store, app submit, app development, Galaxy Watch, android, theme, seller, samsung electronics, galaxy">
+
+
+
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/angularjs/1.5.8/angular-resource.min.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/angularjs/1.5.8/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/ng-dialog/0.6.4/ngDialog.min.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/en_US/js/common.js?ver=1737076562000"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/en_US/js/seller.js?ver=1737076562000"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/jquery/jquery.cycle.all.js"></script>
+	
+	<link href="https://img.samsungapps.com/seller/en_US/css/default2.css?ver=1737076562000" rel="stylesheet" type="text/css">
+	<link href="https://img.samsungapps.com/seller/css/gate.css?ver=1737076562000" rel="stylesheet" type="text/css">
+	<link href="https://img.samsungapps.com/seller/css/layer.css?ver=1737076562000" rel="stylesheet" type="text/css">
+	<link href="https://img.samsungapps.com/seller/css/ng-dialog/ngDialog.min.css" rel="stylesheet" type="text/css">
+	<link href="https://img.samsungapps.com/seller/css/ng-dialog/ngDialog-theme-default.min.css" rel="stylesheet" type="text/css">
+	<link href="https://img.samsungapps.com/seller/css/ng-dialog/ngDialog-theme-plain.min.css" rel="stylesheet" type="text/css">
+	<link href="https://img.samsungapps.com/seller/css/ng-dialog/ngDialog-theme-raw.css" rel="stylesheet" type="text/css">
+	<link href="https://img.samsungapps.com/seller/en_US/css/main_before.css?ver=1737076562000" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript">
+		var $j = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/jquery/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/uislide.js"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/js/gate/common_gate.js?ver=1737076562000"></script>
+</head>
+<body>
+<div ng-app="sellerGate" ng-controller="MainController" class="ng-scope">
+	<!-- wrap 시작 -->
+	<div id="wrap">
+
+		<!-- [GAS-12629] 2019-06-17 수정 -->
+        <!-- portal header 시작 -->
+        <div id="gate_top">
+            <div class="gate_top_con">
+				<a ng-href="https://seller.samsungapps.com" href="https://seller.samsungapps.com"><img src="https://img.samsungapps.com/seller/en_US/images/common/gate_logo.png?2" alt="Samsung GalaxyApps Seller Portal"></a>
+				<!-- a href="./UI-AST-STM-G0000.jsp" title="SAMSUNG GalaxyApps Seller Portal" style="padding-left:20px;"><img src="http://iseller.samsungapps.com/images/gate/gate_logo_ch.png" alt="SAMSUNG GalaxyApps Seller Portal" /></a --><!--[GAS-5602] 2016-09-06 추가 -->
+
+				<div class="header_sing_btn ng-scope" ng-controller="loginController">
+					<form id="loginForm" name="loginForm" class="ng-pristine ng-valid">
+						<input type="hidden" name="act" value="login">
+						<input type="hidden" name="returnURL" ng-value="initialData.returnURL" value="/main/sellerMain.as">
+						<input type="hidden" name="ssl" ng-value="initialData.ssl" value="">
+						<input type="hidden" name="EAcode" id="EAcode" ng-value="initialData.EAcode" value="">
+						<input type="hidden" name="loginAuthKey" id="loginAuthKey" ng-value="initialData.loginAuthKey" value="">
+						<input type="hidden" name="loginEmailID" id="loginEmailID" ng-value="initialData.loginEmailID" value="">
+						<input type="hidden" name="loginPassword" id="loginPassword" ng-value="initialData.loginPassword" value="">
+					</form>
+					<a href="javascript:void(0)" class="sing_btn" ng-click="doLoginBySA();">Sign In</a>
+					<a href="javascript:void(0)" class="sing_btn" ng-click="signUpWithSamsungAccount();">Sign Up Now</a>
+				</div>
+				<div class="selectBoxWrap">
+					<a href="javascript:void(0);" class="ng-binding">ENGLISH</a>
+					<ul style="display:none;">
+						<!-- ngRepeat: localeSet in localeSetList | filter: exceptCurrentLocaleFilter --><li ng-repeat="localeSet in localeSetList | filter: exceptCurrentLocaleFilter" ng-click="changeLocale(localeSet.language);" class="ng-binding ng-scope">中文</li><!-- end ngRepeat: localeSet in localeSetList | filter: exceptCurrentLocaleFilter --><li ng-repeat="localeSet in localeSetList | filter: exceptCurrentLocaleFilter" ng-click="changeLocale(localeSet.language);" class="ng-binding ng-scope">한국어(한국)</li><!-- end ngRepeat: localeSet in localeSetList | filter: exceptCurrentLocaleFilter -->
+					</ul>
+				</div>
+
+				<script type="text/javascript">
+                    $j(document).ready(function () {
+                        $j(".selectBoxWrap a").click(function () {
+                            if ($j(this).next('ul').css("display") == "none") {
+                                $j(".selectBoxWrap ul").hide();
+                                $j(".selectBoxWrap02 ul").hide();
+                                $j(this).next('ul').show();
+                            } else {
+                                $j(".selectBoxWrap ul").hide();
+                                $j(".selectBoxWrap02 ul").hide();
+                            }
+                        });
+                        /* [GAS-5602] 2016-09-08 추가 */
+                        $j(".selectBoxWrap ul li").click(function () {
+                            $j(".selectBoxWrap ul").hide();
+                        });
+                        /* // [GAS-5602] 2016-09-08 추가 */
+                        
+                        /*  [GAS-17034] V1.0 2021-01-14 추가 */
+                        $j(".cookie_layer_del").click(function() {
+							$j(".cookie_layer_pop").hide();
+						});
+						/*  [GAS-17034] V1.0 2021-01-14 추가 */
+                    });	
+                </script>
+            </div>
+        </div>
+        <!-- portal header 끝 -->
+
+        <!-- portal before cont 시작 -->
+        <div class="portal_before_cont">
+            <!-- intro banner 시작 -->
+            <div class="before_visual">
+                <ul class="slide_cont" style="width: 18870px; margin-left: -11322px;">
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000009259" target="_blank"><img src="https://img.samsungapps.com/display/2024/1030/0059/01_20241030005923377.png" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000008292" target="_blank"><img src="https://img.samsungapps.com/display/2023/1124/0512/01_20231124051239193.png" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000008372" target="_blank"><img src="https://img.samsungapps.com/display/2023/1215/0717/01_20231215071711600.png" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000008242" target="_blank"><img src="https://img.samsungapps.com/display/2023/1025/0053/01_20231025005351915.png" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000007772" target="_blank"><img src="https://img.samsungapps.com/display/2023/0822/0755/01_20230822075514832.png" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000007935" target="_blank"><img src="https://img.samsungapps.com/display/2023/0822/0754/01_20230822075407621.png" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://developer.samsung.com/galaxy-games" target="_blank"><img src="https://img.samsungapps.com/display/2020/0904/0051/01_20200904005104603.jpg" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://developer.samsung.com/galaxy-store/marketing-resources.html" target="_blank"><img src="https://img.samsungapps.com/display/2020/0528/0127/01_20200528012739541.jpg" alt=""></a></li>
+					
+						<li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000005055" target="_blank"><img src="https://img.samsungapps.com/display/2021/1217/0020/01_20211217002010757.jpg" alt=""></a></li>
+					
+                <li class="slide_item" style="width: 1887px;"><a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000009259" target="_blank"><img src="https://img.samsungapps.com/display/2024/1030/0059/01_20241030005923377.png" alt=""></a></li></ul>
+                <div class="slide_control">
+                    <div class="slide_pagination" style="width: 1280px;">
+                    <span class="btn_pagination"></span><span class="btn_pagination"></span><span class="btn_pagination"></span><span class="btn_pagination"></span><span class="btn_pagination"></span><span class="btn_pagination"></span><span class="btn_pagination now_item"></span><span class="btn_pagination"></span><span class="btn_pagination"></span></div>
+                    <button tyep="button" class="slide_prev">prev</button>
+                    <button tyep="button" class="slide_next">next</button>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                function visualW() {
+                    $j('.before_visual .slide_item').each(function(){
+                        $j(this).css('width', $j('.before_visual').width());
+                    });
+
+                    //$j('.before_visual .slide_cont').css('width', $j('.before_visual .slide_item').width() * $j('.before_visual .slide_item').length);
+                }
+                $j(document).ready(function () {
+                    visualW();
+					$j('.before_visual').uiSlideShow({ slides: '.slide_cont', slide: '.slide_item', controlWrap: '.slide_control', prev: '.slide_prev', next: '.slide_next', pagination: true, paginationClass: '.slide_pagination', paginationItem: 'btn_pagination', paginationNow: 'now_item', interval: 3000, rnds: Math.floor(Math.random() * (9)) }); //[GAS-12630] 2019-06-19 추가
+                });
+                $j(window).resize(function () {
+                    visualW();
+                });
+            </script>
+            <!-- intro banner 끝 -->
+            <!-- 공지사항 시작 -->
+            <div class="before_notice_cont">
+                <strong class="before_notice_title">Notices</strong>
+                <!-- ngRepeat: noticeItem in noticeList track by $index --><div class="notice_box ng-scope" ng-repeat="noticeItem in noticeList track by $index">
+					<a ng-href="/notice/getNoticeDetail.as?csNoticeID=0000009457" href="/notice/getNoticeDetail.as?csNoticeID=0000009457">
+						<!-- ngIf: noticeItem.isNew === true -->
+						<strong class="notice_box_title ng-binding" title="Application Review might be delayed due to Lunar New Year´s Day">Application Review might be delayed due to Lunar New Year´s Day</strong>
+						<span class="notice_box_date ng-binding">2025-01-16</span>
+						<p class="notice_box_content ng-binding" title="Hello! This is the Galaxy Store Seller Portal team. Thank you for using Seller Portal and for your continued interest. We would like to inform you that app review might be delayed for several days during Lunar New Year`s holiday. (Please note that approval of new sellers may also be delayed.) We greatly appreciate your understanding and promise you an even better app review service. ■ Period - 2025. 01. 27 (Mon) ~ 2025. 01. 31 (Fri) Thank you, Galaxy Store Seller Portal Team">
+							Hello! This is the Galaxy Store Seller Portal team. Thank you for using Seller Portal and for your continued interest. We would like to inform you that app review might be delayed for several days during Lunar New Year`s holiday. (Please note that approval of new sellers may also be delayed.) We greatly appreciate your understanding and promise you an even better app review service. ■ Period - 2025. 01. 27 (Mon) ~ 2025. 01. 31 (Fri) Thank you, Galaxy Store Seller Portal Team
+						</p>
+						<span class="notice_hover_text">View More</span>
+					</a>
+                </div><!-- end ngRepeat: noticeItem in noticeList track by $index --><div class="notice_box ng-scope" ng-repeat="noticeItem in noticeList track by $index">
+					<a ng-href="/notice/getNoticeDetail.as?csNoticeID=0000009456" href="/notice/getNoticeDetail.as?csNoticeID=0000009456">
+						<!-- ngIf: noticeItem.isNew === true -->
+						<strong class="notice_box_title ng-binding" title="Notice on Reduced Support for Wear OS Content for Users with Non-Samsung Devices in China">Notice on Reduced Support for Wear OS Content for Users with Non-Samsung Devices in China</strong>
+						<span class="notice_box_date ng-binding">2025-01-15</span>
+						<p class="notice_box_content ng-binding" title="Hello! This is the Galaxy Store Seller Portal team. Thank you for using Seller Portal and for your continued interest. Until now, for users in China, even when using a third-party smartphone and connected to a Galaxy Watch of Wear OS (including Watch4 and later models), users could access the Galaxy Store from their smartphones to download watch content. However, due to changes in the Galaxy Store's operating policy, we will be reducing services for third-party phones. The service change will proceed according to the procedure below: Finally, as of December 2025, downloading watch content through the Galaxy Store on third-party phones will no longer be possible. Even after that date, however, free contents can still be downloaded newly or existing contents can be re-downloaded by running the Galaxy Store installed inside the watch. ■ Schedules Schedule Contents March 31st, 2025 New downloads of paid content via third-party phones will cease. June 30th, 2025 New downloads of free content via third-party phones will stop. December 31st, 2025 Redownloads of previously purchased content via third-party phones will end. ■ Frequently Asked Questions (FAQs) Q1 If a user who purchased paid content requests a refund due to the discontinuation of sales, should a refund be provided? A1 Under the Galaxy Store Terms of Use, we have no obligation to provide refunds due to service interruption. Q2 How long can users who purchase paid content use that content? A1 Purchased content can continue to be used because it can be re-downloaded through the Galaxy Store inside the watch. If you have any questions, please visit Seller Portal > Help > Contact us for inquiries. Thank you, Galaxy Store Seller Portal Team">
+							Hello! This is the Galaxy Store Seller Portal team. Thank you for using Seller Portal and for your continued interest. Until now, for users in China, even when using a third-party smartphone and connected to a Galaxy Watch of Wear OS (including Watch4 and later models), users could access the Galaxy Store from their smartphones to download watch content. However, due to changes in the Galaxy Store's operating policy, we will be reducing services for third-party phones. The service change will proceed according to the procedure below: Finally, as of December 2025, downloading watch content through the Galaxy Store on third-party phones will no longer be possible. Even after that date, however, free contents can still be downloaded newly or existing contents can be re-downloaded by running the Galaxy Store installed inside the watch. ■ Schedules Schedule Contents March 31st, 2025 New downloads of paid content via third-party phones will cease. June 30th, 2025 New downloads of free content via third-party phones will stop. December 31st, 2025 Redownloads of previously purchased content via third-party phones will end. ■ Frequently Asked Questions (FAQs) Q1 If a user who purchased paid content requests a refund due to the discontinuation of sales, should a refund be provided? A1 Under the Galaxy Store Terms of Use, we have no obligation to provide refunds due to service interruption. Q2 How long can users who purchase paid content use that content? A1 Purchased content can continue to be used because it can be re-downloaded through the Galaxy Store inside the watch. If you have any questions, please visit Seller Portal &gt; Help &gt; Contact us for inquiries. Thank you, Galaxy Store Seller Portal Team
+						</p>
+						<span class="notice_hover_text">View More</span>
+					</a>
+                </div><!-- end ngRepeat: noticeItem in noticeList track by $index --><div class="notice_box ng-scope" ng-repeat="noticeItem in noticeList track by $index">
+					<a ng-href="/notice/getNoticeDetail.as?csNoticeID=0000009437" href="/notice/getNoticeDetail.as?csNoticeID=0000009437">
+						<!-- ngIf: noticeItem.isNew === true -->
+						<strong class="notice_box_title ng-binding" title="GSS User Acquisition Metrics Adjustment for 2024">GSS User Acquisition Metrics Adjustment for 2024</strong>
+						<span class="notice_box_date ng-binding">2025-01-10</span>
+						<p class="notice_box_content ng-binding" title="Hello, this is the Galaxy Store Seller Portal team. Thank you for using Seller Portal and for your continued interest. During the first quarter of 2025, we will be recovering missing user acquisition statistics in the Galaxy Store Statistics (GSS) system. The statistics in the user acquisition menu for 2024 may change while the data is being restored. ■ Target Menu - GSS > User Acquisition > Acquisition Reports > Channel, Source, Keywords ■ Date - January 13, 2025 ~ March 28, 2025 ■ Data Recovery Process - Execute sequential data recovery from most recent to oldest (December, 2024 → November, 2024 → ... → January, 2024) ■ Frequently Asked Questions (FAQ) Q1. In the User Acquisition menu, what statistics are provided? A1-1. Channel: Provides detailed page visit and download metrics for content according to users' channels entering Galaxy Store A1-2. Source: Provides detailed page visit and download metrics for content according to the source when users enter Galaxy Store through external apps. A1-3. Keywords: Provides detailed page visit and download metrics based on search keywords used by Galaxy Store users. Q2. Why can't I see these statistics from the User Acquisition menu? A2-1. The User Acquisition menu is provided for apps that have app detail page visits and downloads A2-2. Apps sold in China cannot provide statistics for user acquisition due to Chinese government policies that prevent data acquisition. A2-3. A selection of partners may not be able to view this user acquisition tab due to the regional restriction of the partners. Q3. In the User Acquisition submenu, why do statistics on the Featuring page differ from those in other submenus? A3. The Featuring page provides statistics on exhibition performance based on each service's main display area, applying different statistical calculation ranges from other menus. If you have any questions, please select Seller Portal > Help > Contact us. Thank you. Galaxy Store Seller Portal Team">
+							Hello, this is the Galaxy Store Seller Portal team. Thank you for using Seller Portal and for your continued interest. During the first quarter of 2025, we will be recovering missing user acquisition statistics in the Galaxy Store Statistics (GSS) system. The statistics in the user acquisition menu for 2024 may change while the data is being restored. ■ Target Menu - GSS &gt; User Acquisition &gt; Acquisition Reports &gt; Channel, Source, Keywords ■ Date - January 13, 2025 ~ March 28, 2025 ■ Data Recovery Process - Execute sequential data recovery from most recent to oldest (December, 2024 → November, 2024 → ... → January, 2024) ■ Frequently Asked Questions (FAQ) Q1. In the User Acquisition menu, what statistics are provided? A1-1. Channel: Provides detailed page visit and download metrics for content according to users' channels entering Galaxy Store A1-2. Source: Provides detailed page visit and download metrics for content according to the source when users enter Galaxy Store through external apps. A1-3. Keywords: Provides detailed page visit and download metrics based on search keywords used by Galaxy Store users. Q2. Why can't I see these statistics from the User Acquisition menu? A2-1. The User Acquisition menu is provided for apps that have app detail page visits and downloads A2-2. Apps sold in China cannot provide statistics for user acquisition due to Chinese government policies that prevent data acquisition. A2-3. A selection of partners may not be able to view this user acquisition tab due to the regional restriction of the partners. Q3. In the User Acquisition submenu, why do statistics on the Featuring page differ from those in other submenus? A3. The Featuring page provides statistics on exhibition performance based on each service's main display area, applying different statistical calculation ranges from other menus. If you have any questions, please select Seller Portal &gt; Help &gt; Contact us. Thank you. Galaxy Store Seller Portal Team
+						</p>
+						<span class="notice_hover_text">View More</span>
+					</a>
+                </div><!-- end ngRepeat: noticeItem in noticeList track by $index -->
+                <a ng-href="/notice/getNoticeList.as" class="notice_more" href="/notice/getNoticeList.as">More</a>
+            </div>
+            <!-- 공지사항 끝 -->
+            <!-- small banner 시작 -->
+            <div class="before_small_bnr">
+                <ul class="small_bnr_cont" style="width: 2280px;">
+					
+						<li class="small_bnr_item" style="width: 1140px;">
+							<div class="small_bnr_left">
+								<a href="https://vimeo.com/sellerportal/v01" target="_blank"><img src="https://img.samsungapps.com/display/2022/0823/0358/02_20220823035805289.png" alt=""></a>
+							</div>
+							<div class="small_bnr_right">
+								<a href="https://developer.samsung.com/remotetestlab/" target="_blank"><img src="https://img.samsungapps.com/display/2019/0723/0006/02_20190723000653390.png" alt=""></a>
+							</div>
+						</li>
+					
+                <li class="small_bnr_item" style="width: 1140px;">
+							<div class="small_bnr_left">
+								<a href="https://vimeo.com/sellerportal/v01" target="_blank"><img src="https://img.samsungapps.com/display/2022/0823/0358/02_20220823035805289.png" alt=""></a>
+							</div>
+							<div class="small_bnr_right">
+								<a href="https://developer.samsung.com/remotetestlab/" target="_blank"><img src="https://img.samsungapps.com/display/2019/0723/0006/02_20190723000653390.png" alt=""></a>
+							</div>
+						</li></ul>
+                <div class="small_bnr_control">
+                    <div class="small_bnr_pagination" style="width: 1140px;">
+                    <span class="btn_pagination now_item"></span></div>
+                    <button type="button" class="small_bnr_prev">prev</button>
+                    <button type="button" class="small_bnr_next">next</button>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                function smallbnrW() {
+                    $j('.before_small_bnr .small_bnr_item').each(function(){
+                        $j(this).css('width', $j('.before_small_bnr').width());
+                    });
+
+                    //$j('.before_small_bnr .small_bnr_cont').css('width', $j('.before_small_bnr .small_bnr_item').width() * $j('.before_small_bnr .small_bnr_item').length);
+                }
+                $j(document).ready(function () {
+                    smallbnrW();
+					$j('.before_small_bnr').uiSlideShow({ slides: '.small_bnr_cont', slide: '.small_bnr_item', controlWrap: '.small_bnr_control', prev: '.small_bnr_prev', next: '.small_bnr_next', pagination: true, paginationClass: '.small_bnr_pagination', paginationItem: 'btn_pagination', paginationNow: 'now_item', interval: 3000 }); //[GAS-12630] 2019-06-19 추가
+                });
+                $j(window).resize(function () {
+                    smallbnrW();
+                });
+            </script>
+            <!-- small banner 끝 -->
+        </div>
+        <!-- portal before cont 끝 -->
+        <!-- floating buttin 시작 -->
+        <div class="page_floating">
+            <a href="#" class="page_top_btn"><img src="https://img.samsungapps.com/seller/en_US/images/common/btn/btn_page_top.png" alt="TOP"></a>
+            <a href="javascript:void();" class="guide_page_btn" onclick="openGuides(); return false;"><img src="https://img.samsungapps.com/seller/en_US/images/common/btn/btn_page_guide.png?1" alt="Guide"></a>
+        </div>
+        <script>
+            $j(window).ready(function(){
+                var topBtn = $j('.page_top_btn');
+
+                if ($j(window).scrollTop() > 0) {
+                    topBtn.css('display', 'block');
+                } else {
+                    topBtn.removeAttr('style');
+                }
+
+                topBtn.on('click', function (e) {
+                    e.preventDefault();
+
+                    $j(window).scrollTop(0);
+                });
+            });
+
+            $j(window).on('scroll', function () {
+                var topBtn = $j('.page_top_btn');
+
+                if ($j(window).scrollTop() > 0) {
+                    topBtn.css('display', 'block');
+                } else {
+                    topBtn.removeAttr('style');
+                }
+            });
+        </script>
+        <!-- floating buttin 끝 -->
+        <!-- //[GAS-12629] 2019-06-17 수정 -->
+        <!-- gate_foot 시작 -->
+        <div id="gate_foot">
+
+            <a href="http://www.samsung.com" target="_blank" class="gate_logo"><span class="invisible">samsung</span></a>
+
+            <div class="gate_footArea">
+                <ul class="gate_foot_link">
+					<li><a ng-href="/terms/termsAndConditions.as" href="/terms/termsAndConditions.as">Terms and Conditions</a></li>
+					<li><a ng-href="/terms/privacyPolicy.as" ng-class="initialData.locale === 'ko_KR' ? 'bold' : ''" href="/terms/privacyPolicy.as">Privacy Policy</a></li>
+                    
+                    <li><a ng-href="/terms/cookiePolicy.as" target="_balck" class="cookie_h5" href="/terms/cookiePolicy.as"><h5>Privacy Policy</h5></a></li><!-- [GAS-17034] V1.0 2021-01-14 추가 -->
+                    
+                    <li><a class="new_link" href="/guidepolicy.as#/en/" target="_blank">Seller Portal Policy</a></li>
+                    <li class="last"><a href="javascript:void();" class="new_link" onclick="openGuides(); return false;">Guides</a>
+                    </li><!-- [GAS-12304] 2019-05-31 추가 -->
+				</ul>
+				
+				<p class="copyR">
+					
+					
+					Copyright© 2009-2025 SAMSUNG All Rights Reserved.
+				</p>
+
+            </div>
+
+            <div class="foot_selbox">
+                <div class="combo-box">
+                    <a href="javascript:void(0)" class="combo-btn">Related Sites</a>
+                    <ul style="display:none;">
+                        <li><a href="http://apps.samsung.com/" target="_blank">Samsung Galaxy Store</a></li>
+                        <!-- [GAS-11628] V1.0 2019-02-12 수정 -->
+                        <li><a href="http://developer.samsung.com/" target="_blank">Samsung Developers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- gate_foot 끝 -->
+
+
+
+
+		<!-- [GAS-5602] 2016-07-21 수정 -->
+		<!-- [GAS-5602] 2016-07-25 수정 -->
+		<script type="text/ng-template" id="sellerTypeSelectionDialog">
+			<div id="confirm01" class="layerPopup" style="width:300px; left:40%; margin-top:142px; margin-left:-215px; display:block;">
+				<h4 class="lay-tit">Select Seller Type</h4><!-- [GAS-5739] 2016-07-28 팝업수정 -->
+				<div class="lay-cont">
+					<p>No record shows that you have a partnership with us. Please refer to the question mark next to each seller type and select a seller type again.</p>
+					<p style="margin-top:10px;">
+						<input type="radio" class="radio vmid" style="margin-right:5px;">Developer<a href="#" class="question" style="margin-left:5px; margin-right:10px;" ng-mouseover="showBubble1=true" ng-mouseleave="showBubble1=false" ng-init="showBubble1=false"><img src="/images/common/ico/icon_question.gif" alt="" style="position:relative; top:4px;"></a>
+						<input type="radio" class="radio vmid" style="margin-right:5px;">MENA<a href="#" class="question" style="margin-left:5px; margin-right:10px;" ng-mouseover="showBubble2=true" ng-mouseleave="showBubble2=false" ng-init="showBubble2=false"><img src="/images/common/ico/icon_question.gif" alt="" style="position:relative; top:4px;"></a>
+						<input type="radio" class="radio vmid" style="margin-right:5px;">China<a href="#" class="question" style="margin-left:5px; margin-right:10px;" ng-mouseover="showBubble4=true" ng-mouseleave="showBubble4=false" ng-init="showBubble4=false"><img src="/images/common/ico/icon_question.gif" alt="" style="position:relative; top:4px;"></a>
+					</p>
+					<p class="popBtnArea" style="margin-top:10px;">
+						<a href="#" class="btnGray" ng-click="closeThisDialog(true);"><span>Confirm</span></a>
+					</p>
+				</div>
+			</div>
+			<div id="bubbleDiv01" class="bubble wide bb-aL" style="width: 410px; z-index: 999; display: block; left: 40%; top: 280px; margin-left: -134px" ng-show="showBubble1">
+				<div class="b-cont">
+				Developer type Sellers can only register applications using Samsung SDK, but may sell the applications to all countries/regions.
+				</div>
+				<div class="b-end" style="background:url('/images/common/bg/bg_bb_small.gif') no-repeat 0 0;"></div>
+			</div>
+			<div id="bubbleDiv02" class="bubble wide bb-aL" style="width: 430px; z-index: 999; left: 40%; display: block; top: 280px; margin-left: -51px" ng-show="showBubble2">
+				<div class="b-cont">
+				MENA type Sellers can register applications which do not use Samsung SDK, but may sell the applications to MENA countries/regions only.<br><br>
+				MENA Countries/Regions : Afghanistan, Algeria, Bahrain, Egypt, Iran, Iraq, Israel, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Pakistan, Palestine, Qatar, Saudi Arabia, Syria, Tunisia, Türkiye, UAE, Yemen.
+				</div>
+				<div class="b-end" style="background:url('/images/common/bg/bg_bb_small.gif') no-repeat 0 0;"></div>
+			</div>
+			<div id="bubbleDiv04" class="bubble wide bb-aL" style="width: 430px; z-index: 999; left: 40%; display: block; top: 280px; margin-left: 29px" ng-show="showBubble4">
+				<div class="b-cont">
+					China Type Sellers can register applications which do not use Samsung SDK, but may sell the applications to China only.
+				</div>
+				<div class="b-end" style="background:url('/images/common/bg/bg_bb_small.gif') no-repeat 0 0;"></div>
+			</div>
+		</script>
+
+		<!-- //[GAS-5602] 2016-07-25 수정 -->
+		<!-- //[GAS-5602] 2016-07-21 수정 -->
+
+		<!-- [GAS-5602] 2016-07-21 추가 -->
+		<!-- [GAS-5602] 2016-07-25 수정 -->
+		<script type="text/ng-template" id="reactivateAccountDialog">
+			<div id="quie_Pop" class="layerPopup" style="width:460px; left:65%; top:32%; margin-left:-215px; display:block;">
+				<h4 class="lay-tit">Reactivate Account</h4>
+				<p class="popClose"><a href="#" ng-click="closeThisDialog(false);"><img src="/images/common/btn/btn_lay_close.gif" alt="close" /></a></p>
+				<div class="lay-cont">
+					<p>You have not logged in for more than 12 months using ***@***.***<br />and your account is now inactive. To reactivate the account, please enter the security code below.</p>
+						<dl class="insTbl" style="margin-top:20px">
+							<dt style="float:left; width:95px; font-weight:bold;"><span style="padding-left:0;">Security Code</span></dt>
+							<dd style="float:left;">
+								<div><!-- 영문,중문 -->
+									<p>Please enter the characters displayed below.</p>
+									<div style="margin:7px 0 5px; overflow:hidden;">
+										<p class="fl" style="float:left"><img src="" style="width:300px; height:57px; border:1px solid #999999;" alt="" /></p><!-- 보안코드 이미지 들어갈 자리-->
+										<!-- [CR-AST1500827] 2015-07-03 추가 -->
+										<p class="fl" style="float:left; width:25px; padding:4px 0 0 3px";>
+											<a href="#" class="clearfix mb05"><img src="/images/common/ico/ico_nSecu.png" alt="Get a new security code" title="Get a new security code" /></a>
+											<a href="#"><img src="/images/common/ico/ico_nSound.png" alt="Play audible security code" title="Play audible security code" /></a>
+										</p>
+										<!-- //[CR-AST1500827] 2015-07-03 추가 -->
+									</div>
+								</div>
+
+								<p><input type="text" value="" class="input" style="width:296px;" /></p>
+								<!--<p class="checkError">Please check that the security code you entered is correct.</p>
+								<p class="checkError">Please enter the security code.</p>-->
+							</dd>
+						</dl>
+
+					<p class="popBtnArea" style="margin-top:10px;">
+						<a href="#" class="btnGray" ng-click="closeThisDialog(true); openSimpleNoticeDialog('Your account is now reactivated. Please sign in again.');"><span>Reactivate Account</span></a>
+					</p>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="simpleNoticeDialog">
+			<div id="pop_reac" class="layerPopup" style="width:200px; margin-left:-100px; left:50%; top:35%; display:block;">
+				<div class="lay-cont">
+					<p class="caution">Notice</p>
+					<p>{{noticeMessage}}</p>
+					<p class="popBtnArea"><a href="#" ng-click="closeThisDialog();" class="btnGray"><span>OK</span></a></p>
+				</div>
+				<a href="#" class="popClose popup" ng-click="closeThisDialog();"><img src="/images/common/btn/btn_lay_close.gif" alt="close" /></a>
+			</div>
+		</script>
+
+	</div>
+	<!-- wrap 끝 -->
+	<!-- [GAS-17034] V1.0 2021-01-14 추가 -->
+	
+         
+	<div class="cookie_layer_pop">
+		<p class="title">Samsung and Cookies   </p>
+		<div class="content">Our site uses essential cookies only. You can read our&nbsp;<a href="https://seller.samsungapps.com/terms/privacyPolicy.as" target="_blank">Privacy Policy</a>&nbsp;and&nbsp;<a href="https://seller.samsungapps.com/terms/cookiePolicy.as" target="_balck"><h5>Cookie Policy</h5></a>&nbsp;for more information.</div>
+		<a class="cookie_layer_del"><img src="https://img.samsungapps.com/seller/images/common/btn/cookie_layer_del.png"></a>
+	</div>
+	
+	<!-- [GAS-17034] V1.0 2021-01-14 추가 -->
+	
+
+
+
+
+
+
+
+
+
+
+
+<!-- pending 일때 -->
+<div id="timeoutMemberAlert" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+    <p class="popTitle">E-Mail/Password Check</p>
+
+    <div class="lineBoxLT">
+    <div class="lineBoxRT">
+    <div class="lineBoxLB">
+    <div class="lineBoxRB">
+        <div class="popGuide">
+            <p>Registration authentication timed out.<br>Click [Resend email] to authenticate again, and complete the authentication within 10 minutes.</p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p class="popBtnArea">
+        <a href="#" onclick="close_popup_new('timeoutMemberAlert'); return false;" class="btnBlue"><span>OK</span></a><!-- 2010-02-16 -->
+        <a href="javascript:sendRemail('timeoutMemberAlert');" class="btnGray"><span>Resend Email</span></a><!-- 2010-02-16 -->
+    </p>
+    <p class="popClose"><a href="#" onclick="close_popup_new('timeoutMemberAlert'); return false;"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close" title="Close"></a></p>
+</div>
+<div id="appendingMemberAlert" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+    <p class="popTitle">E-Mail/Password Check</p>
+
+    <div class="lineBoxLT">
+    <div class="lineBoxRT">
+    <div class="lineBoxLB">
+    <div class="lineBoxRB">
+        <div class="popGuide">
+            <p>E-Mail validation is not completed.<br>Please check your registered E-Mail for your authorization<br>If you have not received an E-Mail, please click [Resend E-Mail] below.</p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p class="popBtnArea">
+        <a href="#" onclick="close_popup_new('appendingMemberAlert'); return false;" class="btnBlue"><span>OK</span></a><!-- 2010-02-16 -->
+        <a href="javascript:sendRemail('appendingMemberAlert');" class="btnGray"><span>Resend Email</span></a><!-- 2010-02-16 -->
+    </p>
+    <p class="popClose"><a href="#" onclick="close_popup_new('appendingMemberAlert'); return false;"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close" title="Close"></a></p>
+</div>
+<div id="appendingMemberResendAlert" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+    <p class="popTitle">E-Mail/Password Check</p>
+
+    <div class="lineBoxLT">
+    <div class="lineBoxRT">
+    <div class="lineBoxLB">
+    <div class="lineBoxRB">
+        <div class="popGuide">
+            <p>An E-Mail has been re-sent to your registered E-Mail address. <br>Please check your E-Mail, then sign in by following the instructions contained in the E-Mail just sent.</p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p class="popBtnArea">
+        <a href="#" onclick="close_popup_new('appendingMemberResendAlert'); return false;" class="btnGray"><span>OK</span></a><!-- 2010-02-16 -->
+    </p>
+    <p class="popClose"><a href="#" onclick="close_popup_new('appendingMemberResendAlert'); return false;"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close" title="Close"></a></p>
+</div>
+<!-- 한쪽이 pending -->
+<div id="appendingMemberAlert2" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+    <p class="popTitle">E-Mail/Password Check</p>
+    <div class="lineBoxLT">
+    <div class="lineBoxRT">
+    <div class="lineBoxLB">
+    <div class="lineBoxRB">
+        <div class="popGuide">Your e-mail validation is not completed. Please click on the url sent to your e-mail address to complete your registration process.<br><br>If you have not received an E-Mail, please click [Resend E-Mail] below.
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p class="popBtnArea">
+        <a href="/main/sellerMain.as" class="btnBlue"><span>OK</span></a><!-- 2010-02-16 -->
+        <a href="javascript:sendRemail('appendingMemberAlert2');" class="btnGray"><span>Resend Email</span></a><!-- 2010-02-16 -->
+    </p>
+</div>
+<!-- pending, ready partner일때 -->
+<div id="appendingMemberAlert3" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+    <p class="popTitle">E-Mail/Password Check</p>
+    <div class="lineBoxLT">
+    <div class="lineBoxRT">
+    <div class="lineBoxLB">
+    <div class="lineBoxRB">
+        <div class="popGuide" id="pendingMsg">
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p class="popBtnArea">
+        <a href="#" onclick="close_popup_new('appendingMemberAlert3'); return false;" class="btnBlue"><span>OK</span></a><!-- 2010-02-16 -->
+        <a href="javascript:sendRemail('appendingMemberAlert3');" class="btnGray"><span>Resend Email</span></a><!-- 2010-02-16 -->
+    </p>
+</div>
+
+<!-- mobile 만 가입되고 partner pending 인 셀러 -->
+<div id="appendingMemberAlert4" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+    <p class="popTitle">E-Mail/Password Check</p>
+    <div class="lineBoxLT">
+    <div class="lineBoxRT">
+    <div class="lineBoxLB">
+    <div class="lineBoxRB">
+        <div class="popGuide">Your request for partnership has not yet been approved. please contact your Samsung Counterpart to approve your partnership request on Samsung Galaxy Store.<br> If your partnership cannot be confirmed, your approval request may be rejected
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p class="popBtnArea">
+        <a href="#" class="btnBlue"><span>OK</span></a>
+    </p>
+</div>
+
+<!-- mobile /TV 에 가입되고 mobile이 partner pending 인 셀러 -->
+<div id="appendingMemberAlert5" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+    <p class="popTitle">E-Mail/Password Check</p>
+    <div class="lineBoxLT">
+    <div class="lineBoxRT">
+    <div class="lineBoxLB">
+    <div class="lineBoxRB">
+        <div class="popGuide">
+        Your request for partnership has not yet been approved. please contact your Samsung Counterpart to approve your partnership request on Samsung Galaxy Store.<br> If your partnership cannot be confirmed, your approval request may be rejected
+        The TV Seller Portal page will open until the confirmation of mobile partnership is complete.
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <p class="popBtnArea">
+        <a href="/main/sellerMain.as" class="btnBlue"><span>OK</span></a>
+    </p>
+</div>
+
+
+<!-- 휴면계정 팝업 추가 GAS-87 -->
+<form name="captchaForm" id="captchaForm" method="post" action="/login/validateCaptcha.as" enctype="multipart/form-data" class="ng-pristine ng-valid">
+
+<!-- [GAS-87] 2015-08-11 팝업추가 -->
+<div id="reActive_Success_Pop" class="layerPopup" style="width:200px; margin-left:-100px; left:50%; top:35%;">
+	<div class="lay-cont">
+		<p class="caution">Notice</p>
+		<p>Your account is now reactivated. Please sign in again.</p>
+		<p class="popBtnArea"><a href="#" onclick="close_popup('reActive_Success_Pop');" class="btn2"><span>OK</span></a></p>
+	</div>
+	<a href="#" class="popClose popup" onclick="close_popup_new('reActive_Success_Pop');">
+		<img src="https://img.samsungapps.com/seller/en_US/images/btn/btn_lay_close.gif" alt="close">
+	</a>
+</div>
+<!-- //[GAS-87] 2015-08-11 팝업추가 -->
+
+<div id="quie_Pop" class="layerPopup" style="width: 470px; left: 50%; top: 20%; margin-left: -215px; display: none;">
+	<h4 class="lay-tit">Reactivate Account</h4>
+	
+	<p class="popClose">
+		<a href="#" onclick="close_popup_new('quie_Pop'); return false;">
+			<img src="https://img.samsungapps.com/seller/en_US/images/btn/btn_lay_close.gif" alt="close">
+		</a>
+	</p><div class="lay-cont">
+		<p>You have not logged in for more than 12 months using  and your account is now inactive. To reactivate the account, please enter the security code below.</p><!-- [CR-AST1500827] 2015-07-16 수정 -->
+			<dl class="insTbl">
+				<dt style="width:95px;"><span style="padding-left:0;">Security Code</span></dt>
+				<dd>
+					<div id="imageCaptchaArea"><!-- 영문,중문 --> 
+						<p>Please enter the characters displayed below.</p>
+						<div style="margin:7px 0 5px; overflow:hidden;">
+							<p class="fl"><img id="captchaImage" src="/captcha/image.img" style="width:300px; height:57px; border:1px solid #999999;" alt=""></p><!-- 보안코드 이미지 들어갈 자리-->
+							<!-- [CR-AST1500827] 2015-07-03 추가 -->
+							<p class="fl" style="width:25px; padding:4px 0 0 3px" ;="">
+								<a href="#" onclick="reloadCaptcha()" class="clearfix mb05"><img src="/images/common/ico/ico_nSecu.png" alt="Get a new security code" title="Get a new security code"></a>
+								<a href="#" onclick="playCaptchaAudio()" class="clearfix mb05"><img src="/images/common/ico/ico_nSound.png" alt="Play audible security code" title="Play audible security code"></a>
+							</p>
+							<!-- //[CR-AST1500827] 2015-07-03 추가 -->
+						</div>
+					</div>
+					<div id="audioCaptchaArea">
+						<!-- [CR-AST1500827] 2015-07-16 수정 -->
+						<p>Enter the number that you hear from the speaker.</p>
+						<div style="margin:7px 0 5px; overflow:hidden;">
+							<p class="fl">
+								<a id="captchaAudioDownload" href="#" onclick="downloadCaptcha()">
+										<img src="/images/common/ico/ico_nSound02.png" style="width:300px; height:57px; border:1px solid #999999;" alt="This feature supports audible security code. When you click this button, you can download the audio file of the security code. Enter the number you hear from the audio file." title="This feature supports audible security code. When you click this button, you can download the audio file of the security code. Enter the number you hear from the audio file.">
+								</a>
+							</p><!-- 보안코드 이미지 들어갈 자리-->
+							<div id="captchaAudio" style="display: none;"></div>
+							<p class="fl" style="width:25px; padding:4px 0 0 3px" ;="">
+								<a href="#" onclick="repeatCaptcha()" class="clearfix mb05"><img src="/images/common/ico/ico_nSecu.png" alt="Listen again" title="Listen again"></a>
+								<a href="#" onclick="showCaptchaImage()" class="clearfix mb05"><img src="/images/common/ico/ico_nPic.png" alt="View security code" title="View security code"></a>
+							</p>
+						</div>
+						<!-- //[CR-AST1500827] 2015-07-16 수정 -->
+					</div>
+					<p><input type="text" name="inputCaptcha" id="inputCaptcha" value="" class="input" style="width:296px;" onkeyup="emptyCheck()"></p>
+					<p><input type="text" name="audioCaptchaYn" id="audioCaptchaYn" value="N" class="input" style="display:none;"></p>
+					<p><input type="text" name="emailID" id="emailID" value="" class="input" style="display:none;"></p>
+			
+					<p class="checkError" id="codeValid" style="display:none">Please check that the security code you entered is correct.</p>
+					<p class="checkError" id="codeEmpty" style="display:none">Please enter the security code.</p>													
+				</dd>
+			</dl>
+
+		<p class="popBtnArea" style="margin-top:10px;">
+			<a href="javascript:validateCaptcha();" class="btnGray"><span>Reactivate Account</span></a><!-- [CR-AST1500827] 2015-07-16 수정 -->
+		</p>		
+	</div>
+</div>
+		
+</form>
+	
+	
+	
+	
+
+	
+	
+		
+
+
+<div id="pop_pw_s" class="layerPopup" style="left:50% !important; top:50% !important; margin-left:-163px; margin-top:-85px;">
+	<div class="lay-cont">
+		<p class="caution">Notice</p>
+		<p>Your password has been changed successfully.</p>
+		<p class="popBtnArea"><a href="/main/sellerMain.as" class="btn2" onclick="close_popup_new('pop_pw_s');"><span>OK</span></a></p>
+	</div>
+	<a href="/main/sellerMain.as" class="popClose popup" onclick="close_popup_new('pop_pw_s');"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close"></a>
+</div>
+<!-- //2013-06-10 : Change Password -->
+
+<!-- [GAS-15248] V1.0 2020-05-11 추가 --> 
+<div id="gateSignUpPop" class="layerPopup" style="width:250px; left:50%; top:40%; margin-left:-143px;">
+	<div class="lineBoxLT">
+	<div class="lineBoxRT">
+	<div class="lineBoxLB">
+	<div class="lineBoxRB">
+		<div class="popGuide">
+			<p class="caution">Notice</p>
+			<p style="word-break:keep-all;">You need to sign up in order to use Seller Portal.<br><br>Press the sign-up button and sign up for Seller Portal.</p>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<p class="popBtnArea">
+		<a href="/join/step1TermByMember.as" class="btnGray"><span>Sign up</span></a>
+	</p>
+	<p class="popClose">
+		<a href="#" onclick="close_popup_new('gateSignUpPop');"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close"></a>
+	</p>
+</div>
+<!-- // [GAS-15248] V1.0 2020-05-11 추가 -->
+
+<div id="unableToSignUpPop1" class="layerPopup" style="width:250px; left:50%; top:40%; margin-left:-143px;">
+	<div class="lineBoxLT">
+	<div class="lineBoxRT">
+	<div class="lineBoxLB">
+	<div class="lineBoxRB">
+		<div class="popGuide">
+			<p class="caution">Notice</p>
+			<p style="word-break:keep-all;">We’re sorry. Minors are not allowed to sign up for/use the Seller Portal.</p>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<p class="popBtnArea">
+		<a href="/login/signOut.as" class="btnGray"><span>OK</span></a>
+	</p>
+	<p class="popClose">
+		<a href="/login/signOut.as"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close"></a>
+	</p>
+</div>
+
+<div id="unableToSignUpPop2" class="layerPopup" style="width:250px; left:50%; top:40%; margin-left:-143px;">
+	<div class="lineBoxLT">
+	<div class="lineBoxRT">
+	<div class="lineBoxLB">
+	<div class="lineBoxRB">
+		<div class="popGuide">
+			<p class="caution">Notice</p>
+			<p style="word-break:keep-all;">Your date of birth cannot be identified. Please inquire at Samsung account <br><a href="https://account.samsung.com/" style="color:#4e93ce" target="_blank">( https://account.samsung.com/ )</a>.</p>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<p class="popBtnArea">
+		<a href="/login/signOut.as" class="btnGray"><span>OK</span></a>
+	</p>
+	<p class="popClose">
+		<a href="/login/signOut.as"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close"></a>
+	</p>
+</div>
+
+<div id="systemErrorPop" class="layerPopup" style="width:250px; left:50%; top:40%; margin-left:-143px;">
+	<div class="lineBoxLT">
+	<div class="lineBoxRT">
+	<div class="lineBoxLB">
+	<div class="lineBoxRB">
+		<div class="popGuide">
+			<p class="caution">Notice</p>
+			<p style="word-break:keep-all;">System error has occured.</p>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<p class="popBtnArea">
+		<a href="/login/signOut.as" class="btnGray"><span>OK</span></a>
+	</p>
+	<p class="popClose">
+		<a href="/login/signOut.as"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close"></a>
+	</p>
+</div>
+
+
+<script>
+
+
+//탈퇴, 기타 로그인 실패시
+
+
+//회원 상태별 팝업
+
+
+
+
+// 휴면 계정 팝업 GAS-87
+
+
+//휴면 계정 팝업 GAS-87
+
+
+
+
+
+
+
+
+//타입삭제sgsg.baek
+/**/
+
+function sendRemail(id){
+    new Ajax.Request("/join/signupSendEmail.as?ynFlag=Y", {
+		method:'post',
+		asynchronous:false,
+        onSuccess : function(transport) {
+    	close_popup_new(id);
+    	open_popup_new('appendingMemberResendAlert',300,200);
+        },
+        onFailure: function(){
+
+        }
+    });
+}
+
+function ospAlert(msg, action) {
+	showOspWarningPopup('E-Mail/Password Check', msg, action);
+}
+
+function getCookie(ckey) {
+    var allcookies = document.cookie;
+    var cookies = allcookies.split("; ");
+    for (var i = 0; i < cookies.length; i++) {
+        var keyValues = cookies[i].split("=");
+        //alert("test2: "+keyValues);
+        if (keyValues[0] == ckey) {
+        	return unescape(keyValues[1]);
+        }
+    }
+    return "";
+}
+
+
+
+function SlrCurTpCdConfirm(){
+	/* 미사용 함수
+	var SlrCurTpCd = document.getElementsByName('SlrCurTpCd');
+	for(var i = 0; i<SlrCurTpCd.length; i++){
+		if(SlrCurTpCd[i].checked == true){
+			$j.ajax({
+				type:"post",
+				url:"/login/updateCuratedSellerTypeCodeAjax.as",
+				data: {"checkSrlCurTpCd" : SlrCurTpCd[i].value},
+				dataType:"json",
+				success:function(data) {
+					close_popup('sellectSlrCurTpCd');
+					var formObj = $('curatedSellerTypeform');
+					var authKey = data.AuthKey;
+					var password = data.Password;
+					var emailID = data.emailID;
+					//var param = FormUtil.serialize(formObj);
+					//alert("blane param ::" + param);
+					//return null;
+					var tokenId = getCookie('iPlanetDirectoryPro');
+					//var encodeToken = encodeURIComponent(tokenId);
+					//var guid = getCookie('uid');
+					  formObj.action="https://seller.samsungapps.com/login/activityAuth.as?key="+authKey+'&Password='+password+'&emailID='+emailID+'&SSOTokenID='+tokenId;
+					  formObj.submit();
+				}
+			});
+		}
+	}
+	*/
+}
+	
+function checkPasswordValue(pwd){
+	if(pwd.name == 'prePassword') {
+		var errMsg1 = $( 'checkError1' );
+		var errMsg2 = $( 'checkError2' );
+		var errMsg3 = $( 'checkError3' );
+		errMsg1.style.display = 'none';
+		errMsg2.style.display = 'none';
+		errMsg3.style.display = 'none';
+	    if(pwd.value ==null || pwd.value == ''){
+	    	$j('#checkError1').show(); //패스워드 미입력 시 에러 노출
+	        return false;
+	    }
+	 // lsj psssword sa-15942
+//		if(!checkPermittedPattern_password_new(pwd.value)){
+//			checkError2.style.display = 'block' ; // 비밀번호 형태가 맞지 않을 시 에러메시지 노출
+//			return false;
+//	    }
+		return true;
+	}
+	return true;
+}
+
+//lsj psssword sa-15942
+function checkPermittedPattern_password_new(pattern) {
+	var prohibitedRegExp = /[#]|\.\/|--/;     // 어플리케이션 타이틀 & 값 허용 12.09.06 yjin
+    if ( prohibitedRegExp.test(pattern) ) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}	
+function passwordOnblur(pwd){
+	if(checkPasswordValue(pwd)){   // 무조건 True로 넘어감 why?
+		checkPermittedPassword(pwd);
+		checkChanged(pwd);
+		if(pwd.name == 'confPassword') {
+			checkPw();  
+		}
+	}else{
+		return;
+	}
+	return;
+}
+
+/* 기능: 신규 패스워드와 확인 패스워드가 맞는지 체크
+ * 작성자: 김유진
+ */
+function checkPw() {
+	var objNotMatchMsg = document.getElementById("checkErrorConfirm") ;
+	//var shortPwdConfMSg = document.getElementById("shortPwdConf");
+	objNotMatchMsg.style.display = 'none';
+	//shortPwdConfMSg.style.display = 'none';
+	
+	var prePassword = document.getElementById("prePassword").value;
+    var password = document.getElementById("passwordCheck").value;
+    var confPassword = document.getElementById("confPassword").value;
+	 /* if(confPassword.length < 6){
+		shortPwdConfMSg.style.display = 'block';
+		return false;
+	}  */
+	if ( password == '' || confPassword=='' ) {
+		objNotMatchMsg.style.display = 'none'; 
+		return true;
+	}
+	if ( password == confPassword ) {
+		objNotMatchMsg.style.display = 'none'; 
+		return true;
+	}else{
+		objNotMatchMsg.style.display = 'block';
+		return false;
+	}
+}
+
+function checkChanged(obj) {
+	if($(obj).name == 'password'){
+		var password = $(obj).value ;
+		var prePass = document.getElementById("prePassword").value ;
+
+		/* if(password.length < 6){
+			document.getElementById("shortPwd").style.display = 'block';		
+		}else{
+			document.getElementById("shortPwd").style.display = 'none';
+		} */
+		if( password == prePass ){
+			document.getElementById("notChanged").style.display = 'block';
+			return false;
+		} else{
+			document.getElementById("notChanged").style.display = 'none';
+			return true;
+		}
+	}
+}
+
+/* 기능: 신규 패스워드와 확인 패스워드가 맞는지 체크
+ * 작성자: 김유진
+ */
+function checkPermittedPassword(obj){
+	if($(obj).name == 'password'){
+		var password = document.getElementById("passwordCheck").value;
+		var passwordErrorFlag = 'N' ;
+
+	/* 1. 연속된 숫자 포함 여부 체크 */
+		var SamePass_0 = 0; //동일문자 카운트
+	    var SamePass_1 = 0; //연속성(+) 카운드
+	    var SamePass_2 = 0; //연속성(-) 카운드
+	    
+	    var chr_pass_0;
+	    var chr_pass_1;
+	    var chr_pass_2;
+	  //  var chr_pass_3;
+
+	    var checkNumber0 = 'N';	//chr_pass_0이 숫자인지 확인
+	    var checkNumber1 = 'N'; //chr_pass_1이 숫자인지 확인
+	    var checkNumber2 = 'N'; //chr_pass_2이 숫자인지 확인
+	  //  var checkNumber3 = 'N'; //chr_pass_3이 숫자인지 확인
+	    var filterNum=/[0-9]/;	//숫자인지 확인할 정규식
+	    
+	    for(var i=0; i < password.length; i++) {
+	        chr_pass_0 = password.charAt(i);
+	        chr_pass_1 = password.charAt(i+1);
+	        chr_pass_2 = password.charAt(i+2);
+	       // chr_pass_3 = password.charAt(i+3);
+
+	        //비교할 문자가 숫자인지 확인			        
+	        checkNumber0 = 'Y';
+	        checkNumber1 = 'Y';
+	        checkNumber2 = 'Y';
+	    //    checkNumber3 = 'Y';
+
+		        
+		    //동일문자 카운트
+	        if( (checkNumber0 == 'Y') && (checkNumber1 == 'Y') && (chr_pass_0 == chr_pass_1) ) {
+	            SamePass_0 = SamePass_0 + 1;
+	            if(SamePass_0 > 1){
+	            	passwordErrorFlag = 'Y';
+	            	document.getElementById("checkErrorNew3").style.display = 'block';	//반복된 숫자(3자 이상)일 때, alert 노출
+	            }
+	        }else {
+		        SamePass_0 = 0;
+	        }
+	         chr_pass_2 = password.charAt(i+2);
+
+	         if( (checkNumber0 == 'Y') && (checkNumber1 == 'Y') && (checkNumber2 == 'Y')) {
+			    //연속성(+) 카운드
+		        if(chr_pass_0.toUpperCase().charCodeAt(0) - chr_pass_1.toUpperCase().charCodeAt(0) == 1 && chr_pass_1.toUpperCase().charCodeAt(0) - chr_pass_2.toUpperCase().charCodeAt(0) == 1) {
+		            SamePass_1 = SamePass_1 + 1;
+		        }
+		        
+		        //연속성(-) 카운드
+		        if(chr_pass_0.toUpperCase().charCodeAt(0) - chr_pass_1.toUpperCase().charCodeAt(0) == -1 && chr_pass_1.toUpperCase().charCodeAt(0) - chr_pass_2.toUpperCase().charCodeAt(0) == -1) {
+		            SamePass_2 = SamePass_2 + 1;
+		        }
+
+		        if(chr_pass_0 == '8' && chr_pass_1 == '9' && chr_pass_2 == '0'){
+		        	 SamePass_1 = SamePass_1 + 1;
+		        }
+		        if(chr_pass_0 == '0' && chr_pass_1 == '9' && chr_pass_2 == '8'){
+		        	 SamePass_2 = SamePass_2 + 1;
+		        }
+	         }
+        }
+
+        if(passwordErrorFlag == 'N') {
+        	document.getElementById("checkErrorNew3").style.display = 'none';	//반복된 숫자(3자 이상)이 아닐 때, alert 숨김
+        }
+
+        if(SamePass_1 > 0 || SamePass_2 > 0) {	
+        	document.getElementById("checkErrorNew2").style.display = 'block';	//연속된 숫자(3자 이상)일 때, alert 노출
+        } else {
+        	document.getElementById("checkErrorNew2").style.display = 'none';	//연속된 숫자(3자 이상)이 아닐 때, alert 숨김
+        }
+        
+        if(SamePass_0 > 2 || SamePass_1 > 0 || SamePass_2 > 0){
+        	passwordErrorFlag = 'Y';
+		}
+     // lsj psssword sa-15942
+     
+     	var errorNew5Flag = 'N'; 
+     /* 2. ID와 동일한 password 체크 */
+	
+		var sellerId = ''.split("@")[0];
+		if(password == sellerId){
+			passwordErrorFlag = 'Y';
+			errorNew5Flag = 'Y';
+		}
+
+		if( errorNew5Flag == 'Y' ) {
+			document.getElementById("checkErrorNew5").style.display = 'block';
+		} else{
+			document.getElementById("checkErrorNew5").style.display = 'none';
+		}
+     
+     // 영문, 숫자, 특수문자혼용되게
+		var objname = obj.name ;
+		var target1 ;
+    	//var tarmsgPre1 = $( 'notEngPre' ) ;
+    	var tarmsg1 = $( 'notEng' ) ;
+    	var tarmsgConf1 = $( 'notEngConf' ) ;
+    	target1 = ( objname == 'password' ? tarmsg1 : tarmsgConf1 ) ;
+    	target1.style.display = 'none' ;
+
+    	var str = obj.value;
+    	var errA = 0; 		  
+    	var errB = 0; 
+    	var errC = 0;
+    	var sChar = "-_=+\|()*&^%$#@!~`?></;,.:'[]{}";
+    	for (var i=0; i<str.length; i++)  { 
+    	    var chk = str.substring(i,i+1); 
+    	    if(/[a-zA-Z]/.test(chk)) { 
+    	        errA = errA + 1; 
+    	    } 
+    	    if(/[0-9]/.test(chk)) { 
+    	        errB = errB + 1; 
+    	    } 
+    	    if(sChar.indexOf(chk)!=-1){
+    	    	errC = errC +1;
+    	    }
+    	} 
+    	if(!( errA > 0 && errB > 0 && errC >0)){
+    		target1.style.display = 'block' ;
+    		passwordErrorFlag = 'Y';
+    	}else {
+    		target1.style.display = 'none' ;
+    	} 		    	
+    	
+		//8~15글자로 제한
+    	var target2 ;
+    	//var tarmsgPre2 = $( 'notLengthPre' ) ;
+    	var tarmsg2 = $( 'notLength' ) ;
+    	var tarmsgConf2 = $( 'notLengthConf' ) ;
+    	target2 = ( objname == 'password' ? tarmsg2 : tarmsgConf2 ) ;   
+    	target2.style.display = 'none' ; 
+   		if(obj.value.length < 8 || 15 < obj.value.length){ 
+   		 	target2.style.display = 'block';
+   		 	passwordErrorFlag = 'Y';
+   		} else{
+   			target2.style.display = 'none';
+ 		}   
+ 		// space입력못하게
+    	var target3 ;
+    	//var tarmsgPre3 = $( 'notSpacePre' ) ;
+    	var tarmsg3 = $( 'notSpace' ) ;
+    	var tarmsgConf3 = $( 'notSpaceConf' ) ;
+    	target3 = ( objname == 'password' ? tarmsg3 : tarmsgConf3 )  ;
+    	target3.style.display = 'none' ;
+    	var spaceResult = 0;
+		for(i=0; i<obj.value.length; i++) {
+		  if(obj.value.charAt(i)==" ") spaceResult++;
+		}
+    	if (spaceResult > 0){
+    		target3.style.display = 'block';
+    		passwordErrorFlag = 'Y';
+		} else{
+			target3.style.display = 'none';
+		}
+
+		
+	/* 위 세가지 체크 중 한가지라도 포함되면 하단 alert 노출 */
+		
+		if( passwordErrorFlag == 'Y' ){
+			//document.getElementById("checkErrorNew1").style.display = 'block';
+			return false;
+		} else{
+			//document.getElementById("checkErrorNew1").style.display = 'none';
+			return true;
+		}
+	}   	    	    
+}
+
+function spaceCheck() {
+	if (window.event.keyCode == '32'){
+		document.getElementById("notSpace").style.display = 'block';
+		  return false;
+	} else{
+		document.getElementById("notSpace").style.display = 'none';
+		return true;
+	}
+}
+
+function chkPasswordPattern1(password) {
+	var filter=/^[\w+!+@+*+$+^+%+&]{6,15}$/;
+	if (filter.test(password))
+		return true;
+	else
+		return false;	
+}
+
+var win_height = document.documentElement.clientHeight/2;
+var win_width = document.documentElement.clientWidth/2;
+
+
+	function open_popup_dimmed (layer)  {
+
+		document.getElementById(layer).style.display = "block"
+		document.getElementById('bg_popup').style.display = "block"
+		var div_height = document.getElementById(layer).offsetHeight/2;
+		var div_width = document.getElementById(layer).offsetWidth/2;
+		var tem_top = win_height - div_height;
+		var pos_top = getPageScroll()[1] + tem_top;
+		var pos_left = win_width - div_width;
+		document.getElementById(layer).style.top = pos_top + "px";
+		document.getElementById(layer).style.left = pos_left + "px";
+
+	}
+	function open_popup_confirm (layer)  {
+		document.getElementById(layer).style.display = "block"
+		document.getElementById(layer).style.zIndex = "220"
+		document.getElementById('bg_popup').style.zIndex = "210"
+		document.getElementById('bg_popup').style.display = "block"
+		var div_height = document.getElementById(layer).offsetHeight/2;
+		var div_width = document.getElementById(layer).offsetWidth/2;
+		var pos_top = win_height - div_height;
+		var pos_left = win_width - div_width;
+		document.getElementById(layer).style.top = pos_top + "px";
+		document.getElementById(layer).style.left = pos_left + "px";
+	}
+
+	function close_popup (one, layer) {
+		if (one != "one")
+		{
+			if (document.getElementById(one))
+			{
+				document.getElementById(one).style.display = "none"
+			}
+			if (document.getElementById(layer))
+			{
+				document.getElementById(layer).style.display = "none"
+			}
+			document.getElementById('bg_popup').style.zIndex = "99"
+			document.getElementById('bg_popup').style.display = "none"
+		}
+
+			if (document.getElementById(one))
+			{
+				document.getElementById(one).style.display = "none"
+			}
+			if (document.getElementById(layer))
+			{
+				document.getElementById(layer).style.display = "none"
+			}
+			document.getElementById('bg_popup').style.zIndex = "99"
+
+			/*insert090408*/
+			document.getElementById("bg_popup").style.height="100%"
+			//delete location.reload();
+	}
+function getPageScroll() {
+     var xScroll, yScroll;
+     if (self.pageYOffset) {
+       yScroll = self.pageYOffset;
+       xScroll = self.pageXOffset;
+     } else if (document.documentElement && document.documentElement.scrollTop) {     // Explorer 6 Strict
+       yScroll = document.documentElement.scrollTop;
+       xScroll = document.documentElement.scrollLeft;
+     } else if (document.body) {// all other Explorers
+       yScroll = document.body.scrollTop;
+       xScroll = document.body.scrollLeft;
+     }
+     return new Array(xScroll,yScroll)
+   }
+
+	function addLoadEvent(func) {
+	  var oldonload = window.onload;
+	  if (typeof window.onload != 'function') {
+		window.onload = func;
+	  } else {
+		window.onload = function() {
+		  oldonload();
+		  func();
+		}
+	  }
+	}
+
+	function bgPopup_over() {
+		var div2= document.createElement("div");
+		div2.innerHTML="<div id='bg_popup' style='display:none;'><div></div><!--[if lte IE 6.5]><iframe></iframe><![endif]--></div></div>";
+		document.body.appendChild(div2);
+	}
+	function warning_popup() {
+		open_popup('warning');
+	}
+	addLoadEvent(bgPopup_over);
+	
+	// Capcha 추가 GAS-87
+	function reloadCaptcha(){
+		document.getElementById("captchaImage").src = "/captcha/image.img?" + Math.random();
+	}
+	function repeatCaptcha(){
+		var audioUrl = "/captcha/audio.wav?downYn=N&repeatYn=Y";
+		playAudio(audioUrl);
+	}
+		
+	function showCaptchaImage(){
+		document.getElementById("audioCaptchaYn").value = 'N';
+		$j("#imageCaptchaArea").show();
+		$j("#audioCaptchaArea").hide();
+
+	}
+		
+	function playCaptchaAudio(){
+		var audioUrl = "/captcha/audio.wav?" + Math.random() + "&lan=" + getLanCode();
+		document.getElementById("audioCaptchaYn").value = 'Y';
+		$j("#imageCaptchaArea").hide();
+		$j("#audioCaptchaArea").show();
+		
+		playAudio(audioUrl);
+	}
+	
+	function downloadCaptcha(){
+		var audioUrl = "/captcha/audio.wav?downYn=Y";
+		location.href = audioUrl;
+		document.getElementById("captchaAudioDownload").href = audioUrl;
+	}
+	
+	function playAudio(audioUrl){
+		var uAgent = navigator.userAgent;
+		
+		if(uAgent.indexOf('Trident') > -1 || uAgent.indexOf('MSIE') > -1){
+			$j("#captchaAudio").html("<bgsound src='" + audioUrl + "' loop='1' />");
+		}else if(document.createElement('audio').canPlayType){
+			new Audio(audioUrl).play(); 
+		}else{
+			window.open(audioUrl, '', 'width=1, height=1');
+		}
+	}
+	
+	function getLanCode(){
+		var lanCode;
+		var locale = "en_US";
+		if(locale == "ko_KR"){
+			lanCode = "ko";
+		}
+		return lanCode;
+	}
+	
+	
+// 2014-06-09 추가
+jQuery(function($){
+	$('.lay-cont a.question').mouseover(tip_on2).mouseleave(tip_off2);
+	
+	//profile: 퍼블리싱에서는 도움말컨텐츠가 include 처리되어 페이지내 개별적으로 삽입하는 방식이 어려우므로 상대좌표를 구한 별도함수로 처리함
+	$('.viewProfile a.question').mouseover(profileTip_on2).mouseleave(tip_off2);
+
+	//$('a.question').mouseover(tip_on).mouseleave(tip_off);
+	$('a.question').click(function(){return false;});
+
+	//profile bubbleOn
+	function profileTip_on2(){
+		var x =$(this).position().left;
+		
+		var y = $(this).position().top;
+		var screenSize = $('body').width();
+		var halfscreen = screenSize/2;
+		var divId = $(this).attr('href');
+		if(divId.indexOf('#bubbleDiv') == -1) return false;
+			
+		$(divId).addClass("bb-aL");
+		$(divId).css({'left' : (x-10)+"px"});
+		$(divId).css({'top' : (y+35)+"px"});
+		$(divId).show();
+
+		$(divId).append('<iframe class="ie6_bug" scrolling="no" frameborder="0"></iframe>');
+		var ifm = $(divId).find('iframe.ie6_bug')
+		var layWidth = ifm.parent().outerWidth();
+		var layHeight = ifm.parent().outerHeight();
+		ifm.attr('width', layWidth);
+		ifm.attr('height', layHeight);
+	};
+
+	//basic bubbleOn
+	function tip_on2(){
+		var x =$(this).offset().left;
+		var y = $(this).offset().top;
+		var screenSize = $('body').width();
+		var halfscreen = screenSize/2;
+		var divId = $(this).attr('href');
+		if(divId.indexOf('#bubbleDiv') == -1) return false;
+
+		//이벤트발생시마다 bubbleDiv 에 클래스(css정의된 위치값) 초기화필요
+		$(divId).removeClass("bbR");
+		$(divId).removeClass("bb-aL");
+		$(divId).removeClass("bb-aR");
+		$(divId).removeClass("bbL");
+		
+		if ($(divId).hasClass('wide')){//큰풍선말(wide,538)
+			$(divId).show();
+				$(divId).addClass("bb-aL");
+				$(divId).css({'left' : (x-10)+"px"});
+			$(divId).css({'top' : (y+35)+"px"});
+		//태그툴팁, 셀활성화
+		}else if ($(this).hasClass('tag')){//태그툴팁
+			$(divId).show();
+			if(halfscreen>x){
+ 				$(divId).addClass("bbL");
+ 				$(divId).css({'left' : (x+8)+"px"});
+			}else{
+				$(divId).addClass("bbR");
+				$(divId).css({'left' : (x-248)+"px"});
+			};
+			$(divId).css({'top' : (y+43)+"px"});
+			$(this).parent('td').addClass('on');
+
+		}else{//작은풍선말(289)
+			$(divId).show();
+			if(halfscreen>x){
+ 				$(divId).addClass("bbL");
+ 				$(divId).css({'left' : (x-10)+"px"});
+			}else{
+				$(divId).addClass("bbR");
+				$(divId).css({'left' : (x-264)+"px"});
+			};
+			$(divId).css({'top' : (y+35)+"px"});
+		};
+		//for IE6: iframe 동적추가,제거
+		$(divId).append('<iframe class="ie6_bug" scrolling="no" frameborder="0"></iframe>');
+		var ifm = $(divId).find('iframe.ie6_bug')
+		var layWidth = ifm.parent().outerWidth();
+		var layHeight = ifm.parent().outerHeight();
+		ifm.attr('width', layWidth);
+		ifm.attr('height', layHeight);
+	};
+	//basic bubbleOff
+	function tip_off2(){
+		var divId = $(this).attr('href');
+		var tagCell = $('.datatype-b .categorize td')
+		$(divId).hide();
+		//태그툴팁
+		if ($(this).parent().is('.categorize td.on')){
+			tagCell.removeClass('on');
+		};
+		var ifm = $(divId).find('iframe.ie6_bug')
+		if (!$(ifm)) return false;
+		$(ifm).remove();
+	};
+	
+	
+});
+
+
+	function validateCaptcha(){
+		
+		var frm = $('captchaForm');
+	    var formValidator = new FormValidator(frm);
+
+	    if(trim(document.getElementById("inputCaptcha").value) == ''){
+	    	document.getElementById("codeValid").style.display = 'none';
+	    	document.getElementById("codeEmpty").style.display = 'block';
+	    	return;
+	    }
+	    
+		if(formValidator.validate()){
+			frm.submit();
+		}
+		
+	}
+	
+	function emptyCheck(){
+		document.getElementById("codeValid").style.display = 'none';
+    	document.getElementById("codeEmpty").style.display = 'none';
+	}
+	
+	
+	
+</script>
+
+
+	<script type="text/javascript">
+	"use strict";
+
+	var app = angular.module('sellerGate', ['ngResource', 'ngDialog', 'ngCookies']);
+
+	app.value("initialData", {
+		contextPath: "",
+		sellerUrl: "https://seller.samsungapps.com",
+		sellerSslUrl: "https://seller.samsungapps.com",
+		sellerStaticUrl: "https://img.samsungapps.com/seller",
+		imageDomain: "https://img.samsungapps.com",
+		backUrl: "\x2Flogin\x2FsignIn.as\x3FreturnURL\x3D\x252Fmain\x252FsellerMain.as",
+		languageParamName: "localeLanguage",
+		locale: "en_US",
+		EAcode: "",
+		returnURL: '\x2Fmain\x2FsellerMain.as',
+		ssl: '',
+		loginAuthKey: "",
+		loginEmailID: "",
+		loginPassword: "",
+		rememberID: "",
+		rememberIdCode: "Y",
+		emailID: ""
+	});
+
+	// Example of how to set default values for all dialogs
+	app.config(['ngDialogProvider', function (ngDialogProvider) {
+		ngDialogProvider.setDefaults({
+			className: 'ngdialog-theme-raw',
+			plain: false,
+			showClose: false,
+			closeByDocument: true,
+			closeByEscape: true,
+			appendTo: false,
+			trapFocus: false,
+			disableAnimation: true,
+			overlay: false
+		});
+	}]);
+
+	app.controller('MainController', function ($scope, $filter, $window, initialData, ngDialog, PortalGateService) {
+
+		$scope.initialData = initialData;
+		$scope.noticeList = [];
+
+		PortalGateService.requestLatestNoticeList(function(noticeList) {
+			for(var i = 0; i < noticeList.length && i < 3; i++){
+				if(noticeList[i].title){
+					var titleDoc = new DOMParser().parseFromString(noticeList[i].title, "text/html");
+  					noticeList[i].title = titleDoc.documentElement.textContent;	
+				}
+				if(noticeList[i].content){
+					var contentDoc = new DOMParser().parseFromString(noticeList[i].content, "text/html");
+  					noticeList[i].content = contentDoc.documentElement.textContent;	
+				}
+				$scope.noticeList.push(noticeList[i]);
+			}
+		}, null);
+
+		$scope.localeSetList = [
+			{locale: "en_US", language: "en", text: "ENGLISH"},
+			{locale: "zh_CN", language: "zh", text: "中文"},
+			{locale: "ko_KR", language: "ko", text: "한국어(한국)"}
+		];
+
+		// set current locale
+		for(var i = 0 ; i < $scope.localeSetList.length; i++){
+			var localeSet = $scope.localeSetList[i];
+			if(localeSet.locale == initialData.locale){
+				$scope.currentLocale = localeSet;
+				break;
+			}
+		}
+
+		$scope.exceptCurrentLocaleFilter = function(localeSet) {
+			return localeSet.locale != initialData.locale;
+		};
+
+		$scope.changeLocale = function(language) {
+			var backUrl = initialData.backUrl;
+			//언어변경시 로그인 실패 팝업이 다시 뜨지 않도록 backURL에서 에러 관련 파라메터를 제거한다.
+			if(	backUrl.indexOf("EAcode") == -1){
+				backUrl = removeParameter(backUrl, 'errCode', '?');
+			}else{
+				backUrl = removeParameter(backUrl, 'errCode', '&');
+			}
+
+			backUrl = removeParameter(backUrl, 'errPopupType', '?');
+			backUrl = removeParameter(backUrl, 'pendingStore', '?');
+
+			if(backUrl.indexOf('?') < 0) {
+				backUrl += '?';
+			} else {
+				backUrl += '&';
+			}
+
+			for(var i = 0 ; i < $scope.localeSetList.length; i++){
+				var localeSet = $scope.localeSetList[i];
+				if(localeSet.language == language){
+					setCookie("sellerLocale",localeSet.locale,null,null,null,"/",".samsungapps.com",null);
+					break;
+				}
+			}
+
+			backUrl += initialData.languageParamName + '=' + language;
+			$window.location=backUrl;
+		};
+		
+		function setCookie ( name, value, exp_y, exp_m, exp_d, path, domain, secure )
+		{
+			var cookie_string = name + "=" + escape ( value );
+			if ( exp_y ) {
+				var expires = new Date ( exp_y, exp_m, exp_d );
+				cookie_string += "; expires=" + expires.toGMTString();
+			}
+			if ( path )
+				cookie_string += "; path=" + escape ( path );
+			if ( domain )
+				cookie_string += "; domain=" + escape ( domain );
+			if ( secure )
+				cookie_string += "; secure";
+			
+			document.cookie = cookie_string;
+		}
+
+		// 파트너 리젝인 상태의 셀러가 로그인 시 셀러 타입 선택 팝업을 띄운다.
+		$scope.openSellerTypeSelectionDialog = function() {
+			var dialog = ngDialog.open({
+				template: "sellerTypeSelectionDialog"
+			});
+
+			dialog.closePromise.then(function(confirmed) {
+					console.log("sellerTypeSelectionDialog has closed with data : " + confirmed.value);
+			});
+		};
+
+		$scope.openReactivateAccountDialog = function() {
+			var dialog = ngDialog.open({
+				template: "reactivateAccountDialog",
+				scope:$scope
+			});
+
+			dialog.closePromise.then(function(confirmed) {
+					console.log("reactivateAccountDialog has closed with data : " + confirmed.value);
+			});
+		};
+
+		//url로부터 특정 파라메터 제거
+		function removeParameter(url, paramName, delimiter){
+			if(url == '' || url.indexOf(paramName) == -1){
+				return url;
+			}
+			var prefix;
+			var postfix='';
+
+			var prefix = url.substr(0, url.indexOf(paramName));
+			var temp = url.substr(url.indexOf(paramName));
+			var tempIndex = temp.indexOf(delimiter);
+
+			if(tempIndex > 0){
+				 postfix = temp.substr(tempIndex);
+			}
+
+			url = prefix + postfix;
+			if(url.charAt(url.length-1) =='?' || url.charAt(url.length-1) =='&') {
+				url = url.substr(0, url.length-1 );
+			}
+			return url;
+		}
+
+		$scope.openSimpleNoticeDialog = function(noticeMessage, action) {
+
+			$scope.noticeMessage = noticeMessage;
+
+			var dialog = ngDialog.open({
+				template: "simpleNoticeDialog",
+				scope:$scope
+			});
+
+			if(action) {
+				dialog.closePromise.then(action);
+			}
+		};
+
+		$scope.getGMTDateString = function(timestamp){
+			if(timestamp === undefined) {
+				timestamp = Date.now();
+			}
+			var date = new Date(timestamp);
+			return date.getUTCFullYear() +
+				'-' + pad(date.getUTCMonth() + 1) +
+				'-' + pad(date.getUTCDate());
+
+			function pad(number) {
+				if (number < 10) {
+					return '0' + number;
+				}
+				return number;
+			}
+		}
+
+	});
+
+	app.controller('loginController', function ($scope, initialData, ngDialog) {
+
+		$scope.login = {};
+
+		if(initialData.rememberID === initialData.rememberIdCode){
+			$scope.login.emailId = initialData.emailID;
+		}
+
+		$scope.doLoginBySA = function() {
+			$j.ajax({
+				type:"post",
+				url:"/login/loginBySamsungAccount.as",
+				dataType:"json",
+				async:false,
+				success:function(data) {
+					location.href = data.url;
+				}
+			});
+		};
+
+		// 비밀번호 찾기 버튼 클릭시 서비스 선택 팝업 처리
+		$scope.handleFindPassword = function() {
+			location.href = initialData.contextPath + "/login/findEmail.as";
+		};
+
+		// Sign Up Now 버튼 클릭시 서비스 선택 팝업 처리
+		$scope.handleSignUp = function() {
+			location.href = initialData.sellerSslUrl + initialData.contextPath + "/login/signIn.as?view=signUp";
+		};
+
+		// 삼성어카운트 회원이지만 셀러에 가입되어 있지 않은 경우
+		$scope.handleAccountSignUp = function(confirmed) {
+			location.href = initialData.contextPath + "/join/getJoinFormForOSPMember.as?act=osp";
+			angular.element("#loginForm #loginAuthKey").val("");
+		};
+		
+		$scope.signUpWithSamsungAccount = function() {
+			location.href = "https://seller.samsungapps.com/join/signUpWithSamsungAccount.as";
+		}
+
+		// 삼성어카운트 회원이지만 셀러에 가입되어 있지 않은 경우
+		if(initialData.loginAuthKey){// && initialData.openPopup === "N"){
+			$scope.handleAccountSignUp();
+		}
+
+	});
+
+	app.service('PortalGateService', function(initialData, $http) {
+
+		this.requestLatestNoticeList = function(callback, errorHandler){
+			callSimpleRestApi("/main/getLatestNoticeList.as", callback, errorHandler);
+		};
+
+		function callSimpleRestApi(url, callback, errorHandler){
+			$http({
+				method: "GET",
+				url: url
+			}).then(
+				function successCallback(response) {
+					if(callback != null) {
+						callback(response.data);
+					}
+				}, function errorCallback(response){
+					if(errorHandler != null) {
+						errorHandler(response.data);
+					}
+				}
+			);
+		};
+		
+	});
+	
+	
+
+
+	</script>
+</div>
+
+<div><div id="bg_popup" style="display:none;"><div></div><!--[if lte IE 6.5]><iframe src='/en_US/images/common/space.gif'></iframe><![endif]--></div></div><div><div id="bg_popup" style="display:none;"><div></div><!--[if lte IE 6.5]><iframe></iframe><![endif]--></div></div></body></html>

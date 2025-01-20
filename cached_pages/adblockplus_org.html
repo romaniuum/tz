@@ -1,0 +1,1014 @@
+<html lang="ru" data-page="index" data-siteurl="https://adblockplus.org" dir="ltr" class="no-js page-index nl restrict-privacy vat-inclusive"><head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Adblock Plus | Бесплатный блокировщик рекламы №&nbsp;1 в мире</title>
+
+  <meta name="description" content="Adblock Plus, самый популярный блокировщик рекламы для Firefox, Chrome, Safari, Android и iOS. Блокируйте всплывающие окна и раздражающую рекламу на веб-сайтах, таких как Facebook и YouTube.">
+
+<link rel="canonical" href="https://adblockplus.org/">
+
+
+    
+<meta property="og:image" content="/img/adblockplus_promo.png">
+<meta property="og:title" content="Adblock Plus | Бесплатный блокировщик рекламы №&nbsp;1 в мире">
+
+  <meta property="og:description" content="Adblock Plus, самый популярный блокировщик рекламы для Firefox, Chrome, Safari, Android и iOS. Блокируйте всплывающие окна и раздражающую рекламу на веб-сайтах, таких как Facebook и YouTube.">
+
+<meta property="og:locale" content="ru_RU">
+
+  
+    <meta property="og:locale:alternate" content="de_DE">
+  
+
+  
+    <meta property="og:locale:alternate" content="en_US">
+  
+
+  
+    <meta property="og:locale:alternate" content="es_ES">
+  
+
+  
+    <meta property="og:locale:alternate" content="fr_FR">
+  
+
+  
+    <meta property="og:locale:alternate" content="it_IT">
+  
+
+  
+    <meta property="og:locale:alternate" content="nl_NL">
+  
+
+  
+    <meta property="og:locale:alternate" content="pt_BR">
+  
+
+  
+
+  
+    <meta property="og:locale:alternate" content="zh_CN">
+  
+
+<meta property="og:url" content="https://adblockplus.org/ru/">
+
+
+<meta name="twitter:site" content="@AdblockPlus">
+<meta name="twitter:creator" content="@AdblockPlus">
+    
+  <link rel="stylesheet" href="/css/defaults.css?781274346">
+  <link rel="stylesheet" href="/css/fonts.css?781274346">
+  <link rel="stylesheet" href="/css/main.css?781274346">
+  <link rel="stylesheet" href="/css/cookies.css?781274346">
+
+
+
+
+
+    <script>(()=>{
+
+const scriptTime = parseInt(performance.now(), 10);
+
+const query = new URLSearchParams(window.location.search);
+
+/**
+ * @namespace
+ * @prop {object} query - global reference to initial window.location.search URL Search Params
+ * @prop {object} api - functions provided to third parties
+ * @prop {object} strings - localised strings injected via script
+ * @prop {object} settings - shared settings injected via script
+ */
+const adblock = window.adblock = {
+  query,
+  api: {},
+  strings: {},
+  settings: {
+    detectedOperatingSystem: navigator.userAgent.includes("Windows NT") ? "windows"
+      : navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad") ? "ios"
+      : navigator.userAgent.includes("Macintosh") ? "mac"
+      : navigator.userAgent.includes("Linux") ? "linux"
+      : "other",
+    detectedBrowser: /opera|opr\//i.test(navigator.userAgent) ? "opera"
+      : /SamsungBrowser/i.test(navigator.userAgent) ? "samsung"
+      : /\sedg\/|edg([ea])/i.test(navigator.userAgent) ? "edge"
+      : /firefox|iceweasel/i.test(navigator.userAgent) ? "firefox"
+      : /chrome|chromium/i.test(navigator.userAgent) ? "chrome"
+      : /safari|applewebkit/i.test(navigator.userAgent) ? "safari"
+      : "other",
+  },
+};
+
+const ALPHANUM = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+/** generate sudo-random id */
+adblock.uid = function uid(length = 32) {
+  return [...Array(length)].map(() => ALPHANUM[Math.floor(Math.random() * ALPHANUM.length)]).join("");
+}
+
+/** browsing session uid */
+adblock.sid = adblock.query.get("sid") || adblock.uid();
+
+/** record data/activity via access log entry */
+adblock.log = function log(event, data = {}) {
+  const params = new URLSearchParams();
+  params.set("event", event);
+  params.set("sid", adblock.sid);
+  for (const property in data) {
+    if (["event", "sid"].includes(property)) throw new Error("Reserved data property name");
+    if (data[property] == null || data[property] == undefined) continue;
+    params.set(property, data[property]);
+  }
+  return fetch(`/access?${params.toString()}`);
+}
+
+/** logs essential analytics on load */
+window.addEventListener("load", function onLoad() {
+  adblock.log("load", {
+    scriptTime,
+    loadTime: parseInt(performance.now(), 10),
+    trafficSource: adblock.query.get("s"),
+    pageName: adblock.settings.page,
+    pageLocale: adblock.settings.locale,
+    detectedCountry: adblock.settings.detectedCountry,
+    detectedOperatingSystem: adblock.settings.detectedOperatingSystem,
+    detectedBrowser: adblock.settings.detectedBrowser,
+    browserHeight: window.innerHeight,
+    browserWidth: window.innerWidth,
+    screenHeight: screen.height,
+    screenWidth: screen.width,
+    adblockPlusInstalled: !!adblock?.adblockPlus,
+    adblockPlusPremium: !!adblock?.adblockPlus?.isPremium,
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function onDOMLoaded() {
+  document.querySelectorAll("[data-click]", function onDataClick(target) {
+    adblock.log("click", JSON.parse(target.dataset.click));
+  });
+});
+
+/** global general error handling and logging function */
+adblock.handleError = function handleError({name, message, context, handler}) {
+  if (handler) handler({name, message, context});
+  else if (message) alert(message);
+  console.error(name, message, context);
+  let shareableContext;
+  try { shareableContext = JSON.stringify(context); }
+  catch (error) {}
+  adblock.log("error", {name, shareableContext})
+}
+
+const injectionCallbacks = {};
+
+/** 
+ * Call a callback after an extension injects data into the page
+ * (or immediately if the extension has already injected data into the page)
+ */
+adblock.afterExtensionInjection = function afterExtensionInjection(extensionName, callback) {
+  if (adblock[extensionName]) return callback();
+  if (!injectionCallbacks[extensionName]) injectionCallbacks[extensionName] = [];
+  injectionCallbacks[extensionName].push(callback);
+}
+
+adblock.afterAdblockPlusDetected = callback => adblock.afterExtensionInjection("adblockPlus", callback);
+
+function handleExtensionInjection(extensionName, extensionId) {
+  try {
+    adblock[extensionName] = JSON.parse(document.documentElement.dataset[extensionId]);
+    if (injectionCallbacks[extensionName])
+      injectionCallbacks[extensionName].forEach(callback => callback());
+  } catch (error) {
+    const context = {};
+    context[extensionId] = document.documentElement.dataset[extensionId];
+    adblock.handleError({name: "parse-extension-injection", context});
+  }
+}
+
+function observeExtensionInjection(extensionName, extensionId) {
+  if (document.documentElement.dataset.hasOwnProperty(extensionId)) {
+    handleExtensionInjection(extensionName, extensionId);
+  } else {
+    const observer = new MutationObserver(() => {
+      if (document.documentElement.dataset.hasOwnProperty(extensionId)) {
+        handleExtensionInjection(extensionName, extensionId);
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.documentElement, {attributes: true});
+  }
+}
+
+observeExtensionInjection("adblock", "adblockExtensionInfo");
+observeExtensionInjection("adblockPlus", "adblockPlusExtensionInfo");
+
+if (adblock.query.has("design")) document.documentElement.classList.add("design");
+
+// FIXME: Hotfix to support images in localised strings via CMS
+// Remove when img tag added to allowlist of tags in strings
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("span.img").forEach(span => {
+    span.innerHTML = span.outerHTML.replace("span", "img");
+    span.replaceWith(span.querySelector("img"));
+  });
+});
+
+})()</script>
+
+<!-- strings injected via cms -->
+<script>(()=>{
+  Object.assign(adblock.strings, {
+    "error--unexpected": "\u041a \u0441\u043e\u0436\u0430\u043b\u0435\u043d\u0438\u044e, \u0432\u0430\u0448 \u043f\u043b\u0430\u0442\u0435\u0436 \u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c."
+  });
+})()</script>
+
+<!-- settings injected via cms -->
+<script>(()=>{
+  adblock.settings.page = "index";
+  adblock.settings.locale = "ru";
+  
+  
+})()</script>
+
+<!-- settings injected via cloud function -->
+<script src="/settings.js?3326006362"></script>
+    
+      
+  <script src="/js/testing/optimizely.js?3326006362"></script>
+
+  <link rel="stylesheet" href="/css/index.css?781274346">
+
+    
+  </head>
+  <body class="chrome">
+    
+
+
+
+<nav id="navbar">
+  <div class="container">
+    <a href="/ru/" hreflang="ru" id="navbar-logo">
+      <img src="/img/adblockplus-logo-color.svg?3696839528" alt="Adblock Plus logo in navigation menu">
+    </a>
+    <a href="#" id="navbar-menu-toggle">
+      <img src="/img/menu-toggle-black.svg?3696839528" alt="Top menu toggle">
+    </a>
+    <ul id="navbar-menu">
+      
+        <li class="">
+          <a href="/ru/download" hreflang="ru">Загрузить</a>
+        </li>
+      
+        <li class="">
+          <a href="/en/about" hreflang="en">O нас</a>
+        </li>
+      
+      <li class="">
+        <a href="https://accounts.adblockplus.org/premium">Premium</a>
+      </li>
+      <li>
+        <a href="https://help.adblockplus.org" target="_blank">Cправка</a>
+      </li>
+      
+      <li id="navbar-locale-menubar">
+        <a id="navbar-locale-selected">
+          Русский (RU)
+        </a>
+        <ul id="navbar-locale-menu">
+          
+            <li>
+              <a href="/de/" hreflang="de">
+                Deutsch (DE)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/en/" hreflang="en">
+                English (US)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/es/" hreflang="es">
+                Español (España) (ES)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/fr/" hreflang="fr">
+                Français (FR)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/it/" hreflang="it">
+                Italiano (IT)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/nl/" hreflang="nl">
+                Nederlands (NL)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/pt_BR/" hreflang="pt-BR">
+                Português (Brasil) (BR)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/ru/" hreflang="ru">
+                Русский (RU)
+              </a>
+            </li>
+          
+            <li>
+              <a href="/zh_CN/" hreflang="zh-CN">
+                中文(简体) (CN)
+              </a>
+            </li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+    
+      
+
+
+
+
+
+<div id="hero-download">
+  <div class="block-cookie-banner premium-only">
+  <div class="block-cookie-banner__container">
+    <div class="block-cookie-banner-start">
+      <img src="/img/premium-cookie-filled.svg?3696839528" alt="" class="block-cookie-banner-start__image">
+    </div>
+    <div class="block-cookie-banner-middle">
+      <h2 class="block-cookie-banner-middle-heading">
+        <span class="block-cookie-banner-middle-heading__badge">НОВИНКА!</span>
+        <span class="block-cookie-banner-middle-heading__text">
+          Блокировка назойливых баннеров с требованием согласия на использование файлов cookie
+        </span>
+      </h2>
+      <p class="block-cookie-banner-middle-body__text">
+        Устали от надоедливых выскакивающих окон с требованием согласия на использование файлов cookie на каждом сайте? Начните блокировать их с помощью Adblock Plus Premium и наслаждайтесь лучшими впечатлениями от просмотра веб-страниц уже сегодня.
+      </p>
+      <a href="https://accounts.adblockplus.org/block-cookie-banners?s=hpban" class="block-cookie-banner-middle__button block-cookie-banner__button">
+        Подробнее
+      </a>
+    </div>
+    <div class="block-cookie-banner-end">
+      <a href="https://accounts.adblockplus.org/block-cookie-banners?s=hpban" class="block-cookie-banner-end__button block-cookie-banner__button">
+        Подробнее
+      </a>
+    </div>
+  </div>
+</div>
+  <div class="hide-on-ios hide-on-android"></div>
+  <div class="container">
+    <div class="row">
+      <header id="intro-standard" class="column one-half content hide-on-maxthon hide-on-android hide-on-ios">
+  <h1><span>Пользуйтесь интернетом</span> <span>без раздражающей рекламы</span></h1>
+  <ul class="checked-list">
+    <li>Получите более чистый и быстрый доступ в Интернет и блокируйте раздражающую рекламу</li>
+    <li>Допустимая реклама по умолчанию разрешена для поддержки сайтов <span class="small avoid-wrap">(<a href="/ru/acceptable-ads" hreflang="ru" title="About Acceptable Ads">Подробнее</a>) <sup>[<a href="#footnote">1</a>]</sup></span></li>
+    <li>Adblock Plus является бесплатным ПО с открытым кодом <span class="small">(<a href="https://www.gnu.org/licenses/gpl.html" title="The GNU General Public License website">GPLv3+</a>)</span></li>
+  </ul>
+  <p id="hero-download-tos">
+    <small>Нажав на кнопку ниже, вы соглашаетесь с нашими <a href="/en/terms" hreflang="en" title="Adblock Plus terms of use">Условиями использования</a>.</small>
+  </p>
+  <a id="install-button" data-install-suffix="index" class="button hero-download-button download-button abp-chrome" href="https://eyeo.to/adblockplus/chrome_install/index" hreflang="ru">
+      Загрузите Adblock Plus для Chrome
+    </a>
+<p id="hero-download-alternate">
+  <a href="/ru/download" hreflang="ru" class="download-more">
+    Загрузить Adblock Plus для другого браузера
+  </a>
+</p>
+</header>
+
+      <div id="intro-graphic" class="column one-half hide-on-ios hide-on-android">
+  <img id="intro-graphic__image" src="/img/hero-ui-illustration.svg?3696839528" alt="">
+</div>
+
+      <article id="intro-ios-safari" class="intro-mobile column one-half text-center content section show-on-ios hero-content">
+  <header>
+    <img height="140" src="/img/ios-safari-logo.svg?3696839528" alt="Логотип iOS Safari">
+    <h1>Блокировка рекламы с помощью Adblock Plus для Safari на iOS</h1>
+  </header>
+  <ul class="centered-list">
+    <li>Блокировка назойливой рекламы</li>
+    <li>Экономия трафика и энергии</li>
+    <li>Блокировка вредоносного ПО, отслеживания и многое другое</li>
+    <li>Разработано эксклюзивно для Safari</li>
+  </ul>
+  <div>
+    <a class="app-store-button abp-ios-safari" href="https://eyeo.to/adblockplus/ios_safari_install/abp-website" title="Загрузите Adblock Plus для Safari на iOS">
+  <img height="60" src="/ru/img/apple-app-store-badge.svg?3696839528" alt="Загрузить Adblock Plus для Safari на iOS в App Store">
+</a>
+
+  </div>
+  <div>
+    <a href="/ru/download" hreflang="ru" class="download-more">Смотрите все наши решения для блокировки рекламы</a>
+  </div>
+</article>
+
+      <article id="intro-android" class="intro-mobile column one-half content section text-center show-on-android hide-on-samsung hero-content">
+  <header>
+    <img height="170" src="/img/abb-browser-icon.svg?3696839528" alt="Логотип Adblock Browser">
+    <h1><span>Загрузите</span> <span>Adblock Browser</span></h1>
+    <p class="subheading"><span>Лучший браузер с блокировкой рекламы</span> <span>для Android</span></p>
+  </header>
+  <ul class="centered-list">
+    <li>Блокировка назойливой рекламы</li>
+    <li>Блокировка отслеживания</li>
+    <li>Защита от вредоносного ПО</li>
+  </ul>
+  <div>
+    <a class="app-store-button abb-android" href="https://eyeo.to/adblockbrowser/android/abp-website" title="Загрузите Adblock Browser на Android">
+  <img width="200" height="60" src="/ru/img/google-play-badge.png?3696839528" alt="Загрузить Adblock Browser для Android в Google Play">
+</a>
+
+  </div>
+  <div>
+    <a href="/ru/download" hreflang="ru" class="download-more">Смотрите все наши решения для блокировки рекламы</a>
+  </div>
+</article>
+
+      <article id="intro-samsung" class="intro-mobile column one-half content section text-center show-on-samsung hero-content">
+  <header>
+    <img height="140" src="/img/samsung-internet-logo.png?3696839528" alt="Логотип Интернет Samsung">
+    <h1>Блокировка рекламы с помощью Adblock Plus для Интернет Samsung</h1>
+    <p class="subheading"><span>Разработано специально</span> <span>для <strong>Интернет Samsung</strong></span></p>
+  </header>
+  <ul class="centered-list">
+    <li>Блокировка назойливой рекламы</li>
+    <li>Блокировка отслеживания</li>
+    <li>Защита от вредоносного ПО</li>
+  </ul>
+  <div>
+    <a class="app-store-button abp-android-samsungBrowser" href="https://eyeo.to/adblockplus/android_samsung_install/" title="Загрузите Adblock Plus в браузере Интернет Samsung">
+  <img height="60" src="/ru/img/google-play-badge.png?3696839528" alt="Загрузить Adblock Plus для Samsung Internet в Google Play">
+</a>
+
+  </div>
+  <div>
+    <a href="/ru/download" hreflang="ru" class="download-more">Смотрите все наши решения для блокировки рекламы</a>
+  </div>
+</article>
+
+    </div>
+    <div id="intro-notices">
+
+  
+
+</div>
+  </div>
+</div>
+
+
+
+<div id="media-section" class="bg-primary section">
+  <div class="container">
+    <div id="media">
+      <header id="media-header">
+        <h2>Как упомянуто в:</h2>
+        <small>(ссылки открываются в новом окне)</small>
+      </header>
+      <ul id="media-list" class="unstyled">
+        
+        <li>
+          <a href="http://www.mediapost.com/publications/article/289691/adblock-plus-comes-to-new-york.html" target="_blank" title="Статья Media Post о Adblock Plus">
+            <img src="/img/media/mediapost.png?3696839528" srcset="/img/media/mediapost-2x.png 2x" alt="Логотип Media Post">
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://www.nytimes.com/2015/08/20/technology/personaltech/ad-blockers-and-the-nuisance-at-the-heart-of-the-modern-web.html" target="_blank" title="Статья New York Times о Adblock Plus">
+            <img src="/img/media/nyt.png?3696839528" srcset="/img/media/nyt-2x.png 2x" alt="Логотип New York Times">
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://www.wsj.com/articles/adblock-plus-chief-till-faida-says-consumers-are-fed-up-with-current-online-ads-1462981668" target="_blank" title="Статья Wall St. Journal о Adblock Plus">
+            <img src="/img/media/wsj.png?3696839528" srcset="/img/media/wsj-2x.png 2x" alt="Логотип Wall St. Journal">
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://techcrunch.com/2016/05/09/adblock-plus-closes-in-on-a-billion-downloads/" target="_blank" title="Статья Tech Crunch о Adblock Plus">
+            <img src="/img/media/techcrunch.png?3696839528" srcset="/img/media/techcrunch-2x.png 2x" alt="Логотип Tech Crunch">
+          </a>
+        </li>
+        
+        <li>
+          <a href="http://www.businessinsider.com/theres-nothing-wrong-about-the-way-adblock-plus-makes-money-2015-9" target="_blank" title="Статья Business Insider о Adblock Plus">
+            <img src="/img/media/business-insider.png?3696839528" srcset="/img/media/business-insider-2x.png 2x" alt="Логотип Business Insider">
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="item-group container content">
+  <div class="row">
+    <div class="column one-third">
+      <img height="242" width="240" src="/img/rocket-illustration.svg?3696839528" alt="Изображение ракеты">
+      <h2 class="h3">Более быстрый и приятный просмотр интернета</h2>
+      <p>Блокируйте рекламу, которая мешает вам просматривать ресурсы в Интернете. Попрощайтесь с рекламой в видео, выскакивающими сверху окнами, мигающими баннерами и т.&nbsp;д. Когда эта раздражающая реклама заблокирована, страницы загружаются быстрее.</p>
+    </div>
+    <div class="column one-third">
+      <img height="242" width="240" src="/img/lock-illustration.svg?3696839528" alt="Изображение замка">
+      <h2 class="h3">Обеспечьте безопасность данных и устройств</h2>
+      <p>С Adblock Plus можно легко избежать отслеживания и вредоносных программ. Благодаря блокировке интрузивной рекламы сокращается риск инфекции вредоносными программами. Блокировка отслеживания не дает компаниям следить за вашей активностью онлайн.</p>
+    </div>
+    <div class="column one-third">
+      <img height="242" width="240" src="/img/checkmark-illustration.svg?3696839528" alt="Значок галочки">
+      <h2 class="h3">Hе вся реклама плохая</h2>
+      <p>Сайтам нужны финансы, чтобы оставаться бесплатными. Поддержите их, разрешив допустимую рекламу (включена по умолчанию). Вы хотите скрывать любую рекламу? Нет проблем. <a href="/ru/acceptable-ads#optout" hreflang="ru" title="Internal link to page about Acceptable Ads">Узнайте, как это сделать</a></p>
+    </div>
+  </div>
+</div>
+
+<section id="abb-cross-promotion" class="bg-secondary hide-on-ios hide-on-android">
+  <div class="container content">
+    <div class="phablet-width">
+      <h2>
+        Вы хотите блокировать рекламу и отслеживание на <span class="avoid-wrap">мобильных устройствах?</span>
+      </h2>
+    </div>
+
+    <div class="abb-cross-promo-content">
+      <figure>
+        <img src="/img/abb-browser-icon.svg?3696839528" alt="Значок Adblock Browser на фоне щита" id="abb-logo">
+        <figcaption>
+          <h3>
+            Приложение Adblock Browser
+          </h3>
+          <p>
+            Создатели Adblock Plus, самого популярного блокировщик рекламы для браузеров настольных компьютеров, теперь предлагают Adblock Browser для устройств Android и iOS.
+          </p>
+        </figcaption>
+      </figure>
+      <div id="abb-app-store-badges">
+        <a class="app-store-button abb-android" href="https://eyeo.to/adblockbrowser/android/abp-website" title="Загрузите Adblock Browser на Android">
+  <img width="200" height="60" src="/ru/img/google-play-badge.png?3696839528" alt="Загрузить Adblock Browser для Android в Google Play">
+</a>
+
+      </div>
+    </div>
+
+    <div class="abb-cross-promo-graphic">
+        <div class="abb-arrow-container">
+          <img class="abb-message" src="/img/abb-cross-promo-message.svg?3696839528" alt="Illustration with text reading: Watch videos without any annoying ads!">
+          <img class="abb-arrow" src="/img/pointing-arrow.svg?3696839528" alt="Illustration of an arrow pointing to an Android phone playing a video">
+        </div>
+      <img class="" src="/img/android-video-illustration.svg?3696839528" alt="Illustration of an Android phone playing a video">
+    </div>
+  </div>
+</section>
+
+<article id="about-abp" class="show-on-ios show-on-android bg-secondary">
+  <div class="container section content">
+    <div class="row">
+      <div id="about-abp-logo" class="column text-center">
+        <img src="/img/abp-laptop.svg?3696839528">
+      </div>
+      <div id="about-abp-body" class="column">
+        <h2>
+          Что такое Adblock Plus?
+        </h2>
+        <p>
+          Adblock Plus — это бесплатное расширение, позволяющее оптимизировать свою работу в сети. Блокировка навязчивой рекламы, отслеживания, распространяющих вредоносное ПО сайтов и многое другое. Доступно для всех основных компьютерных браузеров и мобильных устройств.
+        </p>
+        <p>
+          Adblock Plus представляет собой проект на основе открытого кода, имеющий лицензию <a href="https://www.gnu.org/licenses/gpl.html">GPLv3</a> и применяемый в соответствии с <a href="/en/terms" hreflang="en">Условиями использования</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div id="footnote" class="container content hide-on-ios hide-on-android">
+  <sup>[1]</sup> Следующие правила <strong>всегда</strong> применялись, и <strong>будут</strong> применяться для всех, без исключения:
+  <ul>
+    <li>
+      Участники не могут платить, чтобы обходить <a href="/ru/acceptable-ads#criteria-general" hreflang="ru">критерии.</a> Каждая реклама должна соответствовать правилам.
+    </li>
+    <li>
+      Для прозрачности мы добавляем всю допустимую рекламу в наш <a href="https://adblockplus.org/forum/viewforum.php?f=12">форум</a>, чтобы наши пользователи могли оставлять свои отзывы.
+    </li>
+    <li>
+      Мы слушаем своих пользователей. Если какая-либо допустимая реклама будет оспорена нашим сообществом по обоснованной причине, мы удалим ее из белого списка.
+    </li>
+    <li>
+      Мы имеем возможность сохранить наш продукт с открытым кодом бесплатным, взимая комиссионные сборы с крупных компаний-участников за услуги белого списка. Приблизительно для других 90&nbsp;% наших партнеров эта услуга предоставляется бесплатно.
+    </li>
+  </ul>
+</div>
+
+  
+    <script id="download-label-chrome" type="text/template">
+      Загрузите Adblock Plus для Chrome
+    </script>
+  
+
+  
+    <script id="download-label-chromium" type="text/template">
+      Загрузите Adblock Plus для Chromium
+    </script>
+  
+
+  
+    <script id="download-label-firefox" type="text/template">
+      Загрузите Adblock Plus для Firefox
+    </script>
+  
+
+  
+    <script id="download-label-safari" type="text/template">
+      «Установить для Safari»
+    </script>
+    <script id="alt-download-label-safari" type="text/template">
+      Agree and Install for Safari
+    </script>
+  
+
+  
+    <script id="download-label-msedge" type="text/template">
+      Загрузите Adblock Plus для Microsoft Edge
+    </script>
+  
+
+  
+    <script id="download-label-opera" type="text/template">
+      Загрузите Adblock Plus для Opera
+    </script>
+  
+
+  
+    <script id="download-label-yandexbrowser" type="text/template">
+      Загрузите Adblock Plus для Яндекс.Браузера
+    </script>
+  
+
+  
+    <script id="download-label-ios" type="text/template">
+      «Установить для iOS»
+    </script>
+    <script id="alt-download-label-ios" type="text/template">
+      Agree and Install for iOS
+    </script>
+  
+
+  
+    <script id="download-label-android" type="text/template">
+      «Установить для Android»
+    </script>
+    <script id="alt-download-label-android" type="text/template">
+      Agree and Install for Android
+    </script>
+  
+
+  
+    <script id="download-label-samsungBrowser" type="text/template">
+      «Установить для Интернет Samsung»
+    </script>
+    <script id="alt-download-label-samsungBrowser" type="text/template">
+      Agree and Install for Samsung Internet
+    </script>
+  
+
+
+<script src="/js/vendor/bowser.js?3326006362"></script>
+<script src="/js/install-button.js?3326006362"></script>
+    
+    
+
+
+
+<footer id="footer" class="content">
+  <div class="footer-wrap footer-links">
+    <div class="container">
+      <div class="row">
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Загрузить</h5>
+          <ul>
+            <li><a href="/en/adblock-plus-chrome" hreflang="en">Adblock Plus для Chrome</a></li>
+            <li><a href="/en/adblock-plus-firefox" hreflang="en">Adblock Plus для Firefox</a></li>
+            <li><a href="/en/ad-blocker-safari" hreflang="en">Adblock Plus для Safari</a></li>
+            <li><a href="/en/adblock-plus-opera" hreflang="en">Adblock Plus для Opera</a></li>
+            <li><a href="/en/adblock-plus-edge" hreflang="en">Adblock Plus for Edge</a></li>
+            <li><a href="/en/android-install" hreflang="en">Adblock Browser for Android</a></li>
+          </ul>
+        </nav>
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Ресурсы</h5>
+          <ul>
+            
+              <li><a href="/ru/acceptable-ads" hreflang="ru">Допустимая реклама</a></li>
+            
+              <li><a href="/ru/documentation" hreflang="ru">Документация</a></li>
+            
+              <li><a href="/ru/deployments" hreflang="ru">Для администраторов</a></li>
+            
+              <li><a href="/ru/bugs" hreflang="ru">Сообщить о проблеме</a></li>
+            
+            
+            <li><a href="https://help.adblockplus.org/hc/articles/360062733293" target="_blank" hreflang="en">Создание фильтров для Adblock Plus</a></li>
+          </ul>
+        </nav>
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Сообщество</h5>
+          <ul>
+            <li><a href="/ru/contribute" hreflang="ru">Участие</a></li>
+            <li><a href="https://adblockplus.org/releases/" hreflang="en">Объявления</a></li>
+            <li><a href="https://adblockplus.org/blog/" hreflang="en">Блог</a></li>
+            <li><a href="https://adblockplus.org/forum/" hreflang="en">Форум</a></li>
+          </ul>
+        </nav>
+        <nav class="column one-fourth">
+          <h5 class="footer-heading">Развитие</h5>
+          <ul>
+            <li><a href="https://gitlab.com/adblockinc/ext/adblockplus">Исходный код</a></li>
+            
+  
+    <li><a href="/ru/tools" hreflang="ru">Инструменты</a></li>
+  
+
+            <li><a href="https://eyeo.com/careers">Карьерные возможности в eyeo GmbH</a></li>
+            <li><a href="/en/partner-integrations" hreflang="en">Partner Integrations</a></li>
+          </ul>
+        </nav>
+
+        <nav id="social-list" class="column">
+          <h5 class="footer-social-heading">Следите за нами</h5>
+          <ul>
+            <li>
+              <a href="https://twitter.com/AdblockPlus" title="Следить за Adblock Plus на Twitter" target="_blank" rel="nofollow noopener">
+                <img src="/img/footer-twitter-glyphicon.png?3696839528" alt="Значок Twitter">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/AdblockPlusOfficial" title="Подписаться на Adblock Plus на YouTube" target="_blank" rel="nofollow noopener">
+                <img src="/img/footer-youtube-glyphicon.png?3696839528" alt="Значок YouTube">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/adblockplus" title="Следить за Adblock Plus на Facebook" target="_blank" rel="nofollow noopener">
+                <img src="/img/footer-facebook-glyphicon.png?3696839528" alt="Значок Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/adblockplus/" title="Следить за Adblock Plus на Instagram" target="_blank" rel="nofollow noopener">
+                <img src="/img/footer-instagram-glyphicon.png?3696839528" alt="Значок Instagram">
+              </a>
+            </li>
+            <li>
+              <a href="https://vk.com/adblockplusofficial" title="Следить за Adblock Plus на VK" target="_blank" rel="nofollow noopener">
+                <img src="/img/footer-vk-glyphicon.png?3696839528" alt="Значок VK">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div> 
+    </div> 
+  </div> 
+
+  <div class="footer-wrap footer-legal-links">
+    <div class="container">
+      <div id="footer-legal">
+        <p id="copyright-notice">Авторское право © 2023 Все права защищены. Adblock Plus<sup>®</sup> является зарегистрированной торговой маркой компании <a href="https://eyeo.com">eyeo GmbH</a>.</p>
+        <ul id="legal-list">
+          
+            
+              <li><a href="/en/terms" hreflang="en">Условия использования</a></li>
+            
+              <li><a href="/en/privacy" hreflang="en">Политика конфиденциальности</a></li>
+            
+              <li><a href="/en/imprint" hreflang="en">Контакт</a></li>
+            
+          
+        </ul>
+      </div> 
+    </div> 
+  </div> 
+</footer> 
+
+
+    <div id="cookiebar" class="cookie cookiebar">
+  <div class="container">
+    <div class="row">
+
+      <div class="column two-thirds">
+        <p class="cookiebar-text">
+          <svg viewBox="0 0 37.796 41.279" width="38" height="42">
+            <title>Сообщение о куки</title>
+            <g transform="translate(-14.904 0)">
+              <g transform="translate(14.904 0)">
+                <path d="M52.468,31.165a6.029,6.029,0,0,1-1.514-4.908.935.935,0,0,0-.626-1.019,6.029,6.029,0,0,1-3.244-8.8A.935.935,0,0,0,47,15.368a6.039,6.039,0,0,1-1.112-5.609A.935.935,0,0,0,45.4,8.647,6.029,6.029,0,0,1,42.129,2.01.935.935,0,0,0,41.484.935a20.682,20.682,0,1,0,11.049,31.38A.935.935,0,0,0,52.468,31.165Zm-3.739,2.814A18.759,18.759,0,1,1,40.148,2.524,7.9,7.9,0,0,0,43.887,10a7.889,7.889,0,0,0,1.281,6.029A7.917,7.917,0,0,0,46.682,25.1a7.823,7.823,0,0,0,2.346,1.617,7.889,7.889,0,0,0,1.57,5.123A18.6,18.6,0,0,1,48.729,33.979Z" transform="translate(-14.904 0)"></path>
+              </g>
+              <g transform="translate(24.556 12.199)">
+                <circle cx="1.598" cy="1.598" r="1.598"></circle>
+              </g>
+              <g transform="translate(34.81 18.817)">
+                <circle cx="1.598" cy="1.598" r="1.598"></circle>
+              </g>
+              <g transform="translate(33.212 32.212)">
+                <circle cx="1.598" cy="1.598" r="1.598"></circle>
+              </g>
+              <g transform="translate(36.652 9.03)">
+                <circle cx="1.047" cy="1.047" r="1.047"></circle>
+              </g>
+              <g transform="translate(23.509 25.912)">
+                <circle cx="1.047" cy="1.047" r="1.047"></circle>
+              </g>
+              <g transform="translate(42.765 27.23)">
+                <circle cx="1.047" cy="1.047" r="1.047"></circle>
+              </g>
+            </g>
+          </svg>
+          <span>
+            Мы используем куки, чтобы обеспечить вам максимальное качество пользования нашим сайтом. Пользуясь нашим сайтом, вы осознаете, что мы используем куки, и вы можете изменить настройки в любое время. <a href="/ru/cookie-information" hreflang="ru">Подробнее</a>
+          </span>
+        </p>
+      </div>
+
+      <div class="column one-third text-end">
+        <ul class="cookiebar-nav">
+          <li>
+            <button type="button" class="cookies-submit button" title="Убрать сообщение о куки">
+              Ок, я понял
+            </button>
+          </li>
+          <li class="dropup cookies-dropup">
+            <button type="button" class="cookies-settings button" title="Редактировать настройки куки">
+              Настройки &nbsp;
+              <svg viewBox="0 0 16.509 16.993" width="18" height="18">
+                <title>Значок настроек</title>
+                <path d="M175.051,8.283V.478a.478.478,0,1,0-.955,0v7.8a2.425,2.425,0,0,0,0,4.755v3.474a.478.478,0,1,0,.955,0V13.038a2.425,2.425,0,0,0,0-4.755Zm-.478,3.846a1.468,1.468,0,1,1,1.468-1.468A1.469,1.469,0,0,1,174.574,12.129Z" transform="translate(-166.302 0)"></path>
+                <path d="M9.751,4.278V.478a.478.478,0,0,0-.955,0v3.8a2.425,2.425,0,0,0,0,4.755v7.479a.478.478,0,0,0,.955,0V9.029a2.423,2.423,0,0,0,0-4.752ZM9.274,8.123a1.468,1.468,0,1,1,1.468-1.468A1.469,1.469,0,0,1,9.274,8.123Z" transform="translate(-6.85 0)"></path>
+                <path d="M339.351,4.278V.478a.478.478,0,0,0-.955,0v3.8a2.425,2.425,0,0,0,0,4.755v7.483a.478.478,0,0,0,.955,0V9.029a2.423,2.423,0,0,0,0-4.752Zm-.478,3.846a1.468,1.468,0,1,1,1.468-1.468A1.469,1.469,0,0,1,338.874,8.123Z" transform="translate(-324.789 0)"></path>
+              </svg>
+            </button>
+            <div class="cookies-dropup-menu text-start" tabindex="1">
+               <div class="cookies-settings-form">
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Необходимые куки</p>
+      <p>Эти куки используются для запоминания ваших настроек конфиденциальности. Их нельзя отключить.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input type="checkbox" checked="" disabled="">
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Куки отслеживания</p>
+      <p>Мы используем эти куки для анализа трафика сайта.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input class="tracking-cookies" type="checkbox" checked="">
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <button type="button" class="link-button cookies-save" title="Сохранить настройки куки">
+    Сохранить настройки
+  </button>
+
+  <span class="arrow"></span>
+
+</div><!-- .cookies-settings-form -->
+              <span class="arrow"></span>
+            </div>
+          </li>
+        </ul>
+      </div><!-- .column -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+
+</div><!-- #cookies-large-bar -->
+  <form class="cookie cookieprompt">
+
+  <fieldset class="container">
+
+    <legend class="cookie-heading">
+      Настройки куки
+    </legend>
+
+    <button type="button" class="cookies-close" title="Убрать сообщение о куки">
+      <svg viewBox="0 0 23.313 23.313" width="15" height="15">
+        <title>Значок закрытия</title>
+        <path fill="#fff" class="a" d="M21.763,23.044C19.816,21.1,15.74,17.021,11.656,12.936L1.548,23.044a.9.9,0,0,1-1.279,0,.893.893,0,0,1,0-1.278c1.947-1.948,6.023-6.025,10.108-10.11L.269,1.547a.893.893,0,0,1,0-1.278.9.9,0,0,1,1.279,0L11.655,10.377,21.763.269a.905.905,0,0,1,1.283,1.278L12.935,11.657l10.11,10.11a.908.908,0,0,1-.64,1.547A.909.909,0,0,1,21.763,23.044Z"></path>
+      </svg>
+    </button>
+
+    <p>
+      Мы используем куки, чтобы обеспечить вам максимальное качество пользования нашим сайтом.
+      <a href="/ru/cookie-information" hreflang="ru" title="Дополнительная информация о куки" target="_blank">Подробнее</a>
+    </p>
+
+    <p>
+      <button type="button" class="cookies-submit" title="Убрать сообщение о куки">
+        Ок, я понял
+      </button>
+    </p>
+
+    <p>
+      <button type="button" class="cookies-settings" title="Редактировать настройки куки">
+        Изменить настройки
+      </button>
+    </p>
+
+  </fieldset>
+
+</form>
+  <form class="cookie cookiepage">
+
+  <header class="bg-dark">
+    <div class="container">
+
+      <h4 class="cookie-heading">
+        Настройки куки
+      </h4>
+
+      <button type="button" class="cookies-close" title="Убрать сообщение о куки">
+        <svg viewBox="0 0 23.313 23.313" width="15" height="15">
+          <title>Значок закрытия</title>
+          <path fill="#fff" class="a" d="M21.763,23.044C19.816,21.1,15.74,17.021,11.656,12.936L1.548,23.044a.9.9,0,0,1-1.279,0,.893.893,0,0,1,0-1.278c1.947-1.948,6.023-6.025,10.108-10.11L.269,1.547a.893.893,0,0,1,0-1.278.9.9,0,0,1,1.279,0L11.655,10.377,21.763.269a.905.905,0,0,1,1.283,1.278L12.935,11.657l10.11,10.11a.908.908,0,0,1-.64,1.547A.909.909,0,0,1,21.763,23.044Z"></path>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <div class="bg-light">
+    <div class="container section">
+        Мы используем куки, чтобы обеспечить вам максимальное качество пользования нашим сайтом. Пользуясь нашим сайтом, вы осознаете, что мы используем куки, и вы можете изменить настройки в любое время. <a href="/ru/cookie-information" hreflang="ru">Подробнее</a>
+    </div>
+  </div>
+
+  <div class="container section">
+     <div class="cookies-settings-form">
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Необходимые куки</p>
+      <p>Эти куки используются для запоминания ваших настроек конфиденциальности. Их нельзя отключить.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input type="checkbox" checked="" disabled="">
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="cookies-setting row">
+    <div class="column three-fourths">
+      <p class="cookies-setting-title">Куки отслеживания</p>
+      <p>Мы используем эти куки для анализа трафика сайта.</p>
+    </div>
+    <div class="column one-fourth text-end">
+      <label class="switch">
+        <input class="tracking-cookies" type="checkbox" checked="">
+        <span></span>
+      </label>
+    </div>
+  </div>
+
+  <button type="button" class="link-button cookies-save" title="Сохранить настройки куки">
+    Сохранить настройки
+  </button>
+
+  <span class="arrow"></span>
+
+</div><!-- .cookies-settings-form -->
+  </div>
+
+</form>
+    <script src="/js/testing/setup.js?3326006362"></script>
+    
+  <script src="/js/main.js?3326006362"></script>
+
+
+
+  
+</body></html>
