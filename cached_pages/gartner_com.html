@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Just a moment... | Gartner</title>
+<style>
+        body {
+            margin: 0;
+            font-family: "Graphik Web", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #002856;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        * {
+            font-family: "Graphik Web", Arial, sans-serif;
+            -moz-font-feature-settings: "ss05";
+            -webkit-font-feature-settings: "ss05";
+            font-feature-settings: "ss05" on;
+            margin: 0;
+        }
+
+        a {
+            color: #0000d3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 56px;
+            line-height: 60px;
+            font-weight: 700;
+            word-break: break-word;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+            .backgroundText p {
+                font-size: 18px !important;
+            }
+        }
+
+        header {
+            padding-top: 30px;
+            height: 120px;
+            margin-bottom: 15px;
+            background-color: #FFFFFF;
+        }
+
+        .gartner-logo {
+            margin-left: 56px;
+        }
+
+        .logo {
+            height: auto;
+        }
+
+        .backgroundText {
+            color: #FFFFFF;
+            border: solid 1px #002856;
+            padding: 56px 56px;
+            border: 0;
+            font-size: 14px;
+            height: 80vh;
+        }
+
+        .backgroundText .description {
+            margin-bottom: 62px;
+        }
+
+        .backgroundText p {
+            font-size: 22px;
+            line-height: 34px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        article {
+            margin-top: 110px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            font-size: 14px;
+            background-color: #FFFFFF;
+            align-self: flex-end;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        code {
+            padding: 2px 4px;
+            font-size: 90%;
+            color: #c7254e;
+            background-color: #f9f2f4;
+            border-radius: 4px;
+            font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+    </style>
+<meta http-equiv="refresh" content="390">
+</head>
+<body>
+<header>
+<div class="gartner-logo">
+<a href="/en" class>
+<img class="logo img-responsive" width="116" height="27" alt src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMDgwIDYxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTA4MCA2MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMDAyODU2O30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEwNjQuNCwyNjMuOGwtMy4xLDM2LjZoLTE1Yy0yMy45LDAtMzYuMywxOS4xLTM2LjMsMzcuNXY4Mi43aC00Mi4yVjI2My44aDQwLjFsMC45LDE5LjYKCWM4LjQtMTMuNCwyMy4xLTE5LjYsNDEuMy0xOS42SDEwNjQuNHoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTc3MS4xLDQyMC42aC00Mi4zdi04Mi45YzAtMTcuNC0xLjYtMzkuMi0yNS45LTM5LjJjLTIzLjUsMC0zMi45LDE3LTMyLjksMzYuN3Y4NS4zaC00Mi4zVjI2My44SDY2N2wwLjksMjAKCWM4LjQtMTMuNCwyNC4xLTIzLjksNDcuMi0yMy45YzQyLjcsMCw1Ni4xLDMwLjUsNTYuMSw2Mi4xTDc3MS4xLDQyMC42eiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjA5LjIsMzg0bC0zLDM1LjdjLTkuOCwyLjYtMTkuOSwzLjktMzAuMSwzLjdjLTM5LjksMC01MS41LTE4LjMtNTEuNS01NS4xVjIxOS42SDU2N3Y0NC4yaDQyLjFsLTIuOSwzNi42SDU2NwoJVjM2NWMwLDE0LjgsNCwyMi43LDE5LjIsMjIuN0M1OTQsMzg3LjgsNjAxLjgsMzg2LjUsNjA5LjIsMzg0eiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTEwLjgsMjYzLjhsLTMuMywzNi42SDQ5NmMtMjMuOCwwLTM1LjcsMTkuMS0zNS43LDM3LjV2ODIuN0g0MThWMjYzLjhoNDBsMC44LDE5LjYKCWM4LjUtMTMuMywyMy4yLTE5LjYsNDEuNC0xOS42SDUxMC44eiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjI2LjksNDAzLjJjLTI4LjcsMTUuNC01Ny40LDI0LjItOTUuMywyMy4xYy03MC4yLTIuMS0xMjAuOS00NS44LTEyMC45LTExOS40YzAtNzMuMyw1MS4yLTEyMC4yLDEyMS0xMjEuMwoJYzM1LjQtMC41LDY3LDguNCw5MS44LDMwLjNMMTkzLjYsMjQ2Yy0xNS4zLTEzLjEtMzcuOC0yMC43LTY0LjgtMTkuNWMtNDMuOSwyLTcwLjQsMzQtNzEsNzcuOGMtMC42LDQ3LjUsMjguNiw4MC4zLDc0LjIsODEuNQoJYzIxLjUsMC41LDM2LjgtMi4zLDUwLjEtOC4zVjMyOWgtNDcuNGwzLjItMzkuOWg4OC45TDIyNi45LDQwMy4yeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOTQ4LjksMzU3LjJIODMyLjhjMy4zLDIwLDE5LjEsMzIuMSwzOC43LDMyLjdjMTkuMSwwLjUsMjkuNy01LjIsNDMuNy0xOS40bDI3LjYsMjAuOQoJYy0xOS42LDI0LjItNDMuMiwzMy03MC4xLDMzYy00Ny4yLDAtODIuNS0zMy04Mi41LTgyLjJTODI1LjQsMjYwLDg3MSwyNjBjNTAuMywwLDc3LjgsMzAuNSw3Ny44LDg0LjVMOTQ4LjksMzU3LjJ6IE05MDYuNSwzMjQuMwoJYy0xLjMtMTkuOC0xNi4xLTMyLjMtMzYuNi0zMS41Yy0yMC40LDAuOC0zNC4zLDE0LjItMzcuMSwzMS41SDkwNi41eiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzkxLjMsMzE3Ljl2MTAyLjdoLTM3LjRsLTAuOS0xNS41Yy0xMS40LDE0LjItMzAsMTkuMy00OS4yLDE5LjNjLTI4LjgsMC01Ni0xNC4yLTU2LjYtNDcuMwoJYy0wLjgtNTIsNTguNi01NS43LDk1LjktNTUuN2g3LjV2LTIuMWMwLTE3LjItMTEuNC0yNi41LTMyLjgtMjYuNWMtMTUuNiwwLjEtMzAuNSw2LTQxLjksMTYuN2wtMjQuNC0yNC44CgljMTkuNi0xNi4zLDQ0LjQtMjUuMSw2OS44LTI0LjdDMzY5LjksMjYwLDM5MS4zLDI4Mi40LDM5MS4zLDMxNy45eiBNMzUwLjYsMzUyLjJoLTUuOWMtMjAsMC01NS4yLDEtNTUuMSwyMgoJYzAuMiwyOS42LDYxLDIwLjEsNjEtMTUuNUwzNTAuNiwzNTIuMnoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEwMzEuNCw0MDIuM2MwLjMtOS41LDguMi0xNi45LDE3LjYtMTYuNmM5LjUsMC4zLDE2LjksOC4yLDE2LjYsMTcuNmMtMC4zLDkuMy03LjksMTYuNi0xNy4xLDE2LjYKCWMtOS41LDAtMTcuMS03LjctMTcuMS0xNy4xQzEwMzEuNCw0MDIuNywxMDMxLjQsNDAyLjUsMTAzMS40LDQwMi4zeiBNMTA0OC41LDQyMy41YzExLjYtMC4yLDIxLTkuNywyMC44LTIxLjQKCWMtMC4yLTExLjYtOS43LTIxLTIxLjQtMjAuOGMtMTEuNSwwLjItMjAuOCw5LjUtMjAuOCwyMWMtMC4xLDExLjYsOS4zLDIxLjEsMjAuOSwyMS4yQzEwNDguMiw0MjMuNSwxMDQ4LjQsNDIzLjUsMTA0OC41LDQyMy41CglMMTA0OC41LDQyMy41eiBNMTA0NCw0MDRoNC4zbDYuNCwxMC41aDQuMWwtNi44LTEwLjdjMy42LTAuNCw2LjItMi40LDYuMi02LjdjMC00LjgtMi44LTYuOS04LjYtNi45aC05LjJ2MjQuM2gzLjdMMTA0NCw0MDR6CgkgTTEwNDQsNDAwLjl2LTcuNWg1YzIuNiwwLDUuMywwLjUsNS4zLDMuNmMwLDMuNy0yLjgsNC01LjksNEwxMDQ0LDQwMC45eiIvPgo8L3N2Zz4K">
+</a>
+</div>
+</header>
+<div class="backgroundText">
+<h1>
+Gartner.com
+</h1>
+<div class="description">
+<p class="p-intro" style="color: rgb(6,196,176);">To ensure a secure connection and verify you're human, please complete the validation process, if prompted.
+<br>
+</p>
+</div>
+<div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt={cvId: '3',cZone: "www.gartner.com",cType: 'managed',cRay: '904a858ecefc6616',cH: 'IlUC4frFTZ.ev2puKxgJXM46FzZHoKHi0MEfMG1qejo-1737328473-1.2.1.1-OpukfBs9tngOLVyc_GuFNbM1tdWyZ_O8EbU7hGKPFA_R3v.7XKxb5KMUrJIjecSb',cUPMDTk: "\/?__cf_chl_tk=hlsbZH.ZW8K83Yucoi38Kn6N05wSxW0x3YasWv5uZls-1737328473-1.0.1.1-oKpYb8pyP7z7R58qPJz_sOJg9WLBJddKcU.66KeVbU4",cFPWv: 'g',cITimeS: '1737328473',cTTimeMs: '1000',cMTimeMs: '390000',cTplC: 1,cTplV: 5,cTplB: 'cf',cK: "",fa: "\/?__cf_chl_f_tk=hlsbZH.ZW8K83Yucoi38Kn6N05wSxW0x3YasWv5uZls-1737328473-1.0.1.1-oKpYb8pyP7z7R58qPJz_sOJg9WLBJddKcU.66KeVbU4",md: "3KiuLw5xCVXYuk8uYJ3gNPcLK0hoJtpAtiPENtR6QVQ-1737328473-1.2.1.1-te7zs0x0F4ZkCyIOACjmLc.Esev7HmTPJRvkf03OdsCjCpfvbWZXdGl9V4lL..hFeIS8iP4qSlpZvh193khfm9cngsJ3Ykypa0XmEmpdxUE1G.CaeFzi8wHAhIg6RG2ylu0mrUYCHicLxNQb_gDxFZ2b9sOvY_3RKrYKsgihG.6kPubxM6G_aoQBa3bDCYCBmylcXHz5ppRdzsP_1_tub2ie8PRBRBXPoecqWAIt60EjwLoY4J2YP840WhlJoCe5Jo.Yepw.y9LaFyLZZeAN92ic8MNbBiNtEAfXK0z_hzEAmplHPKHxpvziM2wdOqDLRVPgK8UdSnsf2_P7nYdZc9OsUM3JOYRwBWPz.YiyECKmeD.AvoJs4DEjLvnQeVRfH2DcYemttuyzxNrr8BDeKxzYZOCDzgNxsHbLdfC_QHklQ494kUS6SOajekRp5CbGctDMJV61M_hPZYzCd649B2kVTqgHMu3tfShuj12oPIWcWMSFGrt5tJG3TN0N_0CPgI9VlUCZ4dbv3icaZjUsehZ7Nybc2RRKdcgVI.wv9LF7nD4GA.Te6Q551at61bPg4xTOi92vLVQZIuZxLnYxibap2zsoF2FI1u9tWWmz6pNQrFSbEOs.MQ_Bay87925dG3iJeGTQX2HNxfFgwv_NqwNRiK8b_mIe6RLaATFGfqAvpuxKMvQ4nIVbyAmYBdN6uf50o_WmnRYmJadhr1PRlyxv5jUgo.jgtbYDfXMVGcsecQ2b2LxOobKLxQaj8EbFhRMh.nglxWZhThn4EPBA0sO_ZgSQm9vDlayTiAUm6490HLzsUlravIKKZkriuedL9hirzkXTUZhzvGHg.eXW3iRY.TiLOfMA1LuItx34woHYlg.kbcqU2sXPKIncyutqVW8Ljsjbl0SafzIx2QduHf53O2NY.4Yj84FLvfrEI4kh.xOnZlNP3LFSr6SmLmy1DBgEXwf.FaaW2qgbxwK0df.hLrcmy3PF7jG3qe9MFWM26epH7XeHJQcqRdZGQLd7Q7BsNKlZ0vlVJKJA_LaIbu4iolhsLpMJ7jLAhKcUEx1XJlRAy1jzokzey4ozRXlQfBTY1Y9tSJvOkeiolBe.RJ52JtMkmWFBAffVzmPCdGxH4PQkTcaTa3.V4WbDdGCRmn7GIsOExh7gaEKjOPWaJVvWp_mj1aTqWyibgLD_GIITgJk8G6E_LYJqHkBfKUXkjUFNR2uFGsvpRN1zK62D6K_WVRthTb1zonUSFo3278xvxehY_TBYY0uuyZqDqi1BVO76rw1Tw.oAsFwTjvd3fPScuESfXtNybI4sudXvZ.AQvAKWUqfleENWc383ntww2eFtigPUZAL.6qWXj4FdCDt9noj_17BnsOVdpwM_j3qMWxy8hHTZYyuJinV4sfOpnUz2M.h1ZdRWL5xoyJUxeaRykxhM1fpjwF.Rr9rvUo9Qq9RR5yUT4NwYXWAL5DQSIM0J8kezGmutfEQ3Rclp8Jku414k7zwN0r3KbYHuaL959hRc4Nqy..3o_aLGN_D2uQU1Xq2zdgxsJbH4A7APjyR3HeeuvdSHalBIx8MbqOV5ABELBLsQSic3395dqkgJRS4YfTQB_s5Cyw0KVmgVdwmJZfd_5yhFKlOxvkWMQsf5EEt.XIu6l5qRADLd051wfw9u.3juw2WH6fPlQt.nS5Sq.wqzFUkV4Jk5JnnmHQ5PKlXvwabPwowizo5mTKU4uI8UPeN03ycYOfwE38TYDAXYjWrX8NVJppLgJsWmc_ajQfoYoZctDlxTw6nqqEN4k9sMNyrrL1NzE8Nguo2saif3RFxNvdvZwSJY4azF6ni2dPn1iuQCFQEsLQohwyidFz3ttAHZ3xu_tzVdjFvB0sOEhjtutkGQddb8YzoQSuCWMAryoeAXGpsfE_EdpwzrM.xMTrLWPWaZtZ5HyRB1keS5nI.Up.Z_AkNkju8a4LmlmQ0iiBfcmMU3ylTqOSesgcN5UTUsJLyVkz6U8WarFDFWQIF9g6Io1ByvbdYwjXElAt5MyiRAaa9xI5mtE6wNnuOVOR5tgwzIggNKgoZVaOpVpTQnVuwt8eg20rYWeQKYEmZDJ9x4GxJERHSuez.R8aMT.TKVMupcruGsFafWLalPjj8glS0aV1mUlrhdlQV6XBzUfVQkQCsz6C.chx__vkxIXiR2ttbipBB9i8OouZs6Oio9Y.NKXG5Fpn4GIt0fP2ubLnOLQCIXaTWLVirfXNLX2bHLlHqxFkvTPF_oRihgLzCzYkQIgspPcBluMtpXvC5_OpV21gDZQ3aBvzml",mdrd: "Rmyl6pTUMuZTb0vAqGPy3rGlrtrmxCwSFLwIrSGa_ng-1737328473-1.2.1.1-H9gewop_o9Y5tmnD6Y0jnpcrVZnCeFEDDiztFvYq7PZPP08nLFX2n11Ntiio13p52yBcgrkpsT4RY.jDL.vjMwHp8cAVtXi8YW2nH8py9KQBgJYEVvRsmxdm21mnUeIGHsww4Gz0DyueByX8bjO7pIkV07Mwab_uaB4fLBphRd_JOb_DNdZtbO7iCDZV30TL7k.pE4MTpDwivTE7sBcWBKzTYbmtDY.gAvsSoL_x1IG8mUQnsiwCrMIZuV3t5Qr2SWN6oNfe_yXVHLXLyRKeJEGIu2px1rsjcqMttfbPoHh3fXoQVpcPN7CKzvRcVvt0fGKqwvxGZyy1OgYphdB_b3d2C3.24FesiBK2Z5R.Ebcs_8yCk0u1n1ol5Ua23jX.5HHG7M378DXXNdsef_SHxWHEHKUSK.39mcSXYQMF_HlDzVc44oDWD8c3Xkz9XhMn07NyTfrb_iwoOhlqRBIdTxt6UuOD.6D.ODe6JKZtshlfd5WO_nDqbv3xZGVRaX8BS7RTPJfz5LF0Vrrcwh5FrlxhVUT_4BzTCSRUg7aIOa64WD1JkPGsGKI56W4XsnGQNYs531wXieLfUavnDRQ8HlWuk5y11xwVK8m9H50_h3WPzVHLg5DPe1fgD8.aJH1U2BDda50LzGixwvPi4Go7axB41AdX0_xuSquxf4el6c2LfK9ZGbHOhxJzPCClt7kmuamUB423g1QrYzF4brQo64GXTNV1wnU_ULeVbUWPVvvVNEUnfxGpVZx04FlspDPSVuiXGaYv_j98vP4GHyX3CKzPr9fCfiCLe1ga8AF2pXqz9zF.3gK4qGpu0JFXn3NY8_M4ANoLtcRaTDSjjGOKx8S1eX9SRvbo_j0XVNN1otLnVMJlt5q1jTxiDUidmeWa9xaGPzNlBjTTSX5VJhycvBNByTaAFjoOY.Efcta6RFlHW6QT4am8JRt.K_fXOFIdXbGsTlA0izVNA4rdJPSaew6potkHSW9PtllcH_LyHi4j2hUQJVNBQWUN6belpzKkE3FXLabRimzbGcLNKKQbarhn__RdUpKdO.mh2A1GYOxJGUMs8pT6SDB2EfZ1n6ayc7dCor5Zm91QOLR.4dzDjGEM_2eWAtwe.4tLFjq3jnvxBSrfKeFSH.M.8KSDc8MmGP5Qnwkb292w1QO7dwZlI7khebbCgfUSrDmnCOMGfBeY5gt3yzd.AxOqhDBjY.9KkgSGGYLqPmOe7xswvuqj7PUeDo6MzLmOskOLmGwHqpavPwIdwp9oulIdwTjckVm4Xv_MV0zXz6d82uQr3Y0fIcHl2nU9dAVEn7HfKPNlSnBcBRNOyGqrzH.DMRgfkzIrb43iRLlu.wATPuJwBqwQAY7hGCKD.oIPDvxzZdyvnpqrDdT0uiMLZEwtWDTDvS3yoQpfBFZ1y85glXO.RNMB5vcWK4sKnapoMBxMskqP_eHcDy0lfnZzbVr7acmULLnmdBHPujWpj_h6Da.0NGCms3CFomz3wXxexWpcvN3AYW2rIc2H7v.PfQLIAHTiHl8XK2RPx4iDYeA_wojNeL6Rkg_6W75CQW3jgL5hkVgaSskqY9FytCq40NcNf3xTK2GGIEKpFGTjeDeN4aJ2ALsHGCVKDZiUxLjm8ujWAq2KApINwWRzt5ZniL6JIdvQA4nY8I3Gc9kQw1AjyIT8m49imxPcjpZF8xE8DuvgEVdkQjuxN1rsKAjqwB08sKLfvWZvzDeesNO5eaWyy8RxCMt2TwNPO8mb4fY.2mNae8l98u._OvVQSxLnuq1DCtbfQ6x6tnicsAvrT3FewvkxkHzTM.lHN95llZXSfYK9WkmIuhu_ikDcUZj7Zw8L_gljFrXr3urWSwcyrmJDUaX4jT1NPGQGw.pu2mpVN5fUb4b6HdcXDxMht_3TRWegQV6Gaz7yoyQMuY.AJ4bQDCaKV2r3oc9EMY6kfF3e36bmL_qzmBeh_HR_KSx4S3QpmshoXnf_L6IaDGOOK6NiTyIlUUuk1BpSk0MUJ0tTtCDYzALUu1g4zVNVfdQrZZ9f5zlX18dbfenAbn.a5mXzq.Ly2aKMvBtx4NSBZXSTvvzl0G4fx7LL_XB7WIhoMw0IXpIWS8G25dyKRY8eT5Q0.6VWoOmDvqjYTT4GwTZyiP1yn9XB7JCb.0M4UADJwNjQCk_Pc9AafB2aTUVJz8uHt.y_AlZoNg"};var cpo = document.createElement('script');cpo.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=904a858ecefc6616';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, "\/?__cf_chl_rt_tk=hlsbZH.ZW8K83Yucoi38Kn6N05wSxW0x3YasWv5uZls-1737328473-1.0.1.1-oKpYb8pyP7z7R58qPJz_sOJg9WLBJddKcU.66KeVbU4" + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(cpo);}());</script>
+</div>
+<footer>
+<p>
+Ray ID: <code>904a858ecefc6616</code>
+</p>
+</footer>
+</body>
+</html>

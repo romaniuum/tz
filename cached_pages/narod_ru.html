@@ -63,10 +63,10 @@
 	<script async defer src="https://www.google.com/recaptcha/api.js?onload=reCallback&render=explicit&hl=ru"></script>
 	<script>
 /* --- UCOZ-JS-DATA --- */
-window.uCoz = {"language":"ru","module":"index","site":{"host":"narodru.ucoz.ru","id":"0narodru","domain":"narod.ru"},"ssid":"575432151203103136507","uLightboxType":1,"sign":{"3125":"Закрыть","7252":"Предыдущий","7251":"Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.","7287":"Перейти на страницу с фотографией.","5458":"Следующий","7253":"Начать слайдшоу","7254":"Изменить размер","5255":"Помощник"},"country":"FR"};
+window.uCoz = {"site":{"domain":"narod.ru","id":"0narodru","host":"narodru.ucoz.ru"},"country":"FR","language":"ru","uLightboxType":1,"sign":{"7287":"Перейти на страницу с фотографией.","5255":"Помощник","5458":"Следующий","3125":"Закрыть","7252":"Предыдущий","7254":"Изменить размер","7253":"Начать слайдшоу","7251":"Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже."},"module":"index","ssid":"033050572137514641374"};
 /* --- UCOZ-JS-CODE --- */
  function uSocialLogin(t) {
-			var params = {"google":{"height":600,"width":700},"ok":{"width":710,"height":390},"vkontakte":{"width":790,"height":400},"yandex":{"height":515,"width":870},"facebook":{"height":520,"width":950}};
+			var params = {"google":{"width":700,"height":600},"ok":{"width":710,"height":390},"yandex":{"height":515,"width":870},"vkontakte":{"width":790,"height":400},"facebook":{"width":950,"height":520}};
 			var ref = escape(location.protocol + '//' + ('narod.ru' || location.hostname) + location.pathname + ((location.hash ? ( location.search ? location.search + '&' : '?' ) + 'rnd=' + Date.now() + location.hash : ( location.search || '' ))));
 			window.open('/'+t+'?ref='+ref,'conwin','width='+params[t].width+',height='+params[t].height+',status=1,resizable=1,left='+parseInt((screen.availWidth/2)-(params[t].width/2))+',top='+parseInt((screen.availHeight/2)-(params[t].height/2)-20)+'screenX='+parseInt((screen.availWidth/2)-(params[t].width/2))+',screenY='+parseInt((screen.availHeight/2)-(params[t].height/2)-20));
 			return false;
@@ -654,4 +654,4 @@ function reCallback() {
 </div><!--/U1BREADCRUMB1Z-->
  </body>
  </html>
-<!-- 0.09477 (s300) -->
+<!-- 0.10157 (s300) -->

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"b30b7dc1b0",applicationID:"117563747"};;/*! For license information please see nr-loader-rum-1.278.2.min.js.LICENSE.txt */
-(()=>{var e,t,r={122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},217:(e,t,r)=>{"use strict";r.d(t,{D0:()=>h,gD:()=>b,xN:()=>v});r(860).K7.genericEvents;const n="experimental.marks",i="experimental.measures",o="experimental.resources";var a=r(993);const s=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var c=r(614),u=r(944),l=r(384),d=r(122);const f="[data-nr-mask]",g=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0,level:a.p_.INFO},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(i)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},resources:{get enabled(){return e.feature_flags.includes(o)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:c.wk,inactiveMs:c.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){s(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){s(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0}}},p={},m="All configuration objects require an agent identifier!";function h(e){if(!e)throw new Error(m);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function v(e,t){if(!e)throw new Error(m);p[e]=(0,d.a)(t,g());const r=(0,l.nY)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(m);var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>d});var n=r(122),i=r(384),o=r(154),a=r(324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0,harvester:void 0},l={};function d(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!l[e])throw new Error("Runtime for ".concat(e," was never set"));return l[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");l[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(l[e],"harvestCount")||Object.defineProperty(l[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=l[e])}},324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,xv:()=>n});const n="1.278.2",i="PROD",o="CDN"},154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>l,bv:()=>o,gm:()=>a,mw:()=>s,sb:()=>u});var n=r(863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,l=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)())},687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>d,x3:()=>u});var n=r(836),i=r(606),o=r(860),a=r(646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};l(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),g(e,t,!1),s[e].size&&f(e))}function l(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function d(e="",t="feature",r=!1){if(l(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),g(e,t)})))}function g(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(990),o=r(371),a=r(646),s=r(607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},l={},d=!1;try{d=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=m(e),l=c.length,d=0;d<l;d++)c[d].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:d?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:d};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return l[t]=l[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),l=(0,n.Zm)();l.ee||(l.ee=u)},646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(566).bz)()},566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(836),i=r(154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>l,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>d});var n=r(154),i=r(863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function l(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(836),i=r(607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];l(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return l(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,l,d;try{a=this,o=[...arguments],l="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],l],e)}i(r+"start",[o,a,s],l,c);try{return d=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],l,c),e}finally{i(r+"end",[o,a,d],l,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function l(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},993:(e,t,r)=>{"use strict";r.d(t,{ET:()=>o,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o="log";n.K7.logging},969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>s,rs:()=>i,xV:()=>a,z_:()=>o});const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},344:(e,t,r)=>{"use strict";r.d(t,{G4:()=>i});var n=r(614);r(860).K7.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.g.ERROR,n.g.FULL,n.g.OFF},234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(836),i=r(687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},603:(e,t,r)=>{"use strict";r.d(t,{j:()=>K});var n=r(860),i=r(555),o=r(371),a=r(908),s=r(836),c=r(687),u=r(289),l=r(154),d=r(944),f=r(969),g=r(384),p=r(344);const m=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",p.G4.RECORD,p.G4.PAUSE,"log","wrapLogger"],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(863),b=r(614),y=r(993);var w=r(646),A=r(434);const R=new Map;function _(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,d.R)(29);const i=function(e){return(e||s.ee).get("logger")}(e),o=(0,A.YM)(i),a=new w.y(s.P);a.level=n.level,a.customAttributes=n.customAttributes;const c=t[r]?.[A.Jt]||t[r];return R.set(c,a),o.inPlace(t,[r],"wrap-logger-",(()=>R.get(c))),i}function E(){const e=(0,g.pV)();m.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,d.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const x={};function N(e,t,g=!1){t||(0,c.Ak)(e,"api");const m={};var w=s.ee.get(e),A=w.get("tracer");x[e]=b.g.OFF,w.on(p.G4.REPLAY_RUNNING,(t=>{x[e]=t}));var R="api-",E=R+"ixn-";function N(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),j(R,n,!0,o||null===r?"session":void 0)(t,r)}function k(){}m.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K7.metrics,w),function(e,t,r={},i=y.p_.INFO){(0,a.p)(f.xV,["API/logging/".concat(i.toLowerCase(),"/called")],void 0,n.K7.metrics,e),(0,a.p)(y.ET,[(0,v.t)(),t,r,i],void 0,n.K7.logging,e)}(w,e,t,r)},m.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,w),_(w,e,t,{customAttributes:r,level:i})},h.forEach((e=>{m[e]=j(R,e,!0,"api")})),m.addPageAction=j(R,"addPageAction",!0,n.K7.genericEvents),m.recordCustomEvent=j(R,"recordCustomEvent",!0,n.K7.genericEvents),m.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,j(R,"setPageViewName",!0)()},m.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return N(e,t,"setCustomAttribute",r);(0,d.R)(40,typeof t)}else(0,d.R)(39,typeof e)},m.setUserId=function(e){if("string"==typeof e||null===e)return N("enduser.id",e,"setUserId",!0);(0,d.R)(41,typeof e)},m.setApplicationVersion=function(e){if("string"==typeof e||null===e)return N("application.version",e,"setApplicationVersion",!1);(0,d.R)(42,typeof e)},m.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K7.metrics,w),w.emit("manual-start-all")}catch(e){(0,d.R)(23,e)}},m[p.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K7.metrics,w),(0,a.p)(p.G4.RECORD,[],void 0,n.K7.sessionReplay,w)},m[p.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,w),(0,a.p)(p.G4.PAUSE,[],void 0,n.K7.sessionReplay,w)},m.interaction=function(e){return(new k).get("object"==typeof e?e:{})};const T=k.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K7.metrics,w),g||(0,a.p)(E+"tracer",[(0,v.t)(),e,r],i,n.K7.spa,w),function(){if(A.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.t)()],r)}}}};function j(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K7.metrics,w),i&&(0,a.p)(e+t,[r?(0,v.t)():performance.now(),...arguments],r?null:this,i,w),r?void 0:this}}function I(){r.e(296).then(r.bind(r,778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,d.R)(27,e),w.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{T[e]=j(E,e,void 0,g?n.K7.softNav:n.K7.spa)})),m.setCurrentRouteName=g?j(E,"routeName",void 0,n.K7.softNav):j(R,"routeName",!0,n.K7.spa),m.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K7.metrics,w),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!x[e]],void 0,n.K7.jserrors,w)},l.RI?(0,u.GG)((()=>I()),!0):I(),m}var k=r(217),T=r(122);const j={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},I={};var S=r(284);const O=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let P=!1;function K(e,t={},r,n){let{init:a,info:c,loader_config:u,runtime:d={},exposed:f=!0}=t;d.loaderType=r;const p=(0,g.pV)();c||(a=p.init,c=p.info,u=p.loader_config),(0,k.xN)(e.agentIdentifier,a||{}),function(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");I[e]=(0,T.a)(t,j);const r=(0,g.nY)(e);r&&(r.loader_config=I[e])}(e.agentIdentifier,u||{}),c.jsAttributes??={},l.bv&&(c.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,c);const m=(0,k.D0)(e.agentIdentifier),h=[c.beacon,c.errorBeacon];P||(m.proxy.assets&&(O(m.proxy.assets),h.push(m.proxy.assets)),m.proxy.beacon&&h.push(m.proxy.beacon),E(),(0,g.US)("activatedFeatures",S.B),e.runSoftNavOverSpa&&=!0===m.soft_navigations.enabled&&m.feature_flags.includes("soft_nav")),d.denyList=[...m.ajax.deny_list||[],...m.ajax.block_internal?h:[]],d.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,d),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=N(e.agentIdentifier,n,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=f),P=!0}},374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>s,P3:()=>c,XX:()=>i,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},c={[s.pageViewEvent]:1,[s.pageViewTiming]:2,[s.metrics]:3,[s.jserrors]:4,[s.spa]:5,[s.ajax]:6,[s.sessionTrace]:7,[s.softNav]:8,[s.sessionReplay]:9,[s.logging]:10,[s.genericEvents]:11},u={[s.pageViewEvent]:a,[s.pageViewTiming]:n,[s.ajax]:n,[s.spa]:n,[s.softNav]:n,[s.metrics]:i,[s.jserrors]:i,[s.sessionTrace]:o,[s.sessionReplay]:o,[s.logging]:"browser/logs",[s.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.278.2.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.278.2.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),l=0;l<u.length;l++){var d=u[l];if(d.getAttribute("src")==r||d.getAttribute("data-webpack")==t+o){s=d;break}}if(!s){c=!0;var f={296:"sha512-CcLAdQT8vALDxC7qTmG3sMahdpDdoEgt5RoRndTIgP2G6iyOIFCnudUJJ4fWvi2ByZdRAiIvGuuv1EqTRojiZw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={840:0,374:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.278.2.PROD"]=self["webpackChunk:NRBA-1.278.2.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(374);var e=i(944),t=i(344),r=i(566);class n{agentIdentifier;constructor(e=(0,r.LA)(16)){this.agentIdentifier=e}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(217);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var l=i(603);var d=i(687),f=i(234),g=i(289),p=i(154),m=i(384);const h=e=>p.RI&&!0===(0,s.gD)(e,"privacy.cookies_enabled");function v(e){return!!(0,m.dV)().o.MO&&h(e)&&!0===(0,s.gD)(e,"session_trace.enabled")}var b=i(389);class y extends f.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,d.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,b.J)((()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if(h(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(296).then(i.bind(i,861));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,d.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(296).then(i.bind(i,103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};p.RI?(0,g.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return v(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var w=i(630);class A extends y{static featureName=w.T;constructor(e,t=!0){super(e,w.T,t),this.importAggregator(e)}}var R=i(908),_=i(843),E=i(878),x=i(782),N=i(863);class k extends y{static featureName=x.T;constructor(e,t=!0){super(e,x.T,t),p.RI&&((0,_.u)((()=>(0,R.p)("docHidden",[(0,N.t)()],void 0,x.T,this.ee)),!0),(0,E.sp)("pagehide",(()=>(0,R.p)("winPagehide",[(0,N.t)()],void 0,x.T,this.ee))),this.importAggregator(e))}}var T=i(969);class j extends y{static featureName=T.TZ;constructor(e,t=!0){super(e,T.TZ,t),this.importAggregator(e)}}new class extends o{constructor(t,r){super(r),p.gm?(this.features={},(0,m.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,l.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,m.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[A,k,j],loaderType:"lite"})})()})();</script>
+	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<script>
 			window.metro = {};
-			metro.pageData = {"newsfeed_slug":"home","title":"Metro.co.uk: News, Sport, Showbiz, Celebrities from Metro","headline":"","shortHeadline":"","socialHeadline":"Metro","topCategory":"home","topCategoryId":"","subCategory":"home","subCategoryId":"","siteId":"www.metro.co.uk","type":"home","author":"","creator":"","postAge":"","siteUrl":"https:\/\/metro.co.uk","cdnUrl":"https:\/\/metro.co.uk\/wp-content\/themes\/metro","requestUrl":"\/","ogUrl":"https:\/\/metro.co.uk\/","excerpt":"Metro.co.uk: News, Sport, Showbiz, Celebrities from Metro","siteName":"Metro","ogimageUrl":"https:\/\/metro.co.uk\/wp-content\/client-mu-plugins\/metro-branding\/images\/m-black-share.png","ogimageWidth":1200,"ogimageHeight":630,"image":"https:\/\/metro.co.uk\/wp-content\/client-mu-plugins\/metro-branding\/images\/m-black-share.png","imageWidth":1200,"imageHeight":630,"ogType":"website","pubDate":"","pubDateIso8601":"","pubTime":"","pubDateOffset":"","modDate":"","date":"19\/01\/2025","time":"18:37:53","postId":"","authorId":"","postTags":"","postTagNames":"","postTagIds":"","internalTagSlugs":"","internalTagNames":"","internalTagIds":"","isBlogPost":false,"isWidePost":false,"postLayout":"","postStyle":"","postStyleId":"","leadingImage":false,"isSponsored":false,"rating":false,"isLoggedIn":false,"environment":"production","commentable":false,"categoryName":"","metroAnalyticsApiHost":"d20o19rp6m6brr.cloudfront.net\/metro-analytics","wordCount":665,"videoCount":0,"imageCount":4,"moreLinkCount":0,"pollCount":0,"tagCategory":"","debug":true,"adBreakpoints":[{"minWidth":320,"name":"small"},{"minWidth":768,"name":"medium"},{"minWidth":1024,"name":"large"}],"deviceType":"desktop","themePath":"https:\/\/metro.co.uk\/wp-content\/themes\/metro","fbAppId":"176908729004638","uaDevice":"desktop"};
+			metro.pageData = {"newsfeed_slug":"home","title":"Metro.co.uk: News, Sport, Showbiz, Celebrities from Metro","headline":"","shortHeadline":"","socialHeadline":"Metro","topCategory":"home","topCategoryId":"","subCategory":"home","subCategoryId":"","siteId":"www.metro.co.uk","type":"home","author":"","creator":"","postAge":"","siteUrl":"https:\/\/metro.co.uk","cdnUrl":"https:\/\/metro.co.uk\/wp-content\/themes\/metro","requestUrl":"\/","ogUrl":"https:\/\/metro.co.uk\/","excerpt":"Metro.co.uk: News, Sport, Showbiz, Celebrities from Metro","siteName":"Metro","ogimageUrl":"https:\/\/metro.co.uk\/wp-content\/client-mu-plugins\/metro-branding\/images\/m-black-share.png","ogimageWidth":1200,"ogimageHeight":630,"image":"https:\/\/metro.co.uk\/wp-content\/client-mu-plugins\/metro-branding\/images\/m-black-share.png","imageWidth":1200,"imageHeight":630,"ogType":"website","pubDate":"","pubDateIso8601":"","pubTime":"","pubDateOffset":"","modDate":"","date":"19\/01\/2025","time":"23:15:01","postId":"","authorId":"","postTags":"","postTagNames":"","postTagIds":"","internalTagSlugs":"","internalTagNames":"","internalTagIds":"","isBlogPost":false,"isWidePost":false,"postLayout":"","postStyle":"","postStyleId":"","leadingImage":false,"isSponsored":false,"rating":false,"isLoggedIn":false,"environment":"production","commentable":false,"categoryName":"","metroAnalyticsApiHost":"d20o19rp6m6brr.cloudfront.net\/metro-analytics","wordCount":517,"videoCount":0,"imageCount":4,"moreLinkCount":0,"pollCount":0,"tagCategory":"","debug":true,"adBreakpoints":[{"minWidth":320,"name":"small"},{"minWidth":768,"name":"medium"},{"minWidth":1024,"name":"large"}],"deviceType":"desktop","themePath":"https:\/\/metro.co.uk\/wp-content\/themes\/metro","fbAppId":"176908729004638","uaDevice":"desktop"};
 			metro.isRedesign = true;
 		</script>
 		<style id="metro-archive.css-styles-1737047049461">*,:after,:before{box-sizing:border-box}*{margin:0;padding:0}body{-webkit-font-smoothing:antialiased}canvas,img,picture,video{display:block}button,input,select,textarea{font:inherit}a,h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}html:focus-within{scroll-behavior:smooth}a:not([class]){-webkit-text-decoration-skip:ink;text-decoration-skip-ink:auto}canvas,img,picture,svg,video{background-repeat:no-repeat;background-size:cover;height:auto;max-width:100%;vertical-align:middle}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,:after,:before{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;transition:none}}body,html{scroll-behavior:smooth}body{min-width:320px;position:relative}.wrapper{display:flex;flex-direction:column;gap:1.5rem;margin:0 auto;max-width:60rem;min-height:100vh}@media screen and (max-width:600px){html[lang=en]{margin-top:0!important;scroll-padding-top:0!important}html #wpadminbar{display:none}}a{color:#000}.dark a{color:#fff}.horizontal-scroll{cursor:-webkit-grab;cursor:grab;overflow-x:scroll;scrollbar-width:none}.horizontal-scroll::-webkit-scrollbar{display:none}.blur{position:relative}.blur:after{background:linear-gradient(270deg,var(--blur-color,#fff) 60%,transparent);content:"";display:block;height:100%;position:absolute;right:0;top:0;width:var(--blur-width,50px)}.blur>*{padding-right:var(--blur-width,50px)}hr{border:1px solid #eaeaea}.loader{display:inline-block}.loader:after{animation:loading-animation .8s linear infinite;border:3px solid var(--loading-color,#000);border-color:var(--loading-color,#000) transparent;border-radius:50%;content:" ";display:block;height:var(--loading-size,12px);position:relative;width:var(--loading-size,12px)}@keyframes loading-animation{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.masthead{--button-color:$white;align-items:center;display:flex;gap:10px;height:100px;padding:0 10px 0 0;position:relative}@media(min-width:23.5em){.masthead{padding:0 20px 0 0}}@media(min-width:48em){.masthead{height:108px;padding:0 70px 0 0}}.masthead .metro-button{background:transparent;border:none;height:100%;max-width:none;padding:0}.masthead .metro-button>span{display:none}.masthead .metro-button svg{margin:auto;fill:#fff}.masthead__logo,.masthead__mobile-logo,.masthead__secondary-logo{align-items:center;display:flex;height:100%}.masthead__logo img,.masthead__logo svg,.masthead__mobile-logo img,.masthead__mobile-logo svg,.masthead__secondary-logo img,.masthead__secondary-logo svg{max-height:100%;max-width:100%}.masthead__desktop-logo,.masthead__logo,.masthead__mobile-logo{flex-grow:1;padding:10px;transition:opacity 1s}@media(min-width:23.5em){.masthead__desktop-logo,.masthead__logo,.masthead__mobile-logo{padding:20px}}@media(max-width:47.99em){.metro-search--expanded .masthead__desktop-logo,.metro-search--expanded .masthead__logo,.metro-search--expanded .masthead__mobile-logo{opacity:0}}.masthead__desktop-logo a,.masthead__logo a,.masthead__mobile-logo a{align-items:center;color:#fff;display:inline-flex;height:100%}.masthead__logo{flex-basis:50%;flex-shrink:0}.has-mobile-logo .masthead__logo{display:none}@media(min-width:48em){.has-mobile-logo .masthead__logo{display:flex}.has-desktop-logo .masthead__logo{display:none}}.masthead__logo svg{height:45px;width:188px}@media(min-width:48em){.masthead__logo svg{height:60px;width:237px}}.masthead__logo img{max-height:45px}@media(min-width:48em){.masthead__logo img{max-height:60px}}.masthead__desktop-logo{display:none}@media(min-width:48em){.masthead__desktop-logo{display:flex}}.masthead__desktop-logo img{max-height:60px}.masthead__desktop-logo svg{height:60px}.masthead__mobile-logo img{max-height:45px}@media(min-width:48em){.masthead__mobile-logo{display:none}}.masthead__mobile-logo svg{height:45px;width:188px}@media(min-width:48em){.masthead__mobile-logo svg{height:60px;width:237px}}.masthead__secondary-logo{display:none;padding:5px 0;transition:opacity 1s}@media(min-width:48em){.masthead__secondary-logo{display:flex}}.metro-search--expanded .masthead__secondary-logo{opacity:0}.masthead__secondary-logo>a{display:block;height:100%}.masthead__menu-expand,.masthead__search{flex-shrink:0}.metro-search{align-items:center;background:#292929;border-radius:22.5px;color:#fff;cursor:pointer;display:flex;height:45px;position:absolute;right:65px;transition:width .35s;width:45px}@media(min-width:23.5em){.metro-search{right:80px}}@media(min-width:48em){.metro-search{border-radius:16px;height:32px;right:20px;width:32px}}.metro-search--expanded .metro-search{cursor:auto;width:calc(100% - 100px)}@media(min-width:48em){.metro-search--expanded .metro-search{width:180px}}.metro-search>form{flex-grow:1}.metro-search__input{background:none;border:none;border-radius:25px;box-sizing:border-box;color:#fff;display:none;font-weight:700;outline:none;padding:0 0 0 2px;width:100%}.metro-search__input::-webkit-input-placeholder{color:hsla(0,0%,100%,.3)}.metro-search__input:-ms-input-placeholder{color:hsla(0,0%,100%,.3)}.metro-search__input::placeholder{color:hsla(0,0%,100%,.3)}.metro-search--expanded .metro-search__input{display:block}.metro-search__close,.metro-search__expand{flex-basis:45px;height:100%;width:100%}.metro-search__expand{display:flex}@media(min-width:48em){.metro-search__expand svg{width:12px}}.masthead .metro-search__close{display:none}.metro-search--expanded .metro-search__close{display:flex}.metro-search__close svg{width:12px}@media(min-width:48em){.metro-search__close svg{width:10px}}.site-navigation{background:#000;-ms-scroll-chaining:none;overscroll-behavior:contain;padding:12px 0 0}.site-navigation.site-navigation--expanded{padding:12px 0 38px}.site-navigation a{color:#fff;text-decoration:none}.site-navigation ul{list-style:none}.site-navigation>.horizontal-scroll{display:flex}@media(min-width:48em){.site-navigation>.horizontal-scroll{margin:0 40px 0 0}}.site-navigation>.horizontal-scroll .favicon{flex:0 0 26px;margin:2px 10px 0 -29px;transition:margin .35s}@media(min-width:48em){.site-navigation>.horizontal-scroll .favicon{display:none}}.site-navigation>.horizontal-scroll .favicon svg{height:26px}.is-pinned .site-navigation>.horizontal-scroll .favicon{margin:2px 5px 0 10px}.site-navigation .is-new>a:after{background:#f04;border-radius:3px;content:"";display:inline-block;height:6px;position:absolute;transform:translateX(3px) translateY(3px);width:6px}.site-navigation .social-links{display:none}.site-navigation__menu{align-items:center;display:flex;font-size:14px;font-weight:900;margin:0;padding:0 10px 0 0}@media(min-width:48em){.site-navigation__menu{padding:0 10px}}.site-navigation__menu>li{flex-shrink:0;padding:0 0 10px}@media(min-width:48em){.site-navigation__menu>li{flex:0 0 150px;text-align:center}}.site-navigation__menu>li>a,.site-navigation__menu>li>span{box-sizing:border-box;color:#fff;display:block;line-height:1.5;padding:0 15px 4px;position:relative;text-decoration:none;text-transform:uppercase;width:100%}@media(min-width:48em){.site-navigation__menu>li>a,.site-navigation__menu>li>span{padding:1px 10px}}.site-navigation__menu>li>a:before,.site-navigation__menu>li>span:before{background:var(--accent-color,#fff);border-top-left-radius:3px;border-top-right-radius:3px;content:"";display:block;height:3px;left:8px;position:absolute;top:100%;transition:border-top-left-radius .25s,border-top-right-radius .25s,height .25s;width:calc(100% - 16px);z-index:50}@media(min-width:48em){.site-navigation__menu>li>a:before,.site-navigation__menu>li>span:before{left:unset;width:calc(100% - 20px)}}.site-navigation__menu>li>a:hover:before,.site-navigation__menu>li>span:hover:before{border-top-left-radius:6px;border-top-right-radius:6px;height:6px}.site-navigation__menu>li>a span,.site-navigation__menu>li>span span{display:none}.site-navigation__menu>li.more{max-width:0}.site-navigation__menu .metro-button,.site-navigation__menu>li.more>span{display:none}.site-navigation__submenu{align-items:center;background:#000;bottom:0;display:none;flex-direction:row;gap:25px;height:40px;left:0;padding:0 14px;position:absolute;width:100%}@media(min-width:48em){.site-navigation__submenu{padding:0 20px}}.site-navigation__submenu li{flex-shrink:0;text-wrap:nowrap}.site-navigation__submenu a{color:gray}.site-navigation__submenu .current-menu-item a,.site-navigation__submenu .current-post-ancestor a,.site-navigation__submenu .current-post-parent a,.site-navigation__submenu a:hover{color:#fff}.current-category-ancestor .site-navigation__submenu,.current-menu-ancestor .site-navigation__submenu,.current-menu-item .site-navigation__submenu,.current-post-ancestor .site-navigation__submenu{display:flex}.current-menu-item .site-navigation__submenu{z-index:45}.current-menu-ancestor .site-navigation__submenu{z-index:40}.current-post-ancestor .site-navigation__submenu{z-index:35}.site-navigation__submenu .current-category-ancestor{z-index:30}.site-navigation__menu .current-category-ancestor a:before,.site-navigation__menu .current-menu-item>a:before,.site-navigation__menu .current-menu-parent a:before,.site-navigation__menu>li>a:hover:before{border-top-left-radius:6px;border-top-right-radius:6px;height:6px}@supports not (inset:0){.site-navigation__submenu>*{margin-right:25px!important}.site-navigation__submenu>:last-child{margin-right:0!important}}.masthead__menu-expand{align-items:center;background:#292929;border-radius:22.5px;height:45px;width:45px}@media(min-width:48em){.masthead__menu-expand{border-radius:0;height:auto;padding:10px 12px;position:absolute;right:0;top:calc(100% + 10px);width:auto;z-index:30}}.menu-expand__close,.menu-expand__open{align-items:center;cursor:pointer;display:flex;height:100%;justify-content:center;width:100%}.menu--expanded .menu-expand__open{display:none}.menu-expand__open svg{height:22px;width:19px}@media(min-width:48em){.menu-expand__open svg{height:18px;width:15px}}.masthead .menu-expand__close{display:none}.menu--expanded .menu-expand__close{display:flex}.menu-expand__close svg{height:19px;width:16px}@media(min-width:48em){.menu-expand__close svg{height:18px;width:15px}}.menu--expanded{overflow:hidden}@media(min-width:48em){.menu--expanded{overflow:visible}}.menu--expanded .header:after{background:#000;content:"";display:block;height:31px;width:100%}.menu--expanded .site-navigation{background:#000;height:calc(100vh - 100px);height:calc(100dvh - 100px);overflow-y:auto;position:-webkit-sticky;position:sticky;width:100%;z-index:20}@media(min-width:48em){.menu--expanded .site-navigation{height:auto;max-height:none;max-width:-webkit-fit-content;max-width:-moz-fit-content;max-width:fit-content;padding:12px 40px 0 0;width:60rem}}.menu--expanded .site-navigation>.horizontal-scroll{display:block}@media(min-width:48em){.menu--expanded .site-navigation>.horizontal-scroll{margin:0}}@media(max-width:47.99em){.menu--expanded .site-navigation .is-new>a:after{align-items:center;border-radius:8px;content:"NEW";display:inline-flex;font-size:10px;height:16px;margin-left:10px;padding:0 5px;position:relative;transform:none;width:auto}}.menu--expanded .site-navigation .social-links{display:flex;justify-content:center;margin:0;padding:30px}.menu--expanded .site-navigation__menu{display:block;font-size:16px;grid-template-columns:repeat(7,minmax(-webkit-min-content,1fr));grid-template-columns:repeat(7,minmax(min-content,1fr))}@media(min-width:48em){.menu--expanded .site-navigation__menu{align-items:start;display:grid;font-size:14px;padding:0 10px}}.menu--expanded .site-navigation__menu>li{align-items:center;display:flex;flex-direction:column;padding:0 0 3px;position:relative}@media(min-width:48em){.menu--expanded .site-navigation__menu>li{display:block;min-width:-webkit-min-content;min-width:-moz-min-content;min-width:min-content;padding:0 0 10px}}.menu--expanded .site-navigation__menu>li>a,.menu--expanded .site-navigation__menu>li>span{align-items:center;display:flex;padding:12px 15px 5px}@media(min-width:48em){.menu--expanded .site-navigation__menu>li>a,.menu--expanded .site-navigation__menu>li>span{display:block;padding:1px 10px}}.menu--expanded .site-navigation__menu>li>a span,.menu--expanded .site-navigation__menu>li>span span{display:inline;font-size:12px;font-weight:500;order:2}.menu--expanded .site-navigation__menu>li>a span:before,.menu--expanded .site-navigation__menu>li>span span:before{content:"|";margin:0 10px}.menu--expanded .site-navigation__menu>li.more{max-width:none}.menu--expanded .site-navigation__menu>li.more>span{display:block}.menu--expanded .site-navigation__menu .metro-button{background:none;border:0;display:block;padding-left:50px;position:absolute;right:10px;top:10px}@media(min-width:48em){.menu--expanded .site-navigation__menu .metro-button{display:none}}.menu--expanded .site-navigation__menu .metro-button span{display:none}.menu--expanded .site-navigation__menu .metro-button svg{display:block;height:7px;transition:transform .35s;width:12px}.menu--expanded .site-navigation__submenu{align-items:flex-start;display:flex;flex-direction:column;font-size:14px;gap:0;height:auto;line-height:1.25;padding:10px 15px 0;position:relative;text-align:left}@media(min-width:48em){.menu--expanded .site-navigation__submenu{padding:20px 10px 10px}}.menu--expanded .site-navigation__submenu li{padding:6px 0;text-wrap:wrap}.menu--expanded .site-navigation__submenu--expanded a{color:#d9d9d9}.menu--expanded .site-navigation__submenu--expanded svg{transform:rotate(180deg)}.menu--expanded .horizontal-scroll{cursor:auto}.menu--expanded .favicon{display:none}.site-navigation__accordion{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s;transition:grid-template-rows .35s, -ms-grid-rows .35s;width:100%}@media(min-width:48em){.site-navigation__accordion{grid-template-rows:1fr}}.site-navigation__submenu--expanded .site-navigation__accordion{grid-template-rows:1fr}.header{background:var(--metro--header--background-color);position:-webkit-sticky;position:sticky;top:-100px;z-index:99}@media(min-width:48em){.header{position:relative;top:auto}}.header.is-pinned{border-bottom:1px solid #4d4d4d}.header a>span,.header svg{pointer-events:none}.overlay--open .header{z-index:-1}.footer__logo svg{height:45px;width:188px}@media(min-width:48em){.footer__logo svg{height:50px;width:210px}}.footer__logo>a{color:#fff}.footer__menu{flex-basis:100%}@media(min-width:48em){.footer__menu{order:3}}.footer__menu .menu{display:flex;flex-wrap:wrap;gap:15px 35px;margin:30px 0 0}@media(min-width:48em){.footer__menu .menu{max-width:80%}}@supports not (inset:0){.footer__menu .menu>*{margin-bottom:15px!important;margin-right:35px!important}}.footer__menu .menu-item{display:inline-flex}.footer__menu a{color:#fff;text-decoration:none}.footer__menu a:hover{text-decoration:underline}.ipso-regulated{background-image:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQABLAEsAAD/4QCMRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAAEsAAAAAQAAASwAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAAEagAwAEAAAAAQAAABkAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIABkARgMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/3QAEAAX/2gAMAwEAAhEDEQA/AOAtrex8O6bbX1/ape3t4nmW1tLny4484Ejjgtkj5V4BAyewpB498QINsd35Ua8CKOCJY1HoF2YxXeSaVaaidctjaxXTWro9nbNJsU7bUCMcEHbyOMgHPvVP/hFtDeymNzYw2b7IpL2Yz5js2KrvjT5yVYA7gGDA525GKAOf0j+xPFcjxX1g9rqCRNJGNOVEW6IGSuxgQr4BI24DYPQ4qmB4NIz5et9M/wDLt0/Kuhl0JrO9s72HS4dOubbVolgSC43+dbF1AkILEk7io3DG7eeOOGaDpOi3Wp+I0ubW3mWKcrbxnhmy82FjO4BWO1cE8cAd6AMDPgz+7rP523+FGfBn93Wfztf8K3z8M7L7dbwLq7TCWBWIihUsxLqu9QSAYxvyT1AHvwlp4Ls9Nt7md7+3mWeznijMyqFV9h3NnJxsZcHjIzQBg58Gf3dZ/O2/woz4M/u6z+dr/hXS/wDCutJRpYJtSlikmeNYmmRE2fvWQnAbBDBRt/3h61DJ4NsNE0vXLj7T9sKWkyJuiUCFv3ZAbJyJPm4AHQE8UAZf9l+E5NHk1JpNWt4EuEgDSJC29ipY42jsAP8AvoVT8jwZ/wBBHUf+/Cf4U7VAE8MaHHCkRhc3LyZOMzCQKcj2QIAfQ9qxdg/55Qf99UAf/9Di7C6k13T44rC5jt9WjtDYPHKVUXlv/Cqk8CRcAYONwAwcgisZ/DuvJMYm0u8WTP3fsj5H0wv8qyo/9XL/ALv9RXu2hf8AIl2//XsP5UAefaHplt4Zuhfa9dpZXyxk2lusHnSRORxJIq/dAycAnJPPGKof2T4aPXxHIx9TpUnP/j9c7c/ef/rq/wDSq9AHbacdL0iVpdO8WzWzuArFdIY5AORkFiMggEHqO1VH0zw5I5d/EcjOSSWOlS5J9Sd/JrlKKAOqOk+Gic/8JC3/AIKZP/i6DpPhogj/AISF/wDwUyf/ABdcrRQB22PDC6A+lT61czRm6W4jMWntGUOwqwyxOQQF/KqH9neD/wDoKal/4Dj/AArmKKAP/9k=");background-repeat:no-repeat;height:25px;overflow:hidden;text-indent:100%;width:75px}.footer{align-items:center;background:#000;display:flex;flex-wrap:wrap;justify-content:space-between;padding:30px 20px}@media(min-width:48em){.footer{padding:30px 20px}}.social-links{display:flex;gap:40px;margin:30px 0 0}@media(min-width:48em){.social-links{margin:0}}.social-links__link{transition:opacity .3s}.social-links__link a:active,.social-links__link a:focus,.social-links__link a:hover{opacity:.6}.social-links__link svg{fill:#fff;height:28px;pointer-events:all;width:28px}@supports not (inset:0){.social-links>*{margin-right:40px!important}.social-links>:last-child{margin-right:0!important}}.ad-slot-container.ad-slot-large,.ad-slot-container.ad-slot-medium{display:none}.ad-slot-container.ad-slot-small{display:block}@media(min-width:48em){.ad-slot-container.ad-slot-small{display:none}.ad-slot-container.ad-slot-medium{display:block}.ad-slot-container.page-top-leaderboard{margin-top:-1rem}.ad-slot-container.page-top-leaderboard.ad-slot-large{margin-left:-5px;margin-right:-5px}.ad-slot-container.page-top-leaderboard.ad-slot-medium{position:-webkit-sticky;position:sticky;top:0;z-index:99}.ad-slot-container.page-top-leaderboard.ad-slot-medium>*{margin:0 auto;min-height:90px;width:728px}}@media(min-width:60em){.ad-slot-container.ad-slot-medium,.ad-slot-container.ad-slot-small{display:none}.ad-slot-container.ad-slot-large{display:block}}.ad-slot-container.has-ad-placeholder:before{background-color:#fff;color:#959595;content:"Advertisement";display:block;font-family:var(--wp--preset--font-family--body);font-size:12px;line-height:18px;text-align:center}.ad-slot-container.has-ad-placeholder>*{align-items:center;background-color:#eaeaea;display:flex!important;justify-content:center;min-height:250px;position:relative}.ad-slot-container.has-ad-placeholder--large>*{min-height:600px}.ad-slot-container.skyscraper-left,.ad-slot-container.skyscraper-right{display:none}@media screen and (min-width:1025px){.ad-slot-container.skyscraper-left,.ad-slot-container.skyscraper-right{display:block}}.metro__ad_area_left,.metro__ad_area_right{height:calc(100% - 80px);position:absolute;top:0;width:calc(50% - 500px)}.metro__ad_area_sticky_group{align-items:flex-end;display:flex;flex-direction:column;gap:20px;position:-webkit-sticky;position:sticky;top:0}.metro__ad_area_right{right:0}.metro__ad_area_right .metro__ad_area_sticky_group{align-items:flex-start}#metro_chromeless,.ad-slot-container.jwplayer_ad_container{display:none}@media(min-width:60em){#metro_chromeless{display:block}}#metro_chromeless__more a{font-family:var(--wp--preset--font-family--body);font-size:16px;font-weight:900;line-height:22px;text-decoration:none}.ad-slot-container.connatix_placeholder_desktop{margin:0}@media(min-width:60em){.ad-slot-container.connatix_placeholder_desktop{margin:0 -3.4rem}}#connatix_placeholder_desktop{aspect-ratio:16/9;min-height:unset;text-align:center;width:auto}@media(min-width:60em){#connatix_placeholder_desktop{margin:0 auto;width:600px}.wide-post #connatix_placeholder_desktop #connatix_placeholder_desktop{margin-left:0;width:100%}}.menu--expanded .stickyBannerUnderlay,.overlay--open #metro_chromeless,.overlay--open .stickyBannerUnderlay{z-index:-1}.page-top-leaderboard:has(#billboard[style*="display: none"]){position:relative!important}.author-avatar{background:var(--accent-color,#000);border-radius:24px;height:48px;margin:0 8px 0 0;min-width:48px;overflow:hidden;width:48px}.author-avatar img{width:100%}.author-avatar svg{height:100%;width:100%}.breaking-news{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);background:rgba(0,0,0,.6);bottom:0;color:#fff;font-size:26px;font-weight:900;left:0;line-height:1;padding:8px;position:absolute;z-index:1}.breaking-news span:first-of-type{color:#f04}.channel-glyph{align-items:center;color:var(--accent-color,#000);display:flex;font-weight:600;text-decoration:none}.channel-glyph:active,.channel-glyph:focus,.channel-glyph:hover{text-decoration:underline}.channel-glyph svg{background:var(--accent-color,#000);border-radius:10px;height:16px;margin:0 5px 0 0;width:16px}.dark .channel-glyph{color:var(--accent-color,#fff)}.icon{background:var(--accent-color,#000)}.icon--play{-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);background-color:hsla(0,0%,100%,.05);border:2px solid #fff;border-radius:20px;height:40px;width:40px}.icon--play svg{height:15px;width:15px}@media(min-width:26em){.icon--play svg{height:18px;width:18px}.icon--play{border-radius:25px;height:50px;width:50px}}.share-buttons{align-items:center;display:flex;gap:.5rem}.share-buttons .share-button{border-radius:50%;display:flex;height:2.125rem;position:relative;transition:opacity .3s;width:2.125rem}.share-buttons .share-button:active,.share-buttons .share-button:focus,.share-buttons .share-button:hover{opacity:.6}.share-buttons .share-button svg{position:absolute;fill:#fff;height:60%;left:50%;top:50%;transform:translate(-50%,-50%);width:60%}.share-buttons .whatsapp{background:#57cf38}.share-buttons .facebook{background:#3b5998}.share-buttons .twitter{background:#000}.share-buttons .copy_link{background:#f78b25}.share-buttons .share_more{background:#f04}.share-buttons .share-more{cursor:pointer;position:relative}.share-buttons .messenger{background:#0084ff}.share-buttons .email{background:#7f7f7f}.share-buttons .sms{background:#000}.share-buttons .flipboard{background:#f8241b}.share-buttons .flipboard svg{height:55%;width:55%}.share-buttons .next_story{align-items:center;background:var(--accent-color,#fb257c);color:#fff;display:flex;flex-direction:column;font-size:8px;font-weight:700;justify-content:center;line-height:14px;text-align:center;text-decoration:none}.share-buttons .share-more__submenu{background:#f6f6f6;cursor:default;display:block;left:-102px;padding:14px 14px 14px 17px;position:absolute;text-align:center;top:calc(100% + 13px);z-index:2}.share-buttons .share-more__submenu-header{color:#959595;display:flex;justify-content:space-between;margin-bottom:.5rem}.share-buttons .close-share-more__submenu{cursor:pointer}.share-buttons .close-share-more__submenu svg{height:10px;width:10px;fill:#959595}.share-buttons .share-buttons-sub-label{font-size:14px;font-weight:700;line-height:20px}.share-buttons .share-more__submenu-buttons{display:flex;gap:.875rem}.share-buttons .share-more__submenu.closed{display:none}.share-buttons .share-more__submenu:after{border-bottom:13px solid #f6f6f6;border-left:9px solid transparent;border-right:9px solid transparent;content:"";display:inline-block;left:100px;opacity:1;position:absolute;text-align:center;top:-13px;transform:translateX(10px);visibility:visible}.share-buttons .metro-comments-cta{border-radius:50%;font-weight:700;height:34px;max-width:inherit;padding:0;position:relative;text-transform:none;width:34px}.share-buttons .metro-comments-cta .comment-now__label{display:none}.share-buttons .metro-comments-cta svg{height:1.35rem;left:.05rem;margin-left:0;position:absolute;top:50%;transform:translateY(-50%);width:2rem;fill:#fff}@media(min-width:23.5em){.share-buttons .metro-comments-cta{border-radius:99px;height:unset;margin-left:auto;padding:7px 10px;width:unset}.share-buttons .metro-comments-cta .comment-now__label{display:flex;margin-left:1.75rem;margin-right:.2rem}.share-buttons .metro-comments-cta svg{left:.5rem}}.share-buttons .copy_link_copied_message{background:#000;bottom:75px;color:#fff;font-size:20px;font-weight:700;left:50%;margin-left:-100px;opacity:.9;padding:10px;position:fixed;text-align:center;width:200px;z-index:1}.share-buttons-floaty{background-color:hsla(0,0%,100%,.8);border:0;border-radius:5px;bottom:150px;display:flex;flex-direction:column;gap:.25rem;margin-bottom:0;position:fixed;transition-duration:.3s;transition-property:left,right;transition-timing-function:ease-in;z-index:199}.share-buttons-floaty .share-button{align-items:center;border-radius:3px;display:flex;flex-direction:column;font-size:8px;font-weight:700;height:44px;justify-content:center;line-height:14px;text-align:center;text-decoration:none;width:44px}.share-buttons-floaty .share-button svg{height:50%;left:0;position:relative;top:0;transform:none;width:50%}.share-buttons-floaty .twitter:after,.share-buttons-floaty .whatsapp:after{color:#fff;content:"Share";display:block;font-size:8px;line-height:14px;text-align:center}.share-buttons-floaty .metro-comments-cta{background:#f0f0f0;border:0;border-radius:3px;color:#000;display:flex;flex-direction:column;height:44px;justify-content:center;margin:0;max-width:100%;padding:0;width:44px}.share-buttons-floaty .metro-comments-cta .comment-now__label{display:flex;font-size:8px;font-weight:700;line-height:14px;margin-left:0;margin-right:0}.share-buttons-floaty .metro-comments-cta svg{left:0;position:relative;top:0;transform:none;fill:#000}@media(min-width:48em){.share-buttons-floaty{display:none}}.share-buttons-floaty{right:-50px}.metro-has-floaty-share .share-buttons-floaty{right:0}@supports not (inset:0){.share-buttons>*{margin-right:.5rem!important}.share-buttons-floaty>*,.share-buttons>:last-child{margin-right:0!important}.share-buttons-floaty>*{margin-bottom:.5rem!important}.share-more__submenu-buttons{margin-right:.875rem!important}.share-more__submenu-buttons:last-child{margin-right:0!important}}.lozenge{align-items:center;background:#000;border-radius:15px;color:#fff;display:inline-flex;font-size:14px;font-weight:700;height:30px;padding:0 12px;text-decoration:none;text-transform:uppercase;white-space:nowrap}.topic-lozenges{align-items:center;display:flex;flex:1;flex-direction:row;gap:10px;height:100%;list-style:none}.topic-lozenges .lozenge{background:var(--accent-color,#000)}.topic-lozenges .metro-button{color:var(--accent-text-color,#fff)}.metro-signpost{border-radius:11px;font-size:14px;font-weight:700;line-height:1;margin:0 2px 0 0;padding:0 5px;text-transform:uppercase;vertical-align:middle}@keyframes fade{0%{opacity:0}}.metro-signpost-liveblog:before{animation:fade 1.2s infinite alternate;background:#fff;border-radius:6px;content:"";display:inline-block;height:12px;margin-bottom:-1px;margin-right:4px;width:12px}:root{--button-background:#000;--button-border:#000;--button-text:#fff}button{-webkit-appearance:inherit;-moz-appearance:inherit;appearance:inherit;font:inherit}.metro-button{align-items:center;background:var(--button-background);border:2px solid var(--button-border);border-radius:99px;box-sizing:border-box;color:var(--button-text);cursor:pointer;display:flex;font-size:14px;font-weight:500;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;line-height:1;max-width:-webkit-fit-content;max-width:-moz-fit-content;max-width:fit-content;opacity:1;padding:7px 10px;text-decoration:none;text-transform:uppercase;transition:opacity .3s}.metro-button svg{height:15px;margin-left:.5em;width:15px}.metro-button:hover{opacity:.6}figcaption{border-bottom:1px solid #eaeaea;font-size:13px;line-height:19px;margin:0 1rem;padding:.4rem 0}@media(min-width:48em){figcaption{margin:0}}.metro-pull-notification{background:#f04;box-sizing:border-box;margin:0 auto;padding:10px 25px 10px 10px;position:fixed;top:0;width:100%;z-index:999999}@media(min-width:60em){.metro-pull-notification{max-width:960px}}.metro-pull-notification__body{cursor:pointer;display:flex;flex-direction:row;gap:15px}.metro-pull-notification__body .breaking-news-label{background:rgba(0,0,0,.7);color:#fff;display:flex;flex-direction:column;font-size:18px;font-weight:900;height:100%;justify-content:center;line-height:24px;padding:5px;text-transform:uppercase}.metro-pull-notification__body .breaking-news-label>em{color:#f04;font-style:normal}.metro-pull-notification__logo{height:46px;margin:4px 0 0;width:46px}.metro-pull-notification__logo img{width:100%}.metro-pull-notification__image{height:78px;width:78px}.metro-pull-notification__image img{width:100%}.metro-pull-notification__title{color:#fff;font-family:var(--wp--preset--font-family--body);font-size:18px;line-height:24px;padding:2px 20px 0 0}.metro-pull-notification__close{position:absolute;right:10px;top:6px}.metro-pull-notification__close svg{cursor:pointer;width:20px}.desktop-notification{align-items:center;background:#f7f7f7;box-shadow:2px 2px 2px 0 rgba(46,46,46,.2);box-sizing:border-box;display:flex;flex-direction:column;height:174px;justify-content:space-between;left:50%;padding:25px;position:fixed;top:0;transform:translate(-50%);width:500px;z-index:100}.admin-bar .desktop-notification{top:32px}.desktop-notification>svg:first-of-type{fill:#000;height:24px;width:100px}.desktop-notification>svg:first-of-type path{fill:#000!important}.desktop-notification__prompt{align-items:center;display:flex;flex-direction:row;gap:10px}.desktop-notification__cta,.desktop-notification__prompt h4{font-size:20px;line-height:26px}.desktop-notification__cta{align-items:center;background:var(--accent-color,#1888fc);border:none;border-radius:16px;color:#fff;cursor:pointer;display:flex;font-family:var(--wp--preset--font-family--headline);font-weight:700;height:34px;justify-content:center;width:300px}.desktop-notification__close{cursor:pointer;position:absolute;right:10px;top:10px}.grecaptcha-badge{visibility:hidden}.archive-layout{display:flex;flex-direction:column;gap:1.5rem;margin:0 1rem}@media screen and (min-width:60em){.archive-layout{margin:0}}.archive-layout>:first-child{margin-top:-1.5rem}@media screen and (min-width:48em){.archive-layout>:first-child{margin-top:unset}}@supports not (inset:0){.archive-layout>:first-child{margin-top:0!important}.archive-layout>*{margin-bottom:1.5rem!important}}.article-card{display:flex;flex:1;flex-direction:column}.article-card .icon--play{align-items:center;bottom:10px;display:flex;justify-content:center;left:10px;position:absolute}.article-card .article-card__title a:active,.article-card .article-card__title a:focus,.article-card .article-card__title a:hover{text-decoration:underline}.article-card .article-card__image a:active:before,.article-card .article-card__image a:focus:before,.article-card .article-card__image a:hover:before{opacity:.1}@supports selector(:has(*)){.article-card:has(.article-card__image a:active) .article-card__image:before,.article-card:has(.article-card__image a:focus) .article-card__image:before,.article-card:has(.article-card__image a:hover) .article-card__image:before,.article-card:has(.article-card__title a:active) .article-card__image:before,.article-card:has(.article-card__title a:focus) .article-card__image:before,.article-card:has(.article-card__title a:hover) .article-card__image:before{opacity:.1}.article-card:has(.article-card__image a:active) .article-card__title a,.article-card:has(.article-card__image a:focus) .article-card__title a,.article-card:has(.article-card__image a:hover) .article-card__title a,.article-card:has(.article-card__title a:active) .article-card__title a,.article-card:has(.article-card__title a:focus) .article-card__title a,.article-card:has(.article-card__title a:hover) .article-card__title a{text-decoration:underline}}.article-card a:active,.article-card a:focus,.article-card a:hover{text-decoration:underline}.article-card__image{aspect-ratio:auto 16/9;background:#eaeaea;position:relative}.article-card__image:before{background:#000;content:"";height:100%;left:0;opacity:0;pointer-events:none;position:absolute;top:0;transition:opacity .3s;width:100%}.article-card__image img{display:block;font-size:16px;height:100%;object-fit:cover;width:100%}.article-card__inner{display:flex;flex:1;flex-direction:column;justify-content:space-between;padding:1rem}.article-card__title{font-size:17px;font-weight:700;line-height:23px;margin:-1px 0 calc(1rem + 1px)}.article-card__title a{line-height:1;text-decoration:none;vertical-align:middle}.article-card__meta>:before{content:"|";padding:0 5px}.article-card__meta>:first-child:before{content:"";padding:0}.article-card__meta>* a{font-weight:700}.has-author-avatar .article-card__author{flex-basis:100%;order:1;padding:0}.has-author-avatar .article-card__author:before{display:none}.article-card__author a{text-decoration:none}.article-card__footer{display:flex}.has-author-avatar .article-card__footer .channel-glyph{order:2}.has-author-avatar .article-card__date{order:3}.article-card__meta{align-items:center;display:flex;flex-wrap:wrap;font-size:14px;font-weight:300;line-height:20px}.article-card__bullets{font-size:16px;line-height:22px;list-style:disc;margin:0 0 6px 14px}.article-card__bullets li{font-weight:500;margin-bottom:5px}.article-card__bullets li::marker{color:#f04}.article-card__bullets li a{text-decoration:none}.article-card__author,.article-card__date,.article-card__duration{display:none}@media screen and (min-width:48em){.article-card__author,.article-card__date,.article-card__duration{display:inline}}@media(min-width:48em){.post-grid{display:flex;flex-direction:column;gap:1rem}}.post-grid__label{padding:0}.post-grid__lozenges{margin:0 0 20px;padding:0 10px}@media(min-width:48em){.post-grid__lozenges{margin:0;padding:0}}.post-grid__posts{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}@media(min-width:48em){.post-grid__posts{gap:1rem;grid-template-columns:repeat(4,minmax(0,1fr));order:4}}.post-grid__posts .ad-slot-container{margin:10px 0 20px}@media(min-width:48em){.post-grid__posts .ad-slot-container{margin:0}}.post-grid__posts>:last-child .ad-slot-container{margin-bottom:0}.post-grid__item{border:1px solid #eaeaea;display:flex;flex-direction:column;position:relative}.post-grid__item.content-override{background:var(--metro--content-overrides--background-color);border:1px solid var(--metro--content-overrides--background-color);margin:10px 0}@media(min-width:48em){.post-grid__item.content-override{margin:0}}.post-grid__item .read-more{flex:1 0 100%;font-weight:700}.post-grid__item .read-more:before{content:"";padding:0}.post-grid__item .read-more svg{height:10px;width:20px}.post-grid__more{margin:15px 0;position:relative;text-align:center;width:100%}.post-grid__more a{position:relative;z-index:10}.post-grid__more:after{border-bottom:1px solid #eaeaea;content:"";display:block;left:5%;margin:0 auto;position:absolute;top:15px;width:90%}@media(min-width:48em){.post-grid__more{margin:0;width:auto}}@media(max-width:47.99em){.post-grid .post-grid__posts .post-grid__item.content-override:has(+.editorial-include){margin:1rem -1rem}}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .breaking-news{font-size:36px}.zebra-stacked-post-grid .post-grid__item .breaking-news{font-size:19px}@media(min-width:48em){.zebra-stacked-post-grid .post-grid__item .breaking-news,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .breaking-news{font-size:21px}}@media(min-width:60em){.zebra-stacked-post-grid .post-grid__item .breaking-news,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .breaking-news{font-size:26px}}@media(max-width:47.99em){.zebra-stacked-post-grid .post-grid__item{border:none}.zebra-stacked-post-grid .post-grid__item:after{border-bottom:1px solid #eaeaea;content:"";display:block;margin:0 auto;position:relative;width:100%}.dark .zebra-stacked-post-grid .post-grid__item:after{display:none}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1){margin:0 -1rem}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1):not(.content-override){background:var(--metro--widget--background-color--dark-grey);color:#fff}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1):not(.content-override) a:not(.channel-glyph){color:#fff}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1):after{display:none}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .article-card__inner{padding:1rem}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .article-card__title{font-size:24px;font-weight:700;line-height:30px}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .article-card__author,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .article-card__duration{display:block}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .article-card__date{display:none}}@media(max-width:47.99em)and (min-width:26em){.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+1) .article-card__date{display:block}}@media(max-width:47.99em){.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card{flex-direction:row;gap:10px;padding:1rem 0}@supports not (inset:0){.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card>*,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card>*{margin-right:10px!important}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card>:last-child,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card>:last-child{margin-right:0!important}}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card__image,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card__image{align-self:flex-start;aspect-ratio:4/3;flex-basis:166px}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card__image img,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card__image img{aspect-ratio:4/3}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card__inner,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card__inner{padding:0}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card__title,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card__title{margin-bottom:.5rem}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2).content-override,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3).content-override{margin:0 -1rem}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2).content-override .article-card,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3).content-override .article-card{padding:1rem}.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card__title,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card__title{font-size:16px;line-height:22px}}@media(max-width:47.99em)and (min-width:26em){.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+2) .article-card__title,.zebra-stacked-post-grid .post-grid__item:nth-of-type(3n+3) .article-card__title{font-size:17px;line-height:23px}}
@@ -101,10 +100,11 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 <meta property="og:image:height" content="630"/>
 <meta property="article:publisher" content="https://www.facebook.com/MetroUK" />
 <meta property="article:section" content="News">
-<meta property="article:tag" content="Letters">
-<meta property="article:tag" content="Metro newspaper">
-<meta property="article:published_time" content="2025-01-19T18:30:00+0000"/>
-<meta property="article:modified_time" content="2025-01-17T18:01:46+0000"/>
+<meta property="article:tag" content="Donald Trump">
+<meta property="article:tag" content="Mexico">
+<meta property="article:tag" content="Washington DC">
+<meta property="article:published_time" content="2025-01-19T22:44:19+0000"/>
+<meta property="article:modified_time" content="2025-01-19T22:44:32+0000"/>
 <meta name="twitter:image:src" content="https://metro.co.uk/wp-content/client-mu-plugins/metro-branding/images/m-black-share.png">
 <meta name="twitter:title" content="Metro &#8211; Metro.co.uk: News, Sport, Showbiz, Celebrities from Metro">
 <meta name="twitter:description" content="Metro.co.uk: News, Sport, Showbiz, Celebrities from Metro">
@@ -288,26 +288,12 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 					Top Stories				</h2>
 			</div>
 			<div class="post-grid__posts post-grid__posts_count_7">
-				<div class="post-grid__item has-author-avatar is-breaking-news accent--world accent--news" data-ico=top-stories_home>
+				<div class="post-grid__item has-author-avatar accent--world accent--news" data-ico=top-stories_home>
 	<div class="article-card" post-id=22389224>
 		<div class="article-card__image">
 			<a href="https://metro.co.uk/2025/01/19/questions-gaza-ceasefire-israel-raises-last-minute-concerns-22389224/"  aria-label="Link: British woman among first hostages to arrive in Israel after 470 days in Gaza">
-						<div class="breaking-news">
-			<span>BREAKING</span> <span>NEWS</span>
-		</div>
-										<img decoding="async" width="960" height="540" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236583986-8fdb.jpg?quality=90&amp;strip=all&amp;w=960&amp;h=540&amp;crop=1" class="attachment-metro_16_9_large size-metro_16_9_large wp-post-image" alt="Hostages reuniting with parents in Israel" loading="lazy" />			</a>
-		</div>
-		<div class="article-card__inner">
-			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/questions-gaza-ceasefire-israel-raises-last-minute-concerns-22389224/" >British woman among first hostages to arrive in Israel after 470 days in Gaza</a>
-			</h3>
-			<div class="article-card__footer">
-						<div class="author-avatar">
-			<img decoding="async" src="https://metro.co.uk/wp-content/uploads/2021/08/metro-headshots-gregana-krasteva-4788-100d-e1736864119791.jpg?quality=90&#038;strip=all&#038;w=1024&#038;resize=200,200&#038;zoom=1" loading="lazy" alt="Gergana Krasteva" width="48" height="48"/>
-		</div>
-						<div class="article-card__meta">
-						<a href="/news/world/" class="channel-glyph">
-		<svg xmlns="http://www.w3.org/2000/svg" display="none">
+										<span class="icon icon--play">
+			<svg xmlns="http://www.w3.org/2000/svg" display="none">
 	<symbol viewBox="0 0 188 45" id="common-metro-logo">
 		<path d="M6.09816 1H14.9799L22.4996 17.6072L30.2566 1H39.1383L45 43.7027H33.6316L31.1449 26.1473H31.0263L22.4996 44L13.9737 26.1473H13.8551L11.3684 43.7027H0L6.09816 1Z" fill="currentColor" />
 		<path d="M48 1H70.809L72.5225 12.3471H59.1094V16.8264H67.8539V28.1736H59.1094V32.6528H74L71.1052 44H48V1Z" fill="currentColor" />
@@ -368,10 +354,23 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 	<symbol viewBox="0 0 21 17" id="common-check">
 		<path d="M1.72241 9.02474L8.51295 14.0045L18.4724 1.78149" stroke="currentColor" stroke-width="4" fill="none" />
 	</symbol>
-</svg><svg><title>Channel: World</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+</svg><svg><title>Play Video</title><use xlink:href="#common-video-play" href="#common-video-play" /></svg>		</span>
+						<img decoding="async" width="960" height="540" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236583986-8fdb.jpg?quality=90&amp;strip=all&amp;w=960&amp;h=540&amp;crop=1" class="attachment-metro_16_9_large size-metro_16_9_large wp-post-image" alt="Hostages reuniting with parents in Israel" loading="lazy" />			</a>
+		</div>
+		<div class="article-card__inner">
+			<h3 class="article-card__title">
+								<a href="https://metro.co.uk/2025/01/19/questions-gaza-ceasefire-israel-raises-last-minute-concerns-22389224/" >British woman among first hostages to arrive in Israel after 470 days in Gaza</a>
+			</h3>
+			<div class="article-card__footer">
+						<div class="author-avatar">
+			<img decoding="async" src="https://metro.co.uk/wp-content/uploads/2021/08/metro-headshots-gregana-krasteva-4788-100d-e1736864119791.jpg?quality=90&#038;strip=all&#038;w=1024&#038;resize=200,200&#038;zoom=1" loading="lazy" alt="Gergana Krasteva" width="48" height="48"/>
+		</div>
+						<div class="article-card__meta">
+						<a href="/news/world/" class="channel-glyph">
+		<svg><title>Channel: World</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			World		</span>
 	</a>
-						<span class="article-card__date">5 mins ago</span>
+						<span class="article-card__date">4 hours ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/gergana-krasteva/"><strong>Gergana Krasteva</strong></a></span>
 				</div>
 			</div>
@@ -394,7 +393,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: World</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			World		</span>
 	</a>
-						<span class="article-card__date">2 hours ago</span>
+						<span class="article-card__date">7 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/katie-boyden/"><strong>Katie Boyden</strong></a></span>
 				</div>
 			</div>
@@ -417,7 +416,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">3 hours ago</span>
+						<span class="article-card__date">7 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/josie-copson/"><strong>Josie Copson</strong></a></span>
 				</div>
 			</div>
@@ -427,12 +426,12 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 <div class="post-grid__item accent--uk accent--news" data-ico=top-stories_home>
 	<div class="article-card" post-id=22387547>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/18/woman-raped-outside-shopping-centre-second-victim-injured-linked-attack-22387547/"  aria-label="Link: Woman raped outside shopping centre before second victim injured in &lsquo;linked&rsquo; attack">
-												<img decoding="async" width="320" height="180" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236457520-c6f7.jpg?quality=90&amp;strip=all&amp;w=320&amp;h=180&amp;crop=1" class="attachment-metro_16_9_small size-metro_16_9_small wp-post-image" alt="Rape outside shopping centre." loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/18/woman-raped-outside-shopping-centre-second-victim-injured-linked-attack-22387547/"  aria-label="Link: CCTV of man released after woman raped and another seriously injured on same night">
+												<img decoding="async" width="320" height="180" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236600487-38f4.jpg?quality=90&amp;strip=all&amp;w=320&amp;h=180&amp;crop=1" class="attachment-metro_16_9_small size-metro_16_9_small wp-post-image" alt="CCTV images of a man police want to speak to" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/18/woman-raped-outside-shopping-centre-second-victim-injured-linked-attack-22387547/" >Woman raped outside shopping centre before second victim injured in &lsquo;linked&rsquo; attack</a>
+								<a href="https://metro.co.uk/2025/01/18/woman-raped-outside-shopping-centre-second-victim-injured-linked-attack-22387547/" >CCTV of man released after woman raped and another seriously injured on same night</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -440,7 +439,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			UK		</span>
 	</a>
-						<span class="article-card__date">22 hours ago</span>
+						<span class="article-card__date">2 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/jasper-king/"><strong>Jasper King</strong></a></span>
 				</div>
 			</div>
@@ -463,7 +462,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			UK		</span>
 	</a>
-						<span class="article-card__date">20 hours ago</span>
+						<span class="article-card__date">1 day ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/brooke-davies/"><strong>Brooke Davies</strong></a></span>
 				</div>
 			</div>
@@ -487,7 +486,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Football		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
+						<span class="article-card__date">6 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/callum-mcavoy/"><strong>Callum McAvoy</strong></a></span>
 				</div>
 			</div>
@@ -510,7 +509,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: US</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			US		</span>
 	</a>
-						<span class="article-card__date">3 hours ago</span>
+						<span class="article-card__date">5 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/danny-rigg/"><strong>Danny Rigg</strong></a></span>
 				</div>
 			</div>
@@ -552,7 +551,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Lifestyle</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Lifestyle		</span>
 	</a>
-						<span class="article-card__date">4 hours ago</span>
+						<span class="article-card__date">8 hours ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/alison-rios-mccrone/"><strong>Alison Rios McCrone</strong></a></span>
 				</div>
 			</div>
@@ -576,7 +575,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Lifestyle</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Lifestyle		</span>
 	</a>
-						<span class="article-card__date">5 hours ago</span>
+						<span class="article-card__date">9 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/charlotte-lewington/"><strong>Charlotte Lewington</strong></a></span>
 				</div>
 			</div>
@@ -600,7 +599,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Families</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Families		</span>
 	</a>
-						<span class="article-card__date">8 hours ago</span>
+						<span class="article-card__date">12 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/nilufer-atik/"><strong>Nilufer Atik</strong></a></span>
 				</div>
 			</div>
@@ -623,7 +622,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			UK		</span>
 	</a>
-						<span class="article-card__date">8 hours ago</span>
+						<span class="article-card__date">12 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/kirsten-robertson/"><strong>Kirsten Robertson</strong></a></span>
 				</div>
 			</div>
@@ -647,7 +646,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Lifestyle</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Lifestyle		</span>
 	</a>
-						<span class="article-card__date">7 hours ago</span>
+						<span class="article-card__date">11 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/george-cruse-drew/"><strong>George Cruse-Drew</strong></a></span>
 				</div>
 			</div>
@@ -696,7 +695,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			UK		</span>
 	</a>
-						<span class="article-card__date">1 day ago</span>
+						<span class="article-card__date">2 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/gethin-hicks/"><strong>Gethin Hicks</strong></a></span>
 				</div>
 			</div>
@@ -721,7 +720,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Tech</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Tech		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
+						<span class="article-card__date">6 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/luke-alsford/"><strong>Luke Alsford</strong></a></span>
 				</div>
 			</div>
@@ -744,7 +743,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
+						<span class="article-card__date">6 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/lillie-rohan/"><strong>Lillie Rohan</strong></a></span>
 				</div>
 			</div>
@@ -767,7 +766,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">8 hours ago</span>
+						<span class="article-card__date">13 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/rob-wilson/"><strong>Robert Oliver</strong></a></span>
 				</div>
 			</div>
@@ -792,7 +791,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: US</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			US		</span>
 	</a>
-						<span class="article-card__date">2 hours ago</span>
+						<span class="article-card__date">7 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/danny-rigg/"><strong>Danny Rigg</strong></a></span>
 				</div>
 			</div>
@@ -815,7 +814,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Horoscopes</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Horoscopes		</span>
 	</a>
-						<span class="article-card__date">15 hours ago</span>
+						<span class="article-card__date">19 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/kerry-king/"><strong>Kerry King</strong></a></span>
 				</div>
 			</div>
@@ -909,7 +908,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">4 hours ago</span>
+						<span class="article-card__date">9 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/emily-bashforth/"><strong>Emily Bashforth</strong></a></span>
 				</div>
 			</div>
@@ -932,7 +931,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">9 hours ago</span>
+						<span class="article-card__date">13 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/joel-harley/"><strong>Joel Harley</strong></a></span>
 				</div>
 			</div>
@@ -955,7 +954,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">6 hours ago</span>
+						<span class="article-card__date">11 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/pierra-willix/"><strong>Pierra Willix</strong></a></span>
 				</div>
 			</div>
@@ -978,7 +977,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Travel</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Travel		</span>
 	</a>
-						<span class="article-card__date">6 hours ago</span>
+						<span class="article-card__date">10 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/ellie-hutchings/"><strong>Ellie Hutchings</strong></a></span>
 				</div>
 			</div>
@@ -1001,7 +1000,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Sex</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Sex		</span>
 	</a>
-						<span class="article-card__date">21 hours ago</span>
+						<span class="article-card__date">1 day ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/eleanor-noyce-met/"><strong>Eleanor Noyce</strong></a></span>
 				</div>
 			</div>
@@ -1035,7 +1034,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Music</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Music		</span>
 	</a>
-						<span class="article-card__date">2 hours ago</span>
+						<span class="article-card__date">7 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/joel-harley/"><strong>Joel Harley</strong></a></span>
 				</div>
 			</div>
@@ -1164,7 +1163,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Beauty</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Beauty		</span>
 	</a>
-						<span class="article-card__date">1 day ago</span>
+						<span class="article-card__date">2 days ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/lydia-wheatley/"><strong>Lydia Wheatley</strong></a></span>
 				</div>
 			</div>
@@ -1212,7 +1211,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Shopping</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Shopping		</span>
 	</a>
-						<span class="article-card__date">2 days ago</span>
+						<span class="article-card__date">3 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/sarah-bradbury/"><strong>Sarah Bradbury</strong></a></span>
 				</div>
 			</div>
@@ -1237,7 +1236,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Music</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Music		</span>
 	</a>
-						<span class="article-card__date">2 hours ago</span>
+						<span class="article-card__date">7 hours ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/joel-harley/"><strong>Joel Harley</strong></a></span>
 				</div>
 			</div>
@@ -1260,7 +1259,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">1 day ago</span>
+						<span class="article-card__date">2 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/emily-bashforth/"><strong>Emily Bashforth</strong></a></span>
 				</div>
 			</div>
@@ -1374,7 +1373,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Hollyoaks</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Hollyoaks		</span>
 	</a>
-						<span class="article-card__date">2 days ago</span>
+						<span class="article-card__date">3 days ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/calli-kitson/"><strong>Calli Kitson</strong></a></span>
 				</div>
 			</div>
@@ -1398,7 +1397,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Emmerdale</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Emmerdale		</span>
 	</a>
-						<span class="article-card__date">2 days ago</span>
+						<span class="article-card__date">3 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/duncan-lindsay/"><strong>Duncan Lindsay</strong></a></span>
 				</div>
 			</div>
@@ -1470,7 +1469,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Horoscopes</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Horoscopes		</span>
 	</a>
-						<span class="article-card__date">15 hours ago</span>
+						<span class="article-card__date">19 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/kerry-king/"><strong>Kerry King</strong></a></span>
 				</div>
 			</div>
@@ -1540,7 +1539,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Families</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Families		</span>
 	</a>
-						<span class="article-card__date">8 hours ago</span>
+						<span class="article-card__date">12 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/nilufer-atik/"><strong>Nilufer Atik</strong></a></span>
 				</div>
 			</div>
@@ -1566,7 +1565,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Travel</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Travel		</span>
 	</a>
-						<span class="article-card__date">4 hours ago</span>
+						<span class="article-card__date">8 hours ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/eleanor-noyce-met/"><strong>Eleanor Noyce</strong></a></span>
 				</div>
 			</div>
@@ -1589,7 +1588,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Travel</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Travel		</span>
 	</a>
-						<span class="article-card__date">6 hours ago</span>
+						<span class="article-card__date">10 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/ellie-hutchings/"><strong>Ellie Hutchings</strong></a></span>
 				</div>
 			</div>
@@ -1612,7 +1611,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Travel</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Travel		</span>
 	</a>
-						<span class="article-card__date">11 hours ago</span>
+						<span class="article-card__date">15 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/jen-mills-for-metro-co-uk/"><strong>Jen Mills</strong></a></span>
 				</div>
 			</div>
@@ -1635,7 +1634,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Travel</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Travel		</span>
 	</a>
-						<span class="article-card__date">1 day ago</span>
+						<span class="article-card__date">2 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/lillie-rohan/"><strong>Lillie Rohan</strong></a></span>
 				</div>
 			</div>
@@ -1658,7 +1657,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Travel</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Travel		</span>
 	</a>
-						<span class="article-card__date">1 day ago</span>
+						<span class="article-card__date">2 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/kristina-beanland/"><strong>Kristina Beanland</strong></a></span>
 				</div>
 			</div>
@@ -1685,7 +1684,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Shopping</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Shopping		</span>
 	</a>
-						<span class="article-card__date">12 hours ago</span>
+						<span class="article-card__date">16 hours ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/lydia-wheatley/"><strong>Lydia Wheatley</strong></a></span>
 				</div>
 			</div>
@@ -1709,7 +1708,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Beauty</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Beauty		</span>
 	</a>
-						<span class="article-card__date">1 day ago</span>
+						<span class="article-card__date">2 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/lydia-wheatley/"><strong>Lydia Wheatley</strong></a></span>
 				</div>
 			</div>
@@ -1781,7 +1780,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Shopping</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Shopping		</span>
 	</a>
-						<span class="article-card__date">2 days ago</span>
+						<span class="article-card__date">3 days ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/sarah-bradbury/"><strong>Sarah Bradbury</strong></a></span>
 				</div>
 			</div>
@@ -1808,7 +1807,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Lifestyle</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Lifestyle		</span>
 	</a>
-						<span class="article-card__date">4 hours ago</span>
+						<span class="article-card__date">8 hours ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/alison-rios-mccrone/"><strong>Alison Rios McCrone</strong></a></span>
 				</div>
 			</div>
@@ -1832,7 +1831,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Lifestyle</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Lifestyle		</span>
 	</a>
-						<span class="article-card__date">5 hours ago</span>
+						<span class="article-card__date">9 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/charlotte-lewington/"><strong>Charlotte Lewington</strong></a></span>
 				</div>
 			</div>
@@ -1856,7 +1855,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Lifestyle</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Lifestyle		</span>
 	</a>
-						<span class="article-card__date">7 hours ago</span>
+						<span class="article-card__date">11 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/george-cruse-drew/"><strong>George Cruse-Drew</strong></a></span>
 				</div>
 			</div>
@@ -1880,7 +1879,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Families</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Families		</span>
 	</a>
-						<span class="article-card__date">8 hours ago</span>
+						<span class="article-card__date">12 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/nilufer-atik/"><strong>Nilufer Atik</strong></a></span>
 				</div>
 			</div>
@@ -1904,7 +1903,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Health</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Health		</span>
 	</a>
-						<span class="article-card__date">3 hours ago</span>
+						<span class="article-card__date">8 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/claudia-schergna/"><strong>Claudia Schergna</strong></a></span>
 				</div>
 			</div>
@@ -1919,15 +1918,14 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		</div>
 		
 </div><div class="content-group_body post-grid"><div class="post-grid__posts" data-ico="zone-widget_home_sport"><div class="post-grid__item has-author-avatar accent--football accent--sport" data-ico=>
-	<div class="article-card" post-id=22389617>
+	<div class="article-card" post-id=22391270>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/chelsea-set-new-price-tag-trevoh-chalobah-crystal-palace-recall-22389617/"  aria-label="Link: Chelsea set new price tag for Trevoh Chalobah after Crystal Palace recall">
-												<img decoding="async" width="646" height="485" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2193770442.jpg?quality=90&amp;strip=all&amp;crop=128px%2C106px%2C770px%2C578px&amp;resize=646%2C485" class="attachment-metro_4_3_medium size-metro_4_3_medium wp-post-image" alt="Chelsea Training and Press Conference" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/ex-man-utd-coach-among-favourites-replace-ange-postecoglou-tottenham-22391270/"  aria-label="Link: Ex-Man Utd coach among favourites to replace Ange Postecoglou at Tottenham">
+												<img decoding="async" width="646" height="485" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2194725127.jpg?quality=90&amp;strip=all&amp;crop=211px%2C193px%2C2402px%2C1805px&amp;resize=646%2C485" class="attachment-metro_4_3_medium size-metro_4_3_medium wp-post-image" alt="Everton FC v Tottenham Hotspur FC - Premier League" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-					<span class="metro-signpost metro-signpost-gossip"></span>
-					<a href="https://metro.co.uk/2025/01/19/chelsea-set-new-price-tag-trevoh-chalobah-crystal-palace-recall-22389617/" >Chelsea set new price tag for Trevoh Chalobah after Crystal Palace recall</a>
+								<a href="https://metro.co.uk/2025/01/19/ex-man-utd-coach-among-favourites-replace-ange-postecoglou-tottenham-22391270/" >Ex-Man Utd coach among favourites to replace Ange Postecoglou at Tottenham</a>
 			</h3>
 			<div class="article-card__footer">
 						<div class="author-avatar">
@@ -1938,7 +1936,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Football		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
+						<span class="article-card__date">6 hours ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/callum-mcavoy/"><strong>Callum McAvoy</strong></a></span>
 				</div>
 			</div>
@@ -1946,15 +1944,14 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 	</div>
 </div >
 <div class="post-grid__item accent--football accent--sport" data-ico=>
-	<div class="article-card" post-id=22389792>
+	<div class="article-card" post-id=22390343>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/man-utd-vs-brighton-live-premier-league-latest-score-confirmed-lineups-22389792/"  aria-label="Link: Man United 1-3 Brighton as it happened: Seagulls win after Andre Onana howler">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2194720650.jpg?quality=90&amp;strip=all&amp;crop=0px%2C234px%2C3243px%2C1825px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Manchester United FC v Brighton &amp; Hove Albion FC - Premier League" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/michael-dawson-says-58m-chelsea-star-perfect-man-city-22390343/"  aria-label="Link: Michael Dawson says &pound;58m Chelsea star would be &#039;perfect&#039; for Man City">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/michawl-dawson-e111.png?crop=0px%2C17px%2C656px%2C369px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-					<span class="metro-signpost metro-signpost-liveblog"></span>
-					<a href="https://metro.co.uk/2025/01/19/man-utd-vs-brighton-live-premier-league-latest-score-confirmed-lineups-22389792/" >Man United 1-3 Brighton as it happened: Seagulls win after Andre Onana howler</a>
+								<a href="https://metro.co.uk/2025/01/19/michael-dawson-says-58m-chelsea-star-perfect-man-city-22390343/" >Michael Dawson says &pound;58m Chelsea star would be &#039;perfect&#039; for Man City</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -1962,31 +1959,8 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Football		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/callum-mcavoy/"><strong>Callum McAvoy</strong></a></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div >
-<div class="post-grid__item accent--football accent--sport" data-ico=>
-	<div class="article-card" post-id=22384674>
-		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/man-utd-vs-brighton-live-latest-score-confirmed-team-news-predicted-lineup-22384674/"  aria-label="Link: Man Utd vs Brighton: Confirmed team news, predicted lineup and injuries">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2192515871_edea69.jpg?quality=90&amp;strip=all&amp;crop=261px%2C735px%2C4545px%2C2562px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Liverpool FC v Manchester United FC - Premier League" loading="lazy" />			</a>
-		</div>
-		<div class="article-card__inner">
-			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/man-utd-vs-brighton-live-latest-score-confirmed-team-news-predicted-lineup-22384674/" >Man Utd vs Brighton: Confirmed team news, predicted lineup and injuries</a>
-			</h3>
-			<div class="article-card__footer">
-								<div class="article-card__meta">
-						<a href="/sport/football/" class="channel-glyph">
-		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			Football		</span>
-	</a>
-						<span class="article-card__date">11 hours ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/ben-fleming/"><strong>Ben Fleming</strong></a></span>
+						<span class="article-card__date">9 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/louis-sealey-for-metro-co-uk/"><strong>Louis Sealey</strong></a></span>
 				</div>
 			</div>
 		</div>
@@ -2008,7 +1982,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Football		</span>
 	</a>
-						<span class="article-card__date">4 hours ago</span>
+						<span class="article-card__date">9 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/louis-sealey-for-metro-co-uk/"><strong>Louis Sealey</strong></a></span>
 				</div>
 			</div>
@@ -2016,15 +1990,15 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 	</div>
 </div >
 <div class="post-grid__item accent--football accent--sport" data-ico=>
-	<div class="article-card" post-id=22387224>
+	<div class="article-card" post-id=22389953>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/18/ruben-amorim-tells-erik-ten-hag-signing-can-leave-man-utd-january-22387224/"  aria-label="Link: Ruben Amorim tells Erik ten Hag signing he can leave Man Utd in January">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2193545803.jpg?quality=90&amp;strip=all&amp;crop=0px%2C76px%2C1024px%2C576px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Arsenal v Manchester United - Emirates FA Cup Third Round" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/chelsea-hope-injury-doubt-cole-palmer-fit-end-vitor-pereiras-wolves-honeymoon-22389953/"  aria-label="Link: Wolves won&rsquo;t go down without a fight at Chelsea">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2192599172.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Chelsea Training Session And Press Conference" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-					<span class="metro-signpost metro-signpost-gossip"></span>
-					<a href="https://metro.co.uk/2025/01/18/ruben-amorim-tells-erik-ten-hag-signing-can-leave-man-utd-january-22387224/" >Ruben Amorim tells Erik ten Hag signing he can leave Man Utd in January</a>
+					<span class="metro-signpost metro-signpost-analysis"></span>
+					<a href="https://metro.co.uk/2025/01/19/chelsea-hope-injury-doubt-cole-palmer-fit-end-vitor-pereiras-wolves-honeymoon-22389953/" >Wolves won&rsquo;t go down without a fight at Chelsea</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -2032,7 +2006,31 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Football		</span>
 	</a>
-						<span class="article-card__date">1 day ago</span>
+						<span class="article-card__date">10 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/danny-griffiths-ukmetro/"><strong>The Tipster</strong></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div >
+<div class="post-grid__item accent--football accent--sport" data-ico=>
+	<div class="article-card" post-id=22389617>
+		<div class="article-card__image">
+			<a href="https://metro.co.uk/2025/01/19/chelsea-set-new-price-tag-trevoh-chalobah-crystal-palace-recall-22389617/"  aria-label="Link: Chelsea set new price tag for Trevoh Chalobah after Crystal Palace recall">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2193770442.jpg?quality=90&amp;strip=all&amp;crop=0px%2C108px%2C1024px%2C576px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Chelsea Training and Press Conference" loading="lazy" />			</a>
+		</div>
+		<div class="article-card__inner">
+			<h3 class="article-card__title">
+					<span class="metro-signpost metro-signpost-gossip"></span>
+					<a href="https://metro.co.uk/2025/01/19/chelsea-set-new-price-tag-trevoh-chalobah-crystal-palace-recall-22389617/" >Chelsea set new price tag for Trevoh Chalobah after Crystal Palace recall</a>
+			</h3>
+			<div class="article-card__footer">
+								<div class="article-card__meta">
+						<a href="/sport/football/" class="channel-glyph">
+		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Football		</span>
+	</a>
+						<span class="article-card__date">6 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/callum-mcavoy/"><strong>Callum McAvoy</strong></a></span>
 				</div>
 			</div>
@@ -2213,7 +2211,7 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Coronation Street</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Coronation Street		</span>
 	</a>
-						<span class="article-card__date">3 days ago</span>
+						<span class="article-card__date">4 days ago</span>
 					<span class="article-card__author"><a href="https://metro.co.uk/author/ash-percival/"><strong>Ash Percival</strong></a></span>
 				</div>
 			</div>
@@ -2313,47 +2311,47 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		</div>
 	</div>
 </div >
-</div></div></div><div class="latest" data-query-params="{&quot;per_page&quot;:23,&quot;before&quot;:&quot;2025-01-19T18:37:53+00:00&quot;,&quot;after&quot;:&quot;2024-10-21T18:37:53+00:00&quot;,&quot;_fields&quot;:&quot;metro_content_item,featured_media_sizes&quot;,&quot;metro_content_item_rendered&quot;:true,&quot;metro_content_item_module&quot;:&quot;latest&quot;,&quot;metro-latest-load-more&quot;:true}" data-latest-module="home"><h2 class="latest_title" >More Stories</h2><div class="latest_page post-grid zebra-stacked-post-grid has-dmpu"><div class="post-grid__posts"><div class="post-grid__item accent--uk accent--news" data-ico=>
-	<div class="article-card" post-id=22383278>
+</div></div></div><div class="latest" data-query-params="{&quot;per_page&quot;:23,&quot;before&quot;:&quot;2025-01-19T23:15:01+00:00&quot;,&quot;after&quot;:&quot;2024-10-21T23:15:01+00:00&quot;,&quot;_fields&quot;:&quot;metro_content_item,featured_media_sizes&quot;,&quot;metro_content_item_rendered&quot;:true,&quot;metro_content_item_module&quot;:&quot;latest&quot;,&quot;metro-latest-load-more&quot;:true}" data-latest-module="home"><h2 class="latest_title" >More Stories</h2><div class="latest_page post-grid zebra-stacked-post-grid has-dmpu"><div class="post-grid__posts"><div class="post-grid__item accent--us accent--news" data-ico=>
+	<div class="article-card" post-id=22392052>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/why-alcohol-allowed-crucial-decisions-made-22383278/"  aria-label="Link: &#039;Why is alcohol allowed where crucial decisions are made?&#039;">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2037317979_fba0f6.jpg?quality=90&amp;strip=all&amp;crop=0px%2C220px%2C2121px%2C1193px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Big Ben And House Of Parliament In Westminster Palace From Westminster Bridge In London, United Kingdom" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/secret-1-000ft-long-narco-tunnel-found-mexico-us-border-sealed-off-22392052/"  aria-label="Link: Secret 1,000ft-long &#039;narco&#039; tunnel found on Mexico-US border to be sealed off">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236447250-fdea.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="A National Guard agent inspects an illegal tunnel bound to El Paso in US, at the Mexico-US border" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/why-alcohol-allowed-crucial-decisions-made-22383278/" >&#039;Why is alcohol allowed where crucial decisions are made?&#039;</a>
+								<a href="https://metro.co.uk/2025/01/19/secret-1-000ft-long-narco-tunnel-found-mexico-us-border-sealed-off-22392052/" >Secret 1,000ft-long &#039;narco&#039; tunnel found on Mexico-US border to be sealed off</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
-						<a href="/news/uk/" class="channel-glyph">
-		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			UK		</span>
+						<a href="/news/us/" class="channel-glyph">
+		<svg><title>Channel: US</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			US		</span>
 	</a>
-						<span class="article-card__date">8 mins ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/letters-editor/"><strong>Letters Editor</strong></a></span>
+						<span class="article-card__date">30 mins ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/gergana-krasteva/"><strong>Gergana Krasteva</strong></a></span>
 				</div>
 			</div>
 		</div>
 	</div>
 </div >
-<div class="post-grid__item accent--showbiz accent--entertainment" data-ico=>
-	<div class="article-card" post-id=22391294>
+<div class="post-grid__item accent--football accent--sport" data-ico=>
+	<div class="article-card" post-id=22391874>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/henry-cavill-partner-natalie-viscuso-seen-new-baby-first-time-22391294/"  aria-label="Link: Henry Cavill and Natalie Viscuso welcome their first baby">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236576072-ec09.jpg?quality=90&amp;strip=all&amp;crop=0px%2C48px%2C2464px%2C1386px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/lee-sharpe-names-man-utd-star-off-pace-brighton-defeat-22391874/"  aria-label="Link: Lee Sharpe names Man Utd star who was &#039;off the pace&#039; in Brighton defeat">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/comp-1737320878.png?crop=0px%2C0px%2C1500px%2C844px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/henry-cavill-partner-natalie-viscuso-seen-new-baby-first-time-22391294/" >Henry Cavill and Natalie Viscuso welcome their first baby</a>
+								<a href="https://metro.co.uk/2025/01/19/lee-sharpe-names-man-utd-star-off-pace-brighton-defeat-22391874/" >Lee Sharpe names Man Utd star who was &#039;off the pace&#039; in Brighton defeat</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
-						<a href="/entertainment/showbiz/" class="channel-glyph">
-		<svg><title>Channel: Showbiz</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			Showbiz		</span>
+						<a href="/sport/football/" class="channel-glyph">
+		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Football		</span>
 	</a>
-						<span class="article-card__date">20 mins ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/brooke-johnson/"><strong>Brooke Ivey Johnson</strong></a></span>
+						<span class="article-card__date">46 mins ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/liam-grace/"><strong>Liam Grace</strong></a></span>
 				</div>
 			</div>
 		</div>
@@ -2376,70 +2374,71 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 			<input type="checkbox" name="agree" id="newsletter-signup__mpu_agree" required="1"  />
 					</div>
 		<input type="hidden" name="source" id="newsletter-signup__mpu_source" value="mpu" /><input type="hidden" name="list" id="newsletter-signup__mpu_list" value="Coronavirus News" /><input type="hidden" name="signup_id" id="newsletter-signup__mpu_signup_id" value="22012128" /><div class="newsletter-signup__submit"><button type="submit" aria-disabled="1" class="metro-button metro-button_sign-up "><span>Sign Up</span><svg><title>Sign Up</title><use xlink:href="#common-right-arrow" href="#common-right-arrow" /></svg></button></div></form><div class="newsletter-recaptcha"><p>This site is protected by reCAPTCHA and the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply. Your information will be used in line with our <a href="https://metro.co.uk/privacypolicy/">Privacy Policy</a></p></div>
-			</div></div><div class="post-grid__item accent--tv accent--entertainment" data-ico=>
-	<div class="article-card" post-id=22391322>
+			</div></div><div class="post-grid__item accent--uk accent--news" data-ico=>
+	<div class="article-card" post-id=22391791>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/tv-fans-cancelling-plans-binge-jaw-dropping-thriller-22391322/"  aria-label="Link: TV fans are cancelling all their plans to binge &#039;jaw-dropping&#039; thriller">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_235237259-2624.jpg?quality=90&amp;strip=all&amp;crop=0px%2C0px%2C2500px%2C1406px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Dougray Scott as DI Lou Stanley pulling a face as he emerges from a door in The Crow Girl" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/shock-church-scientology-advert-allowed-london-tube-station-22391791/"  aria-label="Link: Shock over Church of Scientology advert allowed at London Tube station">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_235070744-c452.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="LOS ANGELES, CALIFORNIA - JANUARY 04: A view of the Church of Scientology of Los Angeles building on January 4, 2024 in Los Angeles, California. Plaintiffs in an amended civil lawsuit against the Church of Scientology want the Los Angeles court to consider RICO penalties in the case. (Photo by Mario Tama/Getty Images)" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/tv-fans-cancelling-plans-binge-jaw-dropping-thriller-22391322/" >TV fans are cancelling all their plans to binge &#039;jaw-dropping&#039; thriller</a>
+					<span class="metro-signpost metro-signpost-exclusive"></span>
+					<a href="https://metro.co.uk/2025/01/19/shock-church-scientology-advert-allowed-london-tube-station-22391791/" >Shock over Church of Scientology advert allowed at London Tube station</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
-						<a href="/entertainment/tv/" class="channel-glyph">
-		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			TV		</span>
+						<a href="/news/uk/" class="channel-glyph">
+		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			UK		</span>
 	</a>
-						<span class="article-card__date">48 mins ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/ruth-lawes/"><strong>Ruth Lawes</strong></a></span>
+						<span class="article-card__date">49 mins ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/luke-alsford/"><strong>Luke Alsford</strong></a></span>
 				</div>
 			</div>
 		</div>
 	</div>
 </div >
-<div class="post-grid__item accent--us accent--news" data-ico=>
-	<div class="article-card" post-id=22390950>
+<div class="post-grid__item accent--coronation-street accent--tv-soaps" data-ico=>
+	<div class="article-card" post-id=22356337>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/full-list-apps-banned-us-along-tiktok-22390950/"  aria-label="Link: Full list of apps banned in the US along with TikTok">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2193316102-22a1.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/coronation-street-confirms-surprising-new-friendship-genius-22356337/"  aria-label="Link: Coronation Street confirms surprising new friendship - and it could be genius">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_222038375-2d83.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Exterior of the Rovers Return pub in ITV soap Coronation Street" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/full-list-apps-banned-us-along-tiktok-22390950/" >Full list of apps banned in the US along with TikTok</a>
+								<a href="https://metro.co.uk/2025/01/19/coronation-street-confirms-surprising-new-friendship-genius-22356337/" >Coronation Street confirms surprising new friendship - and it could be genius</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
-						<a href="/news/us/" class="channel-glyph">
-		<svg><title>Channel: US</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			US		</span>
-	</a>
-						<span class="article-card__date">53 mins ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/sara-odeen-isbister/"><strong>Sara Odeen-Isbister</strong></a></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div >
-<div class="post-grid__item accent--tennis accent--sport" data-ico=>
-	<div class="article-card" post-id=22391186>
-		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/emma-raducanu-tipped-immediate-changes-brutal-australian-open-defeat-iga-swiatek-22391186/"  aria-label="Link: Emma Raducanu tipped to make &#039;immediate changes&#039; after Australian Open thumping">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2193830181.jpg?quality=90&amp;strip=all&amp;crop=90px%2C0px%2C924px%2C520px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="TOPSHOT-TENNIS-AUS-OPEN" loading="lazy" />			</a>
-		</div>
-		<div class="article-card__inner">
-			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/emma-raducanu-tipped-immediate-changes-brutal-australian-open-defeat-iga-swiatek-22391186/" >Emma Raducanu tipped to make &#039;immediate changes&#039; after Australian Open thumping</a>
-			</h3>
-			<div class="article-card__footer">
-								<div class="article-card__meta">
-						<a href="/sport/tennis/" class="channel-glyph">
-		<svg><title>Channel: Tennis</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			Tennis		</span>
+						<a href="/tv-soaps/coronation-street/" class="channel-glyph">
+		<svg><title>Channel: Coronation Street</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Coronation Street		</span>
 	</a>
 						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/liam-grace/"><strong>Liam Grace</strong></a></span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/ash-percival/"><strong>Ash Percival</strong></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div >
+<div class="post-grid__item accent--showbiz accent--entertainment" data-ico=>
+	<div class="article-card" post-id=22391936>
+		<div class="article-card__image">
+			<a href="https://metro.co.uk/2025/01/19/nelly-defends-trump-inauguration-performance-after-massive-backlash-22391936/"  aria-label="Link: Nelly defends Trump inauguration  performance after massive backlash">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236596671-03e8.jpg?quality=90&amp;strip=all&amp;crop=723px%2C229px%2C1704px%2C958px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Mandatory Credit: Photo by Daniel DeSlover/ZUMA Press Wire/REX/Shutterstock (14507349ep) Rapper NELLY (CORNELL HAYNES JR.) during the BottleRock Music Festival in Napa, California BottleRock Music Festival 2024, Napa, California, u.s - 24 May 2024" loading="lazy" />			</a>
+		</div>
+		<div class="article-card__inner">
+			<h3 class="article-card__title">
+								<a href="https://metro.co.uk/2025/01/19/nelly-defends-trump-inauguration-performance-after-massive-backlash-22391936/" >Nelly defends Trump inauguration  performance after massive backlash</a>
+			</h3>
+			<div class="article-card__footer">
+								<div class="article-card__meta">
+						<a href="/entertainment/showbiz/" class="channel-glyph">
+		<svg><title>Channel: Showbiz</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Showbiz		</span>
+	</a>
+						<span class="article-card__date">2 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/brooke-johnson/"><strong>Brooke Ivey Johnson</strong></a></span>
 				</div>
 			</div>
 		</div>
@@ -2469,26 +2468,24 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		</div>
 	</div>
 </div >
-<div class="post-grid__item accent--tech accent--news" data-ico=>
-	<div class="article-card" post-id=22390981>
+<div class="post-grid__item accent--football accent--sport" data-ico=>
+	<div class="article-card" post-id=22391897>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/whistleblower-reveals-secret-us-government-ufo-retrieval-programme-22390981/"  aria-label="Link: Video shows &lsquo;egg-shaped UFO&#039; found in secret recovery operation">
-										<span class="icon icon--play">
-			<svg><title>Play Video</title><use xlink:href="#common-video-play" href="#common-video-play" /></svg>		</span>
-						<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236502838-36a4.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="14301415 Internet divided over &#039;egg&#039; UFO retrieval video airs on TV" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/william-saliba-set-for-race-against-time-to-be-fit-for-arsenal-vs-man-city-clash-22391897/"  aria-label="Link: William Saliba set for race against time to be fit for Arsenal vs Man City clash">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_234393050-6d65.jpg?quality=90&amp;strip=all&amp;crop=337px%2C0px%2C2163px%2C1216px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="LONDON, ENGLAND - DECEMBER 27: William Saliba of Arsenal during the Premier League match between Arsenal FC and Ipswich Town FC at Emirates Stadium on December 27, 2024 in London, England. (Photo by Marc Atkins/Getty Images)" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/whistleblower-reveals-secret-us-government-ufo-retrieval-programme-22390981/" >Video shows &lsquo;egg-shaped UFO&#039; found in secret recovery operation</a>
+								<a href="https://metro.co.uk/2025/01/19/william-saliba-set-for-race-against-time-to-be-fit-for-arsenal-vs-man-city-clash-22391897/" >William Saliba set for race against time to be fit for Arsenal vs Man City clash</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
-						<a href="/news/tech/" class="channel-glyph">
-		<svg><title>Channel: Tech</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			Tech		</span>
+						<a href="/sport/football/" class="channel-glyph">
+		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Football		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/luke-alsford/"><strong>Luke Alsford</strong></a></span>
+						<span class="article-card__date">2 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/liam-grace/"><strong>Liam Grace</strong></a></span>
 				</div>
 			</div>
 		</div>
@@ -2519,14 +2516,14 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 	</div>
 </div >
 <div class="post-grid__item accent--uk accent--news" data-ico=>
-	<div class="article-card" post-id=22390902>
+	<div class="article-card" post-id=22391864>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/black-market-weight-drugs-put-hundreds-hospital-diarrhoea-vomiting-22390902/"  aria-label="Link: Black-market weight drugs put hundreds in hospital with diarrhoea and vomiting">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236547942-322b.jpg?quality=90&amp;strip=all&amp;crop=0px%2C48px%2C2464px%2C1386px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/woman-43-found-battered-death-police-forced-break-flat-22391864/"  aria-label="Link: Woman, 43, found battered to death after police forced to break into flat">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236592512-5b9b.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Argyll Road SE18" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/black-market-weight-drugs-put-hundreds-hospital-diarrhoea-vomiting-22390902/" >Black-market weight drugs put hundreds in hospital with diarrhoea and vomiting</a>
+								<a href="https://metro.co.uk/2025/01/19/woman-43-found-battered-death-police-forced-break-flat-22391864/" >Woman, 43, found battered to death after police forced to break into flat</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -2534,8 +2531,8 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			UK		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/danny-rigg/"><strong>Danny Rigg</strong></a></span>
+						<span class="article-card__date">3 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/gergana-krasteva/"><strong>Gergana Krasteva</strong></a></span>
 				</div>
 			</div>
 		</div>
@@ -2566,14 +2563,14 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 	</div>
 </div >
 <div class="post-grid__item accent--tv accent--entertainment" data-ico=>
-	<div class="article-card" post-id=22391140>
+	<div class="article-card" post-id=22391806>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/tommy-fury-pictured-first-time-since-molly-mae-hague-spoke-split-22391140/"  aria-label="Link: Tommy Fury pictured for the first time since Molly-Mae Hague spoke about split">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236570141_1737304349.395-4892.jpg?quality=90&amp;strip=all&amp;crop=0px%2C0px%2C2500px%2C1406px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Tommy Fury in grey tracksuit" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/dancing-ice-star-fights-back-tears-eliminated-first-itv-show-22391806/"  aria-label="Link: Dancing On Ice fans devastated after &#039;abysmal&#039; first elimination with brutal twist">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236588291-4a22.jpg?quality=90&amp;strip=all&amp;crop=0px%2C132px%2C2500px%2C1406px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Dancing On Ice stars Sylvain Longchambon, Ashley Banjo, Oti Mabuse, Jayne Torvill, Christopher Dean and Mark Hanretty" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/tommy-fury-pictured-first-time-since-molly-mae-hague-spoke-split-22391140/" >Tommy Fury pictured for the first time since Molly-Mae Hague spoke about split</a>
+								<a href="https://metro.co.uk/2025/01/19/dancing-ice-star-fights-back-tears-eliminated-first-itv-show-22391806/" >Dancing On Ice fans devastated after &#039;abysmal&#039; first elimination with brutal twist</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -2581,8 +2578,8 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/lillie-rohan/"><strong>Lillie Rohan</strong></a></span>
+						<span class="article-card__date">2 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/ruth-lawes/"><strong>Ruth Lawes</strong></a></span>
 				</div>
 			</div>
 		</div>
@@ -2612,86 +2609,15 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		</div>
 	</div>
 </div >
-<div class="post-grid__item accent--football accent--sport" data-ico=>
-	<div class="article-card" post-id=22391270>
-		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/ex-man-utd-coach-among-favourites-replace-ange-postecoglou-tottenham-22391270/"  aria-label="Link: Ex-Man Utd coach among favourites to replace Ange Postecoglou at Tottenham">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2194725127.jpg?quality=90&amp;strip=all&amp;crop=0px%2C182px%2C3000px%2C1687px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Everton FC v Tottenham Hotspur FC - Premier League" loading="lazy" />			</a>
-		</div>
-		<div class="article-card__inner">
-			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/ex-man-utd-coach-among-favourites-replace-ange-postecoglou-tottenham-22391270/" >Ex-Man Utd coach among favourites to replace Ange Postecoglou at Tottenham</a>
-			</h3>
-			<div class="article-card__footer">
-								<div class="article-card__meta">
-						<a href="/sport/football/" class="channel-glyph">
-		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			Football		</span>
-	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/callum-mcavoy/"><strong>Callum McAvoy</strong></a></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div >
-<div class="post-grid__item accent--uk accent--news" data-ico=>
-	<div class="article-card" post-id=22391211>
-		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/joke-on-lads-trip-led-to-lifesaving-cancer-diagnoses-for-pair-of-brothers-22391211/"  aria-label="Link: Joke on lads&#039; trip led to lifesaving cancer diagnoses for pair of brothers">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236516655-8492.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Keith Powell with brother Alan. Photo released January 19 2025.Two brothers received life-saving prostate cancer treatment within months of each other after a joke on a lad&#039;s holiday prompted them to take a test. Keith Powell, 68, underwent a radical prostatectomy just months after his younger brother, Alan, 66, had the same operation. The brothers even underwent their surgeries at the same hospital in Surrey with the same surgeon - and say they feel lucky to have caught the cancer before it spread. Retired gas and heating engineer Alan decided to get tested after a chance remark about the number of times &#039;men of a certain age&#039; go to the toilet on a lad&#039;s holiday made him think." loading="lazy" />			</a>
-		</div>
-		<div class="article-card__inner">
-			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/joke-on-lads-trip-led-to-lifesaving-cancer-diagnoses-for-pair-of-brothers-22391211/" >Joke on lads&#039; trip led to lifesaving cancer diagnoses for pair of brothers</a>
-			</h3>
-			<div class="article-card__footer">
-								<div class="article-card__meta">
-						<a href="/news/uk/" class="channel-glyph">
-		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			UK		</span>
-	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/katie-boyden/"><strong>Katie Boyden</strong></a></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div >
-<div class="post-grid__item accent--football accent--sport" data-ico=>
-	<div class="article-card" post-id=22391227>
-		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/owen-hargreaves-makes-worrying-man-utd-claim-dreadful-brighton-defeat-22391227/"  aria-label="Link: Owen Hargreaves makes worrying Man Utd claim after &#039;dreadful&#039; Brighton defeat">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/hargreaves-2927.png?crop=0px%2C0px%2C889px%2C501px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
-		</div>
-		<div class="article-card__inner">
-			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/owen-hargreaves-makes-worrying-man-utd-claim-dreadful-brighton-defeat-22391227/" >Owen Hargreaves makes worrying Man Utd claim after &#039;dreadful&#039; Brighton defeat</a>
-			</h3>
-			<div class="article-card__footer">
-								<div class="article-card__meta">
-						<a href="/sport/football/" class="channel-glyph">
-		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			Football		</span>
-	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/louis-sealey-for-metro-co-uk/"><strong>Louis Sealey</strong></a></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div >
 <div class="post-grid__item accent--emmerdale accent--tv-soaps" data-ico=>
-	<div class="article-card" post-id=22381705>
+	<div class="article-card" post-id=22326885>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/sizzling-emmerdale-video-shows-fury-turn-passion-joe-dawn-22381705/"  aria-label="Link: Sizzling Emmerdale video shows fury turn to passion for Joe and Dawn">
-										<span class="icon icon--play">
-			<svg><title>Play Video</title><use xlink:href="#common-video-play" href="#common-video-play" /></svg>		</span>
-						<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/21_01_emm_joe_dawn_02-863a.jpg?quality=90&amp;strip=all&amp;crop=804px%2C0px%2C2582px%2C1453px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Joe Tate and Dawn Fletcher kissing in Emmerdale" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/emmerdale-revisits-grahams-death-joe-taken-aback-kim-22326885/"  aria-label="Link: Emmerdale revisits Graham&#039;s death as Joe is taken aback by Kim">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/20_01_emm_joe_kim_01-9913.jpg?quality=90&amp;strip=all&amp;crop=1096px%2C138px%2C1397px%2C779px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Joe speaks with Kim as they sit on a bench in Emmerdale" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/sizzling-emmerdale-video-shows-fury-turn-passion-joe-dawn-22381705/" >Sizzling Emmerdale video shows fury turn to passion for Joe and Dawn</a>
+								<a href="https://metro.co.uk/2025/01/19/emmerdale-revisits-grahams-death-joe-taken-aback-kim-22326885/" >Emmerdale revisits Graham&#039;s death as Joe is taken aback by Kim</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -2699,22 +2625,68 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: Emmerdale</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			Emmerdale		</span>
 	</a>
-						<span class="article-card__date">2 hours ago</span>
+						<span class="article-card__date">3 hours ago</span>
 					<span class="article-card__author">By <a href="https://metro.co.uk/author/calli-kitson/"><strong>Calli Kitson</strong></a></span>
 				</div>
 			</div>
 		</div>
 	</div>
 </div >
-<div class="post-grid__item accent--tv accent--entertainment" data-ico=>
-	<div class="article-card" post-id=22390804>
+<div class="post-grid__item accent--showbiz accent--entertainment" data-ico=>
+	<div class="article-card" post-id=22391803>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/time-tonight-itv-drama-a-true-story-22390804/"  aria-label="Link: What time is Out There on tonight and is the ITV drama a true story?">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236570398-aeed.jpg?quality=90&amp;strip=all&amp;crop=209px%2C64px%2C1396px%2C786px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Martin Clunes stars as farmer Nathan in ITV drama Out There (Picture: ITV)" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/katie-price-sparks-jj-slater-breakup-rumours-cryptic-message-22391803/"  aria-label="Link: Katie Price sparks JJ Slater breakup rumours with cryptic message">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_235289307-b420.jpg?quality=90&amp;strip=all&amp;crop=371px%2C73px%2C1914px%2C1074px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="JJ Slater and Katie Price attending a launch party for the new series of Geordie Shore, at Thai Square Restaurant And Club, central London. Picture date: Tuesday January 7, 2025. PA Photo. See PA story SHOWBIZ GeordieShore. Photo credit should read: Ben Whitley/PA Wire" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/time-tonight-itv-drama-a-true-story-22390804/" >What time is Out There on tonight and is the ITV drama a true story?</a>
+								<a href="https://metro.co.uk/2025/01/19/katie-price-sparks-jj-slater-breakup-rumours-cryptic-message-22391803/" >Katie Price sparks JJ Slater breakup rumours with cryptic message</a>
+			</h3>
+			<div class="article-card__footer">
+								<div class="article-card__meta">
+						<a href="/entertainment/showbiz/" class="channel-glyph">
+		<svg><title>Channel: Showbiz</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Showbiz		</span>
+	</a>
+						<span class="article-card__date">4 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/brooke-johnson/"><strong>Brooke Ivey Johnson</strong></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div >
+<div class="post-grid__item accent--football accent--sport" data-ico=>
+	<div class="article-card" post-id=22391724>
+		<div class="article-card__image">
+			<a href="https://metro.co.uk/2025/01/19/ruben-amorim-calls-andre-onana-blunder-man-utd-defeat-brighton-22391724/"  aria-label="Link: Ruben Amorim calls out Andre Onana for blunder in Man Utd defeat to Brighton">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2194724695.jpg?quality=90&amp;strip=all&amp;crop=0px%2C86px%2C3375px%2C1898px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Manchester United FC v Brighton &amp; Hove Albion FC - Premier League" loading="lazy" />			</a>
+		</div>
+		<div class="article-card__inner">
+			<h3 class="article-card__title">
+								<a href="https://metro.co.uk/2025/01/19/ruben-amorim-calls-andre-onana-blunder-man-utd-defeat-brighton-22391724/" >Ruben Amorim calls out Andre Onana for blunder in Man Utd defeat to Brighton</a>
+			</h3>
+			<div class="article-card__footer">
+								<div class="article-card__meta">
+						<a href="/sport/football/" class="channel-glyph">
+		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Football		</span>
+	</a>
+						<span class="article-card__date">4 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/liam-grace/"><strong>Liam Grace</strong></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div >
+<div class="post-grid__item accent--tv accent--entertainment" data-ico=>
+	<div class="article-card" post-id=22391558>
+		<div class="article-card__image">
+			<a href="https://metro.co.uk/2025/01/19/traitors-stars-fined-hundreds-thousands-break-huge-bbc-rule-22391558/"  aria-label="Link: The Traitors stars fined &#039;hundreds of thousands&#039; if they break huge BBC rule">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236341920-e1737312435170.jpg?quality=90&amp;strip=all&amp;crop=0px%2C0px%2C1812px%2C1019px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Freddie gasping at the breakfast table on BBC show The Traitors" loading="lazy" />			</a>
+		</div>
+		<div class="article-card__inner">
+			<h3 class="article-card__title">
+								<a href="https://metro.co.uk/2025/01/19/traitors-stars-fined-hundreds-thousands-break-huge-bbc-rule-22391558/" >The Traitors stars fined &#039;hundreds of thousands&#039; if they break huge BBC rule</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -2722,22 +2694,68 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			TV		</span>
 	</a>
-						<span class="article-card__date">2 hours ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/joel-harley/"><strong>Joel Harley</strong></a></span>
+						<span class="article-card__date">4 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/ruth-lawes/"><strong>Ruth Lawes</strong></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div >
+<div class="post-grid__item accent--football accent--sport" data-ico=>
+	<div class="article-card" post-id=22391064>
+		<div class="article-card__image">
+			<a href="https://metro.co.uk/2025/01/19/ian-wright-tells-arsenal-flop-find-new-club-22391064/"  aria-label="Link: Ian Wright tells Arsenal flop to find new club">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2149537075.jpg?quality=90&amp;strip=all&amp;crop=0px%2C144px%2C5650px%2C3184px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Coventry City v Manchester United - Emirates FA Cup Semi Final" loading="lazy" />			</a>
+		</div>
+		<div class="article-card__inner">
+			<h3 class="article-card__title">
+								<a href="https://metro.co.uk/2025/01/19/ian-wright-tells-arsenal-flop-find-new-club-22391064/" >Ian Wright tells Arsenal flop to find new club</a>
+			</h3>
+			<div class="article-card__footer">
+								<div class="article-card__meta">
+						<a href="/sport/football/" class="channel-glyph">
+		<svg><title>Channel: Football</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Football		</span>
+	</a>
+						<span class="article-card__date">4 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/louis-sealey-for-metro-co-uk/"><strong>Louis Sealey</strong></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div >
+<div class="post-grid__item accent--film accent--entertainment" data-ico=>
+	<div class="article-card" post-id=22391585>
+		<div class="article-card__image">
+			<a href="https://metro.co.uk/2025/01/19/youngest-ever-best-actor-oscar-winner-shares-abandoned-loved-ones-preparation-role-22391585/"  aria-label="Link: Youngest ever best actor Oscar winner shares he &#039;abandoned loved ones&#039; for the role">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/AD_11998495-b4a4.jpg?quality=90&amp;strip=all&amp;crop=0px%2C78px%2C2500px%2C1406px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="FILM... The Pianist (2002); Frank Finlay pictured as father, with Jessica Kate Meyer as Halina, Ed Stoppard as Henryk, Maureen Lipman as mother, Adrien Brody as Wladyslaw Szpilman, and Julia Rayner as Regina, in a scene from the film directed by Roman Polanski." loading="lazy" />			</a>
+		</div>
+		<div class="article-card__inner">
+			<h3 class="article-card__title">
+								<a href="https://metro.co.uk/2025/01/19/youngest-ever-best-actor-oscar-winner-shares-abandoned-loved-ones-preparation-role-22391585/" >Youngest ever best actor Oscar winner shares he &#039;abandoned loved ones&#039; for the role</a>
+			</h3>
+			<div class="article-card__footer">
+								<div class="article-card__meta">
+						<a href="/entertainment/film/" class="channel-glyph">
+		<svg><title>Channel: Film</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Film		</span>
+	</a>
+						<span class="article-card__date">4 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/brooke-johnson/"><strong>Brooke Ivey Johnson</strong></a></span>
 				</div>
 			</div>
 		</div>
 	</div>
 </div >
 <div class="post-grid__item accent--uk accent--news" data-ico=>
-	<div class="article-card" post-id=22390669>
+	<div class="article-card" post-id=22383278>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/nazi-southport-rioter-called-dunblane-massacre-a-waste-a-mass-shooting-22390669/"  aria-label="Link: Nazi Southport rioter called Dunblane massacre &#039;a waste of a mass shooting&#039;">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236557294-7d1d.jpg?quality=90&amp;strip=all&amp;w=646&amp;h=363&amp;crop=1" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/why-alcohol-allowed-crucial-decisions-made-22383278/"  aria-label="Link: &#039;Why is alcohol allowed where crucial decisions are made?&#039;">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/GettyImages-2037317979_fba0f6.jpg?quality=90&amp;strip=all&amp;crop=0px%2C220px%2C2121px%2C1193px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Big Ben And House Of Parliament In Westminster Palace From Westminster Bridge In London, United Kingdom" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/nazi-southport-rioter-called-dunblane-massacre-a-waste-a-mass-shooting-22390669/" >Nazi Southport rioter called Dunblane massacre &#039;a waste of a mass shooting&#039;</a>
+								<a href="https://metro.co.uk/2025/01/19/why-alcohol-allowed-crucial-decisions-made-22383278/" >&#039;Why is alcohol allowed where crucial decisions are made?&#039;</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
@@ -2745,56 +2763,31 @@ var MetroPortraitVideoCarouselVersion = '1.0.13';
 		<svg><title>Channel: UK</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
 			UK		</span>
 	</a>
-						<span class="article-card__date">1 hour ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/katie-boyden/"><strong>Katie Boyden</strong></a></span>
+						<span class="article-card__date">5 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/letters-editor/"><strong>Letters Editor</strong></a></span>
 				</div>
 			</div>
 		</div>
 	</div>
 </div >
-<div class="post-grid__item accent--tv accent--entertainment" data-ico=>
-	<div class="article-card" post-id=22390905>
+<div class="post-grid__item accent--showbiz accent--entertainment" data-ico=>
+	<div class="article-card" post-id=22391294>
 		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/viewers-declare-peak-television-back-3-year-wait-hit-drama-22390905/"  aria-label="Link: Viewers declare &#039;peak television is back&#039; after 3-year wait for hit drama">
-										<span class="icon icon--play">
-			<svg><title>Play Video</title><use xlink:href="#common-video-play" href="#common-video-play" /></svg>		</span>
-						<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_235827694-71ea-e1737303446219.jpg?quality=90&amp;strip=all&amp;crop=0px%2C35px%2C1500px%2C844px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Tramell Tillman as Milchick holding a blue card in Severance" loading="lazy" />			</a>
+			<a href="https://metro.co.uk/2025/01/19/henry-cavill-partner-natalie-viscuso-seen-new-baby-first-time-22391294/"  aria-label="Link: Henry Cavill and Natalie Viscuso welcome their first baby">
+												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEC_236576072-ec09.jpg?quality=90&amp;strip=all&amp;crop=0px%2C48px%2C2464px%2C1386px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="" loading="lazy" />			</a>
 		</div>
 		<div class="article-card__inner">
 			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/viewers-declare-peak-television-back-3-year-wait-hit-drama-22390905/" >Viewers declare &#039;peak television is back&#039; after 3-year wait for hit drama</a>
+								<a href="https://metro.co.uk/2025/01/19/henry-cavill-partner-natalie-viscuso-seen-new-baby-first-time-22391294/" >Henry Cavill and Natalie Viscuso welcome their first baby</a>
 			</h3>
 			<div class="article-card__footer">
 								<div class="article-card__meta">
-						<a href="/entertainment/tv/" class="channel-glyph">
-		<svg><title>Channel: TV</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			TV		</span>
+						<a href="/entertainment/showbiz/" class="channel-glyph">
+		<svg><title>Channel: Showbiz</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
+			Showbiz		</span>
 	</a>
-						<span class="article-card__date">2 hours ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/ruth-lawes/"><strong>Ruth Lawes</strong></a></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div >
-<div class="post-grid__item accent--music accent--entertainment" data-ico=>
-	<div class="article-card" post-id=22390507>
-		<div class="article-card__image">
-			<a href="https://metro.co.uk/2025/01/19/snoop-dogg-faces-huge-backlash-performing-trump-inauguration-party-22390507/"  aria-label="Link: Snoop Dogg faces huge backlash for performing at Trump inauguration party">
-												<img decoding="async" width="646" height="363" src="https://metro.co.uk/wp-content/uploads/2025/01/SEI_236564765-17e6.jpg?quality=90&amp;strip=all&amp;crop=396px%2C146px%2C1777px%2C997px&amp;resize=646%2C363" class="attachment-metro_16_9_medium size-metro_16_9_medium wp-post-image" alt="Snoop Dogg faces huge backlash for performing at Trump&#039;s inauguration AP" loading="lazy" />			</a>
-		</div>
-		<div class="article-card__inner">
-			<h3 class="article-card__title">
-								<a href="https://metro.co.uk/2025/01/19/snoop-dogg-faces-huge-backlash-performing-trump-inauguration-party-22390507/" >Snoop Dogg faces huge backlash for performing at Trump inauguration party</a>
-			</h3>
-			<div class="article-card__footer">
-								<div class="article-card__meta">
-						<a href="/entertainment/music/" class="channel-glyph">
-		<svg><title>Channel: Music</title><use xlink:href="#common-channel-glyph" href="#common-channel-glyph" /></svg>		<span class="channel-glyph__label">
-			Music		</span>
-	</a>
-						<span class="article-card__date">2 hours ago</span>
-					<span class="article-card__author">By <a href="https://metro.co.uk/author/joel-harley/"><strong>Joel Harley</strong></a></span>
+						<span class="article-card__date">5 hours ago</span>
+					<span class="article-card__author">By <a href="https://metro.co.uk/author/brooke-johnson/"><strong>Brooke Ivey Johnson</strong></a></span>
 				</div>
 			</div>
 		</div>
@@ -3089,5 +3082,5 @@ var mrcsk = "6Lf9p64mAAAAAC14f-3IUO6QwwEb4WOFX14csXWM"
 				h.appendChild(s);
 			}());
 		</script>
-		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b30b7dc1b0","applicationID":"117563747","transactionName":"MQdXY0QAChAEVhBfDQhNdFRCCAsNSl0LWwc=","queueTime":0,"applicationTime":468,"atts":"HUBAFQwaGU9HVEYMGRsf","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+		</body>
 </html>
